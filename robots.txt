@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://RajivKurian.github.io/sitemap.xml 
