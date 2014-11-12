@@ -21,26 +21,31 @@ The basic data structure looks like a hashmap with separate chaining with lists.
 The first draft of an interface for out fictional timer is:
 
 ``` cpp TimerWheel.h
-// A Timer is uniquely identified by an id.
-// We don't care how this id is generated.
-Timer* add_timer(uint64_t delay, uint64_t id);  // Assume that the delay is in nanos for now.
-void cancel_timer(Timer* timer);
-// Write the list of expired ids into the input array, assuming it is long enough.
-// Returning a list of expired timers instead of calling the expiry processing inline
-// helps in ensuring the integrity of internal timer data structures
-// since all we need to do is ensure that the timer structures are
-// consistent before and after a function call, but not during.
-void expire_timers(uint64_t* ids, uint64_t size);
+struct TimerWheel {
+public:
+  // Fields ....
+
+  // A Timer is uniquely identified by an id.
+  // We don't care how this id is generated.
+  Timer* add_timer(uint64_t delay, uint64_t id);  // Assume that the delay is in nanos for now.
+  void cancel_timer(Timer* timer);
+  // Write the list of expired ids into the input array, assuming it is long enough.
+  // Returning a list of expired timers instead of calling the expiry processing inline
+  // helps in ensuring the integrity of internal timer data structures
+  // since all we need to do is ensure that the timer structures are
+  // consistent before and after a function call, but not during.
+  void expire_timers(uint64_t* ids, uint64_t size);
 }
 ```
 Usually a timer is implemented with a more generic interface with some kind of a ```Runnable``` task per timer that is executed upon timer expiry. We have made things a lot more specific and require that each timer has an unique id. We also leave the execution of code corresponding to each expired timer up to the user of the library. We could use some other identifier instead of an id. For eg: A pointer to a per connection structure if the timers are for closing stale connections.
 
 So the absolute minimum data we need to have in our timers is:
-``` cpp Timer.cpp
+``` cpp Timer.h
 struct Timer {
   uint64_t id;  // Or some other unique identifier. 8 bytes should be enough.
   uint64_t deadline;
   uint64_t remaining_rounds;
+  // Other stuff...
 };
 ```
 
@@ -50,9 +55,9 @@ Given this basic scheme let's look at some of the ways we could implement the in
 <img src="/images/hashed-wheel-timer-linked-list.svg" width="500">
 </p>
 
-Each bucket simply points to an intrusive doubly linked list of timers. Our timer struct looks like:
+Each bucket simply points to an intrusive doubly linked list of timers. Our data structures look like:
 
-``` cpp Timer.cpp
+``` cpp Timer.h
 enum PreviousType {Timer, TimerWheel};
 
 struct Timer {
@@ -68,10 +73,21 @@ struct Timer {
   }
   enum PreviousType previousType;
 };
+
+struct TimerBucket {
+  Timer* timer_list;
+};
+
+struct TimerWheel {
+  TimerBucket[NUM_BUCKETS];
+  // Other stuff.
+
+  // Methods...
+};
 ```
 Our algorithms look like
 ``` cpp TimerWheel.cpp
-Timer* add_timer(uint64_t delay, uint64_t id) {
+Timer* TimerWheel::add_timer(uint64_t delay, uint64_t id) {
   Timer* timer = create_timer(delay, id);
   TimerBucket* bucket = findBucket(timer);
   // Just prepend the timer to the linked list at the bucket;
@@ -79,13 +95,13 @@ Timer* add_timer(uint64_t delay, uint64_t id) {
   return timer;
 }
 
-void cancel_timer(Timer* timer) {
+void TimerWheel::cancel_timer(Timer* timer) {
   // Since the timer is part of a doubly linked list,
   // just delete it from the linked list and free the memory.
 }
 
 // Write the list of expired ids into the input array, assuming it is long enough.
-void expire_timers(uint64_t* ids, uint64_t size) {
+void TimerWheel::expire_timers(uint64_t* ids, uint64_t size) {
   // If it wasn't already clear this is pseudo code.
   deadline = calculate_deadline();
   int num_ids_added = 0;
@@ -118,7 +134,7 @@ This is our base line. We have significant memory over head in terms of previous
 
 Instead of an intrusive linked list we can just store a vector of pointers to timers. We can grow this vector as needed. If memory is not a concern we could allocate a large enough array so that growing is never needed (though still accounted for). Our timer struct now looks like:
 
-``` cpp Timer.cpp
+``` cpp Timer.h
 
 struct Timer {
   uint64_t id;
@@ -133,10 +149,17 @@ struct TimerBucket {
   Timer* timers[];
 };
 
+struct TimerWheel {
+  TimerBucket[NUM_BUCKETS];
+  // Other stuff.
+
+  // Methods...
+};
+
 ```
 Our algorithms look like
 ``` cpp TimerWheel.cpp
-Timer add_timer(uint64_t delay, uint64_t id) {
+Timer* TimerWheel::add_timer(uint64_t delay, uint64_t id) {
   Timer* timer = create_timer(delay, id);
   TimerBucket* bucket = findBucket(timer);
   // Just append the timer to the vector for the bucket.
@@ -144,7 +167,7 @@ Timer add_timer(uint64_t delay, uint64_t id) {
   return timer;
 }
 
-void cancel_timer(Timer* timer) {
+void TimerWheel::cancel_timer(Timer* timer) {
   // Since the timer is part of a vector, we can't just adjust a couple pointers.
   // Since ordering within the vector is not important, we copy the last
   // timer pointer (if the deleted timer wasn't the last one in the vector)
@@ -157,7 +180,7 @@ void cancel_timer(Timer* timer) {
 
 // The expiry logic remains similar. We just traverse an array of pointers now
 // instead of a doubly linked list.
-void expire_timers(uint64_t* ids, uint64_t size) {
+void TimerWheel::expire_timers(uint64_t* ids, uint64_t size) {
   // If it wasn't already clear this is pseudo code.
   deadline = calculate_deadline();
   int num_ids_added = 0;
@@ -213,6 +236,13 @@ struct TimerBucket {
   // Array of Timers.
   Timer* timers;
 };
+
+struct TimerWheel {
+  TimerBucket[NUM_BUCKETS];
+  // Other stuff.
+
+  // Methods...
+};
 ```
 Our modified interface now is:
 ``` cpp TimerWheel.h
@@ -229,14 +259,14 @@ void expire_timers(uint64_t* ids, uint64_t size);
 
 Our algorithms look like
 ``` cpp TimerWheel.cpp
-void add_timer(uint64_t delay, uint64_t id, TimerHolder* holder) {
+void TimerWheel::add_timer(uint64_t delay, uint64_t id, TimerHolder* holder) {
   TimerBucket* bucket = findBucket(timer);
   // Just append timer to end of the bucket, no malloc needed.
   // Update the holder to contain the bucket_number and index_within_bucket.
   initalize_timer(bucket, delay, id, holder);
 }
 
-void cancel_timer(TimerHolder* holder) {
+void TimerWheel::cancel_timer(TimerHolder* holder) {
   // Do some sanity checking first.
   TimerBucket* bucket = find_bucket(holder->bucket_number);
   uint32_t cancelled_timer_index = holder->index_within_bucket;
@@ -259,7 +289,7 @@ void cancel_timer(TimerHolder* holder) {
 
 // The expiry logic remains similar. We just traverse an array of inlined timers now.
 
-void expire_timers(uint64_t* ids, uint64_t size) {
+void TimerWheel::expire_timers(uint64_t* ids, uint64_t size) {
   // If it wasn't already clear this is pseudo code.
   deadline = calculate_deadline();
   int num_ids_added = 0;
