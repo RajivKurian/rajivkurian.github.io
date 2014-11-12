@@ -175,6 +175,58 @@
 
 <p>Each bucket simply points to an intrusive doubly linked list of timers. Our timer struct looks like:</p>
 
+<p>struct Timer {
+  uint64_t id;
+  uint64_t deadline;
+  uint64_t remaining_rounds;
+  Timer<em> next;
+  // Previous is null if this is the first timer in the list.
+  Timer</em> previous;
+};</p>
+
+<p>struct TimerBucket {
+  Timer* list;
+};</p>
+
+<figure class='code'><figcaption><span>Timer.cpp</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='cpp'><span class='line'><span class="n">Our</span> <span class="n">algorithms</span> <span class="n">look</span> <span class="n">like</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p> cpp TimerWheel.cpp
+Timer<em> add_timer(uint64_t delay, uint64_t id) {
+  Timer</em> timer = create_timer(delay, id);
+  TimerBucket* bucket = findBucket(timer);
+  // Just prepend the timer to the linked list at the bucket;
+  insert_into_bucket(bucket_id, timer);
+  return timer;
+}</p>
+
+<p>void cancel_timer(Timer* timer) {
+  // Since the timer is part of a doubly linked list,
+  // just delete it from the linked list and free the memory.
+}</p>
+
+<p>// Write the list of expired ids into the input array, assuming it is long enough.
+void expire_timers(uint64_t* ids, uint64_t size) {
+  // If it wasn&rsquo;t already clear this is pseudo code.
+  deadline = calculate_deadline();
+  int num_ids_added = 0;
+  for (bucket : every bucket that could contain expired timers) {</p>
+
+<pre><code>for (timer : bucket) {
+  if (0 &gt;= timer-&gt;remainingRounds &amp;&amp; timer-&gt;deadline &lt;= deadline) {
+    append_to_ids(ids, size, &amp;num_ids_added, timer-&gt;id);
+    cancel_timer(timer);
+  } else {
+    --timer-&gt;remainingRounds;
+  }
+}
+</code></pre>
+
+<p>  }
+}</p>
+
 <figure class='code'><figcaption><span>Timer.cpp</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -190,108 +242,86 @@
 <span class='line-number'>13</span>
 <span class='line-number'>14</span>
 <span class='line-number'>15</span>
-</pre></td><td class='code'><pre><code class='cpp'><span class='line'><span class="k">enum</span> <span class="n">PreviousType</span> <span class="p">{</span><span class="n">Timer</span><span class="p">,</span> <span class="n">TimerWheel</span><span class="p">};</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">struct</span> <span class="n">Timer</span> <span class="p">{</span>
-</span><span class='line'>  <span class="n">uint64_t</span> <span class="n">id</span><span class="p">;</span>
-</span><span class='line'>  <span class="n">uint64_t</span> <span class="n">deadline</span><span class="p">;</span>
-</span><span class='line'>  <span class="n">uint64_t</span> <span class="n">remaining_rounds</span><span class="p">;</span>
-</span><span class='line'>  <span class="n">Timer</span><span class="o">*</span> <span class="n">next</span><span class="p">;</span>
-</span><span class='line'>  <span class="c1">// A tagged union since the previous could be either a</span>
-</span><span class='line'>  <span class="c1">// pointer to a timer or a pointer to the bucket.</span>
-</span><span class='line'>  <span class="k">union</span> <span class="p">{</span>
-</span><span class='line'>    <span class="n">Timer</span><span class="o">*</span> <span class="n">previous</span><span class="p">;</span>
-</span><span class='line'>    <span class="n">TimerBucket</span><span class="o">*</span> <span class="n">wheel</span><span class="p">;</span>
-</span><span class='line'>  <span class="p">}</span>
-</span><span class='line'>  <span class="k">enum</span> <span class="n">PreviousType</span> <span class="n">previousType</span><span class="p">;</span>
-</span><span class='line'><span class="p">};</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Our algorithms look like</p>
-
-<figure class='code'><figcaption><span>TimerWheel.cpp</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
 <span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-</pre></td><td class='code'><pre><code class='cpp'><span class='line'><span class="n">Timer</span><span class="o">*</span> <span class="n">add_timer</span><span class="p">(</span><span class="n">uint64_t</span> <span class="n">delay</span><span class="p">,</span> <span class="n">uint64_t</span> <span class="n">id</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="n">Timer</span><span class="o">*</span> <span class="n">timer</span> <span class="o">=</span> <span class="n">create_timer</span><span class="p">(</span><span class="n">delay</span><span class="p">,</span> <span class="n">id</span><span class="p">);</span>
-</span><span class='line'>  <span class="n">TimerBucket</span><span class="o">*</span> <span class="n">bucket</span> <span class="o">=</span> <span class="n">findBucket</span><span class="p">(</span><span class="n">timer</span><span class="p">);</span>
-</span><span class='line'>  <span class="c1">// Just prepend the timer to the linked list at the bucket;</span>
-</span><span class='line'>  <span class="n">insert_into_bucket</span><span class="p">(</span><span class="n">bucket_id</span><span class="p">,</span> <span class="n">timer</span><span class="p">);</span>
-</span><span class='line'>  <span class="k">return</span> <span class="n">timer</span><span class="p">;</span>
-</span><span class='line'><span class="p">}</span>
+</pre></td><td class='code'><pre><code class='cpp'><span class='line'><span class="n">So</span> <span class="n">our</span> <span class="n">algorithm</span> <span class="n">characteristics</span> <span class="n">in</span> <span class="n">brief</span> <span class="nl">are:</span>
 </span><span class='line'>
-</span><span class='line'><span class="kt">void</span> <span class="n">cancel_timer</span><span class="p">(</span><span class="n">Timer</span><span class="o">*</span> <span class="n">timer</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="c1">// Since the timer is part of a doubly linked list,</span>
-</span><span class='line'>  <span class="c1">// just delete it from the linked list and free the memory.</span>
-</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="mf">1.</span>  <span class="n">To</span> <span class="n">add</span> <span class="n">a</span> <span class="n">timer</span><span class="p">,</span> <span class="n">just</span> <span class="n">prepend</span> <span class="n">it</span> <span class="n">to</span> <span class="n">the</span> <span class="n">appropriate</span> <span class="n">linked</span> <span class="n">list</span> <span class="o">-</span> <span class="err">```</span><span class="n">O</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="err">```</span>
+</span><span class='line'><span class="mf">2.</span>  <span class="n">To</span> <span class="n">cancel</span> <span class="n">a</span> <span class="n">timer</span> <span class="o">-</span> <span class="k">delete</span> <span class="n">it</span> <span class="n">from</span> <span class="n">the</span> <span class="n">doubly</span> <span class="n">linked</span> <span class="n">list</span> <span class="o">-</span> <span class="err">```</span><span class="n">O</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="err">```</span>
+</span><span class='line'><span class="mf">3.</span>  <span class="n">To</span> <span class="n">clean</span> <span class="n">up</span> <span class="n">all</span> <span class="n">expired</span> <span class="n">timers</span> <span class="o">-</span> <span class="n">Travel</span> <span class="n">list</span> <span class="n">of</span> <span class="n">timers</span> <span class="n">and</span> <span class="k">delete</span> <span class="n">expired</span> <span class="n">ones</span> <span class="o">-</span> <span class="err">```</span><span class="n">O</span><span class="p">(</span><span class="n">expired</span> <span class="n">timers</span><span class="p">)</span><span class="err">```</span><span class="p">.</span> <span class="n">The</span> <span class="n">actual</span> <span class="n">time</span> <span class="n">depends</span> <span class="n">on</span> <span class="n">how</span> <span class="n">many</span> <span class="n">timers</span> <span class="n">hashed</span> <span class="n">onto</span> <span class="n">a</span> <span class="n">bucket</span><span class="p">.</span> <span class="n">We</span> <span class="n">can</span> <span class="n">put</span> <span class="n">some</span> <span class="n">bounds</span> <span class="n">on</span> <span class="k">this</span> <span class="n">number</span> <span class="n">with</span> <span class="n">general</span> <span class="n">hash</span> <span class="n">table</span> <span class="n">math</span><span class="p">.</span>
 </span><span class='line'>
-</span><span class='line'><span class="c1">// Write the list of expired ids into the input array, assuming it is long enough.</span>
-</span><span class='line'><span class="kt">void</span> <span class="n">expire_timers</span><span class="p">(</span><span class="n">uint64_t</span><span class="o">*</span> <span class="n">ids</span><span class="p">,</span> <span class="n">uint64_t</span> <span class="n">size</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="c1">// If it wasn&#39;t already clear this is pseudo code.</span>
-</span><span class='line'>  <span class="n">deadline</span> <span class="o">=</span> <span class="n">calculate_deadline</span><span class="p">();</span>
-</span><span class='line'>  <span class="kt">int</span> <span class="n">num_ids_added</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-</span><span class='line'>  <span class="k">for</span> <span class="p">(</span><span class="n">bucket</span> <span class="o">:</span> <span class="n">every</span> <span class="n">bucket</span> <span class="n">that</span> <span class="n">could</span> <span class="n">contain</span> <span class="n">expired</span> <span class="n">timers</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="k">for</span> <span class="p">(</span><span class="n">timer</span> <span class="o">:</span> <span class="n">bucket</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>      <span class="k">if</span> <span class="p">(</span><span class="mi">0</span> <span class="o">&gt;=</span> <span class="n">timer</span><span class="o">-&gt;</span><span class="n">remainingRounds</span> <span class="o">&amp;&amp;</span> <span class="n">timer</span><span class="o">-&gt;</span><span class="n">deadline</span> <span class="o">&lt;=</span> <span class="n">deadline</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>        <span class="n">append_to_ids</span><span class="p">(</span><span class="n">ids</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">num_ids_added</span><span class="p">,</span> <span class="n">timer</span><span class="o">-&gt;</span><span class="n">id</span><span class="p">);</span>
-</span><span class='line'>        <span class="n">cancel_timer</span><span class="p">(</span><span class="n">timer</span><span class="p">);</span>
-</span><span class='line'>      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-</span><span class='line'>        <span class="o">--</span><span class="n">timer</span><span class="o">-&gt;</span><span class="n">remainingRounds</span><span class="p">;</span>
-</span><span class='line'>      <span class="p">}</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>  <span class="p">}</span>
-</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="cp">###### Comments on implementation.</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">This</span> <span class="n">is</span> <span class="n">our</span> <span class="n">base</span> <span class="n">line</span><span class="p">.</span> <span class="n">We</span> <span class="n">have</span> <span class="n">significant</span> <span class="n">memory</span> <span class="n">over</span> <span class="n">head</span> <span class="n">in</span> <span class="n">terms</span> <span class="n">of</span> <span class="n">previous</span><span class="o">/</span><span class="n">next</span> <span class="n">pointers</span> <span class="n">on</span> <span class="n">our</span> <span class="n">timers</span><span class="p">.</span> <span class="n">It</span><span class="err">&#39;</span><span class="n">s</span> <span class="n">pretty</span> <span class="n">terrible</span> <span class="n">that</span> <span class="n">we</span> <span class="n">have</span> <span class="n">to</span> <span class="err">```</span><span class="n">malloc</span><span class="p">()</span><span class="err">```</span> <span class="n">and</span> <span class="err">```</span><span class="n">free</span><span class="p">()</span><span class="err">```</span> <span class="n">on</span> <span class="n">each</span> <span class="err">```</span><span class="n">add_timer</span><span class="p">()</span><span class="err">```</span> <span class="n">and</span> <span class="err">```</span><span class="n">cancel_timer</span><span class="p">()</span><span class="err">```</span> <span class="n">call</span><span class="p">.</span> <span class="n">Of</span> <span class="n">course</span> <span class="n">the</span> <span class="err">```</span><span class="n">O</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="err">```</span> <span class="n">calls</span> <span class="n">also</span> <span class="n">hide</span> <span class="n">the</span> <span class="n">fact</span> <span class="n">that</span> <span class="n">we</span> <span class="n">are</span> <span class="n">traversing</span> <span class="n">a</span> <span class="n">linked</span> <span class="n">list</span> <span class="n">during</span> <span class="n">timer</span> <span class="n">expiry</span> <span class="n">which</span> <span class="n">is</span> <span class="n">pretty</span> <span class="n">terrible</span><span class="p">.</span>
+</span><span class='line'>
+</span><span class='line'><span class="cp">#####2. Vector of timer pointers per bucket.</span>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span> <span class="n">align</span><span class="o">=</span><span class="s">&quot;center&quot;</span><span class="o">&gt;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="n">img</span> <span class="n">src</span><span class="o">=</span><span class="s">&quot;/images/hashed-wheel-timer-vector.svg&quot;</span> <span class="n">width</span><span class="o">=</span><span class="s">&quot;500&quot;</span><span class="o">&gt;</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">Instead</span> <span class="n">of</span> <span class="n">an</span> <span class="n">intrusive</span> <span class="n">linked</span> <span class="n">list</span> <span class="n">we</span> <span class="n">can</span> <span class="n">just</span> <span class="n">store</span> <span class="n">a</span> <span class="n">vector</span> <span class="n">of</span> <span class="n">pointers</span> <span class="n">to</span> <span class="n">timers</span><span class="p">.</span> <span class="n">We</span> <span class="n">can</span> <span class="n">grow</span> <span class="k">this</span> <span class="n">vector</span> <span class="n">as</span> <span class="n">needed</span><span class="p">.</span> <span class="n">If</span> <span class="n">memory</span> <span class="n">is</span> <span class="n">not</span> <span class="n">a</span> <span class="n">concern</span> <span class="n">we</span> <span class="n">could</span> <span class="n">allocate</span> <span class="n">a</span> <span class="n">large</span> <span class="n">enough</span> <span class="n">array</span> <span class="n">so</span> <span class="n">that</span> <span class="n">growing</span> <span class="n">is</span> <span class="n">never</span> <span class="n">needed</span> <span class="p">(</span><span class="n">though</span> <span class="n">still</span> <span class="n">accounted</span> <span class="k">for</span><span class="p">).</span> <span class="n">Our</span> <span class="n">timer</span> <span class="k">struct</span> <span class="n">now</span> <span class="n">looks</span> <span class="nl">like:</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>So our algorithm characteristics in brief are:</p>
+<p> cpp Timer.cpp</p>
 
-<ol>
-<li>To add a timer, just prepend it to the appropriate linked list &ndash; <code>O(1)</code></li>
-<li>To cancel a timer &ndash; delete it from the doubly linked list &ndash; <code>O(1)</code></li>
-<li>To clean up all expired timers &ndash; Travel list of timers and delete expired ones &ndash; <code>O(expired timers)</code>. The actual time depends on how many timers hashed onto a bucket. We can put some bounds on this number with general hash table math.</li>
-</ol>
+<p>struct Timer {
+  uint64_t id;
+  uint64_t deadline;
+  uint64_t remaining_rounds;
+};</p>
+
+<p>struct TimerBucket {
+  int size;
+  int capacity;
+  // Array of pointers to timers.
+  Timer* timers[];
+};</p>
+
+<figure class='code'><figcaption><span>Timer.cpp</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='cpp'><span class='line'><span class="n">Our</span> <span class="n">algorithms</span> <span class="n">look</span> <span class="n">like</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
-<h6>Comments on implementation.</h6>
+<p> cpp TimerWheel.cpp
+Timer add_timer(uint64_t delay, uint64_t id) {
+  Timer<em> timer = create_timer(delay, id);
+  TimerBucket</em> bucket = findBucket(timer);
+  // Just append the timer to the vector for the bucket.
+  append_to_bucket(bucket, timer);
+  return timer;
+}</p>
 
-<p>This is our base line. We have significant memory over head in terms of previous/next pointers on our timers. It&rsquo;s pretty terrible that we have to <code>malloc()</code> and <code>free()</code> on each <code>add_timer()</code> and <code>cancel_timer()</code> call. Of course the <code>O(1)</code> calls also hide the fact that we are traversing a linked list during timer expiry which is pretty terrible.</p>
+<p>void cancel_timer(Timer* timer) {
+  // Since the timer is part of a vector, we can&rsquo;t just adjust a couple pointers.
+  // Since ordering within the vector is not important, we copy the last
+  // timer pointer (if the deleted timer wasn&rsquo;t the last one in the vector)
+  // to the deleted position.
+  // Decrement the vector size by 1.
+  // Moving the pointer to a timer within the vector doesn&rsquo;t invalidate the
+  // pointer, so it&rsquo;s perfectly safe.
+  // We then free the memory used by the timer.
+}</p>
 
-<h5>2. Vector of timer pointers per bucket.</h5>
+<p>// The expiry logic remains similar. We just traverse an array of pointers now
+// instead of a doubly linked list.
+void expire_timers(uint64_t* ids, uint64_t size) {
+  // If it wasn&rsquo;t already clear this is pseudo code.
+  deadline = calculate_deadline();
+  int num_ids_added = 0;
+  for (bucket : every bucket that could contain expired timers) {</p>
 
-<p align="center">
-<img src="/images/hashed-wheel-timer-vector.svg" width="500">
-</p>
+<pre><code>for (timer : bucket) {
+  if (0 &gt;= timer-&gt;remainingRounds &amp;&amp; timer-&gt;deadline &lt;= deadline) {
+    append_to_ids(ids, size, &amp;num_ids_added, timer-&gt;id);
+    cancel_timer(timer);
+  } else {
+    --timer-&gt;remainingRounds;
+  }
+}
+</code></pre>
 
-
-<p>Instead of an intrusive linked list we can just store a vector of pointers to timers. We can grow this vector as needed. If memory is not a concern we could allocate a large enough array so that growing is never needed (though still accounted for). Our timer struct now looks like:</p>
+<p>  }
+}</p>
 
 <figure class='code'><figcaption><span>Timer.cpp</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -305,284 +335,128 @@
 <span class='line-number'>10</span>
 <span class='line-number'>11</span>
 <span class='line-number'>12</span>
-</pre></td><td class='code'><pre><code class='cpp'><span class='line'><span class="k">struct</span> <span class="n">Timer</span> <span class="p">{</span>
-</span><span class='line'>  <span class="n">uint64_t</span> <span class="n">id</span><span class="p">;</span>
-</span><span class='line'>  <span class="n">uint64_t</span> <span class="n">deadline</span><span class="p">;</span>
-</span><span class='line'>  <span class="n">uint64_t</span> <span class="n">remaining_rounds</span><span class="p">;</span>
-</span><span class='line'><span class="p">};</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">struct</span> <span class="n">TimerBucket</span> <span class="p">{</span>
-</span><span class='line'>  <span class="kt">int</span> <span class="n">size</span><span class="p">;</span>
-</span><span class='line'>  <span class="kt">int</span> <span class="n">capacity</span><span class="p">;</span>
-</span><span class='line'>  <span class="c1">// Array of pointers to timers.</span>
-</span><span class='line'>  <span class="n">Timer</span><span class="o">*</span> <span class="n">timers</span><span class="p">[];</span>
-</span><span class='line'><span class="p">};</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Our algorithms look like</p>
-
-<figure class='code'><figcaption><span>TimerWheel.cpp</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
 <span class='line-number'>13</span>
 <span class='line-number'>14</span>
 <span class='line-number'>15</span>
 <span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-</pre></td><td class='code'><pre><code class='cpp'><span class='line'><span class="n">Timer</span> <span class="n">add_timer</span><span class="p">(</span><span class="n">uint64_t</span> <span class="n">delay</span><span class="p">,</span> <span class="n">uint64_t</span> <span class="n">id</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="n">Timer</span><span class="o">*</span> <span class="n">timer</span> <span class="o">=</span> <span class="n">create_timer</span><span class="p">(</span><span class="n">delay</span><span class="p">,</span> <span class="n">id</span><span class="p">);</span>
-</span><span class='line'>  <span class="n">TimerBucket</span><span class="o">*</span> <span class="n">bucket</span> <span class="o">=</span> <span class="n">findBucket</span><span class="p">(</span><span class="n">timer</span><span class="p">);</span>
-</span><span class='line'>  <span class="c1">// Just append the timer to the vector for the bucket.</span>
-</span><span class='line'>  <span class="n">append_to_bucket</span><span class="p">(</span><span class="n">bucket</span><span class="p">,</span> <span class="n">timer</span><span class="p">);</span>
-</span><span class='line'>  <span class="k">return</span> <span class="n">timer</span><span class="p">;</span>
-</span><span class='line'><span class="p">}</span>
+</pre></td><td class='code'><pre><code class='cpp'><span class='line'><span class="n">So</span> <span class="n">our</span> <span class="n">algorithm</span> <span class="n">characteristics</span> <span class="n">in</span> <span class="n">brief</span> <span class="nl">are:</span>
 </span><span class='line'>
-</span><span class='line'><span class="kt">void</span> <span class="n">cancel_timer</span><span class="p">(</span><span class="n">Timer</span><span class="o">*</span> <span class="n">timer</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="c1">// Since the timer is part of a vector, we can&#39;t just adjust a couple pointers.</span>
-</span><span class='line'>  <span class="c1">// Since ordering within the vector is not important, we copy the last</span>
-</span><span class='line'>  <span class="c1">// timer pointer (if the deleted timer wasn&#39;t the last one in the vector)</span>
-</span><span class='line'>  <span class="c1">// to the deleted position.</span>
-</span><span class='line'>  <span class="c1">// Decrement the vector size by 1.</span>
-</span><span class='line'>  <span class="c1">// Moving the pointer to a timer within the vector doesn&#39;t invalidate the</span>
-</span><span class='line'>  <span class="c1">// pointer, so it&#39;s perfectly safe.</span>
-</span><span class='line'>  <span class="c1">// We then free the memory used by the timer.</span>
-</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="mf">1.</span>  <span class="n">To</span> <span class="n">add</span> <span class="n">a</span> <span class="n">timer</span><span class="p">,</span> <span class="n">just</span> <span class="n">append</span> <span class="n">it</span> <span class="n">to</span> <span class="n">the</span> <span class="n">appropriate</span> <span class="n">vector</span> <span class="o">-</span> <span class="err">```</span><span class="n">O</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="err">```</span><span class="p">.</span>
+</span><span class='line'><span class="mf">2.</span>  <span class="n">To</span> <span class="n">cancel</span> <span class="n">a</span> <span class="n">timer</span><span class="p">,</span> <span class="k">delete</span> <span class="n">it</span> <span class="n">from</span> <span class="n">the</span> <span class="n">middle</span> <span class="n">of</span> <span class="n">the</span> <span class="n">vector</span> <span class="n">and</span> <span class="n">move</span> <span class="n">a</span> <span class="n">pointer</span> <span class="n">to</span> <span class="n">occupy</span> <span class="n">the</span> <span class="n">hole</span>  <span class="o">-</span> <span class="err">```</span><span class="n">O</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="err">```</span><span class="p">.</span>
+</span><span class='line'><span class="mf">3.</span>  <span class="n">To</span> <span class="n">clean</span> <span class="n">up</span> <span class="n">all</span> <span class="n">expired</span> <span class="n">timers</span> <span class="o">-</span> <span class="n">Traverse</span> <span class="n">the</span> <span class="n">vector</span> <span class="n">of</span> <span class="n">timers</span> <span class="n">and</span> <span class="k">delete</span> <span class="n">expired</span> <span class="n">ones</span> <span class="o">-</span> <span class="err">```</span><span class="n">O</span><span class="p">(</span><span class="n">expired</span> <span class="n">timers</span><span class="p">)</span><span class="err">```</span><span class="p">.</span> <span class="n">Again</span> <span class="n">actual</span> <span class="n">time</span> <span class="n">depends</span> <span class="n">on</span> <span class="n">how</span> <span class="n">many</span> <span class="n">timers</span> <span class="n">hashed</span> <span class="n">onto</span> <span class="n">a</span> <span class="n">bucket</span><span class="p">.</span>
 </span><span class='line'>
-</span><span class='line'><span class="c1">// The expiry logic remains similar. We just traverse an array of pointers now</span>
-</span><span class='line'><span class="c1">// instead of a doubly linked list.</span>
-</span><span class='line'><span class="kt">void</span> <span class="n">expire_timers</span><span class="p">(</span><span class="n">uint64_t</span><span class="o">*</span> <span class="n">ids</span><span class="p">,</span> <span class="n">uint64_t</span> <span class="n">size</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="c1">// If it wasn&#39;t already clear this is pseudo code.</span>
-</span><span class='line'>  <span class="n">deadline</span> <span class="o">=</span> <span class="n">calculate_deadline</span><span class="p">();</span>
-</span><span class='line'>  <span class="kt">int</span> <span class="n">num_ids_added</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-</span><span class='line'>  <span class="k">for</span> <span class="p">(</span><span class="n">bucket</span> <span class="o">:</span> <span class="n">every</span> <span class="n">bucket</span> <span class="n">that</span> <span class="n">could</span> <span class="n">contain</span> <span class="n">expired</span> <span class="n">timers</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="k">for</span> <span class="p">(</span><span class="n">timer</span> <span class="o">:</span> <span class="n">bucket</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>      <span class="k">if</span> <span class="p">(</span><span class="mi">0</span> <span class="o">&gt;=</span> <span class="n">timer</span><span class="o">-&gt;</span><span class="n">remainingRounds</span> <span class="o">&amp;&amp;</span> <span class="n">timer</span><span class="o">-&gt;</span><span class="n">deadline</span> <span class="o">&lt;=</span> <span class="n">deadline</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>        <span class="n">append_to_ids</span><span class="p">(</span><span class="n">ids</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">num_ids_added</span><span class="p">,</span> <span class="n">timer</span><span class="o">-&gt;</span><span class="n">id</span><span class="p">);</span>
-</span><span class='line'>        <span class="n">cancel_timer</span><span class="p">(</span><span class="n">timer</span><span class="p">);</span>
-</span><span class='line'>      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-</span><span class='line'>        <span class="o">--</span><span class="n">timer</span><span class="o">-&gt;</span><span class="n">remainingRounds</span><span class="p">;</span>
-</span><span class='line'>      <span class="p">}</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>  <span class="p">}</span>
-</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="cp">###### Comments on implementation.</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">This</span> <span class="n">is</span> <span class="n">a</span> <span class="n">slight</span> <span class="n">improvement</span> <span class="n">on</span> <span class="n">our</span> <span class="n">base</span> <span class="n">line</span><span class="p">.</span> <span class="n">By</span> <span class="k">using</span> <span class="n">a</span> <span class="n">vector</span> <span class="n">of</span> <span class="n">pointers</span> <span class="n">to</span> <span class="n">timers</span> <span class="n">we</span> <span class="n">have</span> <span class="n">removed</span> <span class="n">the</span> <span class="n">need</span> <span class="k">for</span> <span class="n">the</span> <span class="n">next</span> <span class="n">pointers</span> <span class="o">-</span> <span class="n">a</span> <span class="n">slight</span> <span class="n">improvement</span> <span class="n">in</span> <span class="n">space</span> <span class="n">usage</span><span class="p">.</span> <span class="n">We</span> <span class="n">still</span> <span class="n">have</span> <span class="n">the</span> <span class="n">terrible</span> <span class="n">pattern</span> <span class="n">of</span> <span class="n">having</span> <span class="n">to</span>  <span class="n">use</span> <span class="err">```</span><span class="n">malloc</span><span class="p">()</span><span class="err">```</span> <span class="n">and</span> <span class="err">```</span><span class="n">free</span><span class="p">()</span><span class="err">```</span> <span class="n">on</span> <span class="n">each</span> <span class="err">```</span><span class="n">add_timer</span><span class="p">()</span><span class="err">```</span> <span class="n">and</span> <span class="err">```</span><span class="n">cancel_timer</span><span class="p">()</span><span class="err">```</span> <span class="n">call</span><span class="p">.</span> <span class="n">During</span> <span class="n">expiry</span> <span class="n">of</span> <span class="n">timers</span> <span class="n">we</span> <span class="n">now</span> <span class="n">traverse</span> <span class="n">a</span> <span class="n">vector</span> <span class="n">of</span> <span class="n">pointers</span> <span class="n">to</span> <span class="n">timers</span> <span class="n">instead</span> <span class="n">of</span> <span class="n">a</span> <span class="n">linked</span> <span class="n">list</span><span class="p">.</span> <span class="n">This</span> <span class="n">is</span> <span class="n">only</span> <span class="n">marginally</span> <span class="n">better</span> <span class="n">than</span> <span class="n">the</span> <span class="n">first</span> <span class="n">implementation</span> <span class="n">since</span> <span class="n">the</span> <span class="n">timers</span> <span class="n">themselves</span> <span class="n">are</span> <span class="n">allocated</span> <span class="n">randomly</span><span class="p">.</span>
+</span><span class='line'>
+</span><span class='line'><span class="cp">#####3. Vector of inlined timers.</span>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span> <span class="n">align</span><span class="o">=</span><span class="s">&quot;center&quot;</span><span class="o">&gt;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="n">img</span> <span class="n">src</span><span class="o">=</span><span class="s">&quot;/images/hashed-wheel-timer-inlined-vector.svg&quot;</span> <span class="n">width</span><span class="o">=</span><span class="s">&quot;500&quot;</span><span class="o">&gt;</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">Let</span><span class="err">&#39;</span><span class="n">s</span> <span class="n">see</span> <span class="k">if</span> <span class="n">we</span> <span class="n">can</span> <span class="n">improve</span> <span class="n">effiency</span> <span class="n">by</span> <span class="n">making</span> <span class="n">our</span> <span class="n">interface</span> <span class="n">even</span> <span class="n">more</span> <span class="n">specialized</span><span class="p">.</span> <span class="n">So</span> <span class="n">far</span> <span class="n">we</span> <span class="n">have</span> <span class="n">returned</span> <span class="n">a</span> <span class="err">```</span><span class="n">Timer</span><span class="o">*</span><span class="err">```</span> <span class="n">on</span> <span class="n">an</span> <span class="err">```</span><span class="n">add_timer</span><span class="p">()</span><span class="err">```</span> <span class="n">call</span><span class="p">.</span> <span class="n">Our</span> <span class="n">intented</span> <span class="n">use</span> <span class="k">for</span> <span class="n">the</span> <span class="err">```</span><span class="n">Timer</span><span class="o">*</span><span class="err">```</span> <span class="n">is</span> <span class="n">to</span> <span class="n">cancel</span> <span class="n">the</span> <span class="n">timer</span> <span class="k">using</span> <span class="k">this</span> <span class="n">pointer</span><span class="p">.</span> <span class="n">Thus</span> <span class="n">we</span> <span class="n">will</span> <span class="n">end</span> <span class="n">up</span> <span class="n">stashing</span> <span class="k">this</span> <span class="n">pointer</span> <span class="n">somewhere</span><span class="p">.</span> <span class="n">Maybe</span> <span class="n">on</span> <span class="n">a</span> <span class="n">per</span> <span class="n">connection</span> <span class="n">structure</span> <span class="n">or</span> <span class="n">a</span> <span class="n">hash</span> <span class="n">map</span> <span class="n">or</span> <span class="n">something</span><span class="p">.</span> <span class="n">What</span> <span class="k">if</span> <span class="n">we</span> <span class="n">could</span> <span class="n">store</span> <span class="n">a</span> <span class="n">pointer</span> <span class="n">to</span> <span class="k">this</span> <span class="n">timer</span> <span class="n">holder</span> <span class="n">structure</span> <span class="p">(</span><span class="n">that</span> <span class="n">points</span> <span class="n">to</span> <span class="n">our</span> <span class="n">timer</span><span class="p">)</span> <span class="n">in</span> <span class="n">our</span> <span class="n">timer</span><span class="o">?</span> <span class="n">We</span> <span class="n">could</span> <span class="n">then</span> <span class="n">safely</span> <span class="n">move</span><span class="o">/</span><span class="n">invalidate</span> <span class="n">the</span> <span class="n">pointer</span> <span class="n">to</span> <span class="n">a</span> <span class="n">timer</span><span class="p">,</span> <span class="n">updating</span> <span class="n">the</span> <span class="n">only</span> <span class="n">place</span> <span class="n">where</span> <span class="k">this</span> <span class="n">timer</span> <span class="n">was</span> <span class="n">actually</span> <span class="n">referenced</span><span class="p">.</span> <span class="n">Here</span> <span class="n">we</span> <span class="n">assume</span> <span class="n">that</span> <span class="n">the</span> <span class="n">pointer</span> <span class="n">to</span> <span class="n">the</span> <span class="n">timer</span> <span class="n">was</span> <span class="n">stashed</span> <span class="n">in</span> <span class="n">only</span> <span class="n">one</span> <span class="n">place</span><span class="p">.</span> <span class="n">This</span> <span class="n">is</span> <span class="n">somewhat</span> <span class="n">like</span> <span class="n">our</span> <span class="n">own</span> <span class="n">little</span> <span class="n">garbage</span> <span class="n">collector</span> <span class="n">updating</span> <span class="n">references</span> <span class="n">to</span> <span class="n">timer</span> <span class="n">objects</span> <span class="n">that</span> <span class="n">were</span> <span class="n">moved</span> <span class="n">around</span><span class="p">.</span> <span class="n">Let</span><span class="err">&#39;</span><span class="n">s</span> <span class="n">look</span> <span class="n">at</span> <span class="n">our</span> <span class="k">new</span> <span class="n">data</span> <span class="nl">structures:</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>So our algorithm characteristics in brief are:</p>
+<p> cpp NewTimer.h</p>
 
-<ol>
-<li>To add a timer, just append it to the appropriate vector &ndash; <code>O(1)</code>.</li>
-<li>To cancel a timer, delete it from the middle of the vector and move a pointer to occupy the hole  &ndash; <code>O(1)</code>.</li>
-<li>To clean up all expired timers &ndash; Traverse the vector of timers and delete expired ones &ndash; <code>O(expired timers)</code>. Again actual time depends on how many timers hashed onto a bucket.</li>
-</ol>
+<p>// Holder of a pseudo-pointer to a timer.
+// This can be used to cancel the timer.
+struct TimerHolder {
+  uint32_t bucket_number;
+  uint32_t index_within_bucket;
+};</p>
 
+<p>struct Timer {
+  uint64_t id;
+  uint64_t deadline;
+  uint64_t remaining_rounds;
+  // Pointer to the sole container of this timer.
+  TimerHolder* holder;
+};</p>
 
-<h6>Comments on implementation.</h6>
+<p>struct TimerBucket {
+  int size;
+  int capacity;
+  // Array of Timers.
+  Timer* timers;
+};</p>
 
-<p>This is a slight improvement on our base line. By using a vector of pointers to timers we have removed the need for the next pointers &ndash; a slight improvement in space usage. We still have the terrible pattern of having to  use <code>malloc()</code> and <code>free()</code> on each <code>add_timer()</code> and <code>cancel_timer()</code> call. During expiry of timers we now traverse a vector of pointers to timers instead of a linked list. This is only marginally better than the first implementation since the timers themselves are allocated randomly.</p>
-
-<h5>3. Vector of inlined timers.</h5>
-
-<p align="center">
-<img src="/images/hashed-wheel-timer-inlined-vector.svg" width="500">
-</p>
-
-
-<p>Let&rsquo;s see if we can improve effiency by making our interface even more specialized. So far we have returned a <code>Timer*</code> on an <code>add_timer()</code> call. Our intented use for the <code>Timer*</code> is to cancel the timer using this pointer. Thus we will end up stashing this pointer somewhere. Maybe on a per connection structure or a hash map or something. What if we could store a pointer to this timer holder structure (that points to our timer) in our timer? We could then safely move/invalidate the pointer to a timer, updating the only place where this timer was actually referenced. Here we assume that the pointer to the timer was stashed in only one place. This is somewhat like our own little garbage collector updating references to timer objects that were moved around. Let&rsquo;s look at our new data structures:</p>
-
-<figure class='code'><figcaption><span>NewTimer.h</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-</pre></td><td class='code'><pre><code class='cpp'><span class='line'><span class="c1">// Holder of a pseudo-pointer to a timer.</span>
-</span><span class='line'><span class="c1">// This can be used to cancel the timer.</span>
-</span><span class='line'><span class="k">struct</span> <span class="n">TimerHolder</span> <span class="p">{</span>
-</span><span class='line'>  <span class="n">uint32_t</span> <span class="n">bucket_number</span><span class="p">;</span>
-</span><span class='line'>  <span class="n">uint32_t</span> <span class="n">index_within_bucket</span><span class="p">;</span>
-</span><span class='line'><span class="p">};</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">struct</span> <span class="n">Timer</span> <span class="p">{</span>
-</span><span class='line'>  <span class="n">uint64_t</span> <span class="n">id</span><span class="p">;</span>
-</span><span class='line'>  <span class="n">uint64_t</span> <span class="n">deadline</span><span class="p">;</span>
-</span><span class='line'>  <span class="n">uint64_t</span> <span class="n">remaining_rounds</span><span class="p">;</span>
-</span><span class='line'>  <span class="c1">// Pointer to the sole container of this timer.</span>
-</span><span class='line'>  <span class="n">TimerHolder</span><span class="o">*</span> <span class="n">holder</span><span class="p">;</span>
-</span><span class='line'><span class="p">};</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">struct</span> <span class="n">TimerBucket</span> <span class="p">{</span>
-</span><span class='line'>  <span class="kt">int</span> <span class="n">size</span><span class="p">;</span>
-</span><span class='line'>  <span class="kt">int</span> <span class="n">capacity</span><span class="p">;</span>
-</span><span class='line'>  <span class="c1">// Array of Timers.</span>
-</span><span class='line'>  <span class="n">Timer</span><span class="o">*</span> <span class="n">timers</span><span class="p">;</span>
-</span><span class='line'><span class="p">};</span>
+<figure class='code'><figcaption><span>Timer.cpp</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='cpp'><span class='line'><span class="n">Our</span> <span class="n">modified</span> <span class="n">interface</span> <span class="n">now</span> <span class="nl">is:</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Our modified interface now is:</p>
+<p> cpp TimerWheel.h
+// Put the pointer to the timer in the holder.
+void add_timer(uint64_t delay, uint64_t id, TimerHolder* holder);</p>
 
-<figure class='code'><figcaption><span>TimerWheel.h</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='cpp'><span class='line'><span class="c1">// Put the pointer to the timer in the holder.</span>
-</span><span class='line'><span class="kt">void</span> <span class="n">add_timer</span><span class="p">(</span><span class="n">uint64_t</span> <span class="n">delay</span><span class="p">,</span> <span class="n">uint64_t</span> <span class="n">id</span><span class="p">,</span> <span class="n">TimerHolder</span><span class="o">*</span> <span class="n">holder</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// The TimerHolder is always kept up to date. Since this is a single threaded timer</span>
-</span><span class='line'><span class="c1">// this is not impossible to ensure.</span>
-</span><span class='line'><span class="kt">void</span> <span class="n">cancel_timer</span><span class="p">(</span><span class="n">TimerHolder</span><span class="o">*</span> <span class="n">timer</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// Write the list of expired ids into the input array, assuming it is long enough.</span>
-</span><span class='line'><span class="kt">void</span> <span class="n">expire_timers</span><span class="p">(</span><span class="n">uint64_t</span><span class="o">*</span> <span class="n">ids</span><span class="p">,</span> <span class="n">uint64_t</span> <span class="n">size</span><span class="p">);</span>
+<p>// The TimerHolder is always kept up to date. Since this is a single threaded timer
+// this is not impossible to ensure.
+void cancel_timer(TimerHolder* timer);</p>
+
+<p>// Write the list of expired ids into the input array, assuming it is long enough.
+void expire_timers(uint64_t* ids, uint64_t size);</p>
+
+<figure class='code'><figcaption><span>Timer.cpp</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='cpp'><span class='line'><span class="n">Our</span> <span class="n">algorithms</span> <span class="n">look</span> <span class="n">like</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Our algorithms look like</p>
+<p> cpp TimerWheel.cpp
+void add_timer(uint64_t delay, uint64_t id, TimerHolder<em> holder) {
+  TimerBucket</em> bucket = findBucket(timer);
+  // Just append timer to end of the bucket, no malloc needed.
+  // Update the holder to contain the bucket_number and index_within_bucket.
+  initalize_timer(bucket, delay, id, holder);
+}</p>
 
-<figure class='code'><figcaption><span>TimerWheel.cpp</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-<span class='line-number'>38</span>
-<span class='line-number'>39</span>
-<span class='line-number'>40</span>
-<span class='line-number'>41</span>
-<span class='line-number'>42</span>
-<span class='line-number'>43</span>
-<span class='line-number'>44</span>
-<span class='line-number'>45</span>
-</pre></td><td class='code'><pre><code class='cpp'><span class='line'><span class="kt">void</span> <span class="n">add_timer</span><span class="p">(</span><span class="n">uint64_t</span> <span class="n">delay</span><span class="p">,</span> <span class="n">uint64_t</span> <span class="n">id</span><span class="p">,</span> <span class="n">TimerHolder</span><span class="o">*</span> <span class="n">holder</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="n">TimerBucket</span><span class="o">*</span> <span class="n">bucket</span> <span class="o">=</span> <span class="n">findBucket</span><span class="p">(</span><span class="n">timer</span><span class="p">);</span>
-</span><span class='line'>  <span class="c1">// Just append timer to end of the bucket, no malloc needed.</span>
-</span><span class='line'>  <span class="c1">// Update the holder to contain the bucket_number and index_within_bucket.</span>
-</span><span class='line'>  <span class="n">initalize_timer</span><span class="p">(</span><span class="n">bucket</span><span class="p">,</span> <span class="n">delay</span><span class="p">,</span> <span class="n">id</span><span class="p">,</span> <span class="n">holder</span><span class="p">);</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="kt">void</span> <span class="n">cancel_timer</span><span class="p">(</span><span class="n">TimerHolder</span><span class="o">*</span> <span class="n">holder</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="c1">// Do some sanity checking first.</span>
-</span><span class='line'>  <span class="n">TimerBucket</span><span class="o">*</span> <span class="n">bucket</span> <span class="o">=</span> <span class="n">find_bucket</span><span class="p">(</span><span class="n">holder</span><span class="o">-&gt;</span><span class="n">bucket_number</span><span class="p">);</span>
-</span><span class='line'>  <span class="n">uint32_t</span> <span class="n">cancelled_timer_index</span> <span class="o">=</span> <span class="n">holder</span><span class="o">-&gt;</span><span class="n">index_within_bucket</span><span class="p">;</span>
-</span><span class='line'>  <span class="n">Timer</span><span class="o">*</span> <span class="n">timer</span> <span class="o">=</span> <span class="n">find_timer</span><span class="p">(</span><span class="n">bucket</span><span class="p">,</span> <span class="n">cancelled_timer_index</span><span class="p">);</span>
-</span><span class='line'>  <span class="c1">// We need to cancel this timer.</span>
-</span><span class='line'>  <span class="c1">// Just memcpy the last timer in this bucket to occupy the deleted place.</span>
-</span><span class='line'>  <span class="c1">// A timer is just 32 bytes, copying it VS copying a pointer is not a big deal.</span>
-</span><span class='line'>  <span class="c1">// If the cancelled timer is the last timer in this bucket no copy is needed.</span>
-</span><span class='line'>  <span class="c1">// Decrement the vector size by 1.</span>
-</span><span class='line'>  <span class="n">Timer</span><span class="o">*</span> <span class="n">moved_timer</span> <span class="o">=</span> <span class="n">move_last_timer_if_needed</span><span class="p">(</span><span class="n">bucket</span><span class="p">,</span> <span class="n">cancelled_timer_index</span><span class="p">);</span>
-</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="n">moved_timer</span> <span class="o">!=</span> <span class="n">nullptr</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="c1">// If a timer that was moved, change it&#39;s holder&#39;s offsets, </span>
-</span><span class='line'>    <span class="c1">// so it points to the new location of the timer.</span>
-</span><span class='line'>    <span class="n">adjust_holder_pointer</span><span class="p">(</span><span class="n">moved_timer</span><span class="o">-&gt;</span><span class="n">holder</span><span class="p">,</span> <span class="n">cancelled_timer_index</span><span class="p">);</span>
-</span><span class='line'>  <span class="p">}</span>
-</span><span class='line'>  <span class="c1">// The holder for the deleted timer should now contain a null ptr.</span>
-</span><span class='line'>  <span class="c1">// The caller will decide what to do with the holder after this function returns.</span>
-</span><span class='line'>  <span class="n">invalidate_holder_timer</span><span class="p">(</span><span class="n">holder</span><span class="p">);</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// The expiry logic remains similar. We just traverse an array of inlined timers now.</span>
-</span><span class='line'>
-</span><span class='line'><span class="kt">void</span> <span class="n">expire_timers</span><span class="p">(</span><span class="n">uint64_t</span><span class="o">*</span> <span class="n">ids</span><span class="p">,</span> <span class="n">uint64_t</span> <span class="n">size</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="c1">// If it wasn&#39;t already clear this is pseudo code.</span>
-</span><span class='line'>  <span class="n">deadline</span> <span class="o">=</span> <span class="n">calculate_deadline</span><span class="p">();</span>
-</span><span class='line'>  <span class="kt">int</span> <span class="n">num_ids_added</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-</span><span class='line'>  <span class="k">for</span> <span class="p">(</span><span class="n">bucket</span> <span class="o">:</span> <span class="n">every</span> <span class="n">bucket</span> <span class="n">that</span> <span class="n">could</span> <span class="n">contain</span> <span class="n">expired</span> <span class="n">timers</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="k">for</span> <span class="p">(</span><span class="n">timer</span> <span class="o">:</span> <span class="n">bucket</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>      <span class="k">if</span> <span class="p">(</span><span class="mi">0</span> <span class="o">&gt;=</span> <span class="n">timer</span><span class="o">-&gt;</span><span class="n">remainingRounds</span> <span class="o">&amp;&amp;</span> <span class="n">timer</span><span class="o">-&gt;</span><span class="n">deadline</span> <span class="o">&lt;=</span> <span class="n">deadline</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>        <span class="n">append_to_ids</span><span class="p">(</span><span class="n">ids</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">num_ids_added</span><span class="p">,</span> <span class="n">timer</span><span class="o">-&gt;</span><span class="n">id</span><span class="p">);</span>
-</span><span class='line'>        <span class="n">cancel_timer</span><span class="p">(</span><span class="n">timer</span><span class="o">-&gt;</span><span class="n">holder</span><span class="p">);</span>
-</span><span class='line'>      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-</span><span class='line'>        <span class="o">--</span><span class="n">timer</span><span class="o">-&gt;</span><span class="n">remainingRounds</span><span class="p">;</span>
-</span><span class='line'>      <span class="p">}</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>  <span class="p">}</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
+<p>void cancel_timer(TimerHolder<em> holder) {
+  // Do some sanity checking first.
+  TimerBucket</em> bucket = find_bucket(holder->bucket_number);
+  uint32_t cancelled_timer_index = holder->index_within_bucket;
+  Timer<em> timer = find_timer(bucket, cancelled_timer_index);
+  // We need to cancel this timer.
+  // Just memcpy the last timer in this bucket to occupy the deleted place.
+  // A timer is just 32 bytes, copying it VS copying a pointer is not a big deal.
+  // If the cancelled timer is the last timer in this bucket no copy is needed.
+  // Decrement the vector size by 1.
+  Timer</em> moved_timer = move_last_timer_if_needed(bucket, cancelled_timer_index);
+  if (moved_timer != nullptr) {</p>
 
+<pre><code>// If a timer that was moved, change it's holder's offsets, 
+// so it points to the new location of the timer.
+adjust_holder_pointer(moved_timer-&gt;holder, cancelled_timer_index);
+</code></pre>
 
-<p>So our algorithm characteristics in brief are:</p>
+<p>  }
+  // The holder for the deleted timer should now contain a null ptr.
+  // The caller will decide what to do with the holder after this function returns.
+  invalidate_holder_timer(holder);
+}</p>
+
+<p>// The expiry logic remains similar. We just traverse an array of inlined timers now.</p>
+
+<p>void expire_timers(uint64_t* ids, uint64_t size) {
+  // If it wasn&rsquo;t already clear this is pseudo code.
+  deadline = calculate_deadline();
+  int num_ids_added = 0;
+  for (bucket : every bucket that could contain expired timers) {</p>
+
+<pre><code>for (timer : bucket) {
+  if (0 &gt;= timer-&gt;remainingRounds &amp;&amp; timer-&gt;deadline &lt;= deadline) {
+    append_to_ids(ids, size, &amp;num_ids_added, timer-&gt;id);
+    cancel_timer(timer-&gt;holder);
+  } else {
+    --timer-&gt;remainingRounds;
+  }
+}
+</code></pre>
+
+<p>  }
+}
+&#8220;`
+So our algorithm characteristics in brief are:</p>
 
 <ol>
 <li>To add a timer, just scribble some data to the end of the appropriate vector &ndash; <code>O(1)</code>.</li>

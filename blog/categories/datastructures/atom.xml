@@ -4,7 +4,7 @@
   <title><![CDATA[Category: DataStructures | My blog.]]></title>
   <link href="http://RajivKurian.github.io/blog/categories/datastructures/atom.xml" rel="self"/>
   <link href="http://RajivKurian.github.io/"/>
-  <updated>2014-11-12T01:44:15-08:00</updated>
+  <updated>2014-11-12T01:53:57-08:00</updated>
   <id>http://RajivKurian.github.io/</id>
   <author>
     <name><![CDATA[Rajiv]]></name>
@@ -71,31 +71,24 @@ struct Timer {
 
 <p>Each bucket simply points to an intrusive doubly linked list of timers. Our timer struct looks like:</p>
 
-<p>``` cpp Timer.cpp
-enum PreviousType {Timer, TimerWheel};</p>
-
 <p>struct Timer {
   uint64_t id;
   uint64_t deadline;
   uint64_t remaining_rounds;
-  Timer* next;
-  // A tagged union since the previous could be either a
-  // pointer to a timer or a pointer to the bucket.
-  union {</p>
+  Timer<em> next;
+  // Previous is null if this is the first timer in the list.
+  Timer</em> previous;
+};</p>
 
-<pre><code>Timer* previous;
-TimerBucket* wheel;
-</code></pre>
-
-<p>  }
-  enum PreviousType previousType;
+<p>struct TimerBucket {
+  Timer<em> list;
 };
 <code>
 Our algorithms look like
 </code> cpp TimerWheel.cpp
-Timer<em> add_timer(uint64_t delay, uint64_t id) {
-  Timer</em> timer = create_timer(delay, id);
-  TimerBucket* bucket = findBucket(timer);
+Timer</em> add_timer(uint64_t delay, uint64_t id) {
+  Timer<em> timer = create_timer(delay, id);
+  TimerBucket</em> bucket = findBucket(timer);
   // Just prepend the timer to the linked list at the bucket;
   insert_into_bucket(bucket_id, timer);
   return timer;
