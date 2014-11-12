@@ -133,16 +133,24 @@
 <span class='line-number'>9</span>
 <span class='line-number'>10</span>
 <span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class='cpp'><span class='line'><span class="c1">// A Timer is uniquely identified by an id.</span>
-</span><span class='line'><span class="c1">// We don&#39;t care how this id is generated.</span>
-</span><span class='line'><span class="n">Timer</span><span class="o">*</span> <span class="n">add_timer</span><span class="p">(</span><span class="n">uint64_t</span> <span class="n">delay</span><span class="p">,</span> <span class="n">uint64_t</span> <span class="n">id</span><span class="p">);</span>  <span class="c1">// Assume that the delay is in nanos for now.</span>
-</span><span class='line'><span class="kt">void</span> <span class="n">cancel_timer</span><span class="p">(</span><span class="n">Timer</span><span class="o">*</span> <span class="n">timer</span><span class="p">);</span>
-</span><span class='line'><span class="c1">// Write the list of expired ids into the input array, assuming it is long enough.</span>
-</span><span class='line'><span class="c1">// Returning a list of expired timers instead of calling the expiry processing inline</span>
-</span><span class='line'><span class="c1">// helps in ensuring the integrity of internal timer data structures</span>
-</span><span class='line'><span class="c1">// since all we need to do is ensure that the timer structures are</span>
-</span><span class='line'><span class="c1">// consistent before and after a function call, but not during.</span>
-</span><span class='line'><span class="kt">void</span> <span class="n">expire_timers</span><span class="p">(</span><span class="n">uint64_t</span><span class="o">*</span> <span class="n">ids</span><span class="p">,</span> <span class="n">uint64_t</span> <span class="n">size</span><span class="p">);</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='cpp'><span class='line'><span class="k">struct</span> <span class="n">TimerWheel</span> <span class="p">{</span>
+</span><span class='line'><span class="k">public</span><span class="o">:</span>
+</span><span class='line'>  <span class="c1">// Fields ....</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// A Timer is uniquely identified by an id.</span>
+</span><span class='line'>  <span class="c1">// We don&#39;t care how this id is generated.</span>
+</span><span class='line'>  <span class="n">Timer</span><span class="o">*</span> <span class="n">add_timer</span><span class="p">(</span><span class="n">uint64_t</span> <span class="n">delay</span><span class="p">,</span> <span class="n">uint64_t</span> <span class="n">id</span><span class="p">);</span>  <span class="c1">// Assume that the delay is in nanos for now.</span>
+</span><span class='line'>  <span class="kt">void</span> <span class="n">cancel_timer</span><span class="p">(</span><span class="n">Timer</span><span class="o">*</span> <span class="n">timer</span><span class="p">);</span>
+</span><span class='line'>  <span class="c1">// Write the list of expired ids into the input array, assuming it is long enough.</span>
+</span><span class='line'>  <span class="c1">// Returning a list of expired timers instead of calling the expiry processing inline</span>
+</span><span class='line'>  <span class="c1">// helps in ensuring the integrity of internal timer data structures</span>
+</span><span class='line'>  <span class="c1">// since all we need to do is ensure that the timer structures are</span>
+</span><span class='line'>  <span class="c1">// consistent before and after a function call, but not during.</span>
+</span><span class='line'>  <span class="kt">void</span> <span class="n">expire_timers</span><span class="p">(</span><span class="n">uint64_t</span><span class="o">*</span> <span class="n">ids</span><span class="p">,</span> <span class="n">uint64_t</span> <span class="n">size</span><span class="p">);</span>
 </span><span class='line'><span class="p">}</span>
 </span></code></pre></td></tr></table></div></figure>
 
@@ -151,15 +159,17 @@
 
 <p>So the absolute minimum data we need to have in our timers is:</p>
 
-<figure class='code'><figcaption><span>Timer.cpp</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span>Timer.h</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
+<span class='line-number'>6</span>
 </pre></td><td class='code'><pre><code class='cpp'><span class='line'><span class="k">struct</span> <span class="n">Timer</span> <span class="p">{</span>
 </span><span class='line'>  <span class="n">uint64_t</span> <span class="n">id</span><span class="p">;</span>  <span class="c1">// Or some other unique identifier. 8 bytes should be enough.</span>
 </span><span class='line'>  <span class="n">uint64_t</span> <span class="n">deadline</span><span class="p">;</span>
 </span><span class='line'>  <span class="n">uint64_t</span> <span class="n">remaining_rounds</span><span class="p">;</span>
+</span><span class='line'>  <span class="c1">// Other stuff...</span>
 </span><span class='line'><span class="p">};</span>
 </span></code></pre></td></tr></table></div></figure>
 
@@ -173,9 +183,9 @@
 </p>
 
 
-<p>Each bucket simply points to an intrusive doubly linked list of timers. Our timer struct looks like:</p>
+<p>Each bucket simply points to an intrusive doubly linked list of timers. Our data structures look like:</p>
 
-<figure class='code'><figcaption><span>Timer.cpp</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span>Timer.h</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -187,17 +197,45 @@
 <span class='line-number'>10</span>
 <span class='line-number'>11</span>
 <span class='line-number'>12</span>
-</pre></td><td class='code'><pre><code class='cpp'><span class='line'><span class="k">struct</span> <span class="n">Timer</span> <span class="p">{</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+</pre></td><td class='code'><pre><code class='cpp'><span class='line'><span class="k">enum</span> <span class="n">PreviousType</span> <span class="p">{</span><span class="n">Timer</span><span class="p">,</span> <span class="n">TimerWheel</span><span class="p">};</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">struct</span> <span class="n">Timer</span> <span class="p">{</span>
 </span><span class='line'>  <span class="n">uint64_t</span> <span class="n">id</span><span class="p">;</span>
 </span><span class='line'>  <span class="n">uint64_t</span> <span class="n">deadline</span><span class="p">;</span>
 </span><span class='line'>  <span class="n">uint64_t</span> <span class="n">remaining_rounds</span><span class="p">;</span>
 </span><span class='line'>  <span class="n">Timer</span><span class="o">*</span> <span class="n">next</span><span class="p">;</span>
-</span><span class='line'>  <span class="c1">// Previous is null if this is the first timer in the list.</span>
-</span><span class='line'>  <span class="n">Timer</span><span class="o">*</span> <span class="n">previous</span><span class="p">;</span>
+</span><span class='line'>  <span class="c1">// A tagged union since the previous could be either a</span>
+</span><span class='line'>  <span class="c1">// pointer to a timer or a pointer to the bucket.</span>
+</span><span class='line'>  <span class="k">union</span> <span class="p">{</span>
+</span><span class='line'>    <span class="n">Timer</span><span class="o">*</span> <span class="n">previous</span><span class="p">;</span>
+</span><span class='line'>    <span class="n">TimerBucket</span><span class="o">*</span> <span class="n">wheel</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>  <span class="k">enum</span> <span class="n">PreviousType</span> <span class="n">previousType</span><span class="p">;</span>
 </span><span class='line'><span class="p">};</span>
 </span><span class='line'>
 </span><span class='line'><span class="k">struct</span> <span class="n">TimerBucket</span> <span class="p">{</span>
-</span><span class='line'>  <span class="n">Timer</span><span class="o">*</span> <span class="n">list</span><span class="p">;</span>
+</span><span class='line'>  <span class="n">Timer</span><span class="o">*</span> <span class="n">timer_list</span><span class="p">;</span>
+</span><span class='line'><span class="p">};</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">struct</span> <span class="n">TimerWheel</span> <span class="p">{</span>
+</span><span class='line'>  <span class="n">TimerBucket</span><span class="p">[</span><span class="n">NUM_BUCKETS</span><span class="p">];</span>
+</span><span class='line'>  <span class="c1">// Other stuff.</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// Methods...</span>
 </span><span class='line'><span class="p">};</span>
 </span></code></pre></td></tr></table></div></figure>
 
@@ -233,7 +271,7 @@
 <span class='line-number'>27</span>
 <span class='line-number'>28</span>
 <span class='line-number'>29</span>
-</pre></td><td class='code'><pre><code class='cpp'><span class='line'><span class="n">Timer</span><span class="o">*</span> <span class="n">add_timer</span><span class="p">(</span><span class="n">uint64_t</span> <span class="n">delay</span><span class="p">,</span> <span class="n">uint64_t</span> <span class="n">id</span><span class="p">)</span> <span class="p">{</span>
+</pre></td><td class='code'><pre><code class='cpp'><span class='line'><span class="n">Timer</span><span class="o">*</span> <span class="n">TimerWheel</span><span class="o">::</span><span class="n">add_timer</span><span class="p">(</span><span class="n">uint64_t</span> <span class="n">delay</span><span class="p">,</span> <span class="n">uint64_t</span> <span class="n">id</span><span class="p">)</span> <span class="p">{</span>
 </span><span class='line'>  <span class="n">Timer</span><span class="o">*</span> <span class="n">timer</span> <span class="o">=</span> <span class="n">create_timer</span><span class="p">(</span><span class="n">delay</span><span class="p">,</span> <span class="n">id</span><span class="p">);</span>
 </span><span class='line'>  <span class="n">TimerBucket</span><span class="o">*</span> <span class="n">bucket</span> <span class="o">=</span> <span class="n">findBucket</span><span class="p">(</span><span class="n">timer</span><span class="p">);</span>
 </span><span class='line'>  <span class="c1">// Just prepend the timer to the linked list at the bucket;</span>
@@ -241,13 +279,13 @@
 </span><span class='line'>  <span class="k">return</span> <span class="n">timer</span><span class="p">;</span>
 </span><span class='line'><span class="p">}</span>
 </span><span class='line'>
-</span><span class='line'><span class="kt">void</span> <span class="n">cancel_timer</span><span class="p">(</span><span class="n">Timer</span><span class="o">*</span> <span class="n">timer</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'><span class="kt">void</span> <span class="n">TimerWheel</span><span class="o">::</span><span class="n">cancel_timer</span><span class="p">(</span><span class="n">Timer</span><span class="o">*</span> <span class="n">timer</span><span class="p">)</span> <span class="p">{</span>
 </span><span class='line'>  <span class="c1">// Since the timer is part of a doubly linked list,</span>
 </span><span class='line'>  <span class="c1">// just delete it from the linked list and free the memory.</span>
 </span><span class='line'><span class="p">}</span>
 </span><span class='line'>
 </span><span class='line'><span class="c1">// Write the list of expired ids into the input array, assuming it is long enough.</span>
-</span><span class='line'><span class="kt">void</span> <span class="n">expire_timers</span><span class="p">(</span><span class="n">uint64_t</span><span class="o">*</span> <span class="n">ids</span><span class="p">,</span> <span class="n">uint64_t</span> <span class="n">size</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'><span class="kt">void</span> <span class="n">TimerWheel</span><span class="o">::</span><span class="n">expire_timers</span><span class="p">(</span><span class="n">uint64_t</span><span class="o">*</span> <span class="n">ids</span><span class="p">,</span> <span class="n">uint64_t</span> <span class="n">size</span><span class="p">)</span> <span class="p">{</span>
 </span><span class='line'>  <span class="c1">// If it wasn&#39;t already clear this is pseudo code.</span>
 </span><span class='line'>  <span class="n">deadline</span> <span class="o">=</span> <span class="n">calculate_deadline</span><span class="p">();</span>
 </span><span class='line'>  <span class="kt">int</span> <span class="n">num_ids_added</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
@@ -287,7 +325,7 @@
 
 <p>Instead of an intrusive linked list we can just store a vector of pointers to timers. We can grow this vector as needed. If memory is not a concern we could allocate a large enough array so that growing is never needed (though still accounted for). Our timer struct now looks like:</p>
 
-<figure class='code'><figcaption><span>Timer.cpp</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span>Timer.h</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -299,6 +337,13 @@
 <span class='line-number'>10</span>
 <span class='line-number'>11</span>
 <span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
 </pre></td><td class='code'><pre><code class='cpp'><span class='line'><span class="k">struct</span> <span class="n">Timer</span> <span class="p">{</span>
 </span><span class='line'>  <span class="n">uint64_t</span> <span class="n">id</span><span class="p">;</span>
 </span><span class='line'>  <span class="n">uint64_t</span> <span class="n">deadline</span><span class="p">;</span>
@@ -310,6 +355,13 @@
 </span><span class='line'>  <span class="kt">int</span> <span class="n">capacity</span><span class="p">;</span>
 </span><span class='line'>  <span class="c1">// Array of pointers to timers.</span>
 </span><span class='line'>  <span class="n">Timer</span><span class="o">*</span> <span class="n">timers</span><span class="p">[];</span>
+</span><span class='line'><span class="p">};</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">struct</span> <span class="n">TimerWheel</span> <span class="p">{</span>
+</span><span class='line'>  <span class="n">TimerBucket</span><span class="p">[</span><span class="n">NUM_BUCKETS</span><span class="p">];</span>
+</span><span class='line'>  <span class="c1">// Other stuff.</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// Methods...</span>
 </span><span class='line'><span class="p">};</span>
 </span></code></pre></td></tr></table></div></figure>
 
@@ -352,7 +404,7 @@
 <span class='line-number'>34</span>
 <span class='line-number'>35</span>
 <span class='line-number'>36</span>
-</pre></td><td class='code'><pre><code class='cpp'><span class='line'><span class="n">Timer</span> <span class="n">add_timer</span><span class="p">(</span><span class="n">uint64_t</span> <span class="n">delay</span><span class="p">,</span> <span class="n">uint64_t</span> <span class="n">id</span><span class="p">)</span> <span class="p">{</span>
+</pre></td><td class='code'><pre><code class='cpp'><span class='line'><span class="n">Timer</span><span class="o">*</span> <span class="n">TimerWheel</span><span class="o">::</span><span class="n">add_timer</span><span class="p">(</span><span class="n">uint64_t</span> <span class="n">delay</span><span class="p">,</span> <span class="n">uint64_t</span> <span class="n">id</span><span class="p">)</span> <span class="p">{</span>
 </span><span class='line'>  <span class="n">Timer</span><span class="o">*</span> <span class="n">timer</span> <span class="o">=</span> <span class="n">create_timer</span><span class="p">(</span><span class="n">delay</span><span class="p">,</span> <span class="n">id</span><span class="p">);</span>
 </span><span class='line'>  <span class="n">TimerBucket</span><span class="o">*</span> <span class="n">bucket</span> <span class="o">=</span> <span class="n">findBucket</span><span class="p">(</span><span class="n">timer</span><span class="p">);</span>
 </span><span class='line'>  <span class="c1">// Just append the timer to the vector for the bucket.</span>
@@ -360,7 +412,7 @@
 </span><span class='line'>  <span class="k">return</span> <span class="n">timer</span><span class="p">;</span>
 </span><span class='line'><span class="p">}</span>
 </span><span class='line'>
-</span><span class='line'><span class="kt">void</span> <span class="n">cancel_timer</span><span class="p">(</span><span class="n">Timer</span><span class="o">*</span> <span class="n">timer</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'><span class="kt">void</span> <span class="n">TimerWheel</span><span class="o">::</span><span class="n">cancel_timer</span><span class="p">(</span><span class="n">Timer</span><span class="o">*</span> <span class="n">timer</span><span class="p">)</span> <span class="p">{</span>
 </span><span class='line'>  <span class="c1">// Since the timer is part of a vector, we can&#39;t just adjust a couple pointers.</span>
 </span><span class='line'>  <span class="c1">// Since ordering within the vector is not important, we copy the last</span>
 </span><span class='line'>  <span class="c1">// timer pointer (if the deleted timer wasn&#39;t the last one in the vector)</span>
@@ -373,7 +425,7 @@
 </span><span class='line'>
 </span><span class='line'><span class="c1">// The expiry logic remains similar. We just traverse an array of pointers now</span>
 </span><span class='line'><span class="c1">// instead of a doubly linked list.</span>
-</span><span class='line'><span class="kt">void</span> <span class="n">expire_timers</span><span class="p">(</span><span class="n">uint64_t</span><span class="o">*</span> <span class="n">ids</span><span class="p">,</span> <span class="n">uint64_t</span> <span class="n">size</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'><span class="kt">void</span> <span class="n">TimerWheel</span><span class="o">::</span><span class="n">expire_timers</span><span class="p">(</span><span class="n">uint64_t</span><span class="o">*</span> <span class="n">ids</span><span class="p">,</span> <span class="n">uint64_t</span> <span class="n">size</span><span class="p">)</span> <span class="p">{</span>
 </span><span class='line'>  <span class="c1">// If it wasn&#39;t already clear this is pseudo code.</span>
 </span><span class='line'>  <span class="n">deadline</span> <span class="o">=</span> <span class="n">calculate_deadline</span><span class="p">();</span>
 </span><span class='line'>  <span class="kt">int</span> <span class="n">num_ids_added</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
@@ -434,6 +486,13 @@
 <span class='line-number'>19</span>
 <span class='line-number'>20</span>
 <span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
 </pre></td><td class='code'><pre><code class='cpp'><span class='line'><span class="c1">// Holder of a pseudo-pointer to a timer.</span>
 </span><span class='line'><span class="c1">// This can be used to cancel the timer.</span>
 </span><span class='line'><span class="k">struct</span> <span class="n">TimerHolder</span> <span class="p">{</span>
@@ -454,6 +513,13 @@
 </span><span class='line'>  <span class="kt">int</span> <span class="n">capacity</span><span class="p">;</span>
 </span><span class='line'>  <span class="c1">// Array of Timers.</span>
 </span><span class='line'>  <span class="n">Timer</span><span class="o">*</span> <span class="n">timers</span><span class="p">;</span>
+</span><span class='line'><span class="p">};</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">struct</span> <span class="n">TimerWheel</span> <span class="p">{</span>
+</span><span class='line'>  <span class="n">TimerBucket</span><span class="p">[</span><span class="n">NUM_BUCKETS</span><span class="p">];</span>
+</span><span class='line'>  <span class="c1">// Other stuff.</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// Methods...</span>
 </span><span class='line'><span class="p">};</span>
 </span></code></pre></td></tr></table></div></figure>
 
@@ -528,14 +594,14 @@
 <span class='line-number'>43</span>
 <span class='line-number'>44</span>
 <span class='line-number'>45</span>
-</pre></td><td class='code'><pre><code class='cpp'><span class='line'><span class="kt">void</span> <span class="n">add_timer</span><span class="p">(</span><span class="n">uint64_t</span> <span class="n">delay</span><span class="p">,</span> <span class="n">uint64_t</span> <span class="n">id</span><span class="p">,</span> <span class="n">TimerHolder</span><span class="o">*</span> <span class="n">holder</span><span class="p">)</span> <span class="p">{</span>
+</pre></td><td class='code'><pre><code class='cpp'><span class='line'><span class="kt">void</span> <span class="n">TimerWheel</span><span class="o">::</span><span class="n">add_timer</span><span class="p">(</span><span class="n">uint64_t</span> <span class="n">delay</span><span class="p">,</span> <span class="n">uint64_t</span> <span class="n">id</span><span class="p">,</span> <span class="n">TimerHolder</span><span class="o">*</span> <span class="n">holder</span><span class="p">)</span> <span class="p">{</span>
 </span><span class='line'>  <span class="n">TimerBucket</span><span class="o">*</span> <span class="n">bucket</span> <span class="o">=</span> <span class="n">findBucket</span><span class="p">(</span><span class="n">timer</span><span class="p">);</span>
 </span><span class='line'>  <span class="c1">// Just append timer to end of the bucket, no malloc needed.</span>
 </span><span class='line'>  <span class="c1">// Update the holder to contain the bucket_number and index_within_bucket.</span>
 </span><span class='line'>  <span class="n">initalize_timer</span><span class="p">(</span><span class="n">bucket</span><span class="p">,</span> <span class="n">delay</span><span class="p">,</span> <span class="n">id</span><span class="p">,</span> <span class="n">holder</span><span class="p">);</span>
 </span><span class='line'><span class="p">}</span>
 </span><span class='line'>
-</span><span class='line'><span class="kt">void</span> <span class="n">cancel_timer</span><span class="p">(</span><span class="n">TimerHolder</span><span class="o">*</span> <span class="n">holder</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'><span class="kt">void</span> <span class="n">TimerWheel</span><span class="o">::</span><span class="n">cancel_timer</span><span class="p">(</span><span class="n">TimerHolder</span><span class="o">*</span> <span class="n">holder</span><span class="p">)</span> <span class="p">{</span>
 </span><span class='line'>  <span class="c1">// Do some sanity checking first.</span>
 </span><span class='line'>  <span class="n">TimerBucket</span><span class="o">*</span> <span class="n">bucket</span> <span class="o">=</span> <span class="n">find_bucket</span><span class="p">(</span><span class="n">holder</span><span class="o">-&gt;</span><span class="n">bucket_number</span><span class="p">);</span>
 </span><span class='line'>  <span class="n">uint32_t</span> <span class="n">cancelled_timer_index</span> <span class="o">=</span> <span class="n">holder</span><span class="o">-&gt;</span><span class="n">index_within_bucket</span><span class="p">;</span>
@@ -558,7 +624,7 @@
 </span><span class='line'>
 </span><span class='line'><span class="c1">// The expiry logic remains similar. We just traverse an array of inlined timers now.</span>
 </span><span class='line'>
-</span><span class='line'><span class="kt">void</span> <span class="n">expire_timers</span><span class="p">(</span><span class="n">uint64_t</span><span class="o">*</span> <span class="n">ids</span><span class="p">,</span> <span class="n">uint64_t</span> <span class="n">size</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'><span class="kt">void</span> <span class="n">TimerWheel</span><span class="o">::</span><span class="n">expire_timers</span><span class="p">(</span><span class="n">uint64_t</span><span class="o">*</span> <span class="n">ids</span><span class="p">,</span> <span class="n">uint64_t</span> <span class="n">size</span><span class="p">)</span> <span class="p">{</span>
 </span><span class='line'>  <span class="c1">// If it wasn&#39;t already clear this is pseudo code.</span>
 </span><span class='line'>  <span class="n">deadline</span> <span class="o">=</span> <span class="n">calculate_deadline</span><span class="p">();</span>
 </span><span class='line'>  <span class="kt">int</span> <span class="n">num_ids_added</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
