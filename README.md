@@ -1,2 +1,0 @@
-rajivkurian.github.io
-=====================
