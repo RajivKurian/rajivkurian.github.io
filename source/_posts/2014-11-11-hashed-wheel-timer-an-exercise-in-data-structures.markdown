@@ -287,4 +287,4 @@ We no longer call ```malloc()``` and ```free()``` on every timer call. Instead w
 
 ### Conclusion
 
-By analyzing the context of our timer algorithm we were able to come up with a better implementation albeit a more tightly coupled one. Wholistic analysis of a particular piece of software often opens up such opportunities for efficiency gains. Though many a time there is a ```efficiency``` VS ```simplicity``` trade-off, I've been surprised by the number of times such gains have been made without tigher coupling.
+By analyzing the context of our timer algorithm we were able to come up with a better implementation albeit a more tightly coupled one. Wholistic analysis of a particular piece of software often opens up such opportunities for efficiency gains. Though many a time there is a ```efficiency``` VS ```other-non-tangibles``` trade-off, I've been surprised by the number of times such gains have been made without tigher coupling.
