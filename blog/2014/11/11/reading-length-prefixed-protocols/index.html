@@ -5,8 +5,8 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Reading Length Prefixed Protocols - My Octopress Blog</title>
-  <meta name="author" content="Your Name">
+  <title>Reading Length Prefixed Protocols - My blog.</title>
+  <meta name="author" content="Rajiv">
 
   
   <meta name="description" content="Why length prefixed protocols? Protocol design can have a suprisingly large effect on performance. Text-based protocols while good for human &hellip;">
@@ -21,7 +21,7 @@
   <link rel="canonical" href="http://RajivKurian.github.io/blog/2014/11/11/reading-length-prefixed-protocols">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
+  <link href="/atom.xml" rel="alternate" title="My blog." type="application/atom+xml">
   <script src="/javascripts/modernizr-2.0.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
@@ -48,9 +48,7 @@
 
 <body   >
   <header role="banner"><hgroup>
-  <h1><a href="/">My Octopress Blog</a></h1>
-  
-    <h2>A blogging framework for hackers.</h2>
+  <h1><a href="/">My blog.</a></h1>
   
 </hgroup>
 
@@ -144,7 +142,7 @@
 </p>
 
 
-<p>So if we pick a default buffer size D, such that most of our requests are of <code>size D or less</code>, we minimize the number of read calls. When our requests are of <code>size greater than D</code> we incur some copy. The copy isn&rsquo;t that bad especially if our requests are small. Picking the default buffer size depends on the application. Erring on each side has different shortcomings:</p>
+<p>So if we pick a default buffer size D, such that most of our requests are of <code>size D or less</code>, we minimize the number of read calls. When our requests are of <code>size greater than D</code> we incur some copy. The copy isn&rsquo;t that bad especially if our requests are small. Picking the default buffer size depends on the application. Each option has different shortcomings:</p>
 
 <ol>
 <li>Pick too big a size: Internal fragmentation. We have too much unused space.</li>
@@ -208,7 +206,7 @@
       
   
 
-<span class="byline author vcard">Posted by <span class="fn">Your Name</span></span>
+<span class="byline author vcard">Posted by <span class="fn">Rajiv</span></span>
 
       
 
@@ -240,6 +238,8 @@
     <p class="meta">
       
       
+        <a class="basic-alignment right" href="/blog/2014/11/11/hashed-wheel-timer-an-exercise-in-data-structures/" title="Next Post: Hashed Wheel Timer - An exercise in data structures">Hashed Wheel Timer - An exercise in data structures &raquo;</a>
+      
     </p>
   </footer>
 </article>
@@ -257,6 +257,10 @@
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/11/11/hashed-wheel-timer-an-exercise-in-data-structures/">Hashed Wheel Timer - an Exercise in Data Structures</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/11/11/reading-length-prefixed-protocols/">Reading Length Prefixed Protocols</a>
@@ -279,7 +283,7 @@
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2014 - Your Name -
+  Copyright &copy; 2014 - Rajiv -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 

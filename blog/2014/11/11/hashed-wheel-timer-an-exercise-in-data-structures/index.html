@@ -1,24 +1,110 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My blog.]]></title>
-  <link href="http://RajivKurian.github.io/atom.xml" rel="self"/>
-  <link href="http://RajivKurian.github.io/"/>
-  <updated>2014-11-12T01:33:46-08:00</updated>
-  <id>http://RajivKurian.github.io/</id>
-  <author>
-    <name><![CDATA[Rajiv]]></name>
-    
-  </author>
-  <generator uri="http://octopress.org/">Octopress</generator>
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Hashed Wheel Timer - an Exercise in Data Structures - My blog.</title>
+  <meta name="author" content="Rajiv">
 
   
-  <entry>
-    <title type="html"><![CDATA[Hashed Wheel Timer - an Exercise in Data Structures]]></title>
-    <link href="http://RajivKurian.github.io/blog/2014/11/11/hashed-wheel-timer-an-exercise-in-data-structures/"/>
-    <updated>2014-11-11T20:22:55-08:00</updated>
-    <id>http://RajivKurian.github.io/blog/2014/11/11/hashed-wheel-timer-an-exercise-in-data-structures</id>
-    <content type="html"><![CDATA[<h2>Hashed wheel timers &ndash; A short intro.</h2>
+  <meta name="description" content="Hashed wheel timers &ndash; A short intro. The Hashed wheel timer is a very interesting data structure used widely especially in network servers. &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://RajivKurian.github.io/blog/2014/11/11/hashed-wheel-timer-an-exercise-in-data-structures">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="My blog." type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-37425728-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">My blog.</a></h1>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:RajivKurian.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Hashed Wheel Timer - an Exercise in Data Structures</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-11-11T20:22:55-08:00" pubdate data-updated="true">Nov 11<span>th</span>, 2014</time>
+        
+           | <a href="#disqus_thread"
+             data-disqus-identifier="http://RajivKurian.github.io">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><h2>Hashed wheel timers &ndash; A short intro.</h2>
 
 <p>The Hashed wheel timer is a very interesting data structure used widely especially in network servers. Their low over memory over head and reasonable efficiency guarantees are a good match for servers handling millions of connections with a timer per connection. We will not spend too much time describing how they work, instead we will look at a few implementations and try to evaulate their relative trade-offs. More information about hashed-wheel-timers can be found <a href="http://www.cs.columbia.edu/~nahum/w6998/papers/sosp87-timing-wheels.pdf">here</a>.</p>
 
@@ -28,7 +114,7 @@
 <p>Let&rsquo;s quickly recollect the basic data structures of a hashed wheel timer:</p>
 
 <p align="center">
-<img src="http://RajivKurian.github.io/images/hashed-wheel-timer-basic.svg" width="500">
+<img src="/images/hashed-wheel-timer-basic.svg" width="500">
 </p>
 
 
@@ -83,7 +169,7 @@
 <h5>1. Linked list of timers per bucket.</h5>
 
 <p align="center">
-<img src="http://RajivKurian.github.io/images/hashed-wheel-timer-linked-list.svg" width="500">
+<img src="/images/hashed-wheel-timer-linked-list.svg" width="500">
 </p>
 
 
@@ -201,7 +287,7 @@
 <h5>2. Vector of timer pointers per bucket.</h5>
 
 <p align="center">
-<img src="http://RajivKurian.github.io/images/hashed-wheel-timer-vector.svg" width="500">
+<img src="/images/hashed-wheel-timer-vector.svg" width="500">
 </p>
 
 
@@ -327,7 +413,7 @@
 <h5>3. Vector of inlined timers.</h5>
 
 <p align="center">
-<img src="http://RajivKurian.github.io/images/hashed-wheel-timer-inlined-vector.svg" width="500">
+<img src="/images/hashed-wheel-timer-inlined-vector.svg" width="500">
 </p>
 
 
@@ -512,109 +598,139 @@
 <h3>Conclusion</h3>
 
 <p>By analyzing the context of our timer algorithm we were able to come up with a better implementation albeit a more tightly coupled one. Wholistic analysis of a particular piece of software often opens up such opportunities for efficiency gains. Though many a time there is a <code>efficiency</code> VS <code>simplicity</code> trade-off, I&rsquo;ve been surprised by the number of times such gains have been made without tigher coupling.</p>
-]]></content>
-  </entry>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
   
-  <entry>
-    <title type="html"><![CDATA[Reading Length Prefixed Protocols]]></title>
-    <link href="http://RajivKurian.github.io/blog/2014/11/11/reading-length-prefixed-protocols/"/>
-    <updated>2014-11-11T19:52:23-08:00</updated>
-    <id>http://RajivKurian.github.io/blog/2014/11/11/reading-length-prefixed-protocols</id>
-    <content type="html"><![CDATA[<h3>Why length prefixed protocols?</h3>
 
-<p>Protocol design can have a suprisingly large effect on performance. Text-based protocols while good for human readability are far from ideal when it comes to performance. Unless your application almost exclusively deals with strings, a binary protocol could offer significant savings. There is a lot of dogma surrounding binary protocols:</p>
+<span class="byline author vcard">Posted by <span class="fn">Rajiv</span></span>
 
-<!-- more -->
+      
 
 
-<ol>
-<li><strong>They are not extensible</strong>: Though it is easy to corner yourself while designing your own binary protocol, this comes from a lack of experience rather than an inherent property. Look at the design of binary interchange formats like Google Protocol Buffers, FIX, Cap&#8217;n Proto etc to see how they address the issues of future extensions.</li>
-<li><strong>They are difficult to debug</strong>: This really boils down to the fact that binary protocols are not human readable like XML or JSON are. Building simple tools overcomes these issues. Writing a simple <code>toString()</code> method on the objects that you are transferring is already a big step in being able to debug your protocol.</li>
-<li><strong>What about web clients?</strong>: If your service talks to web clients, this is a valid concern. JSON is the de-facto protocol used for server web-client interactions. It&rsquo;s terribly easy to convert Javascript objects to and from JSON. Modern browsers now have support for binary data via <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays">typed arrays</a>. These can be used to <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data">receive and send</a> binary data using the standard XMLHttpRequest interface. You are stuck without a solution on older browsers though so maybe this isn&rsquo;t a great choice at this time.</li>
-</ol>
 
 
-<p>So far we have been talking about binary protocols in general. A length prefixed protocol requires every request be prefixed by its length in bytes. So the first 4/8 bytes of the request tell us the length of the actual payload. The rest of the payload could be text based instead of binary, but that&rsquo;s usually not the norm.</p>
-
-<h4>What can we do with a length prefixed protocol?</h4>
-
-<p>Length prefixed protocols allow us to cheaply check to see if an entire request has been received. All you need to check is to see if you have received all the bytes you were promised. The actual parsing and procesing of the request can be done later, maybe on another thread.</p>
-
-<p>The rest of the article shows some techniques on how to read a length-prefixed request.</p>
-
-<h5>Technique 1.</h5>
-
-<p align="center">
-<img src="http://RajivKurian.github.io/images/lpp-2.svg">
-</p>
 
 
-<p>The above approach lets us pick appropriately sized buffers for each request instead of guessing buffer sizes and copying later. It suffers from a problem though. Even for the smallest of requests we need at least <strong>two read calls</strong>. System calls are expensive and should be avoided if possible. Can we do better? We could trade the extra system calls for more complexity, a worse pathological case and larger internal framgentation.</p>
-
-<h5>Technique 2.</h5>
-
-<p align="center">
-<img src="http://RajivKurian.github.io/images/lpp-3.svg">
-</p>
 
 
-<p>So if we pick a default buffer size D, such that most of our requests are of <code>size D or less</code>, we minimize the number of read calls. When our requests are of <code>size greater than D</code> we incur some copy. The copy isn&rsquo;t that bad especially if our requests are small. Picking the default buffer size depends on the application. Each option has different shortcomings:</p>
-
-<ol>
-<li>Pick too big a size: Internal fragmentation. We have too much unused space.</li>
-<li>Pick too small a size: Multiple system calls and copying. This is marginally worse than our previous approach, since it involves the extra copying.</li>
-</ol>
-
-
-<p>Yet another approach is to not copy the contents of the default buffer but to use a <code>list of buffers</code> to hold our request. Since we know the length of our request, we are guaranteed that the list will be of size 1 or 2.</p>
-
-<h5>Technique 3.</h5>
-
-<p align="center">
-<img src="http://RajivKurian.github.io/images/lpp-4.svg">
-</p>
-
-
-<p>Here we use scatter reads to read into our default buffer and the overflow buffer using the same system call. We avoid the extra copy but have our request spread over two buffers incurring random read costs when parsing the request.</p>
-
-<p>The right approach depends on what trade-offs make sense for the particular application.</p>
-
-<h4>A work of caution &ndash; Slowloris attacks.</h4>
-
-<p>Though other protocols are vulnerable to <a href="http://en.wikipedia.org/wiki/Slowloris">slowloris attacks</a>, servers that use length prefixed protocols are vulnerable to a particularly nasty attack. Imagine the following attack:</p>
-
-<figure class='code'><figcaption><span>Slowloris attack</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='cpp'><span class='line'><span class="mf">1.</span> <span class="n">Client</span> <span class="n">connects</span> <span class="n">and</span> <span class="n">says</span> <span class="n">it</span> <span class="n">has</span> <span class="n">a</span> <span class="n">giant</span> <span class="n">request</span><span class="p">,</span> <span class="n">say</span> <span class="n">of</span> <span class="mi">64</span> <span class="n">MB</span><span class="p">.</span>
-</span><span class='line'><span class="mf">2.</span> <span class="n">Server</span> <span class="n">allocates</span> <span class="n">a</span> <span class="n">buffer</span> <span class="n">of</span> <span class="n">size</span> <span class="mi">64</span> <span class="n">MB</span> <span class="n">waiting</span> <span class="k">for</span> <span class="n">the</span> <span class="n">bytes</span><span class="p">.</span>
-</span><span class='line'><span class="mf">3.</span> <span class="n">Client</span> <span class="n">never</span> <span class="n">sends</span> <span class="n">additional</span> <span class="n">bytes</span> <span class="n">or</span> <span class="n">sends</span> <span class="n">a</span> <span class="n">trickle</span> <span class="n">of</span> <span class="n">bytes</span> <span class="n">infrequently</span><span class="p">.</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Not only did the client tie up a connection, it also tied up memory. A flood of these attacks could cause the server to exhaust all buffers. The standard techniques to mitigate slowloris attacks still apply:</p>
-
-<ol>
-<li>Timers to disconnect idle clients. Some attackers will send a byte or two every now and then to defeat timers. We could mark a client as <code>potentially evil</code> if it only sends a trickle of bytes one too many times. We could also make our timer more strict for clients we suspect.</li>
-<li>Limit the number of connections/requests from the same IP address.</li>
-<li>Maintain a blacklist that keeps evolving. Deny connection requests from IP addresses on the blacklist.</li>
-</ol>
-
-
-<p>We can modify our default buffer size technique to make it more resistant to buffer exhaustion:</p>
-
-<ol>
-<li>Maintain a default buffer size per client. Start with a low buffer size and as the client gains more trust, increase it up to a limit.</li>
-<li>Instead of allocating a buffer of the appropriate size as soon as we know the request length, we could let the client fill up the default buffer before we allocate an overflow buffer. This way we only tie up a smaller buffer till we absolutely need overflow space.</li>
-</ol>
-
-
-<p>The simplest defense though is to use these protocols on trusted networks instead of on the open web.</p>
-
-<h4>Conclusion</h4>
-
-<p>Length prefixed protocols make it really easy to check if a particular request is ready for parsing or not. This is especially a boon for multi-threaded servers where one thread could read bytes off the network and pass a complete request to another thread for parsing and processing. The cheap check implies that the network-thread doesn&rsquo;t have to do much work to decide when to transfer a request to the next stage in the pipeline. The request might still be ill-formed but the parsing/processing thread could take care of it. Let me know in the comments section, if you use other techniques to read length prefixed protocols or if I have missed something.</p>
-]]></content>
-  </entry>
   
-</feed>
+
+
+<time datetime="2014-11-11T20:22:55-08:00" pubdate data-updated="true">Nov 11<span>th</span>, 2014</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/datastructures/'>DataStructures</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://RajivKurian.github.io/blog/2014/11/11/hashed-wheel-timer-an-exercise-in-data-structures/" data-via="" data-counturl="http://RajivKurian.github.io/blog/2014/11/11/hashed-wheel-timer-an-exercise-in-data-structures/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/11/11/reading-length-prefixed-protocols/" title="Previous Post: Reading length prefixed protocols">&laquo; Reading length prefixed protocols</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/11/11/hashed-wheel-timer-an-exercise-in-data-structures/">Hashed Wheel Timer - an Exercise in Data Structures</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/11/11/reading-length-prefixed-protocols/">Reading Length Prefixed Protocols</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+<section>
+  <h1>About Me</h1>
+  <p>I can't think of anything remotely interesting.</p>
+</section>
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Rajiv -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'rajivsblog';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://RajivKurian.github.io/blog/2014/11/11/hashed-wheel-timer-an-exercise-in-data-structures/';
+        var disqus_url = 'http://RajivKurian.github.io/blog/2014/11/11/hashed-wheel-timer-an-exercise-in-data-structures/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
