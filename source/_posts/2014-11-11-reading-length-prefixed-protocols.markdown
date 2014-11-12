@@ -3,6 +3,7 @@ layout: post
 title: "Reading length prefixed protocols"
 date: 2014-11-11 19:52:23 -0800
 comments: true
+author: Rajiv
 categories: 
 ---
 ### Why length prefixed protocols?
@@ -31,7 +32,7 @@ The above approach lets us pick appropriately sized buffers for each request ins
 <img src="/images/lpp-3.svg">
 </p>
 
-So if we pick a default buffer size D, such that most of our requests are of ```size D or less```, we minimize the number of read calls. When our requests are of ```size greater than D``` we incur some copy. The copy isn't that bad especially if our requests are small. Picking the default buffer size depends on the application. Erring on each side has different shortcomings:
+So if we pick a default buffer size D, such that most of our requests are of ```size D or less```, we minimize the number of read calls. When our requests are of ```size greater than D``` we incur some copy. The copy isn't that bad especially if our requests are small. Picking the default buffer size depends on the application. Each option has different shortcomings:
 
 1.  Pick too big a size: Internal fragmentation. We have too much unused space.
 2.  Pick too small a size: Multiple system calls and copying. This is marginally worse than our previous approach, since it involves the extra copying.
