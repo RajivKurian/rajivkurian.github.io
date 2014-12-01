@@ -4,7 +4,7 @@
   <title><![CDATA[Category: DataStructures | My blog.]]></title>
   <link href="http://RajivKurian.github.io/blog/categories/datastructures/atom.xml" rel="self"/>
   <link href="http://RajivKurian.github.io/"/>
-  <updated>2014-11-30T17:49:20-08:00</updated>
+  <updated>2014-11-30T17:51:02-08:00</updated>
   <id>http://RajivKurian.github.io/</id>
   <author>
     <name><![CDATA[Rajiv]]></name>
@@ -101,7 +101,7 @@ TimerBucket* wheel;
 };</p>
 
 <p>struct TimerWheel {
-  TimerBucket[NUM_BUCKETS];
+  TimerBucket buckets[NUM_BUCKETS];
   // Other stuff.</p>
 
 <p>  // Methods&hellip;
@@ -180,7 +180,7 @@ So our algorithm characteristics in brief are:</p>
 };</p>
 
 <p>struct TimerWheel {
-  TimerBucket[NUM_BUCKETS];
+  TimerBucket buckets[NUM_BUCKETS];
   // Other stuff.</p>
 
 <p>  // Methods&hellip;
