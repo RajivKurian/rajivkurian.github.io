@@ -4,7 +4,7 @@
   <title><![CDATA[My blog.]]></title>
   <link href="http://RajivKurian.github.io/atom.xml" rel="self"/>
   <link href="http://RajivKurian.github.io/"/>
-  <updated>2014-11-12T09:23:35-08:00</updated>
+  <updated>2014-11-30T17:49:20-08:00</updated>
   <id>http://RajivKurian.github.io/</id>
   <author>
     <name><![CDATA[Rajiv]]></name>
@@ -430,7 +430,7 @@
 </span><span class='line'><span class="p">};</span>
 </span><span class='line'>
 </span><span class='line'><span class="k">struct</span> <span class="n">TimerWheel</span> <span class="p">{</span>
-</span><span class='line'>  <span class="n">TimerBucket</span><span class="p">[</span><span class="n">NUM_BUCKETS</span><span class="p">];</span>
+</span><span class='line'>  <span class="n">TimerBucket</span> <span class="n">buckets</span><span class="p">[</span><span class="n">NUM_BUCKETS</span><span class="p">];</span>
 </span><span class='line'>  <span class="c1">// Other stuff.</span>
 </span><span class='line'>
 </span><span class='line'>  <span class="c1">// Methods...</span>
@@ -531,7 +531,7 @@
 </span><span class='line'>    <span class="c1">// so it points to the new location of the timer.</span>
 </span><span class='line'>    <span class="n">adjust_holder_pointer</span><span class="p">(</span><span class="n">moved_timer</span><span class="o">-&gt;</span><span class="n">holder</span><span class="p">,</span> <span class="n">cancelled_timer_index</span><span class="p">);</span>
 </span><span class='line'>  <span class="p">}</span>
-</span><span class='line'>  <span class="c1">// The holder for the deleted timer should now contain a null ptr.</span>
+</span><span class='line'>  <span class="c1">// The holder for the deleted timer should point to something illegal like {-1, -1}.</span>
 </span><span class='line'>  <span class="c1">// The caller will decide what to do with the holder after this function returns.</span>
 </span><span class='line'>  <span class="n">invalidate_holder_timer</span><span class="p">(</span><span class="n">holder</span><span class="p">);</span>
 </span><span class='line'><span class="p">}</span>

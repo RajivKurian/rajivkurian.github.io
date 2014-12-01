@@ -4,7 +4,7 @@
   <title><![CDATA[Category: DataStructures | My blog.]]></title>
   <link href="http://RajivKurian.github.io/blog/categories/datastructures/atom.xml" rel="self"/>
   <link href="http://RajivKurian.github.io/"/>
-  <updated>2014-11-12T09:23:35-08:00</updated>
+  <updated>2014-11-30T17:49:20-08:00</updated>
   <id>http://RajivKurian.github.io/</id>
   <author>
     <name><![CDATA[Rajiv]]></name>
@@ -276,7 +276,7 @@ struct TimerHolder {
 };</p>
 
 <p>struct TimerWheel {
-  TimerBucket[NUM_BUCKETS];
+  TimerBucket buckets[NUM_BUCKETS];
   // Other stuff.</p>
 
 <p>  // Methods&hellip;
@@ -323,7 +323,7 @@ adjust_holder_pointer(moved_timer-&gt;holder, cancelled_timer_index);
 </code></pre>
 
 <p>  }
-  // The holder for the deleted timer should now contain a null ptr.
+  // The holder for the deleted timer should point to something illegal like {-1, -1}.
   // The caller will decide what to do with the holder after this function returns.
   invalidate_holder_timer(holder);
 }</p>
