@@ -79,7 +79,7 @@ struct TimerBucket {
 };
 
 struct TimerWheel {
-  TimerBucket[NUM_BUCKETS];
+  TimerBucket buckets[NUM_BUCKETS];
   // Other stuff.
 
   // Methods...
@@ -150,7 +150,7 @@ struct TimerBucket {
 };
 
 struct TimerWheel {
-  TimerBucket[NUM_BUCKETS];
+  TimerBucket buckets[NUM_BUCKETS];
   // Other stuff.
 
   // Methods...
@@ -238,7 +238,7 @@ struct TimerBucket {
 };
 
 struct TimerWheel {
-  TimerBucket[NUM_BUCKETS];
+  TimerBucket buckets[NUM_BUCKETS];
   // Other stuff.
 
   // Methods...
@@ -282,7 +282,7 @@ void TimerWheel::cancel_timer(TimerHolder* holder) {
     // so it points to the new location of the timer.
     adjust_holder_pointer(moved_timer->holder, cancelled_timer_index);
   }
-  // The holder for the deleted timer should now contain a null ptr.
+  // The holder for the deleted timer should point to something illegal like {-1, -1}.
   // The caller will decide what to do with the holder after this function returns.
   invalidate_holder_timer(holder);
 }
