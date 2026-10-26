@@ -1,0 +1,187 @@
+{
+  "unit": "one data flip-flop",
+  "latency_cycles": 6,
+  "selected_profile": 11,
+  "results": [
+    {
+      "profile": 0,
+      "shape": [
+        11,
+        14,
+        24,
+        20,
+        19,
+        26
+      ],
+      "first_rne": true,
+      "final_rne": true,
+      "normalized_cost": 1441.5499999999997,
+      "flip_flops": 326
+    },
+    {
+      "profile": 1,
+      "shape": [
+        11,
+        14,
+        24,
+        20,
+        19,
+        26
+      ],
+      "first_rne": true,
+      "final_rne": false,
+      "normalized_cost": 1401.6,
+      "flip_flops": 322
+    },
+    {
+      "profile": 2,
+      "shape": [
+        11,
+        14,
+        24,
+        20,
+        19,
+        26
+      ],
+      "first_rne": false,
+      "final_rne": true,
+      "normalized_cost": 1403.25,
+      "flip_flops": 324
+    },
+    {
+      "profile": 3,
+      "shape": [
+        11,
+        14,
+        24,
+        20,
+        19,
+        26
+      ],
+      "first_rne": false,
+      "final_rne": false,
+      "normalized_cost": 1368.05,
+      "flip_flops": 320
+    },
+    {
+      "profile": 4,
+      "shape": [
+        10,
+        13,
+        23,
+        20,
+        18,
+        25
+      ],
+      "first_rne": true,
+      "final_rne": true,
+      "normalized_cost": 1357.1999999999998,
+      "flip_flops": 314
+    },
+    {
+      "profile": 5,
+      "shape": [
+        10,
+        13,
+        23,
+        20,
+        18,
+        25
+      ],
+      "first_rne": true,
+      "final_rne": false,
+      "normalized_cost": 1300.7499999999998,
+      "flip_flops": 310
+    },
+    {
+      "profile": 6,
+      "shape": [
+        10,
+        13,
+        23,
+        20,
+        18,
+        25
+      ],
+      "first_rne": false,
+      "final_rne": true,
+      "normalized_cost": 1315.1499999999999,
+      "flip_flops": 312
+    },
+    {
+      "profile": 7,
+      "shape": [
+        10,
+        13,
+        23,
+        20,
+        18,
+        25
+      ],
+      "first_rne": false,
+      "final_rne": false,
+      "normalized_cost": 1267.1999999999998,
+      "flip_flops": 308
+    },
+    {
+      "profile": 8,
+      "shape": [
+        10,
+        13,
+        23,
+        20,
+        17,
+        25
+      ],
+      "first_rne": true,
+      "final_rne": true,
+      "normalized_cost": 1309.85,
+      "flip_flops": 311
+    },
+    {
+      "profile": 9,
+      "shape": [
+        10,
+        13,
+        23,
+        20,
+        17,
+        25
+      ],
+      "first_rne": true,
+      "final_rne": false,
+      "normalized_cost": 1256.1499999999999,
+      "flip_flops": 307
+    },
+    {
+      "profile": 10,
+      "shape": [
+        10,
+        13,
+        23,
+        20,
+        17,
+        25
+      ],
+      "first_rne": false,
+      "final_rne": true,
+      "normalized_cost": 1313.3,
+      "flip_flops": 310
+    },
+    {
+      "profile": 11,
+      "shape": [
+        10,
+        13,
+        23,
+        20,
+        17,
+        25
+      ],
+      "first_rne": false,
+      "final_rne": false,
+      "normalized_cost": 1228.3999999999999,
+      "flip_flops": 305
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 415" role="img"><title>Resolving four low columns before storage preserves the truncated sum using nine instead of sixteen bits</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10" fill="#747d86"/></marker></defs>
+<rect width="100%" height="100%" fill="#faf9f6"/>
+<text x="450" y="25" text-anchor="middle" font-family="system-ui,sans-serif" font-size="21" fill="#41484b">Example: truncate four low bits after adding</text>
+<text x="222" y="60" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" fill="#41484b">Store both rows</text>
+<rect x="25" y="78" width="395" height="65" rx="4" fill="#f5f1e8" stroke="#77878e" stroke-width="1.5"/>
+<text x="222.5" y="105.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" fill="#41484b">U = 0001 | 1110</text>
+<text x="222.5" y="128.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" fill="#41484b">V = 0100 | 0010</text>
+<text x="677" y="60" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" fill="#41484b">Resolve low columns first</text>
+<rect x="480" y="78" width="395" height="65" rx="4" fill="#f5f1e8" stroke="#77878e" stroke-width="1.5"/>
+<text x="677.5" y="105.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" fill="#41484b">U = 0001 | 1110</text>
+<text x="677.5" y="128.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" fill="#41484b">V = 0100 | 0010</text>
+<rect x="480" y="160" width="395" height="52" rx="4" fill="#f5f1e8" stroke="#3d6f8c" stroke-width="1.5"/>
+<text x="677.5" y="192.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" fill="#41484b">1110 + 0010 = 1 | 0000</text>
+<path d="M222 143 V232" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M677 143 V160" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M45 240L400 240" stroke="#b75d2c" stroke-width="5" fill="none"/>
+<path d="M500 240L855 240" stroke="#b75d2c" stroke-width="5" fill="none"/>
+<text x="222" y="224" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#b75d2c">register: 16 bits</text>
+<text x="677" y="231" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#b75d2c">register: 4 + 4 + carry = 9 bits</text>
+<path d="M222 243 V270" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M677 243 V270" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="25" y="270" width="395" height="75" rx="4" fill="#f5f1e8" stroke="#3d6f8c" stroke-width="1.5"/>
+<text x="222.5" y="302.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" fill="#41484b">Full sum: 0110 | 0000</text>
+<text x="222.5" y="325.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" fill="#41484b">Truncated result: 0110</text>
+<rect x="480" y="270" width="395" height="75" rx="4" fill="#f5f1e8" stroke="#3d6f8c" stroke-width="1.5"/>
+<text x="677.5" y="302.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" fill="#41484b">Upper sum: 0001 + 0100 + 1</text>
+<text x="677.5" y="325.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" fill="#41484b">Truncated result: 0110</text>
+<text x="450" y="382" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">For RNE, also retain guard and sticky: both are zero here, so the rounded result is 0110.</text>
+</svg>

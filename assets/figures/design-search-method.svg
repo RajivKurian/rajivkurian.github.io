@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 930" role="img" aria-labelledby="title desc">
+<title id="title">Search computations and circuits using hardware feedback</title>
+<desc id="desc">Choose numerical candidates using estimated costs. Fit or evaluate their finite arithmetic and check numerical requirements. Generate circuit alternatives for promising candidates and neighbors. Measure their hardware and use the results to revisit either the computation or the circuit.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10" fill="#747d86"/></marker></defs>
+<rect width="1100" height="930" fill="#faf9f6"/>
+<style>text{font-family:system-ui,sans-serif;fill:#41484b;font-size:19px} .head{font-weight:600;font-size:21px} .small{font-size:17px} svg > path{fill:none;stroke-width:2;marker-end:url(#arrow)}</style>
+<rect x="300" y="20" width="500" height="85" rx="5" fill="#f5f1e8" stroke="#77878e" stroke-width="2"/>
+<text class="head" x="550" y="51" text-anchor="middle">Set requirements</text>
+<text x="550" y="79" text-anchor="middle">Accuracy · throughput · latency · PPA</text>
+<rect x="300" y="145" width="500" height="110" rx="5" fill="#f5f1e8" stroke="#3d6f8c" stroke-width="2"/>
+<text class="head" x="550" y="176" text-anchor="middle">Search numerical choices</text>
+<text x="550" y="204" text-anchor="middle">Decomposition · precision · rounding</text>
+<text x="550" y="229" text-anchor="middle">Use hardware estimates; keep neighbors</text>
+<rect x="300" y="295" width="500" height="110" rx="5" fill="#f5f1e8" stroke="#3d6f8c" stroke-width="2"/>
+<text class="head" style="font-size:18px" x="550" y="326" text-anchor="middle">Find candidates meeting numerical requirements</text>
+<text x="550" y="354" text-anchor="middle">Model the actual finite arithmetic</text>
+<text x="550" y="379" text-anchor="middle">Fit or evaluate; check the required behavior</text>
+<rect x="300" y="465" width="500" height="110" rx="5" fill="#f5f1e8" stroke="#b75d2c" stroke-width="2"/>
+<text class="head" x="550" y="496" text-anchor="middle">Generate circuit alternatives</text>
+<text x="550" y="524" text-anchor="middle">Choose components and their composition</text>
+<text x="550" y="549" text-anchor="middle">Logic structure · sharing · register cuts</text>
+<rect x="300" y="615" width="500" height="85" rx="5" fill="#f5f1e8" stroke="#b75d2c" stroke-width="2"/>
+<text class="head" x="550" y="646" text-anchor="middle">Check behavior and measure PPA</text>
+<text x="550" y="674" text-anchor="middle">Inspect stage paths and mapped cells</text>
+<rect x="300" y="800" width="500" height="95" rx="5" fill="#f5f1e8" stroke="#77878e" stroke-width="2"/>
+<text class="head" x="550" y="831" text-anchor="middle">Keep useful tradeoffs; stop when satisfied</text>
+<text x="550" y="859" text-anchor="middle">Requirements met; further experiments</text>
+<text x="550" y="884" text-anchor="middle">offer too little expected benefit</text>
+<path d="M550 105 V145" stroke="#747d86"/>
+<path d="M550 255 V295" stroke="#747d86"/>
+<path d="M550 405 V465" stroke="#747d86"/>
+<path d="M550 575 V615" stroke="#747d86"/>
+<text class="small" x="565" y="442">Numerical checks pass</text>
+<path d="M300 655 H65 V200 H300" stroke="#3d6f8c"/>
+<rect x="15" y="375" width="270" height="105" fill="#faf9f6"/>
+<text class="small" x="150" y="401" text-anchor="middle">Revisit numerical choices</text>
+<text class="small" x="150" y="426" text-anchor="middle">when measured costs</text>
+<text class="small" x="150" y="451" text-anchor="middle">justify another search</text>
+<path d="M800 655 H1035 V520 H800" stroke="#b75d2c"/>
+<rect x="815" y="562" width="275" height="65" fill="#faf9f6"/>
+<text class="small" x="952" y="584" text-anchor="middle">Target the limiting path;</text>
+<text class="small" x="952" y="609" text-anchor="middle">change atoms or composition</text>
+<path d="M550 700 V720 M550 760 V800" stroke="#747d86"/>
+<text class="small" x="550" y="744" text-anchor="middle">Choose the next experiment from the evidence</text>
+</svg>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 465" role="img"><title>Fitted words and implementation choices generate a scheduled polynomial circuit</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10" fill="#747d86"/></marker></defs>
+<rect width="100%" height="100%" fill="#faf9f6"/>
+<rect x="20" y="28" width="390" height="80" rx="3" fill="#f5f1e8" stroke="#356c92" stroke-width="1.5"/>
+<text x="215.0" y="51.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">Numerical design from Part 3</text>
+<text x="215.0" y="73.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">256 rows · a/b/c: 8/13/23 bits</text>
+<text x="215.0" y="95.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">t: 18 · s: 15 · y: 25 · two truncations</text>
+<rect x="20" y="132" width="390" height="104" rx="3" fill="#f5f1e8" stroke="#af5137" stroke-width="1.5"/>
+<text x="215.0" y="156.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">Implementation choices for this example</text>
+<text x="215.0" y="178.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">local a/s recoding · column compression</text>
+<text x="215.0" y="200.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">first MAC: hybrid, no internal cut</text>
+<text x="215.0" y="222.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">second MAC: ripple, low-column cut</text>
+<path d="M410 65 H457 V140 H500" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M410 184 H457 V140" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="500" y="72" width="375" height="135" rx="3" fill="#f5f1e8" stroke="#356c92" stroke-width="1.5"/>
+<text x="687.5" y="111.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#41484b">Generator</text>
+<text x="687.5" y="133.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#41484b">select Booth rows and compressors</text>
+<text x="687.5" y="155.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#41484b">build carry networks · fold constants</text>
+<text x="687.5" y="177.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#41484b">insert cuts and matching operand delays</text>
+<path d="M685 207 V266" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="22" y="281" text-anchor="start" font-family="system-ui,sans-serif" font-size="19" fill="#41484b">Generated four-cycle circuit</text>
+<rect x="25" y="305" width="125" height="65" rx="3" fill="#f5f1e8" stroke="#356c92" stroke-width="1.5"/>
+<text x="87.5" y="342.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">ROM + R1</text>
+<rect x="185" y="305" width="235" height="65" rx="3" fill="#f5f1e8" stroke="#356c92" stroke-width="1.5"/>
+<text x="302.5" y="331.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">First MAC → R2</text>
+<text x="302.5" y="353.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">one hybrid-completed sum</text>
+<rect x="455" y="305" width="200" height="65" rx="3" fill="#f5f1e8" stroke="#356c92" stroke-width="1.5"/>
+<text x="555.0" y="331.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">Second MAC → R3</text>
+<text x="555.0" y="353.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">compression + low carry</text>
+<rect x="690" y="305" width="185" height="65" rx="3" fill="#f5f1e8" stroke="#356c92" stroke-width="1.5"/>
+<text x="782.5" y="331.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">Completion → R4</text>
+<text x="782.5" y="353.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">truncate to 25 bits</text>
+<path d="M150 337 H185" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M420 337 H455" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M655 337 H690" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M150 365 V402 H550 V370" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="365" y="426" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">t and c delayed to the same transaction as s</text>
+<text x="450" y="458" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#41484b">Changing a cut regenerates its row storage, downstream logic and operand delays.</text>
+</svg>

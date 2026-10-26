@@ -1,0 +1,6 @@
+# Optional environment for regenerating static figures; publishing uses the SVG.
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12.15
+  - matplotlib-base=3.10.7

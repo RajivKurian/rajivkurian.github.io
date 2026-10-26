@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 235" role="img"><title>700 ps · finish compression before R4; minimum setup slack at every stage</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10" fill="#747d86"/></marker></defs>
+<rect width="100%" height="100%" fill="#faf9f6"/>
+<text x="20" y="28" text-anchor="start" font-family="system-ui,sans-serif" font-size="22" fill="#41484b">700 ps · finish compression before R4</text>
+<text x="20" y="56" text-anchor="start" font-family="system-ui,sans-serif" font-size="16" fill="#41484b">Setup slack at each register stage · ps</text>
+<text x="1180" y="56" text-anchor="end" font-family="system-ui,sans-serif" font-size="17" fill="#356c92">Meets target</text>
+<rect x="20.0" y="77" width="155.33333333333334" height="114" rx="4" fill="#f1f0eb" stroke="#75828a" stroke-width="1.2"/>
+<text x="97.66666666666667" y="100" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">Coefficient</text>
+<text x="97.66666666666667" y="121" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">lookup</text>
+<text x="97.66666666666667" y="175" text-anchor="middle" font-family="system-ui,sans-serif" font-size="19" fill="#41484b">+153.54 ps</text>
+<path d="M175.33333333333334 134 H190.33333333333334" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M190.33333333333334 98 V170" stroke="#75828a" stroke-width="3"/>
+<text x="190.33333333333334" y="218" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">R1</text>
+<path d="M190.33333333333334 134 H213.33333333333334" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="213.33333333333334" y="77" width="155.33333333333334" height="114" rx="4" fill="#f1f0eb" stroke="#75828a" stroke-width="1.2"/>
+<text x="291.0" y="100" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">First MAC</text>
+<text x="291.0" y="121" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">column compression</text>
+<text x="291.0" y="142" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">+ low sum</text>
+<text x="291.0" y="175" text-anchor="middle" font-family="system-ui,sans-serif" font-size="19" fill="#41484b">+67.95 ps</text>
+<path d="M368.6666666666667 134 H383.6666666666667" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M383.6666666666667 98 V170" stroke="#75828a" stroke-width="3"/>
+<text x="383.6666666666667" y="218" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">R2</text>
+<path d="M383.6666666666667 134 H406.6666666666667" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="406.6666666666667" y="77" width="155.33333333333334" height="114" rx="4" fill="#f1f0eb" stroke="#75828a" stroke-width="1.2"/>
+<text x="484.33333333333337" y="100" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">First MAC</text>
+<text x="484.33333333333337" y="121" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">carry completion</text>
+<text x="484.33333333333337" y="142" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">ripple</text>
+<text x="484.33333333333337" y="175" text-anchor="middle" font-family="system-ui,sans-serif" font-size="19" fill="#41484b">+228.52 ps</text>
+<path d="M562.0 134 H577.0" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M577.0 98 V170" stroke="#75828a" stroke-width="3"/>
+<text x="577.0" y="218" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">R3</text>
+<path d="M577.0 134 H600.0" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="600.0" y="77" width="155.33333333333334" height="114" rx="4" fill="#f5eddb" stroke="#9a681c" stroke-width="2.5"/>
+<text x="677.6666666666666" y="100" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">Second MAC</text>
+<text x="677.6666666666666" y="121" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">row selection</text>
+<text x="677.6666666666666" y="142" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">+ full compression</text>
+<text x="677.6666666666666" y="175" text-anchor="middle" font-family="system-ui,sans-serif" font-size="19" fill="#9a681c">+2.08 ps</text>
+<path d="M755.3333333333334 134 H770.3333333333334" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M770.3333333333334 98 V170" stroke="#9a681c" stroke-width="3"/>
+<text x="770.3333333333334" y="218" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">R4</text>
+<path d="M770.3333333333334 134 H793.3333333333334" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="793.3333333333334" y="77" width="155.33333333333334" height="114" rx="4" fill="#f1f0eb" stroke="#75828a" stroke-width="1.2"/>
+<text x="871.0" y="100" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">Second MAC</text>
+<text x="871.0" y="121" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">low-column sum</text>
+<text x="871.0" y="142" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">ripple</text>
+<text x="871.0" y="175" text-anchor="middle" font-family="system-ui,sans-serif" font-size="19" fill="#41484b">+445.52 ps</text>
+<path d="M948.6666666666667 134 H963.6666666666667" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M963.6666666666667 98 V170" stroke="#75828a" stroke-width="3"/>
+<text x="963.6666666666667" y="218" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">R5</text>
+<path d="M963.6666666666667 134 H986.6666666666667" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="986.6666666666667" y="77" width="155.33333333333334" height="114" rx="4" fill="#f1f0eb" stroke="#75828a" stroke-width="1.2"/>
+<text x="1064.3333333333335" y="100" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">Second MAC</text>
+<text x="1064.3333333333335" y="121" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">carry completion</text>
+<text x="1064.3333333333335" y="142" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">ripple</text>
+<text x="1064.3333333333335" y="175" text-anchor="middle" font-family="system-ui,sans-serif" font-size="19" fill="#41484b">+83.22 ps</text>
+<path d="M1142.0 134 H1157.0" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M1157.0 98 V170" stroke="#75828a" stroke-width="3"/>
+<text x="1157.0" y="218" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">R6</text>
+</svg>

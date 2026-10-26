@@ -1,0 +1,27 @@
+---
+title: "Descriptive post title"
+description: "A short description of the subject."
+draft: true
+toc: true
+---
+
+For a series post, open with a short recap of earlier parts and links to them.
+Omit the recap for Part 1; start with the series goal instead.
+
+## What this post covers
+
+State the question and what the reader will learn in this part.
+
+## Posts in this series
+
+List all post titles in order, with a short topic description and links to
+existing posts. Mark the current post with “this post.” Use the titles from
+index.qmd and keep this list consistent across the series.
+
+## First topic
+
+Write the explanation here. Use fenced C++ or Python examples, equations, and
+figures where they help explain a design choice.
+
+Include interactive content locally in this post. Keep its JavaScript and data
+inside the HTML artifact; the site navigation and theme remain static.

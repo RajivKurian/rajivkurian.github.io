@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 380" role="img"><title>Traced constant coefficient bits simplify lookup, register banks and consuming arithmetic</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10" fill="#747d86"/></marker></defs>
+<rect width="100%" height="100%" fill="#faf9f6"/>
+<text x="425" y="24" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#41484b">Traced 128-row table: c[22] = 1 and a[9] = 0 in every row</text>
+<rect x="15" y="60" width="165" height="80" rx="4" fill="#f5f1e8" stroke="#1460aa"/>
+<text x="97.5" y="95.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">ROM column c[22]</text>
+<text x="97.5" y="115.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">1  1  1  …  1</text>
+<path d="M180 100 H230" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="230" y="60" width="220" height="80" rx="4" fill="#f5f1e8" stroke="#1460aa"/>
+<text x="340.0" y="95.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">c0[22], c1[22], c2[22]</text>
+<text x="340.0" y="115.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">all become literal 1</text>
+<path d="M450 100 H500" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="500" y="60" width="335" height="80" rx="4" fill="#f5f1e8" stroke="#1460aa"/>
+<text x="667.5" y="95.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">Compressor inputs (1, 0, 0)</text>
+<text x="667.5" y="115.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">sum = 1, carry = 0</text>
+<text x="425" y="164" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">Three carried c bits need no flip-flops; this compressor becomes constants.</text>
+<rect x="15" y="205" width="165" height="75" rx="4" fill="#f5f1e8" stroke="#1460aa"/>
+<text x="97.5" y="237.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">ROM column a[9]</text>
+<text x="97.5" y="257.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">0  0  0  …  0</text>
+<path d="M180 242 H230" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="230" y="205" width="220" height="75" rx="4" fill="#f5f1e8" stroke="#1460aa"/>
+<text x="340.0" y="237.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">Top Booth triple: 000</text>
+<text x="340.0" y="257.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">magnitude = 0</text>
+<path d="M450 242 H500" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="500" y="205" width="335" height="75" rx="4" fill="#f5f1e8" stroke="#1460aa"/>
+<text x="667.5" y="237.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">No variable top-digit multiple</text>
+<text x="667.5" y="257.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">to select or compress</text>
+<text x="425" y="322" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#b65322">A refit with A = 512 makes a[9] variable in one row.</text>
+<text x="425" y="350" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#b65322">That restores a carried bit and a live top-digit arithmetic path.</text>
+</svg>

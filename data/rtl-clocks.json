@@ -1,0 +1,2251 @@
+{
+  "records": [
+    {
+      "id": 1,
+      "name": "t1000_c4_ripple",
+      "label": "Four cycles \u00b7 column compression",
+      "period_ps": 1000,
+      "cycles": 4,
+      "area_um2": 296.46972,
+      "slack_ps": 89.37,
+      "power_mw": 0.8459346136,
+      "flip_flops": 178,
+      "graph_register_bits_by_stage": [
+        0,
+        62,
+        56,
+        35,
+        26
+      ],
+      "measurement": {
+        "capacitance_unit": "fF",
+        "library_sha256": "c078d2d780379fe4a44d8c0f02c55a49cc1cdbba61a305cfa25d2fa0b18dd3e5",
+        "conda_environment": "3e50db3e9bd7d96b9ed4b2a59886ef655cd6c7db45f3557229f5a00a2491b5d6",
+        "clock_period_ps": 1000,
+        "sdc_sha256": "11b168319a7a3dea07269c3a9c771ebae22e2a998ee21cfed0a20b50831972a6",
+        "vcd_sha256": "d401dcf8d0cfc2421fd4269f844f8515d39791ea4f7861f274e5dcbe883c38cb",
+        "time_unit": "ps",
+        "testbench_sha256": "a437d842a92c7372bc6103764d0892a1f87d0a98a41c0c36e0fc52b391ab93b4",
+        "rtl_sha256": {
+          "sfu_poly.sv": "e558c73f0c07ed992ea487ad40a6c3581cde1848972eecf85db1b3b6d4ffef7f"
+        },
+        "worst_setup_slack_ps": 89.37,
+        "power": {
+          "Sequential": {
+            "total": 0.0003251878079,
+            "switching": 3.307446605e-05,
+            "leakage": 4.077856985e-08,
+            "internal": 0.0002920725674
+          },
+          "Macro": {
+            "switching": 0,
+            "leakage": 0,
+            "internal": 0,
+            "total": 0
+          },
+          "Clock": {
+            "internal": 0,
+            "switching": 0,
+            "leakage": 0,
+            "total": 0
+          },
+          "Total": {
+            "internal": 0.0004870645062,
+            "leakage": 1.562232086e-07,
+            "switching": 0.0003587138781,
+            "total": 0.0008459346136
+          },
+          "Pad": {
+            "total": 0,
+            "switching": 0,
+            "internal": 0,
+            "leakage": 0
+          },
+          "Combinational": {
+            "switching": 0.0003256394994,
+            "leakage": 1.154446352e-07,
+            "total": 0.0005207468639,
+            "internal": 0.0001949919097
+          }
+        },
+        "temperature_c": 25,
+        "meets_setup_target": true,
+        "opensta_version": "3.1.0",
+        "top": "sfu_poly",
+        "verilator_version": "Verilator 5.052 2026-09-05 rev conda-forge build",
+        "eda_bundle_id": "5bbe0144473aeff5be02d1361d0ccb53ea6f985cf0897c78daa4330a5d4a148a",
+        "voltage_v": 0.7,
+        "analysis": "mapped cells with pin capacitance; no wire parasitics",
+        "technology": "ASAP7 7.5-track RVT NLDM",
+        "activity": "mapped gate simulation",
+        "yosys_version": "Yosys 0.63 (git sha1 70a11c6bf0e8dd669f56c7da3587f78b405138e2, clang++ 21.1.8 -fPIC -O3)",
+        "annotated_pins": 10912,
+        "power_unit": "W",
+        "eda_bundle_sha256": "b91ef429cc805a3bbc9595db1a41bf43c9426d28efecdb1e05804525b794d363",
+        "abc_constraints": {
+          "driving_cell": "BUFx2_ASAP7_75t_R",
+          "output_load_fF": 2,
+          "buffering_and_sizing": true
+        },
+        "cell_area_um2": 296.46972,
+        "corner": "TT"
+      },
+      "summary": "Column compression reduces storage and logic while the four-cycle ripple pipeline meets 1 ns.",
+      "stage_slack_ps": [
+        442.2617,
+        89.3692,
+        207.5161,
+        286.7455
+      ],
+      "is_baseline": false
+    },
+    {
+      "id": 2,
+      "name": "t800_c4_ripple",
+      "label": "Four cycles \u00b7 ripple",
+      "period_ps": 800,
+      "cycles": 4,
+      "area_um2": 296.54262,
+      "slack_ps": -56.44,
+      "power_mw": 1.058238209,
+      "flip_flops": 178,
+      "graph_register_bits_by_stage": [
+        0,
+        62,
+        56,
+        35,
+        26
+      ],
+      "measurement": {
+        "analysis": "mapped cells with pin capacitance; no wire parasitics",
+        "cell_area_um2": 296.54262,
+        "library_sha256": "c078d2d780379fe4a44d8c0f02c55a49cc1cdbba61a305cfa25d2fa0b18dd3e5",
+        "capacitance_unit": "fF",
+        "activity": "mapped gate simulation",
+        "time_unit": "ps",
+        "eda_bundle_id": "5bbe0144473aeff5be02d1361d0ccb53ea6f985cf0897c78daa4330a5d4a148a",
+        "corner": "TT",
+        "meets_setup_target": false,
+        "temperature_c": 25,
+        "verilator_version": "Verilator 5.052 2026-09-05 rev conda-forge build",
+        "power": {
+          "Sequential": {
+            "internal": 0.0003650920698,
+            "total": 0.0004065571411,
+            "switching": 4.142428588e-05,
+            "leakage": 4.077856985e-08
+          },
+          "Combinational": {
+            "switching": 0.0004071442818,
+            "total": 0.0006516809226,
+            "leakage": 1.156818001e-07,
+            "internal": 0.0002444209822
+          },
+          "Clock": {
+            "switching": 0,
+            "internal": 0,
+            "total": 0,
+            "leakage": 0
+          },
+          "Macro": {
+            "total": 0,
+            "switching": 0,
+            "internal": 0,
+            "leakage": 0
+          },
+          "Pad": {
+            "internal": 0,
+            "total": 0,
+            "leakage": 0,
+            "switching": 0
+          },
+          "Total": {
+            "internal": 0.0006095131394,
+            "leakage": 1.564603735e-07,
+            "total": 0.001058238209,
+            "switching": 0.0004485686077
+          }
+        },
+        "rtl_sha256": {
+          "sfu_poly.sv": "e558c73f0c07ed992ea487ad40a6c3581cde1848972eecf85db1b3b6d4ffef7f"
+        },
+        "testbench_sha256": "a437d842a92c7372bc6103764d0892a1f87d0a98a41c0c36e0fc52b391ab93b4",
+        "eda_bundle_sha256": "b91ef429cc805a3bbc9595db1a41bf43c9426d28efecdb1e05804525b794d363",
+        "conda_environment": "3e50db3e9bd7d96b9ed4b2a59886ef655cd6c7db45f3557229f5a00a2491b5d6",
+        "clock_period_ps": 800,
+        "power_unit": "W",
+        "technology": "ASAP7 7.5-track RVT NLDM",
+        "top": "sfu_poly",
+        "opensta_version": "3.1.0",
+        "voltage_v": 0.7,
+        "sdc_sha256": "1bf96a27e1a6029c477dcd48f004dcdbf95be96de11c641a8b6a757e9392cdeb",
+        "worst_setup_slack_ps": -56.44,
+        "annotated_pins": 10912,
+        "vcd_sha256": "84a25c8d4b0866cba73784e329aa25f1a032c1ed21cf47a20f61cbac4831577f",
+        "abc_constraints": {
+          "driving_cell": "BUFx2_ASAP7_75t_R",
+          "buffering_and_sizing": true,
+          "output_load_fF": 2
+        },
+        "yosys_version": "Yosys 0.63 (git sha1 70a11c6bf0e8dd669f56c7da3587f78b405138e2, clang++ 21.1.8 -fPIC -O3)"
+      },
+      "summary": "At 800 ps, the complete first multiply-add misses timing; both second-MAC stages meet.",
+      "stage_slack_ps": [
+        242.2617,
+        -56.4362,
+        7.516,
+        86.7455
+      ],
+      "is_baseline": true
+    },
+    {
+      "id": 3,
+      "name": "t800_c4_first_prefix",
+      "label": "Four cycles \u00b7 separate prefix sums",
+      "period_ps": 800,
+      "cycles": 4,
+      "area_um2": 297.02376,
+      "slack_ps": -20.33,
+      "power_mw": 1.052678912,
+      "flip_flops": 178,
+      "graph_register_bits_by_stage": [
+        0,
+        62,
+        56,
+        35,
+        26
+      ],
+      "measurement": {
+        "library_sha256": "c078d2d780379fe4a44d8c0f02c55a49cc1cdbba61a305cfa25d2fa0b18dd3e5",
+        "sdc_sha256": "1bf96a27e1a6029c477dcd48f004dcdbf95be96de11c641a8b6a757e9392cdeb",
+        "yosys_version": "Yosys 0.63 (git sha1 70a11c6bf0e8dd669f56c7da3587f78b405138e2, clang++ 21.1.8 -fPIC -O3)",
+        "eda_bundle_id": "5bbe0144473aeff5be02d1361d0ccb53ea6f985cf0897c78daa4330a5d4a148a",
+        "activity": "mapped gate simulation",
+        "opensta_version": "3.1.0",
+        "meets_setup_target": false,
+        "capacitance_unit": "fF",
+        "power_unit": "W",
+        "technology": "ASAP7 7.5-track RVT NLDM",
+        "cell_area_um2": 297.02376,
+        "clock_period_ps": 800,
+        "conda_environment": "3e50db3e9bd7d96b9ed4b2a59886ef655cd6c7db45f3557229f5a00a2491b5d6",
+        "eda_bundle_sha256": "b91ef429cc805a3bbc9595db1a41bf43c9426d28efecdb1e05804525b794d363",
+        "verilator_version": "Verilator 5.052 2026-09-05 rev conda-forge build",
+        "voltage_v": 0.7,
+        "rtl_sha256": {
+          "sfu_poly.sv": "d750c7d7c4496d64e231cd57952f52571cee81cec13ea35abb8c8ca42abbea1c"
+        },
+        "time_unit": "ps",
+        "testbench_sha256": "a437d842a92c7372bc6103764d0892a1f87d0a98a41c0c36e0fc52b391ab93b4",
+        "vcd_sha256": "e9ec4a5d5e97ae77904a524b2aba46bdd835de32611a10c6ad708b6b17e316f8",
+        "corner": "TT",
+        "annotated_pins": 10879,
+        "top": "sfu_poly",
+        "analysis": "mapped cells with pin capacitance; no wire parasitics",
+        "abc_constraints": {
+          "buffering_and_sizing": true,
+          "output_load_fF": 2,
+          "driving_cell": "BUFx2_ASAP7_75t_R"
+        },
+        "power": {
+          "Combinational": {
+            "total": 0.0006461950834,
+            "switching": 0.0004093753814,
+            "internal": 0.0002367047273,
+            "leakage": 1.149372224e-07
+          },
+          "Pad": {
+            "internal": 0,
+            "switching": 0,
+            "leakage": 0,
+            "total": 0
+          },
+          "Macro": {
+            "leakage": 0,
+            "internal": 0,
+            "total": 0,
+            "switching": 0
+          },
+          "Total": {
+            "total": 0.001052678912,
+            "switching": 0.0004507400154,
+            "internal": 0.000601783162,
+            "leakage": 1.557157958e-07
+          },
+          "Sequential": {
+            "total": 0.0004064838577,
+            "leakage": 4.077856985e-08,
+            "internal": 0.0003650783037,
+            "switching": 4.136476491e-05
+          },
+          "Clock": {
+            "switching": 0,
+            "total": 0,
+            "internal": 0,
+            "leakage": 0
+          }
+        },
+        "worst_setup_slack_ps": -20.33,
+        "temperature_c": 25
+      },
+      "summary": "Shorten the limiting first MAC carry path; preserve second-MAC ripple.",
+      "stage_slack_ps": [
+        229.8298,
+        -20.3285,
+        22.4586,
+        143.6518
+      ],
+      "is_baseline": false
+    },
+    {
+      "id": 4,
+      "name": "t800_c5_ripple",
+      "label": "Five cycles \u00b7 ripple",
+      "period_ps": 800,
+      "cycles": 5,
+      "area_um2": 313.70328,
+      "slack_ps": 30.77,
+      "power_mw": 1.181005035,
+      "flip_flops": 239,
+      "graph_register_bits_by_stage": [
+        0,
+        62,
+        61,
+        56,
+        35,
+        26
+      ],
+      "measurement": {
+        "meets_setup_target": true,
+        "capacitance_unit": "fF",
+        "temperature_c": 25,
+        "verilator_version": "Verilator 5.052 2026-09-05 rev conda-forge build",
+        "yosys_version": "Yosys 0.63 (git sha1 70a11c6bf0e8dd669f56c7da3587f78b405138e2, clang++ 21.1.8 -fPIC -O3)",
+        "testbench_sha256": "a437d842a92c7372bc6103764d0892a1f87d0a98a41c0c36e0fc52b391ab93b4",
+        "power": {
+          "Sequential": {
+            "leakage": 5.477519593e-08,
+            "internal": 0.0004924591049,
+            "switching": 4.589138916e-05,
+            "total": 0.0005384052638
+          },
+          "Pad": {
+            "internal": 0,
+            "switching": 0,
+            "leakage": 0,
+            "total": 0
+          },
+          "Clock": {
+            "internal": 0,
+            "switching": 0,
+            "leakage": 0,
+            "total": 0
+          },
+          "Total": {
+            "switching": 0.000452263077,
+            "total": 0.001181005035,
+            "internal": 0.0007285738247,
+            "leakage": 1.681585502e-07
+          },
+          "Macro": {
+            "internal": 0,
+            "switching": 0,
+            "leakage": 0,
+            "total": 0
+          },
+          "Combinational": {
+            "leakage": 1.133833081e-07,
+            "switching": 0.0004063716333,
+            "total": 0.0006425996544,
+            "internal": 0.0002361146617
+          }
+        },
+        "analysis": "mapped cells with pin capacitance; no wire parasitics",
+        "vcd_sha256": "9d670166a0d359aa2a46522edc7ac2882f1fb85677b2b6f7aef7e14d01907a15",
+        "abc_constraints": {
+          "driving_cell": "BUFx2_ASAP7_75t_R",
+          "output_load_fF": 2,
+          "buffering_and_sizing": true
+        },
+        "voltage_v": 0.7,
+        "library_sha256": "c078d2d780379fe4a44d8c0f02c55a49cc1cdbba61a305cfa25d2fa0b18dd3e5",
+        "top": "sfu_poly",
+        "rtl_sha256": {
+          "sfu_poly.sv": "9b6dc08ecd2922a60adbae5a41caefa9643e48aba343fda5ff5c42349e16f475"
+        },
+        "conda_environment": "3e50db3e9bd7d96b9ed4b2a59886ef655cd6c7db45f3557229f5a00a2491b5d6",
+        "annotated_pins": 11069,
+        "eda_bundle_sha256": "b91ef429cc805a3bbc9595db1a41bf43c9426d28efecdb1e05804525b794d363",
+        "sdc_sha256": "1bf96a27e1a6029c477dcd48f004dcdbf95be96de11c641a8b6a757e9392cdeb",
+        "clock_period_ps": 800,
+        "time_unit": "ps",
+        "worst_setup_slack_ps": 30.77,
+        "opensta_version": "3.1.0",
+        "technology": "ASAP7 7.5-track RVT NLDM",
+        "cell_area_um2": 313.70328,
+        "activity": "mapped gate simulation",
+        "power_unit": "W",
+        "eda_bundle_id": "5bbe0144473aeff5be02d1361d0ccb53ea6f985cf0897c78daa4330a5d4a148a",
+        "corner": "TT"
+      },
+      "summary": "Splitting the first multiply-add also meets 800 ps, with another 61 register bits and a fifth cycle.",
+      "stage_slack_ps": [
+        247.7307,
+        136.4783,
+        328.5205,
+        30.7655,
+        148.2289
+      ],
+      "is_baseline": false
+    },
+    {
+      "id": 5,
+      "name": "t700_c4_ripple",
+      "label": "t700_c4_ripple",
+      "period_ps": 700,
+      "cycles": 4,
+      "area_um2": 298.00062,
+      "slack_ps": -83.73,
+      "power_mw": 1.222695573,
+      "flip_flops": 178,
+      "graph_register_bits_by_stage": [
+        0,
+        62,
+        56,
+        35,
+        26
+      ],
+      "measurement": {
+        "sdc_sha256": "d47ef974e37262f8f6a15bef97154837d6cc3ab120b597f9d7bcf3e4b2f620be",
+        "time_unit": "ps",
+        "abc_constraints": {
+          "driving_cell": "BUFx2_ASAP7_75t_R",
+          "output_load_fF": 2,
+          "buffering_and_sizing": true
+        },
+        "rtl_sha256": {
+          "sfu_poly.sv": "e558c73f0c07ed992ea487ad40a6c3581cde1848972eecf85db1b3b6d4ffef7f"
+        },
+        "activity": "mapped gate simulation",
+        "library_sha256": "c078d2d780379fe4a44d8c0f02c55a49cc1cdbba61a305cfa25d2fa0b18dd3e5",
+        "testbench_sha256": "a437d842a92c7372bc6103764d0892a1f87d0a98a41c0c36e0fc52b391ab93b4",
+        "power_unit": "W",
+        "top": "sfu_poly",
+        "clock_period_ps": 700,
+        "verilator_version": "Verilator 5.052 2026-09-05 rev conda-forge build",
+        "conda_environment": "3e50db3e9bd7d96b9ed4b2a59886ef655cd6c7db45f3557229f5a00a2491b5d6",
+        "eda_bundle_id": "5bbe0144473aeff5be02d1361d0ccb53ea6f985cf0897c78daa4330a5d4a148a",
+        "vcd_sha256": "cf4498b9b8e5f6a36542dfd8d917ef477c225377a545197e588400b77148b2c0",
+        "opensta_version": "3.1.0",
+        "annotated_pins": 10912,
+        "cell_area_um2": 298.00062,
+        "yosys_version": "Yosys 0.63 (git sha1 70a11c6bf0e8dd669f56c7da3587f78b405138e2, clang++ 21.1.8 -fPIC -O3)",
+        "worst_setup_slack_ps": -83.73,
+        "corner": "TT",
+        "power": {
+          "Total": {
+            "total": 0.001222695573,
+            "switching": 0.0005184712354,
+            "internal": 0.0007040654891,
+            "leakage": 1.588919361e-07
+          },
+          "Macro": {
+            "switching": 0,
+            "leakage": 0,
+            "total": 0,
+            "internal": 0
+          },
+          "Combinational": {
+            "total": 0.0007566540153,
+            "internal": 0.0002868028241,
+            "leakage": 1.181133769e-07,
+            "switching": 0.0004697330878
+          },
+          "Sequential": {
+            "leakage": 4.077856985e-08,
+            "internal": 0.0004172624613,
+            "total": 0.0004660411505,
+            "switching": 4.873792204e-05
+          },
+          "Pad": {
+            "leakage": 0,
+            "total": 0,
+            "internal": 0,
+            "switching": 0
+          },
+          "Clock": {
+            "total": 0,
+            "internal": 0,
+            "switching": 0,
+            "leakage": 0
+          }
+        },
+        "meets_setup_target": false,
+        "eda_bundle_sha256": "b91ef429cc805a3bbc9595db1a41bf43c9426d28efecdb1e05804525b794d363",
+        "analysis": "mapped cells with pin capacitance; no wire parasitics",
+        "capacitance_unit": "fF",
+        "temperature_c": 25,
+        "technology": "ASAP7 7.5-track RVT NLDM",
+        "voltage_v": 0.7
+      },
+      "summary": "Establish the unmodified four-cycle failure at the tighter target.",
+      "stage_slack_ps": [
+        142.2617,
+        -83.728,
+        -58.0214,
+        -13.2545
+      ],
+      "is_baseline": false
+    },
+    {
+      "id": 6,
+      "name": "t700_c4_prefix",
+      "label": "t700_c4_prefix",
+      "period_ps": 700,
+      "cycles": 4,
+      "area_um2": 296.45514,
+      "slack_ps": -46.14,
+      "power_mw": 1.2101042080000002,
+      "flip_flops": 178,
+      "graph_register_bits_by_stage": [
+        0,
+        62,
+        56,
+        35,
+        26
+      ],
+      "measurement": {
+        "power": {
+          "Combinational": {
+            "switching": 0.0004735112016,
+            "internal": 0.0002713912108,
+            "total": 0.0007450164994,
+            "leakage": 1.140599295e-07
+          },
+          "Sequential": {
+            "total": 0.0004650873889,
+            "leakage": 4.077856985e-08,
+            "internal": 0.0004172243061,
+            "switching": 4.78223119e-05
+          },
+          "Clock": {
+            "switching": 0,
+            "leakage": 0,
+            "internal": 0,
+            "total": 0
+          },
+          "Total": {
+            "internal": 0.0006886157207,
+            "leakage": 1.548385029e-07,
+            "total": 0.001210104208,
+            "switching": 0.0005213335971
+          },
+          "Pad": {
+            "internal": 0,
+            "switching": 0,
+            "leakage": 0,
+            "total": 0
+          },
+          "Macro": {
+            "leakage": 0,
+            "internal": 0,
+            "switching": 0,
+            "total": 0
+          }
+        },
+        "worst_setup_slack_ps": -46.14,
+        "abc_constraints": {
+          "buffering_and_sizing": true,
+          "driving_cell": "BUFx2_ASAP7_75t_R",
+          "output_load_fF": 2
+        },
+        "vcd_sha256": "4c2006c9a1d00f6152642e7e7207c57795ccc3bb9157c7f2904086573a48c690",
+        "technology": "ASAP7 7.5-track RVT NLDM",
+        "testbench_sha256": "a437d842a92c7372bc6103764d0892a1f87d0a98a41c0c36e0fc52b391ab93b4",
+        "time_unit": "ps",
+        "sdc_sha256": "d47ef974e37262f8f6a15bef97154837d6cc3ab120b597f9d7bcf3e4b2f620be",
+        "meets_setup_target": false,
+        "annotated_pins": 10880,
+        "yosys_version": "Yosys 0.63 (git sha1 70a11c6bf0e8dd669f56c7da3587f78b405138e2, clang++ 21.1.8 -fPIC -O3)",
+        "eda_bundle_id": "5bbe0144473aeff5be02d1361d0ccb53ea6f985cf0897c78daa4330a5d4a148a",
+        "eda_bundle_sha256": "b91ef429cc805a3bbc9595db1a41bf43c9426d28efecdb1e05804525b794d363",
+        "cell_area_um2": 296.45514,
+        "rtl_sha256": {
+          "sfu_poly.sv": "61b8d109bace7773cfc883479f87443aa86df957fd2f6d9004fa8ab53cb799dc"
+        },
+        "temperature_c": 25,
+        "activity": "mapped gate simulation",
+        "opensta_version": "3.1.0",
+        "analysis": "mapped cells with pin capacitance; no wire parasitics",
+        "capacitance_unit": "fF",
+        "corner": "TT",
+        "library_sha256": "c078d2d780379fe4a44d8c0f02c55a49cc1cdbba61a305cfa25d2fa0b18dd3e5",
+        "verilator_version": "Verilator 5.052 2026-09-05 rev conda-forge build",
+        "top": "sfu_poly",
+        "clock_period_ps": 700,
+        "conda_environment": "3e50db3e9bd7d96b9ed4b2a59886ef655cd6c7db45f3557229f5a00a2491b5d6",
+        "voltage_v": 0.7,
+        "power_unit": "W"
+      },
+      "summary": "Both MACs lose sufficient timing margin; try faster carry throughout.",
+      "stage_slack_ps": [
+        141.6616,
+        -42.5535,
+        -46.1399,
+        56.6651
+      ],
+      "is_baseline": false
+    },
+    {
+      "id": 7,
+      "name": "t700_c5_ripple",
+      "label": "Five cycles \u00b7 column compression",
+      "period_ps": 700,
+      "cycles": 5,
+      "area_um2": 313.71786,
+      "slack_ps": -40.53,
+      "power_mw": 1.349928905,
+      "flip_flops": 239,
+      "graph_register_bits_by_stage": [
+        0,
+        62,
+        61,
+        56,
+        35,
+        26
+      ],
+      "measurement": {
+        "abc_constraints": {
+          "output_load_fF": 2,
+          "buffering_and_sizing": true,
+          "driving_cell": "BUFx2_ASAP7_75t_R"
+        },
+        "temperature_c": 25,
+        "activity": "mapped gate simulation",
+        "verilator_version": "Verilator 5.052 2026-09-05 rev conda-forge build",
+        "yosys_version": "Yosys 0.63 (git sha1 70a11c6bf0e8dd669f56c7da3587f78b405138e2, clang++ 21.1.8 -fPIC -O3)",
+        "capacitance_unit": "fF",
+        "meets_setup_target": false,
+        "corner": "TT",
+        "voltage_v": 0.7,
+        "worst_setup_slack_ps": -40.53,
+        "time_unit": "ps",
+        "top": "sfu_poly",
+        "vcd_sha256": "0d45dc88dabca50617ea3eea9e6a2fe75c60554943e1288cdfd6aa77a41f658d",
+        "power": {
+          "Macro": {
+            "internal": 0,
+            "total": 0,
+            "leakage": 0,
+            "switching": 0
+          },
+          "Total": {
+            "switching": 0.0005169128417,
+            "leakage": 1.682011828e-07,
+            "total": 0.001349928905,
+            "internal": 0.0008328479016
+          },
+          "Clock": {
+            "internal": 0,
+            "switching": 0,
+            "total": 0,
+            "leakage": 0
+          },
+          "Combinational": {
+            "total": 0.0007345761987,
+            "leakage": 1.134259477e-07,
+            "internal": 0.0002700368932,
+            "switching": 0.0004644258588
+          },
+          "Sequential": {
+            "switching": 5.248669549e-05,
+            "leakage": 5.477519593e-08,
+            "total": 0.0006153527647,
+            "internal": 0.0005628112704
+          },
+          "Pad": {
+            "total": 0,
+            "internal": 0,
+            "leakage": 0,
+            "switching": 0
+          }
+        },
+        "technology": "ASAP7 7.5-track RVT NLDM",
+        "library_sha256": "c078d2d780379fe4a44d8c0f02c55a49cc1cdbba61a305cfa25d2fa0b18dd3e5",
+        "eda_bundle_sha256": "b91ef429cc805a3bbc9595db1a41bf43c9426d28efecdb1e05804525b794d363",
+        "opensta_version": "3.1.0",
+        "cell_area_um2": 313.71786,
+        "analysis": "mapped cells with pin capacitance; no wire parasitics",
+        "testbench_sha256": "a437d842a92c7372bc6103764d0892a1f87d0a98a41c0c36e0fc52b391ab93b4",
+        "clock_period_ps": 700,
+        "rtl_sha256": {
+          "sfu_poly.sv": "9b6dc08ecd2922a60adbae5a41caefa9643e48aba343fda5ff5c42349e16f475"
+        },
+        "power_unit": "W",
+        "annotated_pins": 11069,
+        "sdc_sha256": "d47ef974e37262f8f6a15bef97154837d6cc3ab120b597f9d7bcf3e4b2f620be",
+        "eda_bundle_id": "5bbe0144473aeff5be02d1361d0ccb53ea6f985cf0897c78daa4330a5d4a148a",
+        "conda_environment": "3e50db3e9bd7d96b9ed4b2a59886ef655cd6c7db45f3557229f5a00a2491b5d6"
+      },
+      "summary": "After splitting the first MAC, the second compression and low-column addition miss 700 ps.",
+      "stage_slack_ps": [
+        147.7307,
+        36.4783,
+        228.5204,
+        -40.5299,
+        48.2289
+      ],
+      "is_baseline": true
+    },
+    {
+      "id": 8,
+      "name": "t700_c5_rows",
+      "label": "Five cycles \u00b7 whole-row compression",
+      "period_ps": 700,
+      "cycles": 5,
+      "area_um2": 342.51336,
+      "slack_ps": 2.14,
+      "power_mw": 1.4502551639999999,
+      "flip_flops": 265,
+      "graph_register_bits_by_stage": [
+        0,
+        62,
+        71,
+        56,
+        50,
+        26
+      ],
+      "measurement": {
+        "top": "sfu_poly",
+        "capacitance_unit": "fF",
+        "yosys_version": "Yosys 0.63 (git sha1 70a11c6bf0e8dd669f56c7da3587f78b405138e2, clang++ 21.1.8 -fPIC -O3)",
+        "eda_bundle_sha256": "b91ef429cc805a3bbc9595db1a41bf43c9426d28efecdb1e05804525b794d363",
+        "technology": "ASAP7 7.5-track RVT NLDM",
+        "clock_period_ps": 700,
+        "eda_bundle_id": "5bbe0144473aeff5be02d1361d0ccb53ea6f985cf0897c78daa4330a5d4a148a",
+        "vcd_sha256": "25a4f5228879b9e666014f03a8dad89f11fd792061b0e204c5721c0e77a23b09",
+        "time_unit": "ps",
+        "opensta_version": "3.1.0",
+        "testbench_sha256": "a437d842a92c7372bc6103764d0892a1f87d0a98a41c0c36e0fc52b391ab93b4",
+        "voltage_v": 0.7,
+        "meets_setup_target": true,
+        "annotated_pins": 12095,
+        "activity": "mapped gate simulation",
+        "conda_environment": "3e50db3e9bd7d96b9ed4b2a59886ef655cd6c7db45f3557229f5a00a2491b5d6",
+        "rtl_sha256": {
+          "sfu_poly.sv": "8710252a78f88dca7ae5059eac7a3878cf3e5fb0897b91404d8bff89b934c4b9"
+        },
+        "sdc_sha256": "d47ef974e37262f8f6a15bef97154837d6cc3ab120b597f9d7bcf3e4b2f620be",
+        "temperature_c": 25,
+        "power": {
+          "Sequential": {
+            "leakage": 6.065816649e-08,
+            "total": 0.0006660145591,
+            "switching": 5.293596405e-05,
+            "internal": 0.000613017939
+          },
+          "Pad": {
+            "internal": 0,
+            "leakage": 0,
+            "total": 0,
+            "switching": 0
+          },
+          "Combinational": {
+            "total": 0.0007842407795,
+            "leakage": 1.238626766e-07,
+            "internal": 0.0002938035468,
+            "switching": 0.0004903133377
+          },
+          "Total": {
+            "switching": 0.0005432489561,
+            "total": 0.001450255164,
+            "internal": 0.0009068216314,
+            "leakage": 1.845207578e-07
+          },
+          "Clock": {
+            "switching": 0,
+            "leakage": 0,
+            "total": 0,
+            "internal": 0
+          },
+          "Macro": {
+            "leakage": 0,
+            "switching": 0,
+            "internal": 0,
+            "total": 0
+          }
+        },
+        "corner": "TT",
+        "verilator_version": "Verilator 5.052 2026-09-05 rev conda-forge build",
+        "cell_area_um2": 342.51336,
+        "worst_setup_slack_ps": 2.14,
+        "abc_constraints": {
+          "output_load_fF": 2,
+          "driving_cell": "BUFx2_ASAP7_75t_R",
+          "buffering_and_sizing": true
+        },
+        "library_sha256": "c078d2d780379fe4a44d8c0f02c55a49cc1cdbba61a305cfa25d2fa0b18dd3e5",
+        "analysis": "mapped cells with pin capacitance; no wire parasitics",
+        "power_unit": "W"
+      },
+      "summary": "Whole-row grouping changes the dependency paths and meets 700 ps, with a larger cut bank.",
+      "stage_slack_ps": [
+        131.1134,
+        68.0891,
+        147.3792,
+        2.1389,
+        10.5448
+      ],
+      "is_baseline": false
+    },
+    {
+      "id": 9,
+      "name": "t800_c4_unified_prefix",
+      "label": "Four cycles \u00b7 unified prefix",
+      "period_ps": 800,
+      "cycles": 4,
+      "area_um2": 298.0152,
+      "slack_ps": -1.65,
+      "power_mw": 1.0613446359999998,
+      "flip_flops": 178,
+      "graph_register_bits_by_stage": [
+        0,
+        62,
+        56,
+        35,
+        26
+      ],
+      "measurement": {
+        "abc_constraints": {
+          "driving_cell": "BUFx2_ASAP7_75t_R",
+          "buffering_and_sizing": true,
+          "output_load_fF": 2
+        },
+        "voltage_v": 0.7,
+        "corner": "TT",
+        "power_unit": "W",
+        "top": "sfu_poly",
+        "clock_period_ps": 800,
+        "eda_bundle_id": "5bbe0144473aeff5be02d1361d0ccb53ea6f985cf0897c78daa4330a5d4a148a",
+        "rtl_sha256": {
+          "sfu_poly.sv": "cdf00c28ce7faa7517d571afdaff20af89590b79b96faccab9b9904b23b998ed"
+        },
+        "annotated_pins": 10892,
+        "activity": "mapped gate simulation",
+        "sdc_sha256": "1bf96a27e1a6029c477dcd48f004dcdbf95be96de11c641a8b6a757e9392cdeb",
+        "worst_setup_slack_ps": -1.65,
+        "yosys_version": "Yosys 0.63 (git sha1 70a11c6bf0e8dd669f56c7da3587f78b405138e2, clang++ 21.1.8 -fPIC -O3)",
+        "cell_area_um2": 298.0152,
+        "library_sha256": "c078d2d780379fe4a44d8c0f02c55a49cc1cdbba61a305cfa25d2fa0b18dd3e5",
+        "analysis": "mapped cells with pin capacitance; no wire parasitics",
+        "technology": "ASAP7 7.5-track RVT NLDM",
+        "meets_setup_target": false,
+        "opensta_version": "3.1.0",
+        "verilator_version": "Verilator 5.052 2026-09-05 rev conda-forge build",
+        "power": {
+          "Macro": {
+            "switching": 0,
+            "total": 0,
+            "leakage": 0,
+            "internal": 0
+          },
+          "Total": {
+            "switching": 0.0004552590544,
+            "internal": 0.0006059292355,
+            "leakage": 1.563739289e-07,
+            "total": 0.001061344636
+          },
+          "Combinational": {
+            "total": 0.0006550329272,
+            "internal": 0.0002408509463,
+            "switching": 0.0004140663659,
+            "leakage": 1.155953484e-07
+          },
+          "Clock": {
+            "switching": 0,
+            "total": 0,
+            "internal": 0,
+            "leakage": 0
+          },
+          "Sequential": {
+            "switching": 4.119272853e-05,
+            "leakage": 4.077856985e-08,
+            "total": 0.0004063116212,
+            "internal": 0.0003650781291
+          },
+          "Pad": {
+            "internal": 0,
+            "switching": 0,
+            "leakage": 0,
+            "total": 0
+          }
+        },
+        "testbench_sha256": "a437d842a92c7372bc6103764d0892a1f87d0a98a41c0c36e0fc52b391ab93b4",
+        "vcd_sha256": "0c6b5bd275fa908b9e9df29436ac0fa07eab6ded839048012426480ea2396655",
+        "temperature_c": 25,
+        "time_unit": "ps",
+        "eda_bundle_sha256": "b91ef429cc805a3bbc9595db1a41bf43c9426d28efecdb1e05804525b794d363",
+        "capacitance_unit": "fF",
+        "conda_environment": "3e50db3e9bd7d96b9ed4b2a59886ef655cd6c7db45f3557229f5a00a2491b5d6"
+      },
+      "summary": "A single prefix network spans the first sum. It narrowly misses the 800 ps target.",
+      "stage_slack_ps": [
+        261.1909,
+        -1.6503,
+        49.5366,
+        148.2289
+      ],
+      "is_baseline": false
+    },
+    {
+      "id": 10,
+      "name": "t800_c4_unified_hybrid",
+      "label": "Four cycles \u00b7 unified hybrid",
+      "period_ps": 800,
+      "cycles": 4,
+      "area_um2": 299.56068,
+      "slack_ps": 25.75,
+      "power_mw": 1.0621030809999998,
+      "flip_flops": 178,
+      "graph_register_bits_by_stage": [
+        0,
+        62,
+        56,
+        35,
+        26
+      ],
+      "measurement": {
+        "time_unit": "ps",
+        "activity": "mapped gate simulation",
+        "meets_setup_target": true,
+        "sdc_sha256": "1bf96a27e1a6029c477dcd48f004dcdbf95be96de11c641a8b6a757e9392cdeb",
+        "vcd_sha256": "2b57fe9f5296cc10dad9d58da6263d950e5846973486d085b694bb1cd0f4759a",
+        "opensta_version": "3.1.0",
+        "conda_environment": "3e50db3e9bd7d96b9ed4b2a59886ef655cd6c7db45f3557229f5a00a2491b5d6",
+        "abc_constraints": {
+          "output_load_fF": 2,
+          "driving_cell": "BUFx2_ASAP7_75t_R",
+          "buffering_and_sizing": true
+        },
+        "power": {
+          "Sequential": {
+            "switching": 4.008797987e-05,
+            "leakage": 4.077856985e-08,
+            "internal": 0.0003650575818,
+            "total": 0.0004051863507
+          },
+          "Clock": {
+            "switching": 0,
+            "internal": 0,
+            "total": 0,
+            "leakage": 0
+          },
+          "Combinational": {
+            "internal": 0.0002389295696,
+            "leakage": 1.161626102e-07,
+            "total": 0.0006569164689,
+            "switching": 0.0004178707022
+          },
+          "Pad": {
+            "leakage": 0,
+            "total": 0,
+            "switching": 0,
+            "internal": 0
+          },
+          "Macro": {
+            "internal": 0,
+            "total": 0,
+            "leakage": 0,
+            "switching": 0
+          },
+          "Total": {
+            "total": 0.001062103081,
+            "leakage": 1.569411836e-07,
+            "switching": 0.0004579586093,
+            "internal": 0.0006039875443
+          }
+        },
+        "power_unit": "W",
+        "library_sha256": "c078d2d780379fe4a44d8c0f02c55a49cc1cdbba61a305cfa25d2fa0b18dd3e5",
+        "cell_area_um2": 299.56068,
+        "worst_setup_slack_ps": 25.75,
+        "verilator_version": "Verilator 5.052 2026-09-05 rev conda-forge build",
+        "eda_bundle_id": "5bbe0144473aeff5be02d1361d0ccb53ea6f985cf0897c78daa4330a5d4a148a",
+        "clock_period_ps": 800,
+        "analysis": "mapped cells with pin capacitance; no wire parasitics",
+        "capacitance_unit": "fF",
+        "temperature_c": 25,
+        "testbench_sha256": "a437d842a92c7372bc6103764d0892a1f87d0a98a41c0c36e0fc52b391ab93b4",
+        "yosys_version": "Yosys 0.63 (git sha1 70a11c6bf0e8dd669f56c7da3587f78b405138e2, clang++ 21.1.8 -fPIC -O3)",
+        "eda_bundle_sha256": "b91ef429cc805a3bbc9595db1a41bf43c9426d28efecdb1e05804525b794d363",
+        "technology": "ASAP7 7.5-track RVT NLDM",
+        "voltage_v": 0.7,
+        "rtl_sha256": {
+          "sfu_poly.sv": "f3a9c06db27461bc36361f7259f0f9f2926cea49f9f1a6e1ce116be5aa241952"
+        },
+        "corner": "TT",
+        "top": "sfu_poly",
+        "annotated_pins": 10976
+      },
+      "summary": "Eight low columns ripple; the upper suffix uses prefix completion. Four cycles now meet 800 ps.",
+      "stage_slack_ps": [
+        286.6323,
+        25.7547,
+        31.8364,
+        181.6834
+      ],
+      "is_baseline": false
+    },
+    {
+      "id": 11,
+      "name": "t700_c5_low_block8",
+      "label": "t700_c5_low_block8",
+      "period_ps": 700,
+      "cycles": 5,
+      "area_um2": 313.19298,
+      "slack_ps": -50.59,
+      "power_mw": 1.350512379,
+      "flip_flops": 239,
+      "graph_register_bits_by_stage": [
+        0,
+        62,
+        61,
+        56,
+        35,
+        26
+      ],
+      "measurement": {
+        "time_unit": "ps",
+        "eda_bundle_id": "5bbe0144473aeff5be02d1361d0ccb53ea6f985cf0897c78daa4330a5d4a148a",
+        "voltage_v": 0.7,
+        "capacitance_unit": "fF",
+        "cell_area_um2": 313.19298,
+        "yosys_version": "Yosys 0.63 (git sha1 70a11c6bf0e8dd669f56c7da3587f78b405138e2, clang++ 21.1.8 -fPIC -O3)",
+        "power": {
+          "Combinational": {
+            "internal": 0.0002695946314,
+            "leakage": 1.129521721e-07,
+            "switching": 0.000465092482,
+            "total": 0.0007348000654
+          },
+          "Sequential": {
+            "leakage": 5.477519593e-08,
+            "internal": 0.0005628176732,
+            "switching": 5.283985956e-05,
+            "total": 0.0006157123134
+          },
+          "Total": {
+            "internal": 0.0008324122173,
+            "switching": 0.0005179324653,
+            "leakage": 1.677273929e-07,
+            "total": 0.001350512379
+          },
+          "Macro": {
+            "switching": 0,
+            "total": 0,
+            "internal": 0,
+            "leakage": 0
+          },
+          "Pad": {
+            "total": 0,
+            "leakage": 0,
+            "switching": 0,
+            "internal": 0
+          },
+          "Clock": {
+            "total": 0,
+            "leakage": 0,
+            "internal": 0,
+            "switching": 0
+          }
+        },
+        "technology": "ASAP7 7.5-track RVT NLDM",
+        "annotated_pins": 11030,
+        "corner": "TT",
+        "eda_bundle_sha256": "b91ef429cc805a3bbc9595db1a41bf43c9426d28efecdb1e05804525b794d363",
+        "temperature_c": 25,
+        "power_unit": "W",
+        "vcd_sha256": "6fcf62a66c19596b1dce94920a4accdff5b9a389aa2f3a586b0c4acda9b7f454",
+        "verilator_version": "Verilator 5.052 2026-09-05 rev conda-forge build",
+        "activity": "mapped gate simulation",
+        "top": "sfu_poly",
+        "meets_setup_target": false,
+        "opensta_version": "3.1.0",
+        "abc_constraints": {
+          "driving_cell": "BUFx2_ASAP7_75t_R",
+          "buffering_and_sizing": true,
+          "output_load_fF": 2
+        },
+        "analysis": "mapped cells with pin capacitance; no wire parasitics",
+        "sdc_sha256": "d47ef974e37262f8f6a15bef97154837d6cc3ab120b597f9d7bcf3e4b2f620be",
+        "conda_environment": "3e50db3e9bd7d96b9ed4b2a59886ef655cd6c7db45f3557229f5a00a2491b5d6",
+        "clock_period_ps": 700,
+        "worst_setup_slack_ps": -50.59,
+        "library_sha256": "c078d2d780379fe4a44d8c0f02c55a49cc1cdbba61a305cfa25d2fa0b18dd3e5",
+        "rtl_sha256": {
+          "sfu_poly.sv": "48cf67b73edf89ef08eaee4b8147b65ea73300d2667e0d34f7bcf3093a3425e0"
+        },
+        "testbench_sha256": "a437d842a92c7372bc6103764d0892a1f87d0a98a41c0c36e0fc52b391ab93b4"
+      },
+      "summary": "R4 low-column addition misses 40.53 ps; use block lookahead there without changing the other three carry networks or the stored heap.",
+      "stage_slack_ps": [
+        136.4945,
+        54.6744,
+        228.5204,
+        -50.5928,
+        45.2876
+      ],
+      "is_baseline": false
+    },
+    {
+      "id": 12,
+      "name": "t700_c5_cut15",
+      "label": "Five cycles \u00b7 cut at column 15",
+      "period_ps": 700,
+      "cycles": 5,
+      "area_um2": 315.61326,
+      "slack_ps": -16.61,
+      "power_mw": 1.366208191,
+      "flip_flops": 243,
+      "graph_register_bits_by_stage": [
+        0,
+        62,
+        61,
+        56,
+        39,
+        26
+      ],
+      "measurement": {
+        "eda_bundle_id": "5bbe0144473aeff5be02d1361d0ccb53ea6f985cf0897c78daa4330a5d4a148a",
+        "power_unit": "W",
+        "eda_bundle_sha256": "b91ef429cc805a3bbc9595db1a41bf43c9426d28efecdb1e05804525b794d363",
+        "conda_environment": "3e50db3e9bd7d96b9ed4b2a59886ef655cd6c7db45f3557229f5a00a2491b5d6",
+        "voltage_v": 0.7,
+        "worst_setup_slack_ps": -16.61,
+        "power": {
+          "Pad": {
+            "leakage": 0,
+            "switching": 0,
+            "internal": 0,
+            "total": 0
+          },
+          "Macro": {
+            "leakage": 0,
+            "internal": 0,
+            "total": 0,
+            "switching": 0
+          },
+          "Sequential": {
+            "internal": 0.0005726600066,
+            "total": 0.0006239959621,
+            "switching": 5.128023622e-05,
+            "leakage": 5.569398809e-08
+          },
+          "Clock": {
+            "leakage": 0,
+            "switching": 0,
+            "total": 0,
+            "internal": 0
+          },
+          "Combinational": {
+            "internal": 0.0002727346728,
+            "leakage": 1.134983876e-07,
+            "switching": 0.0004693641386,
+            "total": 0.0007422122872
+          },
+          "Total": {
+            "internal": 0.0008453944465,
+            "leakage": 1.691924325e-07,
+            "total": 0.001366208191,
+            "switching": 0.0005206445348
+          }
+        },
+        "analysis": "mapped cells with pin capacitance; no wire parasitics",
+        "temperature_c": 25,
+        "library_sha256": "c078d2d780379fe4a44d8c0f02c55a49cc1cdbba61a305cfa25d2fa0b18dd3e5",
+        "technology": "ASAP7 7.5-track RVT NLDM",
+        "corner": "TT",
+        "time_unit": "ps",
+        "opensta_version": "3.1.0",
+        "meets_setup_target": false,
+        "abc_constraints": {
+          "driving_cell": "BUFx2_ASAP7_75t_R",
+          "output_load_fF": 2,
+          "buffering_and_sizing": true
+        },
+        "cell_area_um2": 315.61326,
+        "capacitance_unit": "fF",
+        "annotated_pins": 11065,
+        "testbench_sha256": "a437d842a92c7372bc6103764d0892a1f87d0a98a41c0c36e0fc52b391ab93b4",
+        "clock_period_ps": 700,
+        "top": "sfu_poly",
+        "rtl_sha256": {
+          "sfu_poly.sv": "06be17b55e59476e602198f5f2f143643904c341f1ae864b518d203bd86ef3d3"
+        },
+        "yosys_version": "Yosys 0.63 (git sha1 70a11c6bf0e8dd669f56c7da3587f78b405138e2, clang++ 21.1.8 -fPIC -O3)",
+        "activity": "mapped gate simulation",
+        "vcd_sha256": "0e823a007e08a3ea8d8801dbdb9df382b2d083a4352d288eb7a510a595f613ae",
+        "verilator_version": "Verilator 5.052 2026-09-05 rev conda-forge build",
+        "sdc_sha256": "d47ef974e37262f8f6a15bef97154837d6cc3ab120b597f9d7bcf3e4b2f620be"
+      },
+      "summary": "R4 misses 40.53 ps while R5 has 48.23 ps slack. Move two unresolved low columns across R4, keeping the numerical drop at 17.",
+      "stage_slack_ps": [
+        180.1085,
+        52.04,
+        228.5204,
+        -16.6125,
+        49.6227
+      ],
+      "is_baseline": false
+    },
+    {
+      "id": 13,
+      "name": "t700_c5_cut13",
+      "label": "Five cycles \u00b7 cut at column 13",
+      "period_ps": 700,
+      "cycles": 5,
+      "area_um2": 316.386,
+      "slack_ps": -14.25,
+      "power_mw": 1.376305125,
+      "flip_flops": 246,
+      "graph_register_bits_by_stage": [
+        0,
+        62,
+        61,
+        56,
+        42,
+        26
+      ],
+      "measurement": {
+        "testbench_sha256": "a437d842a92c7372bc6103764d0892a1f87d0a98a41c0c36e0fc52b391ab93b4",
+        "voltage_v": 0.7,
+        "opensta_version": "3.1.0",
+        "time_unit": "ps",
+        "eda_bundle_sha256": "b91ef429cc805a3bbc9595db1a41bf43c9426d28efecdb1e05804525b794d363",
+        "verilator_version": "Verilator 5.052 2026-09-05 rev conda-forge build",
+        "power_unit": "W",
+        "clock_period_ps": 700,
+        "vcd_sha256": "8cee1aefae2bc7db82cf0d10660199aca58365fa352ed8fc0e3d174c59645344",
+        "annotated_pins": 11072,
+        "technology": "ASAP7 7.5-track RVT NLDM",
+        "conda_environment": "3e50db3e9bd7d96b9ed4b2a59886ef655cd6c7db45f3557229f5a00a2491b5d6",
+        "analysis": "mapped cells with pin capacitance; no wire parasitics",
+        "corner": "TT",
+        "rtl_sha256": {
+          "sfu_poly.sv": "4716b01bf53bd0f81ac4666d4304b2dc972b6623dac5f287e9ec55b06dede341"
+        },
+        "eda_bundle_id": "5bbe0144473aeff5be02d1361d0ccb53ea6f985cf0897c78daa4330a5d4a148a",
+        "library_sha256": "c078d2d780379fe4a44d8c0f02c55a49cc1cdbba61a305cfa25d2fa0b18dd3e5",
+        "capacitance_unit": "fF",
+        "meets_setup_target": false,
+        "yosys_version": "Yosys 0.63 (git sha1 70a11c6bf0e8dd669f56c7da3587f78b405138e2, clang++ 21.1.8 -fPIC -O3)",
+        "abc_constraints": {
+          "output_load_fF": 2,
+          "driving_cell": "BUFx2_ASAP7_75t_R",
+          "buffering_and_sizing": true
+        },
+        "sdc_sha256": "d47ef974e37262f8f6a15bef97154837d6cc3ab120b597f9d7bcf3e4b2f620be",
+        "activity": "mapped gate simulation",
+        "worst_setup_slack_ps": -14.25,
+        "cell_area_um2": 316.386,
+        "temperature_c": 25,
+        "power": {
+          "Pad": {
+            "internal": 0,
+            "switching": 0,
+            "leakage": 0,
+            "total": 0
+          },
+          "Sequential": {
+            "switching": 5.371824227e-05,
+            "internal": 0.0005793740856,
+            "total": 0.0006331486511,
+            "leakage": 5.637042122e-08
+          },
+          "Total": {
+            "leakage": 1.699323064e-07,
+            "internal": 0.0008502130513,
+            "switching": 0.000525922107,
+            "total": 0.001376305125
+          },
+          "Clock": {
+            "leakage": 0,
+            "switching": 0,
+            "total": 0,
+            "internal": 0
+          },
+          "Macro": {
+            "switching": 0,
+            "leakage": 0,
+            "internal": 0,
+            "total": 0
+          },
+          "Combinational": {
+            "leakage": 1.135618319e-07,
+            "total": 0.0007431562408,
+            "switching": 0.0004722036247,
+            "internal": 0.0002708390239
+          }
+        },
+        "top": "sfu_poly"
+      },
+      "summary": "Moving four unresolved columns across the second cut helps, but this five-cycle fit still misses timing.",
+      "stage_slack_ps": [
+        196.3633,
+        53.3418,
+        228.5204,
+        -14.2478,
+        73.6156
+      ],
+      "is_baseline": false
+    },
+    {
+      "id": 14,
+      "name": "t700_c6_product_cut",
+      "label": "Six cycles \u00b7 store product rows",
+      "period_ps": 700,
+      "cycles": 6,
+      "area_um2": 371.6442,
+      "slack_ps": 115.36,
+      "power_mw": 1.829938963,
+      "flip_flops": 428,
+      "graph_register_bits_by_stage": [
+        0,
+        62,
+        61,
+        56,
+        189,
+        35,
+        26
+      ],
+      "measurement": {
+        "opensta_version": "3.1.0",
+        "verilator_version": "Verilator 5.052 2026-09-05 rev conda-forge build",
+        "time_unit": "ps",
+        "conda_environment": "3e50db3e9bd7d96b9ed4b2a59886ef655cd6c7db45f3557229f5a00a2491b5d6",
+        "power_unit": "W",
+        "eda_bundle_id": "5bbe0144473aeff5be02d1361d0ccb53ea6f985cf0897c78daa4330a5d4a148a",
+        "sdc_sha256": "d47ef974e37262f8f6a15bef97154837d6cc3ab120b597f9d7bcf3e4b2f620be",
+        "top": "sfu_poly",
+        "library_sha256": "c078d2d780379fe4a44d8c0f02c55a49cc1cdbba61a305cfa25d2fa0b18dd3e5",
+        "cell_area_um2": 371.6442,
+        "annotated_pins": 11750,
+        "analysis": "mapped cells with pin capacitance; no wire parasitics",
+        "voltage_v": 0.7,
+        "technology": "ASAP7 7.5-track RVT NLDM",
+        "power": {
+          "Clock": {
+            "internal": 0,
+            "switching": 0,
+            "leakage": 0,
+            "total": 0
+          },
+          "Sequential": {
+            "internal": 0.001017685863,
+            "total": 0.001117664156,
+            "leakage": 9.814345248e-08,
+            "switching": 9.988014062e-05
+          },
+          "Total": {
+            "total": 0.001829938963,
+            "switching": 0.0005407111021,
+            "leakage": 2.102959371e-07,
+            "internal": 0.001289017615
+          },
+          "Pad": {
+            "internal": 0,
+            "leakage": 0,
+            "total": 0,
+            "switching": 0
+          },
+          "Combinational": {
+            "leakage": 1.121524562e-07,
+            "internal": 0.0002713317517,
+            "switching": 0.0004408311506,
+            "total": 0.0007122750976
+          },
+          "Macro": {
+            "internal": 0,
+            "leakage": 0,
+            "switching": 0,
+            "total": 0
+          }
+        },
+        "testbench_sha256": "a437d842a92c7372bc6103764d0892a1f87d0a98a41c0c36e0fc52b391ab93b4",
+        "corner": "TT",
+        "yosys_version": "Yosys 0.63 (git sha1 70a11c6bf0e8dd669f56c7da3587f78b405138e2, clang++ 21.1.8 -fPIC -O3)",
+        "meets_setup_target": true,
+        "clock_period_ps": 700,
+        "abc_constraints": {
+          "output_load_fF": 2,
+          "driving_cell": "BUFx2_ASAP7_75t_R",
+          "buffering_and_sizing": true
+        },
+        "activity": "mapped gate simulation",
+        "vcd_sha256": "f62e9511459018f042a94a0876bb0748edcb7e5ce8c4114e45dfd23dd68f1fc9",
+        "rtl_sha256": {
+          "sfu_poly.sv": "66ecd5a3e3e6480ed673a8e015650b0fbf2c17e61d7a9e9d0b2aaf8cafba9928"
+        },
+        "temperature_c": 25,
+        "capacitance_unit": "fF",
+        "eda_bundle_sha256": "b91ef429cc805a3bbc9595db1a41bf43c9426d28efecdb1e05804525b794d363",
+        "worst_setup_slack_ps": 115.36
+      },
+      "summary": "A new register separates second-MAC product selection from compression. It closes timing but stores 189 signals in that bank.",
+      "stage_slack_ps": [
+        116.5916,
+        115.3634,
+        228.5204,
+        372.4254,
+        154.5187,
+        124.4023
+      ],
+      "is_baseline": false
+    },
+    {
+      "id": 15,
+      "name": "t700_c6_compress3",
+      "label": "Six cycles \u00b7 compress before storage",
+      "period_ps": 700,
+      "cycles": 6,
+      "area_um2": 340.0056,
+      "slack_ps": 33.34,
+      "power_mw": 1.5730779849999998,
+      "flip_flops": 326,
+      "graph_register_bits_by_stage": [
+        0,
+        62,
+        61,
+        56,
+        87,
+        35,
+        26
+      ],
+      "measurement": {
+        "time_unit": "ps",
+        "eda_bundle_id": "5bbe0144473aeff5be02d1361d0ccb53ea6f985cf0897c78daa4330a5d4a148a",
+        "power_unit": "W",
+        "temperature_c": 25,
+        "technology": "ASAP7 7.5-track RVT NLDM",
+        "corner": "TT",
+        "capacitance_unit": "fF",
+        "cell_area_um2": 340.0056,
+        "vcd_sha256": "43cef996e5c8180e523c8da720bda97c0b502a2443a51c5ee98bd14861b1a509",
+        "rtl_sha256": {
+          "sfu_poly.sv": "3afe4ee8e4cfcab9564bd82a57c939b2444d382240764a7dcd45914b964d51f3"
+        },
+        "sdc_sha256": "d47ef974e37262f8f6a15bef97154837d6cc3ab120b597f9d7bcf3e4b2f620be",
+        "yosys_version": "Yosys 0.63 (git sha1 70a11c6bf0e8dd669f56c7da3587f78b405138e2, clang++ 21.1.8 -fPIC -O3)",
+        "analysis": "mapped cells with pin capacitance; no wire parasitics",
+        "annotated_pins": 11365,
+        "opensta_version": "3.1.0",
+        "testbench_sha256": "a437d842a92c7372bc6103764d0892a1f87d0a98a41c0c36e0fc52b391ab93b4",
+        "library_sha256": "c078d2d780379fe4a44d8c0f02c55a49cc1cdbba61a305cfa25d2fa0b18dd3e5",
+        "top": "sfu_poly",
+        "meets_setup_target": true,
+        "clock_period_ps": 700,
+        "voltage_v": 0.7,
+        "abc_constraints": {
+          "buffering_and_sizing": true,
+          "output_load_fF": 2,
+          "driving_cell": "BUFx2_ASAP7_75t_R"
+        },
+        "verilator_version": "Verilator 5.052 2026-09-05 rev conda-forge build",
+        "eda_bundle_sha256": "b91ef429cc805a3bbc9595db1a41bf43c9426d28efecdb1e05804525b794d363",
+        "conda_environment": "3e50db3e9bd7d96b9ed4b2a59886ef655cd6c7db45f3557229f5a00a2491b5d6",
+        "activity": "mapped gate simulation",
+        "power": {
+          "Sequential": {
+            "total": 0.0008467466687,
+            "switching": 7.266690955e-05,
+            "leakage": 7.472966956e-08,
+            "internal": 0.0007740050205
+          },
+          "Clock": {
+            "total": 0,
+            "switching": 0,
+            "internal": 0,
+            "leakage": 0
+          },
+          "Macro": {
+            "leakage": 0,
+            "switching": 0,
+            "total": 0,
+            "internal": 0
+          },
+          "Total": {
+            "internal": 0.001046665595,
+            "total": 0.001573077985,
+            "leakage": 1.879694196e-07,
+            "switching": 0.0005262243794
+          },
+          "Combinational": {
+            "leakage": 1.132396932e-07,
+            "switching": 0.0004535573826,
+            "internal": 0.0002726604871,
+            "total": 0.0007263310836
+          },
+          "Pad": {
+            "internal": 0,
+            "switching": 0,
+            "leakage": 0,
+            "total": 0
+          }
+        },
+        "worst_setup_slack_ps": 33.34
+      },
+      "summary": "Three compressor layers run before the extra register, shrinking its bank from 189 to 87 bits while retaining positive slack.",
+      "stage_slack_ps": [
+        163.353,
+        33.3374,
+        228.5204,
+        164.367,
+        203.7395,
+        124.4023
+      ],
+      "is_baseline": false
+    },
+    {
+      "id": 16,
+      "name": "t700_c6_compress4",
+      "label": "Six cycles \u00b7 four layers before storage",
+      "period_ps": 700,
+      "cycles": 6,
+      "area_um2": 337.62906,
+      "slack_ps": 84.88,
+      "power_mw": 1.540485886,
+      "flip_flops": 313,
+      "graph_register_bits_by_stage": [
+        0,
+        62,
+        61,
+        56,
+        74,
+        35,
+        26
+      ],
+      "measurement": {
+        "verilator_version": "Verilator 5.052 2026-09-05 rev conda-forge build",
+        "top": "sfu_poly",
+        "power": {
+          "Macro": {
+            "switching": 0,
+            "total": 0,
+            "leakage": 0,
+            "internal": 0
+          },
+          "Total": {
+            "switching": 0.00052598404,
+            "internal": 0.001014316455,
+            "total": 0.001540485886,
+            "leakage": 1.854448612e-07
+          },
+          "Sequential": {
+            "leakage": 7.173628092e-08,
+            "switching": 6.650008436e-05,
+            "internal": 0.0007410905673,
+            "total": 0.0008076623781
+          },
+          "Clock": {
+            "leakage": 0,
+            "switching": 0,
+            "total": 0,
+            "internal": 0
+          },
+          "Pad": {
+            "leakage": 0,
+            "total": 0,
+            "internal": 0,
+            "switching": 0
+          },
+          "Combinational": {
+            "total": 0.0007328234497,
+            "leakage": 1.137085093e-07,
+            "internal": 0.0002732260909,
+            "switching": 0.0004594836792
+          }
+        },
+        "rtl_sha256": {
+          "sfu_poly.sv": "8007a712a210238081f5804969316765da1a47f1fc572feb2c4c6d64f0bd40ba"
+        },
+        "analysis": "mapped cells with pin capacitance; no wire parasitics",
+        "meets_setup_target": true,
+        "activity": "mapped gate simulation",
+        "temperature_c": 25,
+        "sdc_sha256": "d47ef974e37262f8f6a15bef97154837d6cc3ab120b597f9d7bcf3e4b2f620be",
+        "eda_bundle_id": "5bbe0144473aeff5be02d1361d0ccb53ea6f985cf0897c78daa4330a5d4a148a",
+        "power_unit": "W",
+        "worst_setup_slack_ps": 84.88,
+        "corner": "TT",
+        "time_unit": "ps",
+        "eda_bundle_sha256": "b91ef429cc805a3bbc9595db1a41bf43c9426d28efecdb1e05804525b794d363",
+        "vcd_sha256": "2ef931e73cab74a321a87d53db624c3e7b9160befa77d396066c3184feaab19e",
+        "abc_constraints": {
+          "driving_cell": "BUFx2_ASAP7_75t_R",
+          "buffering_and_sizing": true,
+          "output_load_fF": 2
+        },
+        "library_sha256": "c078d2d780379fe4a44d8c0f02c55a49cc1cdbba61a305cfa25d2fa0b18dd3e5",
+        "yosys_version": "Yosys 0.63 (git sha1 70a11c6bf0e8dd669f56c7da3587f78b405138e2, clang++ 21.1.8 -fPIC -O3)",
+        "capacitance_unit": "fF",
+        "cell_area_um2": 337.62906,
+        "technology": "ASAP7 7.5-track RVT NLDM",
+        "conda_environment": "3e50db3e9bd7d96b9ed4b2a59886ef655cd6c7db45f3557229f5a00a2491b5d6",
+        "clock_period_ps": 700,
+        "opensta_version": "3.1.0",
+        "voltage_v": 0.7,
+        "testbench_sha256": "a437d842a92c7372bc6103764d0892a1f87d0a98a41c0c36e0fc52b391ab93b4",
+        "annotated_pins": 11420
+      },
+      "summary": "After three layers, R4 still has 164.37 ps slack. Complete another one or two layers before that register to reduce stored information.",
+      "stage_slack_ps": [
+        148.8332,
+        84.8773,
+        228.5204,
+        99.6316,
+        214.0556,
+        124.4023
+      ],
+      "is_baseline": false
+    },
+    {
+      "id": 17,
+      "name": "t700_c6_compress5",
+      "label": "Six cycles \u00b7 five layers before storage",
+      "period_ps": 700,
+      "cycles": 6,
+      "area_um2": 335.2671,
+      "slack_ps": 55.21,
+      "power_mw": 1.526228851,
+      "flip_flops": 305,
+      "graph_register_bits_by_stage": [
+        0,
+        62,
+        61,
+        56,
+        66,
+        35,
+        26
+      ],
+      "measurement": {
+        "corner": "TT",
+        "testbench_sha256": "a437d842a92c7372bc6103764d0892a1f87d0a98a41c0c36e0fc52b391ab93b4",
+        "sdc_sha256": "d47ef974e37262f8f6a15bef97154837d6cc3ab120b597f9d7bcf3e4b2f620be",
+        "conda_environment": "3e50db3e9bd7d96b9ed4b2a59886ef655cd6c7db45f3557229f5a00a2491b5d6",
+        "library_sha256": "c078d2d780379fe4a44d8c0f02c55a49cc1cdbba61a305cfa25d2fa0b18dd3e5",
+        "eda_bundle_id": "5bbe0144473aeff5be02d1361d0ccb53ea6f985cf0897c78daa4330a5d4a148a",
+        "yosys_version": "Yosys 0.63 (git sha1 70a11c6bf0e8dd669f56c7da3587f78b405138e2, clang++ 21.1.8 -fPIC -O3)",
+        "abc_constraints": {
+          "driving_cell": "BUFx2_ASAP7_75t_R",
+          "buffering_and_sizing": true,
+          "output_load_fF": 2
+        },
+        "voltage_v": 0.7,
+        "power_unit": "W",
+        "time_unit": "ps",
+        "clock_period_ps": 700,
+        "eda_bundle_sha256": "b91ef429cc805a3bbc9595db1a41bf43c9426d28efecdb1e05804525b794d363",
+        "annotated_pins": 11344,
+        "capacitance_unit": "fF",
+        "cell_area_um2": 335.2671,
+        "verilator_version": "Verilator 5.052 2026-09-05 rev conda-forge build",
+        "worst_setup_slack_ps": 55.21,
+        "technology": "ASAP7 7.5-track RVT NLDM",
+        "analysis": "mapped cells with pin capacitance; no wire parasitics",
+        "opensta_version": "3.1.0",
+        "rtl_sha256": {
+          "sfu_poly.sv": "8eafb04ffe52b3f43a6b7fd2b64f48c9be63eb6a5fe0bbc6f0ba85734ec6bd89"
+        },
+        "activity": "mapped gate simulation",
+        "temperature_c": 25,
+        "meets_setup_target": true,
+        "power": {
+          "Total": {
+            "leakage": 1.842510216e-07,
+            "switching": 0.0005287200911,
+            "internal": 0.0009973244742,
+            "total": 0.001526228851
+          },
+          "Sequential": {
+            "switching": 6.195301103e-05,
+            "total": 0.0007834514254,
+            "internal": 0.0007214284851,
+            "leakage": 6.990293144e-08
+          },
+          "Combinational": {
+            "internal": 0.0002758961928,
+            "leakage": 1.143480901e-07,
+            "switching": 0.0004667668254,
+            "total": 0.0007427773671
+          },
+          "Clock": {
+            "switching": 0,
+            "internal": 0,
+            "leakage": 0,
+            "total": 0
+          },
+          "Pad": {
+            "leakage": 0,
+            "switching": 0,
+            "internal": 0,
+            "total": 0
+          },
+          "Macro": {
+            "total": 0,
+            "leakage": 0,
+            "internal": 0,
+            "switching": 0
+          }
+        },
+        "top": "sfu_poly",
+        "vcd_sha256": "7b66eb60b7eda90e8e332dceb158dcb04ddd802d608482d6c0dbfebd64ed1158"
+      },
+      "summary": "After three layers, R4 still has 164.37 ps slack. Complete another one or two layers before that register to reduce stored information.",
+      "stage_slack_ps": [
+        146.0337,
+        55.2077,
+        228.5204,
+        82.7846,
+        296.9836,
+        124.4023
+      ],
+      "is_baseline": false
+    },
+    {
+      "id": 18,
+      "name": "t700_c6_full_compress",
+      "label": "Six cycles \u00b7 finish compression before storage",
+      "period_ps": 700,
+      "cycles": 6,
+      "area_um2": 332.7885,
+      "slack_ps": 2.08,
+      "power_mw": 1.496633166,
+      "flip_flops": 293,
+      "graph_register_bits_by_stage": [
+        0,
+        62,
+        61,
+        56,
+        55,
+        35,
+        26
+      ],
+      "measurement": {
+        "library_sha256": "c078d2d780379fe4a44d8c0f02c55a49cc1cdbba61a305cfa25d2fa0b18dd3e5",
+        "eda_bundle_id": "5bbe0144473aeff5be02d1361d0ccb53ea6f985cf0897c78daa4330a5d4a148a",
+        "testbench_sha256": "a437d842a92c7372bc6103764d0892a1f87d0a98a41c0c36e0fc52b391ab93b4",
+        "verilator_version": "Verilator 5.052 2026-09-05 rev conda-forge build",
+        "annotated_pins": 11270,
+        "corner": "TT",
+        "vcd_sha256": "9806f257d92b84054a3da15c0e5b11cf1d01af7f7b76e9c62afe7aa6187d1fb4",
+        "top": "sfu_poly",
+        "abc_constraints": {
+          "driving_cell": "BUFx2_ASAP7_75t_R",
+          "buffering_and_sizing": true,
+          "output_load_fF": 2
+        },
+        "temperature_c": 25,
+        "yosys_version": "Yosys 0.63 (git sha1 70a11c6bf0e8dd669f56c7da3587f78b405138e2, clang++ 21.1.8 -fPIC -O3)",
+        "activity": "mapped gate simulation",
+        "clock_period_ps": 700,
+        "technology": "ASAP7 7.5-track RVT NLDM",
+        "capacitance_unit": "fF",
+        "power_unit": "W",
+        "power": {
+          "Macro": {
+            "total": 0,
+            "leakage": 0,
+            "internal": 0,
+            "switching": 0
+          },
+          "Sequential": {
+            "leakage": 6.714875411e-08,
+            "internal": 0.0006919823936,
+            "switching": 5.799866994e-05,
+            "total": 0.0007500482607
+          },
+          "Total": {
+            "total": 0.001496633166,
+            "internal": 0.0009665449033,
+            "leakage": 1.812730943e-07,
+            "switching": 0.0005299069453
+          },
+          "Clock": {
+            "switching": 0,
+            "leakage": 0,
+            "total": 0,
+            "internal": 0
+          },
+          "Combinational": {
+            "total": 0.000746584672,
+            "internal": 0.0002745626261,
+            "switching": 0.0004719078715,
+            "leakage": 1.14124326e-07
+          },
+          "Pad": {
+            "internal": 0,
+            "switching": 0,
+            "leakage": 0,
+            "total": 0
+          }
+        },
+        "worst_setup_slack_ps": 2.08,
+        "analysis": "mapped cells with pin capacitance; no wire parasitics",
+        "voltage_v": 0.7,
+        "sdc_sha256": "d47ef974e37262f8f6a15bef97154837d6cc3ab120b597f9d7bcf3e4b2f620be",
+        "opensta_version": "3.1.0",
+        "eda_bundle_sha256": "b91ef429cc805a3bbc9595db1a41bf43c9426d28efecdb1e05804525b794d363",
+        "cell_area_um2": 332.7885,
+        "meets_setup_target": true,
+        "time_unit": "ps",
+        "conda_environment": "3e50db3e9bd7d96b9ed4b2a59886ef655cd6c7db45f3557229f5a00a2491b5d6",
+        "rtl_sha256": {
+          "sfu_poly.sv": "f7085ea9a7cbff721f5c4ab975333cdb8389e1bd0ca6a5c99b1279d9c937d449"
+        }
+      },
+      "summary": "Compression finishes before the extra register. Its bank holds 55 signals instead of 189, and the circuit meets 700 ps.",
+      "stage_slack_ps": [
+        153.5375,
+        67.9544,
+        228.5204,
+        2.085,
+        445.5245,
+        83.2209
+      ],
+      "is_baseline": false
+    },
+    {
+      "id": 101,
+      "name": "narrow_local",
+      "label": "Four cycles \u00b7 whole-row starting circuit",
+      "area_um2": 319.12704,
+      "slack_ps": 102.37,
+      "power_mw": 0.8894164929999999,
+      "flip_flops": 194,
+      "graph_register_bits_by_stage": [
+        0,
+        62,
+        56,
+        50,
+        26
+      ],
+      "measurement": {
+        "top": "sfu_poly",
+        "conda_environment": "3e50db3e9bd7d96b9ed4b2a59886ef655cd6c7db45f3557229f5a00a2491b5d6",
+        "yosys_version": "Yosys 0.63 (git sha1 70a11c6bf0e8dd669f56c7da3587f78b405138e2, clang++ 21.1.8 -fPIC -O3)",
+        "verilator_version": "Verilator 5.052 2026-09-05 rev conda-forge build",
+        "technology": "ASAP7 7.5-track RVT NLDM",
+        "corner": "TT",
+        "voltage_v": 0.7,
+        "temperature_c": 25,
+        "time_unit": "ps",
+        "capacitance_unit": "fF",
+        "clock_period_ps": 1000,
+        "cell_area_um2": 319.12704,
+        "abc_constraints": {
+          "driving_cell": "BUFx2_ASAP7_75t_R",
+          "output_load_fF": 2.0,
+          "buffering_and_sizing": true
+        },
+        "library_sha256": "c078d2d780379fe4a44d8c0f02c55a49cc1cdbba61a305cfa25d2fa0b18dd3e5",
+        "rtl_sha256": {
+          "sfu_poly.sv": "fe9c611a17a3fc2db2ddf3d92d3e098034ec80731d9dcc6a652d7e4f6da8f753"
+        },
+        "opensta_version": "3.1.0",
+        "eda_bundle_id": "5bbe0144473aeff5be02d1361d0ccb53ea6f985cf0897c78daa4330a5d4a148a",
+        "eda_bundle_sha256": "b91ef429cc805a3bbc9595db1a41bf43c9426d28efecdb1e05804525b794d363",
+        "analysis": "mapped cells with pin capacitance; no wire parasitics",
+        "activity": "mapped gate simulation",
+        "testbench_sha256": "c092478172bf56b5a9a7a3ef0f9b99b8a99df8f3cf432cb9be89d07431181f4a",
+        "power_unit": "W",
+        "vcd_sha256": "b16c6a3b4c7163bd4ffb7db7079f63a5404207e540e208380bf99d844ec9ec40",
+        "sdc_sha256": "9f16bf7b5be9bd7707539926b18c310db3911031e1c9d4692caa83f05507392e",
+        "annotated_pins": 11829,
+        "worst_setup_slack_ps": 102.37,
+        "meets_setup_target": true,
+        "power": {
+          "Sequential": {
+            "internal": 0.0003139769833,
+            "switching": 3.26882182e-05,
+            "leakage": 4.441584167e-08,
+            "total": 0.0003467096249
+          },
+          "Combinational": {
+            "internal": 0.0002014540951,
+            "switching": 0.0003411309153,
+            "leakage": 1.218119365e-07,
+            "total": 0.0005427068681
+          },
+          "Clock": {
+            "internal": 0.0,
+            "switching": 0.0,
+            "leakage": 0.0,
+            "total": 0.0
+          },
+          "Macro": {
+            "internal": 0.0,
+            "switching": 0.0,
+            "leakage": 0.0,
+            "total": 0.0
+          },
+          "Pad": {
+            "internal": 0.0,
+            "switching": 0.0,
+            "leakage": 0.0,
+            "total": 0.0
+          },
+          "Total": {
+            "internal": 0.0005154312821,
+            "switching": 0.0003738189698,
+            "leakage": 1.662277498e-07,
+            "total": 0.000889416493
+          }
+        }
+      },
+      "period_ps": 1000,
+      "cycles": 4,
+      "summary": "Start with local narrow-operand Booth recoding, whole-row compression and ripple carry completion.",
+      "is_baseline": true
+    }
+  ],
+  "viewer": [
+    "narrow_local",
+    "t1000_c4_ripple",
+    "t800_c4_ripple",
+    "t800_c4_unified_prefix",
+    "t800_c4_unified_hybrid",
+    "t800_c5_ripple",
+    "t700_c5_ripple",
+    "t700_c5_rows",
+    "t700_c5_cut13",
+    "t700_c6_product_cut",
+    "t700_c6_full_compress"
+  ],
+  "activity_clocks": [
+    {
+      "name": "t1000_c4_ripple",
+      "period_ps": 1000,
+      "first_timestamps_ps": [
+        0,
+        500,
+        1000
+      ],
+      "simulation": "PASS: 16392 cycles, exact fixed-point model, bubbles and repeated reset",
+      "vcd_sha256": "e294e9811e564cb7345a2a374d1407759c5e288cb2e52ae690e9944941b0e4a6"
+    },
+    {
+      "name": "t800_c4_unified_hybrid",
+      "period_ps": 800,
+      "first_timestamps_ps": [
+        0,
+        400,
+        800
+      ],
+      "simulation": "PASS: 16392 cycles, exact fixed-point model, bubbles and repeated reset",
+      "vcd_sha256": "8d998ef0db6854afc4a0708a27d332650cdc0bbd882875fcfe9c6b66cc80e681"
+    },
+    {
+      "name": "t700_c6_compress3",
+      "period_ps": 700,
+      "first_timestamps_ps": [
+        0,
+        350,
+        700
+      ],
+      "simulation": "PASS: 16392 cycles, exact fixed-point model, bubbles and repeated reset",
+      "vcd_sha256": "cfc1860d102e05053712e5989f793f4c4ba4d980b9cf459527de054bffd53015"
+    }
+  ],
+  "booth_comparison": [
+    {
+      "id": 2,
+      "name": "column_local",
+      "label": "Column compression",
+      "area_um2": 296.46972,
+      "slack_ps": 89.37,
+      "power_mw": 0.8459346136,
+      "flip_flops": 178,
+      "graph_register_bits_by_stage": [
+        0,
+        62,
+        56,
+        35,
+        26
+      ],
+      "measurement": {
+        "top": "sfu_poly",
+        "conda_environment": "3e50db3e9bd7d96b9ed4b2a59886ef655cd6c7db45f3557229f5a00a2491b5d6",
+        "yosys_version": "Yosys 0.63 (git sha1 70a11c6bf0e8dd669f56c7da3587f78b405138e2, clang++ 21.1.8 -fPIC -O3)",
+        "verilator_version": "Verilator 5.052 2026-09-05 rev conda-forge build",
+        "technology": "ASAP7 7.5-track RVT NLDM",
+        "corner": "TT",
+        "voltage_v": 0.7,
+        "temperature_c": 25,
+        "time_unit": "ps",
+        "capacitance_unit": "fF",
+        "clock_period_ps": 1000,
+        "cell_area_um2": 296.46972,
+        "abc_constraints": {
+          "driving_cell": "BUFx2_ASAP7_75t_R",
+          "output_load_fF": 2.0,
+          "buffering_and_sizing": true
+        },
+        "library_sha256": "c078d2d780379fe4a44d8c0f02c55a49cc1cdbba61a305cfa25d2fa0b18dd3e5",
+        "rtl_sha256": {
+          "sfu_poly.sv": "e558c73f0c07ed992ea487ad40a6c3581cde1848972eecf85db1b3b6d4ffef7f"
+        },
+        "opensta_version": "3.1.0",
+        "eda_bundle_id": "5bbe0144473aeff5be02d1361d0ccb53ea6f985cf0897c78daa4330a5d4a148a",
+        "eda_bundle_sha256": "b91ef429cc805a3bbc9595db1a41bf43c9426d28efecdb1e05804525b794d363",
+        "analysis": "mapped cells with pin capacitance; no wire parasitics",
+        "activity": "mapped gate simulation",
+        "testbench_sha256": "c092478172bf56b5a9a7a3ef0f9b99b8a99df8f3cf432cb9be89d07431181f4a",
+        "power_unit": "W",
+        "vcd_sha256": "d401dcf8d0cfc2421fd4269f844f8515d39791ea4f7861f274e5dcbe883c38cb",
+        "sdc_sha256": "9f16bf7b5be9bd7707539926b18c310db3911031e1c9d4692caa83f05507392e",
+        "annotated_pins": 10912,
+        "worst_setup_slack_ps": 89.37,
+        "meets_setup_target": true,
+        "power": {
+          "Sequential": {
+            "internal": 0.0002920725674,
+            "switching": 3.307446605e-05,
+            "leakage": 4.077856985e-08,
+            "total": 0.0003251878079
+          },
+          "Combinational": {
+            "internal": 0.0001949919097,
+            "switching": 0.0003256394994,
+            "leakage": 1.154446352e-07,
+            "total": 0.0005207468639
+          },
+          "Clock": {
+            "internal": 0.0,
+            "switching": 0.0,
+            "leakage": 0.0,
+            "total": 0.0
+          },
+          "Macro": {
+            "internal": 0.0,
+            "switching": 0.0,
+            "leakage": 0.0,
+            "total": 0.0
+          },
+          "Pad": {
+            "internal": 0.0,
+            "switching": 0.0,
+            "leakage": 0.0,
+            "total": 0.0
+          },
+          "Total": {
+            "internal": 0.0004870645062,
+            "switching": 0.0003587138781,
+            "leakage": 1.562232086e-07,
+            "total": 0.0008459346136
+          }
+        }
+      }
+    },
+    {
+      "id": 8,
+      "name": "column_residual_local",
+      "label": "Columns + local t decode",
+      "area_um2": 308.76066,
+      "slack_ps": 64.41,
+      "power_mw": 0.9195277235,
+      "flip_flops": 179,
+      "graph_register_bits_by_stage": [
+        0,
+        62,
+        56,
+        36,
+        26
+      ],
+      "measurement": {
+        "top": "sfu_poly",
+        "conda_environment": "3e50db3e9bd7d96b9ed4b2a59886ef655cd6c7db45f3557229f5a00a2491b5d6",
+        "yosys_version": "Yosys 0.63 (git sha1 70a11c6bf0e8dd669f56c7da3587f78b405138e2, clang++ 21.1.8 -fPIC -O3)",
+        "verilator_version": "Verilator 5.052 2026-09-05 rev conda-forge build",
+        "technology": "ASAP7 7.5-track RVT NLDM",
+        "corner": "TT",
+        "voltage_v": 0.7,
+        "temperature_c": 25,
+        "time_unit": "ps",
+        "capacitance_unit": "fF",
+        "clock_period_ps": 1000,
+        "cell_area_um2": 308.76066,
+        "abc_constraints": {
+          "driving_cell": "BUFx2_ASAP7_75t_R",
+          "output_load_fF": 2.0,
+          "buffering_and_sizing": true
+        },
+        "library_sha256": "c078d2d780379fe4a44d8c0f02c55a49cc1cdbba61a305cfa25d2fa0b18dd3e5",
+        "rtl_sha256": {
+          "sfu_poly.sv": "5d7c0050c5b66fab268d1c2afbcbde7ae3fa8283f8c9e3edaa48bb486adaa539"
+        },
+        "opensta_version": "3.1.0",
+        "eda_bundle_id": "5bbe0144473aeff5be02d1361d0ccb53ea6f985cf0897c78daa4330a5d4a148a",
+        "eda_bundle_sha256": "b91ef429cc805a3bbc9595db1a41bf43c9426d28efecdb1e05804525b794d363",
+        "analysis": "mapped cells with pin capacitance; no wire parasitics",
+        "activity": "mapped gate simulation",
+        "testbench_sha256": "c092478172bf56b5a9a7a3ef0f9b99b8a99df8f3cf432cb9be89d07431181f4a",
+        "power_unit": "W",
+        "vcd_sha256": "64e6fc33a5d409b9516594665870c06d498346fa4a70866d4e4b38ce83a5cfec",
+        "sdc_sha256": "9f16bf7b5be9bd7707539926b18c310db3911031e1c9d4692caa83f05507392e",
+        "annotated_pins": 11311,
+        "worst_setup_slack_ps": 64.41,
+        "meets_setup_target": true,
+        "power": {
+          "Sequential": {
+            "internal": 0.0002940557315,
+            "switching": 2.449748717e-05,
+            "leakage": 4.099915429e-08,
+            "total": 0.0003185942187
+          },
+          "Combinational": {
+            "internal": 0.0002197508875,
+            "switching": 0.0003810627968,
+            "leakage": 1.200283322e-07,
+            "total": 0.0006009336794
+          },
+          "Clock": {
+            "internal": 0.0,
+            "switching": 0.0,
+            "leakage": 0.0,
+            "total": 0.0
+          },
+          "Macro": {
+            "internal": 0.0,
+            "switching": 0.0,
+            "leakage": 0.0,
+            "total": 0.0
+          },
+          "Pad": {
+            "internal": 0.0,
+            "switching": 0.0,
+            "leakage": 0.0,
+            "total": 0.0
+          },
+          "Total": {
+            "internal": 0.0005138064735,
+            "switching": 0.0004055602476,
+            "leakage": 1.610274865e-07,
+            "total": 0.0009195277235
+          }
+        }
+      }
+    },
+    {
+      "id": 9,
+      "name": "column_residual_carried",
+      "label": "Columns + carried t decode",
+      "area_um2": 307.30266,
+      "slack_ps": 181.79,
+      "power_mw": 0.9109943639,
+      "flip_flops": 197,
+      "graph_register_bits_by_stage": [
+        0,
+        71,
+        65,
+        36,
+        26
+      ],
+      "measurement": {
+        "top": "sfu_poly",
+        "conda_environment": "3e50db3e9bd7d96b9ed4b2a59886ef655cd6c7db45f3557229f5a00a2491b5d6",
+        "yosys_version": "Yosys 0.63 (git sha1 70a11c6bf0e8dd669f56c7da3587f78b405138e2, clang++ 21.1.8 -fPIC -O3)",
+        "verilator_version": "Verilator 5.052 2026-09-05 rev conda-forge build",
+        "technology": "ASAP7 7.5-track RVT NLDM",
+        "corner": "TT",
+        "voltage_v": 0.7,
+        "temperature_c": 25,
+        "time_unit": "ps",
+        "capacitance_unit": "fF",
+        "clock_period_ps": 1000,
+        "cell_area_um2": 307.30266,
+        "abc_constraints": {
+          "driving_cell": "BUFx2_ASAP7_75t_R",
+          "output_load_fF": 2.0,
+          "buffering_and_sizing": true
+        },
+        "library_sha256": "c078d2d780379fe4a44d8c0f02c55a49cc1cdbba61a305cfa25d2fa0b18dd3e5",
+        "rtl_sha256": {
+          "sfu_poly.sv": "14a7f5f6e5b93dcdab6a9911363b3e710055a8614a47b7182fd1901ddee4052e"
+        },
+        "opensta_version": "3.1.0",
+        "eda_bundle_id": "5bbe0144473aeff5be02d1361d0ccb53ea6f985cf0897c78daa4330a5d4a148a",
+        "eda_bundle_sha256": "b91ef429cc805a3bbc9595db1a41bf43c9426d28efecdb1e05804525b794d363",
+        "analysis": "mapped cells with pin capacitance; no wire parasitics",
+        "activity": "mapped gate simulation",
+        "testbench_sha256": "c092478172bf56b5a9a7a3ef0f9b99b8a99df8f3cf432cb9be89d07431181f4a",
+        "power_unit": "W",
+        "vcd_sha256": "032f20340188370ac27b26fca7fda8c3c098e08de37cba512992ba3501f8e039",
+        "sdc_sha256": "9f16bf7b5be9bd7707539926b18c310db3911031e1c9d4692caa83f05507392e",
+        "annotated_pins": 10880,
+        "worst_setup_slack_ps": 181.79,
+        "meets_setup_target": true,
+        "power": {
+          "Sequential": {
+            "internal": 0.0003170716518,
+            "switching": 3.292753536e-05,
+            "leakage": 4.503364792e-08,
+            "total": 0.0003500441962
+          },
+          "Combinational": {
+            "internal": 0.0002080355625,
+            "switching": 0.0003527983499,
+            "leakage": 1.161905061e-07,
+            "total": 0.0005609500804
+          },
+          "Clock": {
+            "internal": 0.0,
+            "switching": 0.0,
+            "leakage": 0.0,
+            "total": 0.0
+          },
+          "Macro": {
+            "internal": 0.0,
+            "switching": 0.0,
+            "leakage": 0.0,
+            "total": 0.0
+          },
+          "Pad": {
+            "internal": 0.0,
+            "switching": 0.0,
+            "leakage": 0.0,
+            "total": 0.0
+          },
+          "Total": {
+            "internal": 0.000525107258,
+            "switching": 0.0003857258416,
+            "leakage": 1.612241647e-07,
+            "total": 0.0009109943639
+          }
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "measurement_sha256": {
+      "t1000_c4_ripple": "2b5ce91c0fd2af94f2b6f63e59b453d70ced07b692bd973a3a3f1f71f672dd5f",
+      "t800_c4_ripple": "5d1fa4d73443f6f9645025521eaf4566fa5f7afaac47ffa35b6bde0e50e44e57",
+      "t800_c4_first_prefix": "f9d4123970c47235e142fd7330e6e14885fd3692fc2566246005adfb2f461738",
+      "t800_c5_ripple": "b96ce1367f13244f6d49a4a159715144d2e34ef1586d0475cb88e606e61dfb65",
+      "t700_c4_ripple": "e03bb02e88ade7153c50f7ea87c70f00d1a7ef44356f6c2ee069b3cfbdc916e7",
+      "t700_c4_prefix": "0f4b1903f6c4ef26e45732b7662071f6d709815094c847b78a7de19d5cf2fa9e",
+      "t700_c5_ripple": "7a210a7a5645e570fe67cea82652ea8b5c04d58d75455e028f6296df34ec27ee",
+      "t700_c5_rows": "33eedcb9f3a17df78cf1e83435d39e66c07da11224826016be3f583f35615e03",
+      "t800_c4_unified_prefix": "07d26a7c4d9dda06b2783bc00438aa7a9237aa0d6559b3893db276f3f9dfc022",
+      "t800_c4_unified_hybrid": "fc7c61b295ad53bc60d8b2c2a7367b89e51be865b461226eb908b55645ff178c",
+      "t700_c5_low_block8": "bdff0e3bfbeef519f59d621db57dfbf4b556d83da1e64f2ea37e9dc20cdebefc",
+      "t700_c5_cut15": "9920962fb2a4bc1c8e2f5380545881f24672a31077dc93460aece097822cda95",
+      "t700_c5_cut13": "942806b85320a3ca0054d4208d24ae94396676286b691bc3e75b07b2c8fb3578",
+      "t700_c6_product_cut": "09a17737b5db5bec81f1ab7b5dc6b6dfc437416a10a678de8ec809f7c1f62169",
+      "t700_c6_compress3": "ee17ccd816cc4946efc46565980b2248bb76a9b2e22074d209c3caa718599a24",
+      "t700_c6_compress4": "225f1d2eb25f07b70dbab500265a212987738475db6307369fb80fd74fcf337d",
+      "t700_c6_compress5": "4ac3a37f6abe74a231ff58377619c6b5550f792a9eadfcf5519f50f1fe9a8aff",
+      "t700_c6_full_compress": "dc8110d6429bbe2419e5a579114ba7cb3f960e07784bf4d0b3608390f99fabdd"
+    },
+    "archive_sha256": "f83ce472d79832707e252ade3f1565b1775511a42ed9662cd2a843ce2a2873a4"
+  }
+}

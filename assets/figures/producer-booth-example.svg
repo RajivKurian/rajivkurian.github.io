@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 170" role="img"><title>Binary and radix-4 Booth representations of 13 times 7</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10" fill="#747d86"/></marker></defs>
+<rect width="100%" height="100%" fill="#faf9f6"/>
+<text x="450" y="27" text-anchor="middle" font-family="system-ui,sans-serif" font-size="21" fill="#41484b">Example: 13 × 7</text>
+<rect x="25" y="55" width="395" height="90" rx="4" fill="#f5f1e8" stroke="#77878e" stroke-width="1.5"/>
+<text x="222.5" y="94.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" fill="#41484b">Binary: 7 = 1 + 2 + 4</text>
+<text x="222.5" y="117.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" fill="#41484b">13 × 7 = 13 + 26 + 52 = 91</text>
+<rect x="480" y="55" width="395" height="90" rx="4" fill="#f5f1e8" stroke="#3d6f8c" stroke-width="1.5"/>
+<text x="677.5" y="94.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" fill="#41484b">Booth: 7 = −1 + 2 × 4</text>
+<text x="677.5" y="117.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" fill="#41484b">13 × 7 = −13 + (26 &lt;&lt; 2) = 91</text>
+</svg>

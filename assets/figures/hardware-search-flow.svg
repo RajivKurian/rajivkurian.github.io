@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 510" role="img"><title>Directed hardware experiments with automated coefficient fitting</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10" fill="#747d86"/></marker></defs>
+<rect width="100%" height="100%" fill="#faf9f6"/>
+<rect x="155" y="15" width="540" height="65" rx="4" fill="#f5f1e8" stroke="#b65322"/>
+<text x="425.0" y="42.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">We fix table size, coefficient and internal formats,</text>
+<text x="425.0" y="62.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">and both narrowing rules</text>
+<rect x="255" y="105" width="340" height="45" rx="4" fill="#f5f1e8" stroke="#d8d4ca"/>
+<text x="425.0" y="132.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">Initialize table from Remez</text>
+<rect x="255" y="175" width="340" height="45" rx="4" fill="#f5f1e8" stroke="#1460aa"/>
+<text x="425.0" y="202.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">Search integer coefficient words</text>
+<rect x="255" y="245" width="340" height="45" rx="4" fill="#f5f1e8" stroke="#d8d4ca"/>
+<text x="425.0" y="272.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">Exhaustive error and monotonicity test</text>
+<rect x="255" y="325" width="340" height="65" rx="4" fill="#f5f1e8" stroke="#1460aa"/>
+<text x="425.0" y="352.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">Record error distribution</text>
+<text x="425.0" y="372.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">Synthesize promising passing tables</text>
+<rect x="255" y="425" width="340" height="60" rx="4" fill="#f5f1e8" stroke="#b65322"/>
+<text x="425.0" y="450.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">We compare area and numerical quality</text>
+<text x="425.0" y="470.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">and choose the next hardware experiment</text>
+<path d="M425 80 V105" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M425 150 V175" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M425 220 V245" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M425 290 V325" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M425 390 V425" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="450" y="313" text-anchor="start" font-family="system-ui,sans-serif" font-size="12" fill="#41484b">pass</text>
+<path d="M255 267 H160 V197 H255" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="153" y="230" text-anchor="end" font-family="system-ui,sans-serif" font-size="11" fill="#b65322">fail: add inputs</text>
+<path d="M595 455 H790 V47 H695" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="785" y="411" text-anchor="end" font-family="system-ui,sans-serif" font-size="12" fill="#41484b">new point</text>
+<path d="M255 197 H65 V455 H255" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)" stroke-dasharray="5 4"/>
+<text x="75" y="407" text-anchor="start" font-family="system-ui,sans-serif" font-size="12" fill="#41484b">if fitting stalls</text>
+</svg>

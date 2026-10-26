@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 425" role="img"><title>Resolve the low columns before storage while preserving carry and rounding information</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10" fill="#747d86"/></marker></defs>
+<rect width="100%" height="100%" fill="#faf9f6"/>
+<text x="425" y="25" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#41484b">Example: discard four low columns from the final two rows</text>
+<text x="215" y="65" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" fill="#747d86">Store both full rows</text>
+<text x="650" y="65" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" fill="#1460aa">Resolve the low columns first</text>
+<rect x="40" y="90" width="350" height="100" rx="4" fill="#f5f1e8" stroke="#d8d4ca"/>
+<text x="215.0" y="125.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">U = 0010 | 1101</text>
+<text x="215.0" y="145.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">V = 0001 | 1111</text>
+<text x="215.0" y="165.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">register 16 bits</text>
+<rect x="460" y="90" width="350" height="100" rx="4" fill="#f5f1e8" stroke="#1460aa"/>
+<text x="635.0" y="125.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">1101 + 1111 = 1 | 1100</text>
+<text x="635.0" y="145.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">carry = 1 · guard = 1 · sticky = 1</text>
+<text x="635.0" y="165.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">register upper rows + these 3 bits</text>
+<path d="M215 190 V235" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M635 190 V235" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="40" y="235" width="350" height="75" rx="4" fill="#f5f1e8" stroke="#d8d4ca"/>
+<text x="215.0" y="267.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">After register: add full rows</text>
+<text x="215.0" y="287.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">0100 | 1100 → RNE → 0101</text>
+<rect x="460" y="235" width="350" height="75" rx="4" fill="#f5f1e8" stroke="#1460aa"/>
+<text x="635.0" y="267.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">After register: 0010 + 0001 + carry</text>
+<text x="635.0" y="287.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">0100 → RNE increment → 0101</text>
+<text x="215" y="350" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">16 stored bits</text>
+<text x="635" y="350" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">4 + 4 + 3 = 11 stored bits</text>
+<text x="425" y="393" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">Same rounded result; low-column work moved across the register boundary.</text>
+</svg>

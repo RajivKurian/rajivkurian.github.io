@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 930 335" role="img"><title>Three register positions in the same exact two-compressor circuit</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10" fill="#747d86"/></marker></defs>
+<rect width="100%" height="100%" fill="#faf9f6"/>
+<text x="465" y="25" text-anchor="middle" font-family="system-ui,sans-serif" font-size="21" fill="#41484b">Move one register through the two dependent compressors</text>
+<text x="465" y="51" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">Pipeline time → · unchanged wires bypass each compressor</text>
+<text x="20" y="103" text-anchor="start" font-family="system-ui,sans-serif" font-size="17" fill="#356c92">8 stored bits</text>
+<rect x="290" y="78" width="225" height="43" rx="3" fill="#f5f1e8" stroke="#75828a" stroke-width="1.5"/>
+<text x="402.5" y="104.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">FA₁: p10 + p01 + b1</text>
+<rect x="560" y="78" width="225" height="43" rx="3" fill="#f5f1e8" stroke="#75828a" stroke-width="1.5"/>
+<text x="672.5" y="104.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">FA₂: p20 + p11 + c2</text>
+<path d="M210 100 H290" fill="none" stroke="#75828a" stroke-width="1.7" marker-end="url(#arrow)"/>
+<path d="M515 100 H560" fill="none" stroke="#75828a" stroke-width="1.7" marker-end="url(#arrow)"/>
+<path d="M785 100 H855" fill="none" stroke="#75828a" stroke-width="1.7" marker-end="url(#arrow)"/>
+<path d="M245 71 V130" stroke="#356c92" stroke-width="5"/>
+<text x="20" y="180" text-anchor="start" font-family="system-ui,sans-serif" font-size="17" fill="#9a681c">7 stored bits</text>
+<rect x="290" y="155" width="225" height="43" rx="3" fill="#f5f1e8" stroke="#75828a" stroke-width="1.5"/>
+<text x="402.5" y="181.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">FA₁: p10 + p01 + b1</text>
+<rect x="560" y="155" width="225" height="43" rx="3" fill="#f5f1e8" stroke="#75828a" stroke-width="1.5"/>
+<text x="672.5" y="181.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">FA₂: p20 + p11 + c2</text>
+<path d="M210 177 H290" fill="none" stroke="#75828a" stroke-width="1.7" marker-end="url(#arrow)"/>
+<path d="M515 177 H560" fill="none" stroke="#75828a" stroke-width="1.7" marker-end="url(#arrow)"/>
+<path d="M785 177 H855" fill="none" stroke="#75828a" stroke-width="1.7" marker-end="url(#arrow)"/>
+<path d="M537 148 V207" stroke="#9a681c" stroke-width="5"/>
+<text x="20" y="257" text-anchor="start" font-family="system-ui,sans-serif" font-size="17" fill="#af5137">6 stored bits</text>
+<rect x="290" y="232" width="225" height="43" rx="3" fill="#f5f1e8" stroke="#75828a" stroke-width="1.5"/>
+<text x="402.5" y="258.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">FA₁: p10 + p01 + b1</text>
+<rect x="560" y="232" width="225" height="43" rx="3" fill="#f5f1e8" stroke="#75828a" stroke-width="1.5"/>
+<text x="672.5" y="258.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">FA₂: p20 + p11 + c2</text>
+<path d="M210 254 H290" fill="none" stroke="#75828a" stroke-width="1.7" marker-end="url(#arrow)"/>
+<path d="M515 254 H560" fill="none" stroke="#75828a" stroke-width="1.7" marker-end="url(#arrow)"/>
+<path d="M785 254 H855" fill="none" stroke="#75828a" stroke-width="1.7" marker-end="url(#arrow)"/>
+<path d="M820 225 V284" stroke="#af5137" stroke-width="5"/>
+<text x="465" y="326" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#41484b">Later cuts store fewer signals, but require more dependent work before the register.</text>
+</svg>

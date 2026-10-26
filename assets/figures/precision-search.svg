@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 210" role="img"><title>Reducing coefficient and intermediate widths lowers the mapped cost of 128-row RNE designs</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10" fill="#747d86"/></marker></defs>
+<rect width="100%" height="100%" fill="#faf9f6"/>
+<rect x="15" y="18" width="250" height="125" rx="4" fill="#f5f1e8" stroke="#1460aa"/>
+<text x="140.0" y="65.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">a/b/c: 11/14/24 bits</text>
+<text x="140.0" y="85.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">first/result: 19/26 bits</text>
+<text x="140.0" y="105.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">Mapped cost: 1441.55</text>
+<path d="M265 80 H300" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="300" y="18" width="250" height="125" rx="4" fill="#f5f1e8" stroke="#1460aa"/>
+<text x="425.0" y="65.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">a/b/c: 10/13/23 bits</text>
+<text x="425.0" y="85.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">first/result: 18/25 bits</text>
+<text x="425.0" y="105.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">Mapped cost: 1357.20</text>
+<path d="M550 80 H585" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="585" y="18" width="250" height="125" rx="4" fill="#f5f1e8" stroke="#1460aa"/>
+<text x="710.0" y="65.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">a/b/c: 10/13/23 bits</text>
+<text x="710.0" y="85.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">first/result: 17/25 bits</text>
+<text x="710.0" y="105.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">Mapped cost: 1309.85</text>
+<text x="425" y="180" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#41484b">128 rows · 20-bit residual · RNE at both points</text>
+</svg>

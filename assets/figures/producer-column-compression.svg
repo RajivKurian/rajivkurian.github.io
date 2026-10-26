@@ -1,0 +1,161 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 325" role="img"><title>The first multiply-add has eight aligned rows; column four illustrates the difference between row and column grouping</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10" fill="#747d86"/></marker></defs>
+<rect width="100%" height="100%" fill="#faf9f6"/>
+<text x="450" y="25" text-anchor="middle" font-family="system-ui,sans-serif" font-size="21" fill="#41484b">First multiply-add: eight aligned rows</text>
+<text x="90" y="57" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#41484b">35</text>
+<text x="189" y="57" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#41484b">24</text>
+<text x="297" y="57" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#41484b">12</text>
+<text x="369" y="57" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#41484b">4</text>
+<text x="405" y="57" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#41484b">0</text>
+<text x="50" y="57" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#41484b">bit</text>
+<rect x="363" y="69" width="12" height="146" fill="#e5edf1"/>
+<text x="65" y="90" text-anchor="end" font-family="system-ui,sans-serif" font-size="13" fill="#41484b">b</text>
+<circle cx="99" cy="85" r="3" fill="#3d6f8c"/>
+<circle cx="108" cy="85" r="3" fill="#3d6f8c"/>
+<circle cx="117" cy="85" r="3" fill="#3d6f8c"/>
+<circle cx="126" cy="85" r="3" fill="#3d6f8c"/>
+<circle cx="135" cy="85" r="3" fill="#3d6f8c"/>
+<circle cx="144" cy="85" r="3" fill="#3d6f8c"/>
+<circle cx="153" cy="85" r="3" fill="#3d6f8c"/>
+<circle cx="162" cy="85" r="3" fill="#3d6f8c"/>
+<circle cx="171" cy="85" r="3" fill="#3d6f8c"/>
+<circle cx="180" cy="85" r="3" fill="#3d6f8c"/>
+<circle cx="189" cy="85" r="3" fill="#3d6f8c"/>
+<circle cx="198" cy="85" r="3" fill="#3d6f8c"/>
+<circle cx="207" cy="85" r="3" fill="#3d6f8c"/>
+<text x="65" y="108" text-anchor="end" font-family="system-ui,sans-serif" font-size="13" fill="#41484b">d0</text>
+<circle cx="234" cy="103" r="3" fill="#3d6f8c"/>
+<circle cx="243" cy="103" r="3" fill="#3d6f8c"/>
+<circle cx="252" cy="103" r="3" fill="#3d6f8c"/>
+<circle cx="261" cy="103" r="3" fill="#3d6f8c"/>
+<circle cx="270" cy="103" r="3" fill="#3d6f8c"/>
+<circle cx="279" cy="103" r="3" fill="#3d6f8c"/>
+<circle cx="288" cy="103" r="3" fill="#3d6f8c"/>
+<circle cx="297" cy="103" r="3" fill="#3d6f8c"/>
+<circle cx="306" cy="103" r="3" fill="#3d6f8c"/>
+<circle cx="315" cy="103" r="3" fill="#3d6f8c"/>
+<circle cx="324" cy="103" r="3" fill="#3d6f8c"/>
+<circle cx="333" cy="103" r="3" fill="#3d6f8c"/>
+<circle cx="342" cy="103" r="3" fill="#3d6f8c"/>
+<circle cx="351" cy="103" r="3" fill="#3d6f8c"/>
+<circle cx="360" cy="103" r="3" fill="#3d6f8c"/>
+<circle cx="369" cy="103" r="3" fill="#3d6f8c"/>
+<circle cx="378" cy="103" r="3" fill="#3d6f8c"/>
+<circle cx="387" cy="103" r="3" fill="#3d6f8c"/>
+<circle cx="396" cy="103" r="3" fill="#3d6f8c"/>
+<circle cx="405" cy="103" r="3" fill="#3d6f8c"/>
+<text x="65" y="126" text-anchor="end" font-family="system-ui,sans-serif" font-size="13" fill="#41484b">d1</text>
+<circle cx="216" cy="121" r="3" fill="#3d6f8c"/>
+<circle cx="225" cy="121" r="3" fill="#3d6f8c"/>
+<circle cx="234" cy="121" r="3" fill="#3d6f8c"/>
+<circle cx="243" cy="121" r="3" fill="#3d6f8c"/>
+<circle cx="252" cy="121" r="3" fill="#3d6f8c"/>
+<circle cx="261" cy="121" r="3" fill="#3d6f8c"/>
+<circle cx="270" cy="121" r="3" fill="#3d6f8c"/>
+<circle cx="279" cy="121" r="3" fill="#3d6f8c"/>
+<circle cx="288" cy="121" r="3" fill="#3d6f8c"/>
+<circle cx="297" cy="121" r="3" fill="#3d6f8c"/>
+<circle cx="306" cy="121" r="3" fill="#3d6f8c"/>
+<circle cx="315" cy="121" r="3" fill="#3d6f8c"/>
+<circle cx="324" cy="121" r="3" fill="#3d6f8c"/>
+<circle cx="333" cy="121" r="3" fill="#3d6f8c"/>
+<circle cx="342" cy="121" r="3" fill="#3d6f8c"/>
+<circle cx="351" cy="121" r="3" fill="#3d6f8c"/>
+<circle cx="360" cy="121" r="3" fill="#3d6f8c"/>
+<circle cx="369" cy="121" r="3" fill="#3d6f8c"/>
+<circle cx="378" cy="121" r="3" fill="#3d6f8c"/>
+<circle cx="387" cy="121" r="3" fill="#3d6f8c"/>
+<text x="65" y="144" text-anchor="end" font-family="system-ui,sans-serif" font-size="13" fill="#41484b">d2</text>
+<circle cx="198" cy="139" r="3" fill="#3d6f8c"/>
+<circle cx="207" cy="139" r="3" fill="#3d6f8c"/>
+<circle cx="216" cy="139" r="3" fill="#3d6f8c"/>
+<circle cx="225" cy="139" r="3" fill="#3d6f8c"/>
+<circle cx="234" cy="139" r="3" fill="#3d6f8c"/>
+<circle cx="243" cy="139" r="3" fill="#3d6f8c"/>
+<circle cx="252" cy="139" r="3" fill="#3d6f8c"/>
+<circle cx="261" cy="139" r="3" fill="#3d6f8c"/>
+<circle cx="270" cy="139" r="3" fill="#3d6f8c"/>
+<circle cx="279" cy="139" r="3" fill="#3d6f8c"/>
+<circle cx="288" cy="139" r="3" fill="#3d6f8c"/>
+<circle cx="297" cy="139" r="3" fill="#3d6f8c"/>
+<circle cx="306" cy="139" r="3" fill="#3d6f8c"/>
+<circle cx="315" cy="139" r="3" fill="#3d6f8c"/>
+<circle cx="324" cy="139" r="3" fill="#3d6f8c"/>
+<circle cx="333" cy="139" r="3" fill="#3d6f8c"/>
+<circle cx="342" cy="139" r="3" fill="#3d6f8c"/>
+<circle cx="351" cy="139" r="3" fill="#3d6f8c"/>
+<circle cx="360" cy="139" r="3" fill="#3d6f8c"/>
+<circle cx="369" cy="139" r="3" fill="#3d6f8c"/>
+<text x="65" y="162" text-anchor="end" font-family="system-ui,sans-serif" font-size="13" fill="#41484b">d3</text>
+<circle cx="180" cy="157" r="3" fill="#3d6f8c"/>
+<circle cx="189" cy="157" r="3" fill="#3d6f8c"/>
+<circle cx="198" cy="157" r="3" fill="#3d6f8c"/>
+<circle cx="207" cy="157" r="3" fill="#3d6f8c"/>
+<circle cx="216" cy="157" r="3" fill="#3d6f8c"/>
+<circle cx="225" cy="157" r="3" fill="#3d6f8c"/>
+<circle cx="234" cy="157" r="3" fill="#3d6f8c"/>
+<circle cx="243" cy="157" r="3" fill="#3d6f8c"/>
+<circle cx="252" cy="157" r="3" fill="#3d6f8c"/>
+<circle cx="261" cy="157" r="3" fill="#3d6f8c"/>
+<circle cx="270" cy="157" r="3" fill="#3d6f8c"/>
+<circle cx="279" cy="157" r="3" fill="#3d6f8c"/>
+<circle cx="288" cy="157" r="3" fill="#3d6f8c"/>
+<circle cx="297" cy="157" r="3" fill="#3d6f8c"/>
+<circle cx="306" cy="157" r="3" fill="#3d6f8c"/>
+<circle cx="315" cy="157" r="3" fill="#3d6f8c"/>
+<circle cx="324" cy="157" r="3" fill="#3d6f8c"/>
+<circle cx="333" cy="157" r="3" fill="#3d6f8c"/>
+<circle cx="342" cy="157" r="3" fill="#3d6f8c"/>
+<circle cx="351" cy="157" r="3" fill="#3d6f8c"/>
+<text x="65" y="180" text-anchor="end" font-family="system-ui,sans-serif" font-size="13" fill="#41484b">d4</text>
+<circle cx="162" cy="175" r="3" fill="#b75d2c"/>
+<circle cx="180" cy="175" r="3" fill="#3d6f8c"/>
+<circle cx="189" cy="175" r="3" fill="#3d6f8c"/>
+<circle cx="198" cy="175" r="3" fill="#3d6f8c"/>
+<circle cx="207" cy="175" r="3" fill="#3d6f8c"/>
+<circle cx="216" cy="175" r="3" fill="#3d6f8c"/>
+<circle cx="225" cy="175" r="3" fill="#3d6f8c"/>
+<circle cx="234" cy="175" r="3" fill="#3d6f8c"/>
+<circle cx="243" cy="175" r="3" fill="#3d6f8c"/>
+<circle cx="252" cy="175" r="3" fill="#3d6f8c"/>
+<circle cx="261" cy="175" r="3" fill="#3d6f8c"/>
+<circle cx="270" cy="175" r="3" fill="#3d6f8c"/>
+<circle cx="279" cy="175" r="3" fill="#3d6f8c"/>
+<circle cx="288" cy="175" r="3" fill="#3d6f8c"/>
+<circle cx="297" cy="175" r="3" fill="#3d6f8c"/>
+<circle cx="306" cy="175" r="3" fill="#3d6f8c"/>
+<circle cx="315" cy="175" r="3" fill="#3d6f8c"/>
+<circle cx="324" cy="175" r="3" fill="#3d6f8c"/>
+<circle cx="333" cy="175" r="3" fill="#3d6f8c"/>
+<text x="65" y="198" text-anchor="end" font-family="system-ui,sans-serif" font-size="13" fill="#41484b">corr</text>
+<circle cx="351" cy="193" r="3" fill="#3d6f8c"/>
+<circle cx="369" cy="193" r="3" fill="#3d6f8c"/>
+<circle cx="387" cy="193" r="3" fill="#3d6f8c"/>
+<circle cx="405" cy="193" r="3" fill="#3d6f8c"/>
+<text x="65" y="216" text-anchor="end" font-family="system-ui,sans-serif" font-size="13" fill="#41484b">bias</text>
+<circle cx="90" cy="211" r="3" fill="#b75d2c"/>
+<circle cx="99" cy="211" r="3" fill="#b75d2c"/>
+<circle cx="108" cy="211" r="3" fill="#b75d2c"/>
+<circle cx="117" cy="211" r="3" fill="#b75d2c"/>
+<circle cx="126" cy="211" r="3" fill="#b75d2c"/>
+<circle cx="135" cy="211" r="3" fill="#b75d2c"/>
+<circle cx="144" cy="211" r="3" fill="#b75d2c"/>
+<circle cx="153" cy="211" r="3" fill="#b75d2c"/>
+<circle cx="171" cy="211" r="3" fill="#b75d2c"/>
+<circle cx="189" cy="211" r="3" fill="#b75d2c"/>
+<circle cx="207" cy="211" r="3" fill="#b75d2c"/>
+<circle cx="225" cy="211" r="3" fill="#b75d2c"/>
+<circle cx="234" cy="211" r="3" fill="#b75d2c"/>
+<circle cx="369" cy="85" r="4" fill="#faf9f6" stroke="#77878e"/>
+<rect x="470" y="65" width="405" height="85" rx="4" fill="#f5f1e8" stroke="#77878e" stroke-width="1.5"/>
+<text x="672.5" y="90.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#41484b">Row group: b, d0, d1</text>
+<text x="672.5" y="113.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#41484b">At bit 4: 0 + p + q</text>
+<text x="672.5" y="136.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#41484b">d2 supplies r to a later layer</text>
+<rect x="470" y="180" width="405" height="85" rx="4" fill="#f5f1e8" stroke="#3d6f8c" stroke-width="1.5"/>
+<text x="672.5" y="205.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#41484b">Column group: d0, d1, d2</text>
+<text x="672.5" y="228.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#41484b">At bit 4: p + q + r</text>
+<text x="672.5" y="251.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#41484b">one compressor combines all three</text>
+<text x="255" y="247" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">d0–d4: Booth product rows</text>
+<text x="255" y="272" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#41484b">corr: negative-digit correction · bias: fixed constant</text>
+<text x="450" y="309" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">Columns are aligned bit weights; empty positions are fixed zeros.</text>
+</svg>

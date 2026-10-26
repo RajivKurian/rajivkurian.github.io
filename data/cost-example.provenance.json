@@ -1,0 +1,30 @@
+{
+  "generator": "//sfu:blog_cost_example",
+  "source_sha256": "5c77c4cafc4b0fa0d9b2f75736af49292be6df401be1b6e08185b5acd7dd2b35",
+  "data_sha256": "2a2920eeed05e2e949abb38e85ad889263c848f46f6445c53a68fc5830af2c74",
+  "inputs": "First-row relative-minimax seeds from design-points.json, scaled per row before quantization.",
+  "scope": "Unsigned Horner on all 2^24 reduced-coordinate values; native long-double exp2 reference. Adds analytic coordinate-rounding contribution. Checks intermediate overflow.",
+  "counts": "Compressor sites include the fused addend. Area prices the live gate graph, not a full-adder count times a weight. Registers include polynomial data plus nine n bits and one valid bit per stage. Common range reduction and output packing excluded from the polynomial/table total.",
+  "booth_model_sha256": "87fc79c7f21979651423c34b69fbea747074f9aa6b94a3d1c9f8541dc8e5799e",
+  "architecture": "Unsigned residual recoded by radix-4 modified Booth. Two's-complement correction bits and flipped sign bits with fixed bias compensation. Aligned coefficient enters parallel Wallace 3:2 reduction. Brent-Kung prefix final adder. RNE guard/sticky and conditional increment. Constant ROM Shannon mux graph. Primitive logic with constant folding, common-subexpression sharing and output liveness pruning.",
+  "area_prices_um2": {
+    "and2": 0.08748,
+    "or2": 0.08748,
+    "xor2": 0.13122,
+    "inverter": 0.04374,
+    "register_bit": 0.2916
+  },
+  "validation": "Small Booth/FMA circuits exhaustively checked for operand widths 1\u20134 and addend widths 1\u20133; actual-width networks checked on 1024 deterministic corner/random inputs each. Constant-ROM graph checked against every row. Original full fractional-coordinate audit retained.",
+  "early_model_sha256": "1fdfd6c8b05fa5483460abc76156203c2d4871b835dc43b767fc371d626c2fac",
+  "early_model": "Normalized scalar score: fixed-table binary selection tree, bottom constant-input mux elimination, shared address complements, narrower-operand unsigned Booth row positions, aligned sum completion, data and metadata registers.",
+  "early_rates": {
+    "unit": "one data flip-flop",
+    "booth_row_position": 1.6,
+    "aligned_sum_bit": 4.5,
+    "two_input_mux": 0.8,
+    "address_complement": 0.15,
+    "register_bit": 1
+  },
+  "rate_derivation": "Mapped selected Booth circuit partitioned at final two-row heaps. Row-generation/compression group divided by 352 row positions: 1.56591 register units/position. Remaining completion/rounding/buffering/control divided by 70 aligned sum bits: 4.49714. Separate mapped 32-output variable mux bank: .7875 register units/mux. Minimum inverter: .15. Rounded rates applied across shapes.",
+  "calibration": "code/rtl/audits/booth/calibration/weights.json"
+}

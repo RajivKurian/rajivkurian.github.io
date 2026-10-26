@@ -1,0 +1,13 @@
+dist/
+exports/
+_site/
+.quarto/
+.preview/
+.envs/
+node_modules/
+__pycache__/
+*.pyc
+
+**/*.quarto_ipynb
+
+/.quarto/

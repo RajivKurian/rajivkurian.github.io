@@ -1,0 +1,11 @@
+project:
+  output-dir: .preview
+  render:
+    - docs/style-preview.qmd
+    - "!index.qmd"
+    - "!about.qmd"
+    - "!links.qmd"
+    - "!posts/**/*.qmd"
+website:
+  navbar: false
+  page-footer: ""

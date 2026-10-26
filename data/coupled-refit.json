@@ -1,0 +1,68 @@
+{
+  "row": 5,
+  "table_bits": 8,
+  "shape": [
+    8,
+    13,
+    23,
+    18,
+    15,
+    25
+  ],
+  "before": [
+    78,
+    2877,
+    4251473
+  ],
+  "after": [
+    58,
+    2878,
+    4251473
+  ],
+  "inputs": [
+    {
+      "bits": 1017635318,
+      "x": 0.020493488758802414,
+      "t": 0.24633026123046875,
+      "before_interval": [
+        4251473,
+        4251474
+      ],
+      "after_interval": [
+        4251472,
+        4251474
+      ],
+      "before_ulp": 1,
+      "after_ulp": 0
+    },
+    {
+      "bits": 1019108400,
+      "x": 0.02323731780052185,
+      "t": 0.9487533569335938,
+      "before_interval": [
+        4251471,
+        4251472
+      ],
+      "after_interval": [
+        4251472,
+        4251473
+      ],
+      "before_ulp": 3,
+      "after_ulp": 1
+    }
+  ],
+  "provenance": {
+    "input_sha256": {
+      "rtl/audits/rounding/narrow256-s15-rne/fit-0.txt": "e055af13b86c64d06adad50771f0b668910a8bcd4ffe892a536a0024c97f5e27",
+      "rtl/audits/rounding/narrow256-s15-rne/fit-2.txt": "9691955291031388216c5d9f845cb209cda8f8b5aeb694efe0b390ccb4bfecfa",
+      "rtl/audits/rounding/narrow256-s15-rne/witnesses.txt": "d3cb84afd9c24b0a5b06a536e343f5b71ed48ad07cd57f51d2e6a76b91beda19"
+    },
+    "binary_sha256": "f05f11a565715b65c91a6f603866939e34d49e723dd158475684140e2283699c",
+    "source_sha256": {
+      "sfu/blog_coupled_move.cc": "ec1163f73a793a3403dcea7669542c0bd37850a3eaf1d866f91a4aa54f8ef22a",
+      "sfu/search.cc": "9314f2965d2a03dfaebc828d0b1bc8d6476d977740991583117fe6c3d58d7a57",
+      "sfu/exp2.cc": "02806d6834cf389ab9c8e4a2d6bb45035e2f7a66b559b1f53f108643157b27b2"
+    },
+    "validation": "Individual C-interval endpoints and adjacent rejected words checked through the forward integer model with MPFR references."
+  }
+}

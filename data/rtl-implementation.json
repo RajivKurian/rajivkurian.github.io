@@ -1,0 +1,1274 @@
+{
+  "designs": [
+    {
+      "name": "narrow256-s15-tt",
+      "label": "15-bit first result \u00b7 truncate/truncate",
+      "shape": [
+        8,
+        13,
+        23,
+        18,
+        15,
+        25
+      ],
+      "target": "narrow256_s15_tt",
+      "profile_sha256": "9cda166e4b9163d301e63ca3907ba654561412ad1d51f648a041b1c084d2bec5",
+      "report": {
+        "top": "sfu_poly",
+        "conda_environment": "3e50db3e9bd7d96b9ed4b2a59886ef655cd6c7db45f3557229f5a00a2491b5d6",
+        "yosys_version": "Yosys 0.63 (git sha1 70a11c6bf0e8dd669f56c7da3587f78b405138e2, clang++ 21.1.8 -fPIC -O3)",
+        "verilator_version": "Verilator 5.052 2026-09-05 rev conda-forge build",
+        "technology": "ASAP7 7.5-track RVT NLDM",
+        "corner": "TT",
+        "voltage_v": 0.7,
+        "temperature_c": 25,
+        "time_unit": "ps",
+        "capacitance_unit": "fF",
+        "clock_period_ps": 1000,
+        "cell_area_um2": 352.64646,
+        "abc_constraints": {
+          "driving_cell": "BUFx2_ASAP7_75t_R",
+          "output_load_fF": 2.0,
+          "buffering_and_sizing": true
+        },
+        "library_sha256": "c078d2d780379fe4a44d8c0f02c55a49cc1cdbba61a305cfa25d2fa0b18dd3e5",
+        "rtl_sha256": {
+          "sfu_poly.sv": "501911efb7a50975219662296bf9d8792f2a3575eaca40826d822e1fd037561d",
+          "rounding_polynomial.sv": "2d428641872172a021c4a91aaaa54130e1c4211fdeea7b2e6dd7d71c3f8eee8c",
+          "polynomial_reduce.sv": "0a32fd9c040de18357e04ab496d9b86f6f8d4e25880c1e50d23bc50ad20455da",
+          "booth_rows.sv": "dd1cec2fbe32f3e174b46b5395708e4ab8fe4ade0a41af0f9ee48ceddff4cd53",
+          "carry_save_layer.sv": "72f404bde589696010fffbe28de3d4809b2f0ef6d50cd95625353f5db9803548"
+        },
+        "opensta_version": "3.1.0",
+        "eda_bundle_id": "5bbe0144473aeff5be02d1361d0ccb53ea6f985cf0897c78daa4330a5d4a148a",
+        "eda_bundle_sha256": "b91ef429cc805a3bbc9595db1a41bf43c9426d28efecdb1e05804525b794d363",
+        "analysis": "mapped cells with pin capacitance; no wire parasitics",
+        "activity": "mapped gate simulation",
+        "testbench_sha256": "6fab63b03fad2aa345c8607caca730a73f1a1c602ddfa5cd9fe0558227f5d2e1",
+        "power_unit": "W",
+        "vcd_sha256": "ce58b6984e1a5c57e32bdaabad733376ddecb1457e1906e5905803c3f5195d56",
+        "sdc_sha256": "9f16bf7b5be9bd7707539926b18c310db3911031e1c9d4692caa83f05507392e",
+        "annotated_pins": 12261,
+        "worst_setup_slack_ps": 323.61,
+        "meets_setup_target": true,
+        "power": {
+          "Sequential": {
+            "internal": 0.0005041653058,
+            "switching": 4.306243136e-05,
+            "leakage": 6.660187779e-08,
+            "total": 0.0005472943303
+          },
+          "Combinational": {
+            "internal": 0.0002412110625,
+            "switching": 0.0004442794307,
+            "leakage": 1.22908844e-07,
+            "total": 0.0006856134278
+          },
+          "Clock": {
+            "internal": 0.0,
+            "switching": 0.0,
+            "leakage": 0.0,
+            "total": 0.0
+          },
+          "Macro": {
+            "internal": 0.0,
+            "switching": 0.0,
+            "leakage": 0.0,
+            "total": 0.0
+          },
+          "Pad": {
+            "internal": 0.0,
+            "switching": 0.0,
+            "leakage": 0.0,
+            "total": 0.0
+          },
+          "Total": {
+            "internal": 0.0007453762228,
+            "switching": 0.0004873418366,
+            "leakage": 1.895107573e-07,
+            "total": 0.001232907642
+          }
+        }
+      },
+      "flip_flops": 291
+    },
+    {
+      "name": "narrow256-combined-rne",
+      "label": "16-bit first result \u00b7 RNE/RNE",
+      "shape": [
+        8,
+        13,
+        23,
+        18,
+        16,
+        25
+      ],
+      "target": "narrow256_combined_rne",
+      "profile_sha256": "408a35b745833ff01586f0f32f2a8e5e610b4bce76108996a3b9e1691ec8780f",
+      "report": {
+        "top": "sfu_poly",
+        "conda_environment": "3e50db3e9bd7d96b9ed4b2a59886ef655cd6c7db45f3557229f5a00a2491b5d6",
+        "yosys_version": "Yosys 0.63 (git sha1 70a11c6bf0e8dd669f56c7da3587f78b405138e2, clang++ 21.1.8 -fPIC -O3)",
+        "verilator_version": "Verilator 5.052 2026-09-05 rev conda-forge build",
+        "technology": "ASAP7 7.5-track RVT NLDM",
+        "corner": "TT",
+        "voltage_v": 0.7,
+        "temperature_c": 25,
+        "time_unit": "ps",
+        "capacitance_unit": "fF",
+        "clock_period_ps": 1000,
+        "cell_area_um2": 389.3589,
+        "abc_constraints": {
+          "driving_cell": "BUFx2_ASAP7_75t_R",
+          "output_load_fF": 2.0,
+          "buffering_and_sizing": true
+        },
+        "library_sha256": "c078d2d780379fe4a44d8c0f02c55a49cc1cdbba61a305cfa25d2fa0b18dd3e5",
+        "rtl_sha256": {
+          "sfu_poly.sv": "9d208cd43143a16e640b07d5ddc55f9493ee8fc529334546b997ddadd60b6302",
+          "rounding_polynomial.sv": "2d428641872172a021c4a91aaaa54130e1c4211fdeea7b2e6dd7d71c3f8eee8c",
+          "polynomial_reduce.sv": "0a32fd9c040de18357e04ab496d9b86f6f8d4e25880c1e50d23bc50ad20455da",
+          "booth_rows.sv": "dd1cec2fbe32f3e174b46b5395708e4ab8fe4ade0a41af0f9ee48ceddff4cd53",
+          "carry_save_layer.sv": "72f404bde589696010fffbe28de3d4809b2f0ef6d50cd95625353f5db9803548"
+        },
+        "opensta_version": "3.1.0",
+        "eda_bundle_id": "5bbe0144473aeff5be02d1361d0ccb53ea6f985cf0897c78daa4330a5d4a148a",
+        "eda_bundle_sha256": "b91ef429cc805a3bbc9595db1a41bf43c9426d28efecdb1e05804525b794d363",
+        "analysis": "mapped cells with pin capacitance; no wire parasitics",
+        "activity": "mapped gate simulation",
+        "testbench_sha256": "6fab63b03fad2aa345c8607caca730a73f1a1c602ddfa5cd9fe0558227f5d2e1",
+        "power_unit": "W",
+        "vcd_sha256": "a95f6726e64e546fe2aadc0de3932256b5f3bd62f038f30961023c2427113ffb",
+        "sdc_sha256": "9f16bf7b5be9bd7707539926b18c310db3911031e1c9d4692caa83f05507392e",
+        "annotated_pins": 13505,
+        "worst_setup_slack_ps": 234.74,
+        "meets_setup_target": true,
+        "power": {
+          "Sequential": {
+            "internal": 0.0005214556004,
+            "switching": 5.02066905e-05,
+            "leakage": 6.890289228e-08,
+            "total": 0.0005717311869
+          },
+          "Combinational": {
+            "internal": 0.0002745086967,
+            "switching": 0.0004919224884,
+            "leakage": 1.403142988e-07,
+            "total": 0.000766571553
+          },
+          "Clock": {
+            "internal": 0.0,
+            "switching": 0.0,
+            "leakage": 0.0,
+            "total": 0.0
+          },
+          "Macro": {
+            "internal": 0.0,
+            "switching": 0.0,
+            "leakage": 0.0,
+            "total": 0.0
+          },
+          "Pad": {
+            "internal": 0.0,
+            "switching": 0.0,
+            "leakage": 0.0,
+            "total": 0.0
+          },
+          "Total": {
+            "internal": 0.0007959638606,
+            "switching": 0.0005421292735,
+            "leakage": 2.092171343e-07,
+            "total": 0.001338302274
+          }
+        }
+      },
+      "flip_flops": 301
+    }
+  ],
+  "architecture_experiment": {
+    "schema": 1,
+    "selected": "selected",
+    "flow_sha256": "3aa77d4526e74ca59367b1ec352460fc56ef28589680c75aa45fd4c9bfb64a36",
+    "verification": {
+      "bazel_tests_passed": 14,
+      "rtl_stress_cycles": 1000000,
+      "mapped_stress_cycles": 1000000
+    },
+    "same_flow_baselines": [
+      {
+        "top": "quadratic_mul_split",
+        "conda_environment": "3e50db3e9bd7d96b9ed4b2a59886ef655cd6c7db45f3557229f5a00a2491b5d6",
+        "yosys_version": "Yosys 0.63 (git sha1 70a11c6bf0e8dd669f56c7da3587f78b405138e2, clang++ 21.1.8 -fPIC -O3)",
+        "verilator_version": "Verilator 5.052 2026-09-05 rev conda-forge build",
+        "technology": "ASAP7 7.5-track RVT NLDM",
+        "corner": "TT",
+        "voltage_v": 0.7,
+        "temperature_c": 25,
+        "time_unit": "ps",
+        "capacitance_unit": "fF",
+        "clock_period_ps": 1000,
+        "cell_area_um2": 384.24132,
+        "abc_constraints": {
+          "driving_cell": "BUFx2_ASAP7_75t_R",
+          "output_load_fF": 2.0,
+          "buffering_and_sizing": true
+        },
+        "library_sha256": "c078d2d780379fe4a44d8c0f02c55a49cc1cdbba61a305cfa25d2fa0b18dd3e5",
+        "rtl_sha256": {
+          "quadratic_mul_split.sv": "9a26a78cbb12ec2aafc82c53452489ac020a7e51f35859cbb04d010ff0773e1f"
+        },
+        "opensta_version": "3.1.0",
+        "eda_bundle_id": "5bbe0144473aeff5be02d1361d0ccb53ea6f985cf0897c78daa4330a5d4a148a",
+        "eda_bundle_sha256": "b91ef429cc805a3bbc9595db1a41bf43c9426d28efecdb1e05804525b794d363",
+        "analysis": "mapped cells with pin capacitance; no wire parasitics",
+        "activity": "mapped gate simulation",
+        "testbench_sha256": "31b090a36c61522eee23ebfa8c5a24731ef693c9df0941417f44419cd459f30e",
+        "power_unit": "W",
+        "vcd_sha256": "5edcfcab6eeaa3db1c5a1361220c0b2610c421c807d0842b8474c7343c55b151",
+        "sdc_sha256": "9f16bf7b5be9bd7707539926b18c310db3911031e1c9d4692caa83f05507392e",
+        "annotated_pins": 11645,
+        "worst_setup_slack_ps": 12.51,
+        "meets_setup_target": true,
+        "power": {
+          "Sequential": {
+            "internal": 0.0005758481566,
+            "switching": 4.220501432e-05,
+            "leakage": 7.618628217e-08,
+            "total": 0.0006181293866
+          },
+          "Combinational": {
+            "internal": 0.0002800847869,
+            "switching": 0.0004150105524,
+            "leakage": 1.560794374e-07,
+            "total": 0.0006952513941
+          },
+          "Clock": {
+            "internal": 0.0,
+            "switching": 0.0,
+            "leakage": 0.0,
+            "total": 0.0
+          },
+          "Macro": {
+            "internal": 0.0,
+            "switching": 0.0,
+            "leakage": 0.0,
+            "total": 0.0
+          },
+          "Pad": {
+            "internal": 0.0,
+            "switching": 0.0,
+            "leakage": 0.0,
+            "total": 0.0
+          },
+          "Total": {
+            "internal": 0.0008559328271,
+            "switching": 0.0004572155012,
+            "leakage": 2.32265819e-07,
+            "total": 0.001313380548
+          }
+        },
+        "pipeline_stages": 5,
+        "flip_flops": 332,
+        "mapped_cells": 3494,
+        "mapped_cells_by_type": {
+          "A2O1A1Ixp33_ASAP7_75t_R": 19,
+          "A2O1A1O1Ixp25_ASAP7_75t_R": 11,
+          "AND2x2_ASAP7_75t_R": 138,
+          "AND3x1_ASAP7_75t_R": 39,
+          "AND4x1_ASAP7_75t_R": 4,
+          "AO211x2_ASAP7_75t_R": 1,
+          "AO21x1_ASAP7_75t_R": 29,
+          "AO22x1_ASAP7_75t_R": 1,
+          "AOI211xp5_ASAP7_75t_R": 15,
+          "AOI21xp33_ASAP7_75t_R": 150,
+          "AOI22xp33_ASAP7_75t_R": 57,
+          "AOI311xp33_ASAP7_75t_R": 2,
+          "AOI31xp33_ASAP7_75t_R": 9,
+          "DFFHQNx1_ASAP7_75t_R": 332,
+          "HB1xp67_ASAP7_75t_R": 140,
+          "INVxp33_ASAP7_75t_R": 125,
+          "INVxp67_ASAP7_75t_R": 1,
+          "MAJIxp5_ASAP7_75t_R": 249,
+          "MAJx2_ASAP7_75t_R": 83,
+          "NAND2xp33_ASAP7_75t_R": 293,
+          "NAND3xp33_ASAP7_75t_R": 26,
+          "NAND4xp25_ASAP7_75t_R": 7,
+          "NOR2xp33_ASAP7_75t_R": 505,
+          "NOR3xp33_ASAP7_75t_R": 52,
+          "NOR4xp25_ASAP7_75t_R": 2,
+          "O2A1O1Ixp33_ASAP7_75t_R": 25,
+          "OA211x2_ASAP7_75t_R": 7,
+          "OA21x2_ASAP7_75t_R": 28,
+          "OA22x2_ASAP7_75t_R": 41,
+          "OAI211xp5_ASAP7_75t_R": 3,
+          "OAI21xp33_ASAP7_75t_R": 120,
+          "OAI22xp33_ASAP7_75t_R": 24,
+          "OAI311xp33_ASAP7_75t_R": 1,
+          "OAI31xp33_ASAP7_75t_R": 13,
+          "OAI32xp33_ASAP7_75t_R": 1,
+          "OR2x2_ASAP7_75t_R": 49,
+          "OR3x1_ASAP7_75t_R": 20,
+          "OR4x1_ASAP7_75t_R": 15,
+          "XNOR2xp5_ASAP7_75t_R": 535,
+          "XOR2xp5_ASAP7_75t_R": 322
+        }
+      },
+      {
+        "top": "quadratic_csa",
+        "conda_environment": "3e50db3e9bd7d96b9ed4b2a59886ef655cd6c7db45f3557229f5a00a2491b5d6",
+        "yosys_version": "Yosys 0.63 (git sha1 70a11c6bf0e8dd669f56c7da3587f78b405138e2, clang++ 21.1.8 -fPIC -O3)",
+        "verilator_version": "Verilator 5.052 2026-09-05 rev conda-forge build",
+        "technology": "ASAP7 7.5-track RVT NLDM",
+        "corner": "TT",
+        "voltage_v": 0.7,
+        "temperature_c": 25,
+        "time_unit": "ps",
+        "capacitance_unit": "fF",
+        "clock_period_ps": 1000,
+        "cell_area_um2": 414.52398,
+        "abc_constraints": {
+          "driving_cell": "BUFx2_ASAP7_75t_R",
+          "output_load_fF": 2.0,
+          "buffering_and_sizing": true
+        },
+        "library_sha256": "c078d2d780379fe4a44d8c0f02c55a49cc1cdbba61a305cfa25d2fa0b18dd3e5",
+        "rtl_sha256": {
+          "quadratic_csa.sv": "72303d6bf80543c83e7a5a752d269ca56dae8d1c599429ec6ea992da4b03ae5d",
+          "carry_save_layer.sv": "72f404bde589696010fffbe28de3d4809b2f0ef6d50cd95625353f5db9803548"
+        },
+        "opensta_version": "3.1.0",
+        "eda_bundle_id": "5bbe0144473aeff5be02d1361d0ccb53ea6f985cf0897c78daa4330a5d4a148a",
+        "eda_bundle_sha256": "b91ef429cc805a3bbc9595db1a41bf43c9426d28efecdb1e05804525b794d363",
+        "analysis": "mapped cells with pin capacitance; no wire parasitics",
+        "activity": "mapped gate simulation",
+        "testbench_sha256": "31b090a36c61522eee23ebfa8c5a24731ef693c9df0941417f44419cd459f30e",
+        "power_unit": "W",
+        "vcd_sha256": "967126a86c63186025e825f54ecf406b82b05e7c79d4b3c6247edc83a7b94309",
+        "sdc_sha256": "9f16bf7b5be9bd7707539926b18c310db3911031e1c9d4692caa83f05507392e",
+        "annotated_pins": 13277,
+        "worst_setup_slack_ps": 35.44,
+        "meets_setup_target": true,
+        "power": {
+          "Sequential": {
+            "internal": 0.0006532163825,
+            "switching": 4.951504525e-05,
+            "leakage": 8.768336102e-08,
+            "total": 0.0007028190885
+          },
+          "Combinational": {
+            "internal": 0.0002717621392,
+            "switching": 0.0004278641136,
+            "leakage": 1.577757729e-07,
+            "total": 0.0006997840828
+          },
+          "Clock": {
+            "internal": 0.0,
+            "switching": 0.0,
+            "leakage": 0.0,
+            "total": 0.0
+          },
+          "Macro": {
+            "internal": 0.0,
+            "switching": 0.0,
+            "leakage": 0.0,
+            "total": 0.0
+          },
+          "Pad": {
+            "internal": 0.0,
+            "switching": 0.0,
+            "leakage": 0.0,
+            "total": 0.0
+          },
+          "Total": {
+            "internal": 0.0009249784052,
+            "switching": 0.0004773794499,
+            "leakage": 2.454591765e-07,
+            "total": 0.00140260323
+          }
+        },
+        "pipeline_stages": 5,
+        "flip_flops": 383,
+        "mapped_cells": 3963,
+        "mapped_cells_by_type": {
+          "A2O1A1Ixp33_ASAP7_75t_R": 21,
+          "A2O1A1O1Ixp25_ASAP7_75t_R": 7,
+          "AND2x2_ASAP7_75t_R": 119,
+          "AND3x1_ASAP7_75t_R": 47,
+          "AND4x1_ASAP7_75t_R": 7,
+          "AO21x1_ASAP7_75t_R": 39,
+          "AO22x1_ASAP7_75t_R": 2,
+          "AOI211xp5_ASAP7_75t_R": 17,
+          "AOI21xp33_ASAP7_75t_R": 134,
+          "AOI221xp5_ASAP7_75t_R": 1,
+          "AOI22xp33_ASAP7_75t_R": 12,
+          "AOI311xp33_ASAP7_75t_R": 3,
+          "AOI31xp33_ASAP7_75t_R": 12,
+          "DFFHQNx1_ASAP7_75t_R": 383,
+          "HB1xp67_ASAP7_75t_R": 207,
+          "INVxp33_ASAP7_75t_R": 229,
+          "MAJIxp5_ASAP7_75t_R": 172,
+          "MAJx2_ASAP7_75t_R": 60,
+          "NAND2xp33_ASAP7_75t_R": 516,
+          "NAND3xp33_ASAP7_75t_R": 34,
+          "NAND4xp25_ASAP7_75t_R": 9,
+          "NOR2xp33_ASAP7_75t_R": 458,
+          "NOR3xp33_ASAP7_75t_R": 56,
+          "NOR4xp25_ASAP7_75t_R": 43,
+          "NOR5xp2_ASAP7_75t_R": 1,
+          "O2A1O1Ixp33_ASAP7_75t_R": 63,
+          "OA211x2_ASAP7_75t_R": 11,
+          "OA21x2_ASAP7_75t_R": 50,
+          "OA22x2_ASAP7_75t_R": 2,
+          "OAI211xp5_ASAP7_75t_R": 32,
+          "OAI21xp33_ASAP7_75t_R": 213,
+          "OAI22xp33_ASAP7_75t_R": 117,
+          "OAI311xp33_ASAP7_75t_R": 3,
+          "OAI31xp33_ASAP7_75t_R": 8,
+          "OR2x2_ASAP7_75t_R": 42,
+          "OR3x1_ASAP7_75t_R": 18,
+          "OR4x1_ASAP7_75t_R": 71,
+          "XNOR2xp5_ASAP7_75t_R": 472,
+          "XOR2xp5_ASAP7_75t_R": 272
+        }
+      }
+    ],
+    "selected_result": {
+      "top": "quadratic_booth",
+      "conda_environment": "3e50db3e9bd7d96b9ed4b2a59886ef655cd6c7db45f3557229f5a00a2491b5d6",
+      "yosys_version": "Yosys 0.63 (git sha1 70a11c6bf0e8dd669f56c7da3587f78b405138e2, clang++ 21.1.8 -fPIC -O3)",
+      "verilator_version": "Verilator 5.052 2026-09-05 rev conda-forge build",
+      "technology": "ASAP7 7.5-track RVT NLDM",
+      "corner": "TT",
+      "voltage_v": 0.7,
+      "temperature_c": 25,
+      "time_unit": "ps",
+      "capacitance_unit": "fF",
+      "clock_period_ps": 1000,
+      "cell_area_um2": 329.7996,
+      "abc_constraints": {
+        "driving_cell": "BUFx2_ASAP7_75t_R",
+        "output_load_fF": 2.0,
+        "buffering_and_sizing": true
+      },
+      "library_sha256": "c078d2d780379fe4a44d8c0f02c55a49cc1cdbba61a305cfa25d2fa0b18dd3e5",
+      "rtl_sha256": {
+        "quadratic_booth.sv": "4aed1bd48ad99ea0d9ff698401eeecb4f9bf8c919fedc95c3587176423f2b3db",
+        "booth_rows.sv": "e002dd68909190c05fda3682bd0e64021c51132aa5a62339d3e3b5586085f011",
+        "carry_save_layer.sv": "72f404bde589696010fffbe28de3d4809b2f0ef6d50cd95625353f5db9803548"
+      },
+      "opensta_version": "3.1.0",
+      "eda_bundle_id": "5bbe0144473aeff5be02d1361d0ccb53ea6f985cf0897c78daa4330a5d4a148a",
+      "eda_bundle_sha256": "b91ef429cc805a3bbc9595db1a41bf43c9426d28efecdb1e05804525b794d363",
+      "analysis": "mapped cells with pin capacitance; no wire parasitics",
+      "activity": "mapped gate simulation",
+      "testbench_sha256": "31b090a36c61522eee23ebfa8c5a24731ef693c9df0941417f44419cd459f30e",
+      "power_unit": "W",
+      "vcd_sha256": "450945c418c21b047017fbb622a4adf39152b1076c88c3bc163c4b86b4025303",
+      "sdc_sha256": "9f16bf7b5be9bd7707539926b18c310db3911031e1c9d4692caa83f05507392e",
+      "annotated_pins": 10298,
+      "worst_setup_slack_ps": 291.37,
+      "meets_setup_target": true,
+      "power": {
+        "Sequential": {
+          "internal": 0.0004549945879,
+          "switching": 3.070925231e-05,
+          "leakage": 6.069829084e-08,
+          "total": 0.0004857645545
+        },
+        "Combinational": {
+          "internal": 0.0002543095034,
+          "switching": 0.0004186135193,
+          "leakage": 1.219829358e-07,
+          "total": 0.000673045055
+        },
+        "Clock": {
+          "internal": 0.0,
+          "switching": 0.0,
+          "leakage": 0.0,
+          "total": 0.0
+        },
+        "Macro": {
+          "internal": 0.0,
+          "switching": 0.0,
+          "leakage": 0.0,
+          "total": 0.0
+        },
+        "Pad": {
+          "internal": 0.0,
+          "switching": 0.0,
+          "leakage": 0.0,
+          "total": 0.0
+        },
+        "Total": {
+          "internal": 0.0007093038876,
+          "switching": 0.0004493226879,
+          "leakage": 1.826811058e-07,
+          "total": 0.001158809173
+        }
+      },
+      "pipeline_stages": 5,
+      "flip_flops": 265,
+      "mapped_cells": 3075,
+      "mapped_cells_by_type": {
+        "A2O1A1Ixp33_ASAP7_75t_R": 41,
+        "A2O1A1O1Ixp25_ASAP7_75t_R": 4,
+        "AND2x2_ASAP7_75t_R": 29,
+        "AND3x1_ASAP7_75t_R": 16,
+        "AND4x1_ASAP7_75t_R": 1,
+        "AO21x1_ASAP7_75t_R": 46,
+        "AOI211xp5_ASAP7_75t_R": 43,
+        "AOI21xp33_ASAP7_75t_R": 89,
+        "AOI21xp5_ASAP7_75t_R": 1,
+        "AOI22xp33_ASAP7_75t_R": 76,
+        "AOI311xp33_ASAP7_75t_R": 2,
+        "AOI31xp33_ASAP7_75t_R": 5,
+        "AOI32xp33_ASAP7_75t_R": 1,
+        "DFFHQNx1_ASAP7_75t_R": 265,
+        "HB1xp67_ASAP7_75t_R": 158,
+        "INVx1_ASAP7_75t_R": 5,
+        "INVxp33_ASAP7_75t_R": 282,
+        "INVxp67_ASAP7_75t_R": 5,
+        "MAJIxp5_ASAP7_75t_R": 116,
+        "MAJx2_ASAP7_75t_R": 41,
+        "NAND2xp33_ASAP7_75t_R": 221,
+        "NAND2xp5_ASAP7_75t_R": 5,
+        "NAND3xp33_ASAP7_75t_R": 28,
+        "NAND4xp25_ASAP7_75t_R": 2,
+        "NOR2xp33_ASAP7_75t_R": 256,
+        "NOR3xp33_ASAP7_75t_R": 47,
+        "NOR4xp25_ASAP7_75t_R": 8,
+        "NOR5xp2_ASAP7_75t_R": 2,
+        "O2A1O1Ixp33_ASAP7_75t_R": 38,
+        "OA211x2_ASAP7_75t_R": 17,
+        "OA21x2_ASAP7_75t_R": 36,
+        "OAI211xp5_ASAP7_75t_R": 31,
+        "OAI21xp33_ASAP7_75t_R": 89,
+        "OAI21xp5_ASAP7_75t_R": 1,
+        "OAI221xp5_ASAP7_75t_R": 1,
+        "OAI22xp33_ASAP7_75t_R": 150,
+        "OAI311xp33_ASAP7_75t_R": 2,
+        "OAI31xp33_ASAP7_75t_R": 10,
+        "OAI32xp33_ASAP7_75t_R": 2,
+        "OR2x2_ASAP7_75t_R": 37,
+        "OR3x1_ASAP7_75t_R": 17,
+        "OR4x1_ASAP7_75t_R": 4,
+        "XNOR2xp5_ASAP7_75t_R": 621,
+        "XOR2xp5_ASAP7_75t_R": 224
+      }
+    },
+    "iterations": [
+      {
+        "name": "01_fused_reset",
+        "report": "iterations/01_fused_reset/summary.json",
+        "area_um2": 356.1894,
+        "slack_ps": 119.46,
+        "power_mW": 1.268410706,
+        "flip_flops": 337,
+        "rtl_sha256": {
+          "quadratic_booth.sv": "372998460b7270347c0e94789e22c1a0f8e2dd36a320f256c0bfd464cfab9a89",
+          "booth_rows.sv": "e002dd68909190c05fda3682bd0e64021c51132aa5a62339d3e3b5586085f011",
+          "carry_save_layer.sv": "72f404bde589696010fffbe28de3d4809b2f0ef6d50cd95625353f5db9803548"
+        },
+        "mapping": "unsized"
+      },
+      {
+        "name": "02_two_rows_reset",
+        "report": "iterations/02_two_rows_reset/summary.json",
+        "area_um2": 348.7536,
+        "slack_ps": 166.21,
+        "power_mW": 1.212996198,
+        "flip_flops": 311,
+        "rtl_sha256": {
+          "quadratic_booth.sv": "49ae0636892a5423beb4b5d483855e8378d9f812efd24b43737e4c1351e67540",
+          "booth_rows.sv": "e002dd68909190c05fda3682bd0e64021c51132aa5a62339d3e3b5586085f011",
+          "carry_save_layer.sv": "72f404bde589696010fffbe28de3d4809b2f0ef6d50cd95625353f5db9803548"
+        },
+        "mapping": "unsized"
+      },
+      {
+        "name": "03_two_rows_valid_reset",
+        "report": "iterations/03_two_rows_valid_reset/summary.json",
+        "area_um2": 340.39926,
+        "slack_ps": 178.89,
+        "power_mW": 1.211874536,
+        "flip_flops": 311,
+        "rtl_sha256": {
+          "quadratic_booth.sv": "f7504b3efbe16e278423e61c3d8ddfa9d18dd80b4015fa3e04e45815c020aa28",
+          "booth_rows.sv": "e002dd68909190c05fda3682bd0e64021c51132aa5a62339d3e3b5586085f011",
+          "carry_save_layer.sv": "72f404bde589696010fffbe28de3d4809b2f0ef6d50cd95625353f5db9803548"
+        },
+        "mapping": "unsized"
+      },
+      {
+        "name": "04_prefix",
+        "report": "iterations/04_prefix/summary.json",
+        "area_um2": 339.21828,
+        "slack_ps": 174.98,
+        "power_mW": 1.206752961,
+        "flip_flops": 311,
+        "rtl_sha256": {
+          "quadratic_booth.sv": "2d8a935028c84216d880ce930ec72444fdd812fb695bbe5456e519053e96bead",
+          "booth_rows.sv": "e002dd68909190c05fda3682bd0e64021c51132aa5a62339d3e3b5586085f011",
+          "prefix_adder.sv": "9bdabc8d687e82595c77cc4416e9e8ae44687d184ca894043391a17c7cbcfa21",
+          "carry_save_layer.sv": "72f404bde589696010fffbe28de3d4809b2f0ef6d50cd95625353f5db9803548"
+        },
+        "mapping": "unsized"
+      },
+      {
+        "name": "05_sticky",
+        "report": "iterations/05_sticky/summary.json",
+        "area_um2": 335.67534,
+        "slack_ps": 187.35,
+        "power_mW": 1.1878543300000002,
+        "flip_flops": 301,
+        "rtl_sha256": {
+          "quadratic_booth.sv": "06849b81313a0afecdb91eec67dc4b596420b177836a9ebb5a14ebc4194fd43d",
+          "booth_rows.sv": "e002dd68909190c05fda3682bd0e64021c51132aa5a62339d3e3b5586085f011",
+          "prefix_adder.sv": "9bdabc8d687e82595c77cc4416e9e8ae44687d184ca894043391a17c7cbcfa21",
+          "carry_save_layer.sv": "72f404bde589696010fffbe28de3d4809b2f0ef6d50cd95625353f5db9803548"
+        },
+        "mapping": "unsized"
+      },
+      {
+        "name": "06_second_low_cut",
+        "report": "iterations/06_second_low_cut/summary.json",
+        "area_um2": 330.64524,
+        "slack_ps": 129.74,
+        "power_mW": 1.1678258890000002,
+        "flip_flops": 284,
+        "rtl_sha256": {
+          "quadratic_booth.sv": "0a0669a284368f4f27075d90e1001d346d39fea262eadd6000cc69352f7d5fce",
+          "booth_rows.sv": "e002dd68909190c05fda3682bd0e64021c51132aa5a62339d3e3b5586085f011",
+          "prefix_adder.sv": "9cb3b398f14da635044765fbabe5abdd858d33a8a2c06eee01f3bde3278f3b91",
+          "carry_save_layer.sv": "72f404bde589696010fffbe28de3d4809b2f0ef6d50cd95625353f5db9803548"
+        },
+        "mapping": "unsized"
+      },
+      {
+        "name": "07_both_low_cut",
+        "report": "iterations/07_both_low_cut/summary.json",
+        "area_um2": 325.77552,
+        "slack_ps": 207.42,
+        "power_mW": 1.143565634,
+        "flip_flops": 265,
+        "rtl_sha256": {
+          "quadratic_booth.sv": "f024ac6d37487ec3e3b0e03d19167d8683cef6bf4148405a3dc0dd4ee76f5869",
+          "booth_rows.sv": "e002dd68909190c05fda3682bd0e64021c51132aa5a62339d3e3b5586085f011",
+          "prefix_adder.sv": "9cb3b398f14da635044765fbabe5abdd858d33a8a2c06eee01f3bde3278f3b91",
+          "carry_save_layer.sv": "72f404bde589696010fffbe28de3d4809b2f0ef6d50cd95625353f5db9803548"
+        },
+        "mapping": "unsized"
+      },
+      {
+        "name": "08_addend_first",
+        "report": "iterations/08_addend_first/summary.json",
+        "area_um2": 323.42814,
+        "slack_ps": 183.21,
+        "power_mW": 1.136591192,
+        "flip_flops": 265,
+        "rtl_sha256": {
+          "quadratic_booth.sv": "07bc2eafa28a345e61ef60a1f8494f4dbd059ad3b759dc04d56cb7abe459e345",
+          "booth_rows.sv": "e002dd68909190c05fda3682bd0e64021c51132aa5a62339d3e3b5586085f011",
+          "prefix_adder.sv": "9cb3b398f14da635044765fbabe5abdd858d33a8a2c06eee01f3bde3278f3b91",
+          "carry_save_layer.sv": "72f404bde589696010fffbe28de3d4809b2f0ef6d50cd95625353f5db9803548"
+        },
+        "mapping": "unsized"
+      },
+      {
+        "name": "09_reverse_rows",
+        "report": "iterations/09_reverse_rows/summary.json",
+        "area_um2": 323.39898,
+        "slack_ps": 233.4,
+        "power_mW": 1.135189552,
+        "flip_flops": 265,
+        "rtl_sha256": {
+          "quadratic_booth.sv": "d42a6bcec54e7105f897e51a81148ec068bb0357e74afdd5ab66bff2f9feac7d",
+          "booth_rows.sv": "e002dd68909190c05fda3682bd0e64021c51132aa5a62339d3e3b5586085f011",
+          "prefix_adder.sv": "9cb3b398f14da635044765fbabe5abdd858d33a8a2c06eee01f3bde3278f3b91",
+          "carry_save_layer.sv": "72f404bde589696010fffbe28de3d4809b2f0ef6d50cd95625353f5db9803548"
+        },
+        "mapping": "unsized"
+      },
+      {
+        "name": "10_buffered_sized",
+        "report": "iterations/10_buffered_sized/summary.json",
+        "area_um2": 332.51148,
+        "slack_ps": 298.42,
+        "power_mW": 1.1678824669999999,
+        "flip_flops": 265,
+        "rtl_sha256": {
+          "quadratic_booth.sv": "d42a6bcec54e7105f897e51a81148ec068bb0357e74afdd5ab66bff2f9feac7d",
+          "booth_rows.sv": "e002dd68909190c05fda3682bd0e64021c51132aa5a62339d3e3b5586085f011",
+          "prefix_adder.sv": "9cb3b398f14da635044765fbabe5abdd858d33a8a2c06eee01f3bde3278f3b91",
+          "carry_save_layer.sv": "72f404bde589696010fffbe28de3d4809b2f0ef6d50cd95625353f5db9803548"
+        },
+        "mapping": "buffered_sized"
+      },
+      {
+        "name": "11_inferred_adders",
+        "report": "iterations/11_inferred_adders/summary.json",
+        "area_um2": 329.7996,
+        "slack_ps": 291.37,
+        "power_mW": 1.1588091729999999,
+        "flip_flops": 265,
+        "rtl_sha256": {
+          "quadratic_booth.sv": "8441031cb680451e14ae216fac7c36c14ef11aba1e9d5335ce6737154f73faf2",
+          "booth_rows.sv": "e002dd68909190c05fda3682bd0e64021c51132aa5a62339d3e3b5586085f011",
+          "carry_save_layer.sv": "72f404bde589696010fffbe28de3d4809b2f0ef6d50cd95625353f5db9803548"
+        },
+        "mapping": "buffered_sized"
+      },
+      {
+        "name": "selected",
+        "report": "iterations/selected/summary.json",
+        "area_um2": 329.7996,
+        "slack_ps": 291.37,
+        "power_mW": 1.1588091729999999,
+        "flip_flops": 265,
+        "rtl_sha256": {
+          "quadratic_booth.sv": "4aed1bd48ad99ea0d9ff698401eeecb4f9bf8c919fedc95c3587176423f2b3db",
+          "booth_rows.sv": "e002dd68909190c05fda3682bd0e64021c51132aa5a62339d3e3b5586085f011",
+          "carry_save_layer.sv": "72f404bde589696010fffbe28de3d4809b2f0ef6d50cd95625353f5db9803548"
+        },
+        "mapping": "buffered_sized"
+      }
+    ]
+  },
+  "constant_audit": {
+    "profile": 11,
+    "constant_masks": {
+      "a": {
+        "ones": 0,
+        "zeros": 512,
+        "width": 10
+      },
+      "b": {
+        "ones": 0,
+        "zeros": 0,
+        "width": 13
+      },
+      "c": {
+        "ones": 4194304,
+        "zeros": 0,
+        "width": 23
+      }
+    },
+    "snapshots": {
+      "generic.json": {
+        "sha256": "bd4b8f2c67d28af2ded547168b2f8b28b1563710df8470062dab70ce6c0a9f6a",
+        "wires": {
+          "a0[9]": "0",
+          "core.a[9]": "0",
+          "c0[22]": "1",
+          "core.c1[22]": "1",
+          "core.c2[22]": "1",
+          "core.second_heap[43]": "1"
+        },
+        "zero_top_booth_digit": true,
+        "constant_c_compressor": {
+          "inputs": [
+            "1",
+            "0",
+            "0"
+          ],
+          "sum": "1",
+          "carry": "0"
+        },
+        "flip_flops": 305
+      },
+      "mapped.json": {
+        "sha256": "790453d9f19ec943ce54b24dfbadd35c666a87df51bda2c27ca0eccabef661bd",
+        "wires": {
+          "a0[9]": "0",
+          "core.a[9]": "0",
+          "c0[22]": "1",
+          "core.c1[22]": "1",
+          "core.c2[22]": "1",
+          "core.second_heap[43]": "1"
+        },
+        "zero_top_booth_digit": true,
+        "constant_c_compressor": {
+          "inputs": [
+            "1",
+            "0",
+            "0"
+          ],
+          "sum": "1",
+          "carry": "0"
+        },
+        "flip_flops": 305
+      }
+    },
+    "comparison": [
+      {
+        "name": "profile_11",
+        "normalized_cost": 1228.3999999999999,
+        "slack_ps": 292.56,
+        "rtl_sha256": {
+          "sfu_poly.sv": "bbf231349fb83aed89525469b9d6e804dc87eaec4f71f5d69fe2226b44ebcd73",
+          "rounding_polynomial.sv": "2d428641872172a021c4a91aaaa54130e1c4211fdeea7b2e6dd7d71c3f8eee8c",
+          "polynomial_reduce.sv": "0a32fd9c040de18357e04ab496d9b86f6f8d4e25880c1e50d23bc50ad20455da",
+          "booth_rows.sv": "dd1cec2fbe32f3e174b46b5395708e4ab8fe4ade0a41af0f9ee48ceddff4cd53",
+          "carry_save_layer.sv": "72f404bde589696010fffbe28de3d4809b2f0ef6d50cd95625353f5db9803548"
+        }
+      },
+      {
+        "name": "constant_a",
+        "normalized_cost": 1229.3,
+        "slack_ps": 336.5,
+        "rtl_sha256": {
+          "sfu_poly.sv": "4135c189faa1bd07a1b688ac585e42ebe62bd2d9d76b7c41c7ca39ffe366f41a",
+          "rounding_polynomial.sv": "2d428641872172a021c4a91aaaa54130e1c4211fdeea7b2e6dd7d71c3f8eee8c",
+          "polynomial_reduce.sv": "0a32fd9c040de18357e04ab496d9b86f6f8d4e25880c1e50d23bc50ad20455da",
+          "booth_rows.sv": "dd1cec2fbe32f3e174b46b5395708e4ab8fe4ade0a41af0f9ee48ceddff4cd53",
+          "carry_save_layer.sv": "72f404bde589696010fffbe28de3d4809b2f0ef6d50cd95625353f5db9803548"
+        }
+      }
+    ],
+    "decision": "Keep the baseline for area; explicit narrowing raises cost by 0.90 FF units and improves setup slack by 43.94 ps."
+  },
+  "rounding_delta": {
+    "rne": {
+      "profile": 8,
+      "structural_probe": false,
+      "source_sha256": {
+        "rtl/rounding/profile_8/sfu_poly.sv": "7b2cde67ea9cf92bcf5f31be5491db8062c9d21efe53d840c6ae6ee9bb9499b6",
+        "rtl/rounding/rounding_polynomial.sv": "2d428641872172a021c4a91aaaa54130e1c4211fdeea7b2e6dd7d71c3f8eee8c",
+        "rtl/rounding/polynomial_reduce.sv": "0a32fd9c040de18357e04ab496d9b86f6f8d4e25880c1e50d23bc50ad20455da",
+        "rtl/examples/booth_rows.sv": "dd1cec2fbe32f3e174b46b5395708e4ab8fe4ade0a41af0f9ee48ceddff4cd53",
+        "rtl/examples/carry_save_layer.sv": "72f404bde589696010fffbe28de3d4809b2f0ef6d50cd95625353f5db9803548"
+      },
+      "normalized_cost": 1309.85,
+      "flip_flops": 311,
+      "signals": {
+        "a0[9]": "0",
+        "core.a[9]": "0",
+        "core.guard1[0]": 421,
+        "core.sticky1[0]": 423,
+        "core.round1[0]": 4049
+      },
+      "top_booth_triple": [
+        "0",
+        "0",
+        "0"
+      ],
+      "top_booth_magnitude": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "a9_dff_drivers": [],
+      "mapped_sha256": "d161a2f12ca9cbdf70a087ef83a58b9832cdbca16bf7dec22d9a8b0cc658b6ec",
+      "cells": {
+        "HB1xp67_ASAP7_75t_R": 195,
+        "OAI21xp33_ASAP7_75t_R": 143,
+        "O2A1O1Ixp33_ASAP7_75t_R": 47,
+        "NOR2xp33_ASAP7_75t_R": 354,
+        "NAND2xp33_ASAP7_75t_R": 226,
+        "INVxp67_ASAP7_75t_R": 27,
+        "INVxp33_ASAP7_75t_R": 284,
+        "AO21x1_ASAP7_75t_R": 28,
+        "NAND2xp5_ASAP7_75t_R": 16,
+        "AOI221xp5_ASAP7_75t_R": 12,
+        "AOI211xp5_ASAP7_75t_R": 73,
+        "AOI21xp33_ASAP7_75t_R": 170,
+        "OAI211xp5_ASAP7_75t_R": 37,
+        "NOR3xp33_ASAP7_75t_R": 65,
+        "OAI31xp33_ASAP7_75t_R": 18,
+        "OAI22xp33_ASAP7_75t_R": 174,
+        "AOI32xp33_ASAP7_75t_R": 6,
+        "A2O1A1Ixp33_ASAP7_75t_R": 63,
+        "NAND3xp33_ASAP7_75t_R": 44,
+        "NAND4xp25_ASAP7_75t_R": 2,
+        "AOI321xp33_ASAP7_75t_R": 2,
+        "OR3x1_ASAP7_75t_R": 20,
+        "A2O1A1O1Ixp25_ASAP7_75t_R": 11,
+        "AOI311xp33_ASAP7_75t_R": 17,
+        "AOI31xp33_ASAP7_75t_R": 18,
+        "NOR4xp25_ASAP7_75t_R": 11,
+        "OAI221xp5_ASAP7_75t_R": 14,
+        "AOI22xp33_ASAP7_75t_R": 9,
+        "AO32x1_ASAP7_75t_R": 3,
+        "OAI321xp33_ASAP7_75t_R": 5,
+        "OAI32xp33_ASAP7_75t_R": 66,
+        "OAI311xp33_ASAP7_75t_R": 17,
+        "AND3x1_ASAP7_75t_R": 16,
+        "OA33x2_ASAP7_75t_R": 2,
+        "XOR2xp5_ASAP7_75t_R": 284,
+        "XNOR2xp5_ASAP7_75t_R": 534,
+        "MAJIxp5_ASAP7_75t_R": 118,
+        "MAJx2_ASAP7_75t_R": 37,
+        "AND2x2_ASAP7_75t_R": 31,
+        "OA21x2_ASAP7_75t_R": 43,
+        "OR2x2_ASAP7_75t_R": 53,
+        "INVx1_ASAP7_75t_R": 4,
+        "AOI21xp5_ASAP7_75t_R": 3,
+        "OA211x2_ASAP7_75t_R": 9,
+        "AND4x1_ASAP7_75t_R": 4,
+        "OA31x2_ASAP7_75t_R": 2,
+        "AO221x1_ASAP7_75t_R": 1,
+        "OR4x1_ASAP7_75t_R": 3,
+        "AO211x2_ASAP7_75t_R": 1,
+        "NOR5xp2_ASAP7_75t_R": 1,
+        "NAND5xp2_ASAP7_75t_R": 2,
+        "DFFHQNx1_ASAP7_75t_R": 311
+      }
+    },
+    "truncate-refit": {
+      "profile": 10,
+      "structural_probe": false,
+      "source_sha256": {
+        "rtl/rounding/profile_10/sfu_poly.sv": "66fe00ab4b336cc5fe9d5ff996bd25facfd018b51c63ac04c6489c70617875aa",
+        "rtl/rounding/rounding_polynomial.sv": "2d428641872172a021c4a91aaaa54130e1c4211fdeea7b2e6dd7d71c3f8eee8c",
+        "rtl/rounding/polynomial_reduce.sv": "0a32fd9c040de18357e04ab496d9b86f6f8d4e25880c1e50d23bc50ad20455da",
+        "rtl/examples/booth_rows.sv": "dd1cec2fbe32f3e174b46b5395708e4ab8fe4ade0a41af0f9ee48ceddff4cd53",
+        "rtl/examples/carry_save_layer.sv": "72f404bde589696010fffbe28de3d4809b2f0ef6d50cd95625353f5db9803548"
+      },
+      "normalized_cost": 1313.3,
+      "flip_flops": 310,
+      "signals": {
+        "a0[9]": 147,
+        "core.a[9]": 147,
+        "core.guard1[0]": "optimized-away",
+        "core.sticky1[0]": "optimized-away",
+        "core.round1[0]": "0"
+      },
+      "top_booth_triple": [
+        147,
+        "0",
+        "0"
+      ],
+      "top_booth_magnitude": [
+        2181,
+        2183,
+        2185,
+        2187,
+        2189,
+        2191,
+        2193,
+        2195,
+        2197,
+        2199,
+        2201,
+        2203,
+        2206,
+        2209,
+        2211,
+        2214,
+        2216,
+        2219,
+        2221,
+        1367,
+        "0"
+      ],
+      "a9_dff_drivers": [
+        "$auto$ff.cc:337:slice$2411"
+      ],
+      "mapped_sha256": "31d4537f47dd0f6820b1f2c83da05f771f5949fc9a89a41643c7f5313f4fce3d",
+      "cells": {
+        "NAND2xp33_ASAP7_75t_R": 259,
+        "AOI21xp33_ASAP7_75t_R": 178,
+        "HB1xp67_ASAP7_75t_R": 206,
+        "NOR2xp33_ASAP7_75t_R": 413,
+        "AOI211xp5_ASAP7_75t_R": 81,
+        "OAI22xp33_ASAP7_75t_R": 188,
+        "XNOR2xp5_ASAP7_75t_R": 595,
+        "OAI32xp33_ASAP7_75t_R": 55,
+        "XOR2xp5_ASAP7_75t_R": 220,
+        "AND3x1_ASAP7_75t_R": 9,
+        "OR2x2_ASAP7_75t_R": 42,
+        "OAI21xp33_ASAP7_75t_R": 125,
+        "MAJIxp5_ASAP7_75t_R": 114,
+        "MAJx2_ASAP7_75t_R": 29,
+        "AO21x1_ASAP7_75t_R": 35,
+        "NOR3xp33_ASAP7_75t_R": 43,
+        "OA21x2_ASAP7_75t_R": 28,
+        "O2A1O1Ixp33_ASAP7_75t_R": 65,
+        "OA211x2_ASAP7_75t_R": 13,
+        "INVxp33_ASAP7_75t_R": 285,
+        "INVxp67_ASAP7_75t_R": 25,
+        "OAI211xp5_ASAP7_75t_R": 30,
+        "OAI221xp5_ASAP7_75t_R": 14,
+        "AOI22xp33_ASAP7_75t_R": 9,
+        "A2O1A1Ixp33_ASAP7_75t_R": 53,
+        "AOI31xp33_ASAP7_75t_R": 18,
+        "AND2x2_ASAP7_75t_R": 29,
+        "OAI321xp33_ASAP7_75t_R": 1,
+        "OR3x1_ASAP7_75t_R": 21,
+        "NAND4xp25_ASAP7_75t_R": 6,
+        "INVx1_ASAP7_75t_R": 9,
+        "NAND2xp5_ASAP7_75t_R": 22,
+        "NOR4xp25_ASAP7_75t_R": 11,
+        "OAI311xp33_ASAP7_75t_R": 19,
+        "OAI31xp33_ASAP7_75t_R": 27,
+        "AOI311xp33_ASAP7_75t_R": 21,
+        "A2O1A1O1Ixp25_ASAP7_75t_R": 10,
+        "AOI221xp5_ASAP7_75t_R": 16,
+        "NAND3xp33_ASAP7_75t_R": 47,
+        "AOI21xp5_ASAP7_75t_R": 2,
+        "AOI33xp33_ASAP7_75t_R": 1,
+        "OR4x1_ASAP7_75t_R": 3,
+        "AOI32xp33_ASAP7_75t_R": 6,
+        "AND4x1_ASAP7_75t_R": 2,
+        "AO32x1_ASAP7_75t_R": 1,
+        "NOR5xp2_ASAP7_75t_R": 1,
+        "NAND5xp2_ASAP7_75t_R": 1,
+        "AO211x2_ASAP7_75t_R": 1,
+        "DFFHQNx1_ASAP7_75t_R": 310
+      }
+    },
+    "truncate-unrefitted": {
+      "profile": 8,
+      "structural_probe": true,
+      "source_sha256": {
+        "rtl/audits/rounding/first-rounding-delta/truncate-unrefitted/sfu_poly.sv": "f5b62880747cd71a20d63568c9599de189e814c9a53eb4844763166d2337f46d",
+        "rtl/rounding/rounding_polynomial.sv": "2d428641872172a021c4a91aaaa54130e1c4211fdeea7b2e6dd7d71c3f8eee8c",
+        "rtl/rounding/polynomial_reduce.sv": "0a32fd9c040de18357e04ab496d9b86f6f8d4e25880c1e50d23bc50ad20455da",
+        "rtl/examples/booth_rows.sv": "dd1cec2fbe32f3e174b46b5395708e4ab8fe4ade0a41af0f9ee48ceddff4cd53",
+        "rtl/examples/carry_save_layer.sv": "72f404bde589696010fffbe28de3d4809b2f0ef6d50cd95625353f5db9803548"
+      },
+      "normalized_cost": 1269.1499999999999,
+      "flip_flops": 309,
+      "signals": {
+        "a0[9]": "0",
+        "core.a[9]": "0",
+        "core.guard1[0]": "optimized-away",
+        "core.sticky1[0]": "optimized-away",
+        "core.round1[0]": "0"
+      },
+      "top_booth_triple": [
+        "0",
+        "0",
+        "0"
+      ],
+      "top_booth_magnitude": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "a9_dff_drivers": [],
+      "mapped_sha256": "26db1ad73f467ef34214db9a4d08a3b1e7b90b0715ef3dc52e5e96a2680509e9",
+      "cells": {
+        "XOR2xp5_ASAP7_75t_R": 250,
+        "XNOR2xp5_ASAP7_75t_R": 507,
+        "NOR2xp33_ASAP7_75t_R": 339,
+        "NAND2xp33_ASAP7_75t_R": 239,
+        "INVxp33_ASAP7_75t_R": 295,
+        "MAJIxp5_ASAP7_75t_R": 110,
+        "OAI211xp5_ASAP7_75t_R": 36,
+        "O2A1O1Ixp33_ASAP7_75t_R": 69,
+        "AOI22xp33_ASAP7_75t_R": 9,
+        "A2O1A1Ixp33_ASAP7_75t_R": 65,
+        "INVxp67_ASAP7_75t_R": 25,
+        "AOI211xp5_ASAP7_75t_R": 82,
+        "AOI21xp33_ASAP7_75t_R": 147,
+        "OAI22xp33_ASAP7_75t_R": 192,
+        "OR2x2_ASAP7_75t_R": 50,
+        "OAI32xp33_ASAP7_75t_R": 55,
+        "OAI21xp33_ASAP7_75t_R": 160,
+        "MAJx2_ASAP7_75t_R": 29,
+        "A2O1A1O1Ixp25_ASAP7_75t_R": 15,
+        "AND2x2_ASAP7_75t_R": 32,
+        "NAND3xp33_ASAP7_75t_R": 43,
+        "AO21x1_ASAP7_75t_R": 38,
+        "NAND4xp25_ASAP7_75t_R": 3,
+        "AO32x1_ASAP7_75t_R": 3,
+        "OA211x2_ASAP7_75t_R": 12,
+        "OAI31xp33_ASAP7_75t_R": 24,
+        "OAI311xp33_ASAP7_75t_R": 17,
+        "OA21x2_ASAP7_75t_R": 32,
+        "HB1xp67_ASAP7_75t_R": 187,
+        "INVx1_ASAP7_75t_R": 5,
+        "NAND2xp5_ASAP7_75t_R": 15,
+        "AOI21xp5_ASAP7_75t_R": 2,
+        "OR3x1_ASAP7_75t_R": 15,
+        "AOI221xp5_ASAP7_75t_R": 8,
+        "NOR3xp33_ASAP7_75t_R": 50,
+        "AOI311xp33_ASAP7_75t_R": 14,
+        "OAI221xp5_ASAP7_75t_R": 12,
+        "AOI31xp33_ASAP7_75t_R": 15,
+        "AND3x1_ASAP7_75t_R": 18,
+        "AND4x1_ASAP7_75t_R": 1,
+        "AOI32xp33_ASAP7_75t_R": 5,
+        "AOI33xp33_ASAP7_75t_R": 1,
+        "NOR4xp25_ASAP7_75t_R": 7,
+        "OR4x1_ASAP7_75t_R": 2,
+        "AO31x2_ASAP7_75t_R": 1,
+        "AO22x1_ASAP7_75t_R": 1,
+        "NAND5xp2_ASAP7_75t_R": 1,
+        "NOR5xp2_ASAP7_75t_R": 1,
+        "DFFHQNx1_ASAP7_75t_R": 309
+      }
+    },
+    "truncate-high-bit-zero": {
+      "profile": 10,
+      "structural_probe": true,
+      "source_sha256": {
+        "rtl/audits/rounding/first-rounding-delta/truncate-high-bit-zero/sfu_poly.sv": "34889da962886c433d3c2fbcb2e924b1a41d875559d6469f9a0cf4ac4e169de6",
+        "rtl/rounding/rounding_polynomial.sv": "2d428641872172a021c4a91aaaa54130e1c4211fdeea7b2e6dd7d71c3f8eee8c",
+        "rtl/rounding/polynomial_reduce.sv": "0a32fd9c040de18357e04ab496d9b86f6f8d4e25880c1e50d23bc50ad20455da",
+        "rtl/examples/booth_rows.sv": "dd1cec2fbe32f3e174b46b5395708e4ab8fe4ade0a41af0f9ee48ceddff4cd53",
+        "rtl/examples/carry_save_layer.sv": "72f404bde589696010fffbe28de3d4809b2f0ef6d50cd95625353f5db9803548"
+      },
+      "normalized_cost": 1273.1499999999999,
+      "flip_flops": 309,
+      "signals": {
+        "a0[9]": "0",
+        "core.a[9]": "0",
+        "core.guard1[0]": "optimized-away",
+        "core.sticky1[0]": "optimized-away",
+        "core.round1[0]": "0"
+      },
+      "top_booth_triple": [
+        "0",
+        "0",
+        "0"
+      ],
+      "top_booth_magnitude": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "a9_dff_drivers": [],
+      "mapped_sha256": "838e8dd284b21a12161ac43098766406275828a8c5c957da1a9776ca6f4deb1c",
+      "cells": {
+        "XNOR2xp5_ASAP7_75t_R": 509,
+        "XOR2xp5_ASAP7_75t_R": 252,
+        "OAI32xp33_ASAP7_75t_R": 58,
+        "INVxp33_ASAP7_75t_R": 276,
+        "NOR2xp33_ASAP7_75t_R": 334,
+        "NAND2xp33_ASAP7_75t_R": 224,
+        "AOI211xp5_ASAP7_75t_R": 80,
+        "AOI21xp33_ASAP7_75t_R": 147,
+        "MAJIxp5_ASAP7_75t_R": 118,
+        "MAJx2_ASAP7_75t_R": 31,
+        "INVxp67_ASAP7_75t_R": 27,
+        "OR4x1_ASAP7_75t_R": 3,
+        "OAI21xp33_ASAP7_75t_R": 139,
+        "A2O1A1Ixp33_ASAP7_75t_R": 54,
+        "OA211x2_ASAP7_75t_R": 16,
+        "AOI22xp33_ASAP7_75t_R": 8,
+        "OAI221xp5_ASAP7_75t_R": 18,
+        "OAI22xp33_ASAP7_75t_R": 188,
+        "OR2x2_ASAP7_75t_R": 53,
+        "AO221x1_ASAP7_75t_R": 1,
+        "OAI211xp5_ASAP7_75t_R": 41,
+        "O2A1O1Ixp33_ASAP7_75t_R": 54,
+        "OR3x1_ASAP7_75t_R": 23,
+        "AND3x1_ASAP7_75t_R": 19,
+        "NAND3xp33_ASAP7_75t_R": 38,
+        "AO21x1_ASAP7_75t_R": 41,
+        "OA21x2_ASAP7_75t_R": 32,
+        "OAI31xp33_ASAP7_75t_R": 26,
+        "AND2x2_ASAP7_75t_R": 34,
+        "HB1xp67_ASAP7_75t_R": 197,
+        "NAND2xp5_ASAP7_75t_R": 14,
+        "INVx1_ASAP7_75t_R": 6,
+        "AOI31xp33_ASAP7_75t_R": 28,
+        "NOR3xp33_ASAP7_75t_R": 42,
+        "OAI321xp33_ASAP7_75t_R": 3,
+        "AOI32xp33_ASAP7_75t_R": 7,
+        "A2O1A1O1Ixp25_ASAP7_75t_R": 12,
+        "AOI221xp5_ASAP7_75t_R": 14,
+        "OAI21xp5_ASAP7_75t_R": 1,
+        "AOI311xp33_ASAP7_75t_R": 10,
+        "OAI311xp33_ASAP7_75t_R": 22,
+        "AOI321xp33_ASAP7_75t_R": 1,
+        "AO22x1_ASAP7_75t_R": 2,
+        "NOR4xp25_ASAP7_75t_R": 10,
+        "AND4x1_ASAP7_75t_R": 4,
+        "AOI21xp5_ASAP7_75t_R": 1,
+        "AO211x2_ASAP7_75t_R": 2,
+        "AO32x1_ASAP7_75t_R": 2,
+        "NAND4xp25_ASAP7_75t_R": 2,
+        "DFFHQNx1_ASAP7_75t_R": 309
+      }
+    }
+  },
+  "provenance": {
+    "input_sha256": {
+      "rtl/audits/rounding/narrow256-s15-tt/mapped.json": "c43da38baadd24676b9ba6d4dc7bac875125b7c664c0ae82e66ba59cee2daae4",
+      "rtl/audits/rounding/narrow256-combined-rne/mapped.json": "f8d4c649ed61c18a6b0f535171a9ea9286ea0a0f9644b78c74aa99dd00940572",
+      "rtl/audits/booth/optimization.json": "2ca1ed8686eb2726c8f5ea8fa522176282e03b02811484f216f0cff861a0b130",
+      "rtl/audits/rounding/constant-bits/summary.json": "f149ceda4ae01b054269d36f2d960ed114e4a8155b420af264ba32bd1a3c4e2d",
+      "rtl/audits/rounding/first-rounding-delta/summary.json": "8e70ff5418df9e64b1d52132e71300d7416bc5be0357fe5d790268d4ee6fbbf4"
+    },
+    "rtl_sha256": {
+      "rtl/rounding/narrow256_s15_tt/sfu_poly.sv": "501911efb7a50975219662296bf9d8792f2a3575eaca40826d822e1fd037561d",
+      "rtl/rounding/rounding_polynomial.sv": "2d428641872172a021c4a91aaaa54130e1c4211fdeea7b2e6dd7d71c3f8eee8c",
+      "rtl/rounding/polynomial_reduce.sv": "0a32fd9c040de18357e04ab496d9b86f6f8d4e25880c1e50d23bc50ad20455da",
+      "rtl/examples/booth_rows.sv": "dd1cec2fbe32f3e174b46b5395708e4ab8fe4ade0a41af0f9ee48ceddff4cd53",
+      "rtl/examples/carry_save_layer.sv": "72f404bde589696010fffbe28de3d4809b2f0ef6d50cd95625353f5db9803548",
+      "rtl/rounding/narrow256_combined_rne/sfu_poly.sv": "9d208cd43143a16e640b07d5ddc55f9493ee8fc529334546b997ddadd60b6302"
+    },
+    "narrow256_study_sha256": "4eb2f050601b68be5a48e75c3d021522e021dcafbd6921f5fe5318b48b96ff0b",
+    "download_sha256": "605e7bf00503b895f1eb66ce6fa694e6147d6cd4d11ecba9807c0b88b644bfd7",
+    "download_entries": {
+      "narrow256_s15_tt/sfu_poly.sv": "501911efb7a50975219662296bf9d8792f2a3575eaca40826d822e1fd037561d",
+      "common/rounding_polynomial.sv": "2d428641872172a021c4a91aaaa54130e1c4211fdeea7b2e6dd7d71c3f8eee8c",
+      "common/polynomial_reduce.sv": "0a32fd9c040de18357e04ab496d9b86f6f8d4e25880c1e50d23bc50ad20455da",
+      "common/booth_rows.sv": "dd1cec2fbe32f3e174b46b5395708e4ab8fe4ade0a41af0f9ee48ceddff4cd53",
+      "common/carry_save_layer.sv": "72f404bde589696010fffbe28de3d4809b2f0ef6d50cd95625353f5db9803548",
+      "narrow256_s15_tt/measurement.json": "c43da38baadd24676b9ba6d4dc7bac875125b7c664c0ae82e66ba59cee2daae4",
+      "narrow256_combined_rne/sfu_poly.sv": "9d208cd43143a16e640b07d5ddc55f9493ee8fc529334546b997ddadd60b6302",
+      "narrow256_combined_rne/measurement.json": "f8d4c649ed61c18a6b0f535171a9ea9286ea0a0f9644b78c74aa99dd00940572",
+      "common/polynomial.sdc": "9f16bf7b5be9bd7707539926b18c310db3911031e1c9d4692caa83f05507392e",
+      "README.txt": "c0d8dea1c4a3f9b8ea0a7f3b02642e2c718f1e4ac2648a082a1986ae13bc6653",
+      "source-sha256.json": "ffa83c8fe60de37fdf08e7b0f489f34c2c56c81e999e0b08727494edccaf85e5"
+    }
+  }
+}

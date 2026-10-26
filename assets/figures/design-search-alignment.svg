@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 440" role="img" aria-labelledby="title desc">
+<title id="title">Grouping changes which small contributions survive finite alignment</title>
+<desc id="desc">On an illustrative alignment grid with spacing one eighth, each of four terms equal to one thirty-second rounds to zero. Their sum is one eighth and survives if combined before alignment with one. The two answers are one and nine eighths.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10" fill="#747d86"/></marker></defs>
+<rect width="1000" height="440" fill="#faf9f6"/>
+<style>text{font-family:system-ui,sans-serif;font-size:20px;fill:#41484b}.head{font-weight:600}.note{font-size:18px}svg > path{fill:none;stroke:#747d86;stroke-width:2;marker-end:url(#arrow)}</style>
+<text x="500" y="32" text-anchor="middle" class="head">Same terms: 1 + 1/32 + 1/32 + 1/32 + 1/32</text>
+<text x="500" y="62" text-anchor="middle" class="note">Illustrative shared alignment grid: multiples of 1/8</text>
+<text x="250" y="112" text-anchor="middle" class="head">Align the terms individually</text>
+<rect x="40" y="137" width="420" height="100" rx="5" fill="#f5f1e8" stroke="#3d6f8c" stroke-width="2"/>
+<text x="750" y="112" text-anchor="middle" class="head">Combine the small terms first</text>
+<rect x="540" y="137" width="420" height="100" rx="5" fill="#f5f1e8" stroke="#b75d2c" stroke-width="2"/>
+<text x="250" y="177" text-anchor="middle" class="">1 stays 1</text>
+<text x="250" y="210" text-anchor="middle" class="">Each 1/32 becomes 0</text>
+<text x="750" y="177" text-anchor="middle" class="">Four small terms sum to 1/8</text>
+<text x="750" y="210" text-anchor="middle" class="">1/8 survives alignment with 1</text>
+<path d="M250 237 V282"/>
+<path d="M750 237 V282"/>
+<rect x="90" y="285" width="320" height="65" rx="5" fill="#f5f1e8" stroke="#3d6f8c" stroke-width="2"/>
+<rect x="590" y="285" width="320" height="65" rx="5" fill="#f5f1e8" stroke="#b75d2c" stroke-width="2"/>
+<text x="250" y="325" text-anchor="middle" class="head">Result: 1</text>
+<text x="750" y="325" text-anchor="middle" class="head">Result: 9/8</text>
+<text x="500" y="395" text-anchor="middle" class="note">The discarded contributions matter together. Grouping changes when they are lost.</text>
+</svg>

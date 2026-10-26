@@ -1,0 +1,63 @@
+/* Content figures share the paper palette; all rules are scoped to this series. */
+.sfu-widget, .sfu-figure {
+  --plot-blue: #3e6a89;
+  --plot-orange: #b86632;
+  --plot-ink: #41484b;
+  --plot-rule: #d8d4ca;
+  --plot-paper: #f5f1e8;
+}
+.sfu-figure svg, .sfu-widget svg { width: 100%; height: auto; display: block; }
+.sfu-figure { margin-block: 2rem; }
+.sfu-figure .diagram-box rect { fill: #f5f1e8; stroke: #c4bfb3; rx: 4px; }
+.sfu-figure .diagram-text { font: 15px system-ui, sans-serif; text-anchor: middle; fill: #41484b; }
+.sfu-figure .diagram-label { font: 14px system-ui, sans-serif; fill: #595e60; }
+.sfu-figure .diagram-line { fill: none; stroke: #8a9296; stroke-width: 1.4; }
+.sfu-figure .accent-text { fill: #3e6a89; font-weight: 600; }
+.sfu-figure .bit-address { fill: #e4edf3; stroke: #829cac; }
+.sfu-figure .bit-residual { fill: #f3e6d7; stroke: #bd9674; }
+.sfu-figure .bit-text { font: 22px ui-monospace, monospace; text-anchor: middle; fill: #41484b; }
+.sfu-widget { background: var(--plot-paper); border: 1px solid #d8d4ca; border-radius: 5px; padding: 1.35rem; margin-block: 2rem; font-family: system-ui, sans-serif; font-size: .9rem; line-height: 1.55; }
+.sfu-widget h3 { font: 500 1.15rem/1.4 system-ui, sans-serif; margin: 0 0 .6rem; }
+.sfu-widget .widget-intro { color: #555c60; margin-bottom: 1.2rem; }
+.sfu-widget .widget-controls { display: flex; flex-wrap: wrap; align-items: end; gap: 1rem 1.3rem; margin-block: 1rem; }
+.sfu-widget label { flex: 1 1 145px; min-width: 0; font-size: .82rem; font-weight: 500; }
+.sfu-widget input[type=range] { width: 100%; display: block; margin-top: .5rem; accent-color: var(--plot-blue); }
+.sfu-widget select { display: block; background: #faf9f6; border: 1px solid #bbb8ae; border-radius: 3px; color: #41484b; font: inherit; padding: .45rem; width: 100%; margin-top: .45rem; }
+.sfu-widget output { color: var(--plot-blue); font-variant-numeric: tabular-nums; margin-left: .4rem; }
+.sfu-widget input[type=checkbox] { accent-color: var(--plot-blue); margin-right: .4rem; }
+.sfu-widget .check-control { align-self: center; }
+.sfu-widget .preset-buttons, .sfu-widget .stage-buttons { display: flex; flex-wrap: wrap; gap: .5rem; }
+.sfu-widget button { border: 1px solid #b9b7af; background: #faf9f6; color: #41484b; font: inherit; padding: .3rem .7rem; border-radius: 3px; cursor: pointer; }
+.sfu-widget button:hover { border-color: var(--plot-blue); }
+.sfu-widget button[aria-pressed=true] { background: #e4edf3; border-color: var(--plot-blue); }
+.sfu-widget .widget-results { border-block: 1px solid var(--plot-rule); padding-block: .75rem; margin-block: 1rem; }
+.sfu-widget .metric-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(150px,1fr)); gap: .65rem; }
+.sfu-widget .metric-grid strong { display: block; font-size: 1rem; font-weight: 500; }
+.sfu-widget .metric-grid span { color: #62686b; font-size: .75rem; }
+.sfu-widget .coordinate-line { font: .76rem/1.7 ui-monospace, monospace; overflow-wrap: anywhere; margin-top: .65rem; }
+.sfu-widget .widget-note { font-size: .75rem; color: #5d6467; margin: .75rem 0 0; }
+.sfu-widget .plot-legend { display: flex; gap: 1rem; flex-wrap: wrap; font-size: .75rem; }
+.sfu-widget .legend-blue { color: #3e6a89; }
+.sfu-widget .legend-orange { color: #a65424; }
+.sfu-widget .stage-inspector { border-top: 1px solid var(--plot-rule); padding-top: 1rem; margin-top: 1rem; }
+.sfu-widget .stage-buttons { margin-block: .8rem; }
+.sfu-widget pre { background: #eeebe3; padding: .8rem; font-size: .73rem; line-height: 1.6; overflow-x: auto; white-space: pre-wrap; overflow-wrap: anywhere; margin-bottom: 0; }
+.sfu-widget [disabled] { opacity: .5; }
+@media(max-width: 600px) {
+  .sfu-widget { padding: .85rem; }
+  .sfu-widget .widget-controls { gap: .8rem; }
+  .sfu-widget label { flex-basis: 125px; }
+  .sfu-figure { overflow-x: auto; }
+  .sfu-figure svg { min-width: 540px; }
+}
+
+#reduction-widget .plot-legend { margin-top: 1rem; }
+.sfu-widget .zoom-controls { display: flex; align-items: center; flex-wrap: wrap; gap: 1rem; }
+.sfu-widget .zoom-controls span { font-size: .82rem; color: #62686b; font-variant-numeric: tabular-nums; }
+
+#remez-sequence [data-frame] > p { min-height: 3.1em; }
+
+/* The comparison keeps neighboring width and rounding profiles together. */
+.quality-results .table td,
+.quality-results .table th { padding: .3rem .4rem; }
+.quality-results .table { font-variant-numeric: tabular-nums; }

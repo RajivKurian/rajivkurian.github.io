@@ -1,0 +1,10 @@
+{
+  "generator_target": "//sfu:blog_examples",
+  "code_commit": null,
+  "environment_sha256": "3e50db3e9bd7d96b9ed4b2a59886ef655cd6c7db45f3557229f5a00a2491b5d6",
+  "mpfr_precision_bits": 256,
+  "input_grid": "x = -i/8, i = 0..640, exactly representable FP32",
+  "output_reference": "MPFR directed exp/exp2 bounds agree after FP32 RNE",
+  "source_sha256": "ccac11ded311fa84cd6b3a654a664a5aa0434e39157c2a30615e5b25c9404e0b",
+  "data_sha256": "0aedbf4de6ac1096edb30380f1f9ef5457211f800a854661f1ead05270215e2b"
+}

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 475" role="img"><title>Local residual recoding stores 18 bits; carried recoding stores 27 distinct controls at each of two banks</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10" fill="#747d86"/></marker></defs>
+<rect width="100%" height="100%" fill="#faf9f6"/>
+<text x="450" y="25" text-anchor="middle" font-family="system-ui,sans-serif" font-size="21" fill="#41484b">Decode t at each multiplier</text>
+<text x="25" y="95" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" fill="#41484b">t</text>
+<path d="M40 90 H95" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="95" y="60" width="155" height="60" rx="4" fill="#f5f1e8" stroke="#3d6f8c" stroke-width="1.5"/>
+<text x="172.5" y="84.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" fill="#41484b">R1</text>
+<text x="172.5" y="107.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" fill="#41484b">18-bit t</text>
+<path d="M250 90 H585" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="585" y="60" width="155" height="60" rx="4" fill="#f5f1e8" stroke="#3d6f8c" stroke-width="1.5"/>
+<text x="662.5" y="84.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" fill="#41484b">R2</text>
+<text x="662.5" y="107.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" fill="#41484b">18-bit t</text>
+<path d="M172 120 V148" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="97" y="148" width="150" height="52" rx="4" fill="#f5f1e8" stroke="#77878e" stroke-width="1.5"/>
+<text x="172.0" y="180.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">decode → rows</text>
+<path d="M662 120 V148" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="587" y="148" width="150" height="52" rx="4" fill="#f5f1e8" stroke="#77878e" stroke-width="1.5"/>
+<text x="662.0" y="180.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">decode → rows</text>
+<text x="450" y="255" text-anchor="middle" font-family="system-ui,sans-serif" font-size="21" fill="#41484b">Decode t once and carry the controls</text>
+<rect x="15" y="292" width="135" height="56" rx="4" fill="#f5f1e8" stroke="#3d6f8c" stroke-width="1.5"/>
+<text x="82.5" y="314.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">decode t</text>
+<text x="82.5" y="337.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">one / two / sign</text>
+<path d="M150 320 H185" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="185" y="290" width="155" height="60" rx="4" fill="#f5f1e8" stroke="#3d6f8c" stroke-width="1.5"/>
+<text x="262.5" y="314.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" fill="#41484b">R1</text>
+<text x="262.5" y="337.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" fill="#41484b">27 controls</text>
+<path d="M340 320 H625" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="625" y="290" width="155" height="60" rx="4" fill="#f5f1e8" stroke="#3d6f8c" stroke-width="1.5"/>
+<text x="702.5" y="314.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" fill="#41484b">R2</text>
+<text x="702.5" y="337.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" fill="#41484b">27 controls</text>
+<path d="M262 350 V378" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="187" y="378" width="150" height="52" rx="4" fill="#f5f1e8" stroke="#77878e" stroke-width="1.5"/>
+<text x="262.0" y="410.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">select product rows</text>
+<path d="M702 350 V378" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="627" y="378" width="150" height="52" rx="4" fill="#f5f1e8" stroke="#77878e" stroke-width="1.5"/>
+<text x="702.0" y="410.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">select product rows</text>
+</svg>

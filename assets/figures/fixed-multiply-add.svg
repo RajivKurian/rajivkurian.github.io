@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 485" role="img"><title>Fixed-point multiply-add: integer multiplication, scale alignment, rounding and register</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10" fill="#747d86"/></marker></defs>
+<rect width="100%" height="100%" fill="#faf9f6"/>
+<rect x="20" y="15" width="145" height="65" rx="4" fill="#f5f1e8" stroke="#d8d4ca"/>
+<text x="92.5" y="42.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">a = 3 × 2⁻⁵</text>
+<text x="92.5" y="62.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">stored: 11 (2 bits)</text>
+<rect x="195" y="15" width="145" height="65" rx="4" fill="#f5f1e8" stroke="#d8d4ca"/>
+<text x="267.5" y="42.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">t = 3 × 2⁻²</text>
+<text x="267.5" y="62.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">stored: 11 (2 bits)</text>
+<rect x="490" y="15" width="245" height="65" rx="4" fill="#f5f1e8" stroke="#d8d4ca"/>
+<text x="612.5" y="42.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">b = 5 × 2⁻⁴</text>
+<text x="612.5" y="62.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">stored: 101 (3 bits)</text>
+<path d="M92 80 V100 H180 V115" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M267 80 V100 H180" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="60" y="115" width="240" height="65" rx="4" fill="#f5f1e8" stroke="#d8d4ca"/>
+<text x="180.0" y="142.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">2 × 2-bit integer multiply</text>
+<text x="180.0" y="162.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">3 × 3 = 9; scale 2⁻⁷</text>
+<path d="M612 80 V115" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="490" y="115" width="245" height="65" rx="4" fill="#f5f1e8" stroke="#d8d4ca"/>
+<text x="612.5" y="142.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">Align b: append three zeros</text>
+<text x="612.5" y="162.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">101 → 101000 = 40; scale 2⁻⁷</text>
+<path d="M180 180 V210 H385 V230" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M612 180 V210 H385" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="260" y="230" width="250" height="65" rx="4" fill="#f5f1e8" stroke="#d8d4ca"/>
+<text x="385.0" y="257.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">Add at common scale 2⁻⁷</text>
+<text x="385.0" y="277.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">9 + 40 = 49 → 0110001</text>
+<path d="M385 295 V330" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="260" y="330" width="250" height="90" rx="4" fill="#f5f1e8" stroke="#1460aa"/>
+<text x="385.0" y="360.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">Keep 0110; discard 001</text>
+<text x="385.0" y="380.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">guard 0 · sticky 1</text>
+<text x="385.0" y="400.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">No increment → 0110</text>
+<path d="M510 362 H565" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="565" y="330" width="185" height="65" rx="4" fill="#f5f1e8" stroke="#1460aa"/>
+<text x="657.5" y="357.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">4-bit register</text>
+<text x="657.5" y="377.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">6 × 2⁻⁴ = 0.375</text>
+<text x="390" y="454" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">Guard: first discarded bit. Sticky: OR of all bits below guard.</text>
+</svg>

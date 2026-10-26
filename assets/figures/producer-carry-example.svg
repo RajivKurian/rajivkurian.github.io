@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 490" role="img"><title>Ripple and prefix fed by the same column-packed rows; high bits on the left, carry travels toward higher weights</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10" fill="#747d86"/></marker></defs>
+<rect width="100%" height="100%" fill="#faf9f6"/>
+<text x="480" y="26" text-anchor="middle" font-family="system-ui,sans-serif" font-size="21" fill="#41484b">Complete U + V from the column-packing example</text>
+<text x="480" y="52" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#41484b">Longest incoming compressor path per column · high bits left · low bits right</text>
+<text x="235" y="84" text-anchor="middle" font-family="system-ui,sans-serif" font-size="20" fill="#356c92">Ripple</text>
+<text x="395" y="107" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">bit 0</text>
+<path d="M395 119 V225" fill="none" stroke="#356c92" stroke-width="1.7" marker-end="url(#arrow)"/>
+<text x="395" y="243" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#41484b">p00, b0</text>
+<text x="290" y="107" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">bit 1</text>
+<path d="M280 129 H300" stroke="#356c92" stroke-width="4"/>
+<path d="M290 141 V225" fill="none" stroke="#356c92" stroke-width="1.7" marker-end="url(#arrow)"/>
+<text x="290" y="243" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#41484b">s1, 0</text>
+<text x="185" y="107" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">bit 2</text>
+<path d="M175 129 H195" stroke="#af5137" stroke-width="4"/>
+<path d="M175 163 H195" stroke="#af5137" stroke-width="4"/>
+<path d="M185 141 V153" fill="none" stroke="#af5137" stroke-width="1.7" marker-end="url(#arrow)"/>
+<path d="M185 175 V225" fill="none" stroke="#af5137" stroke-width="1.7" marker-end="url(#arrow)"/>
+<text x="185" y="243" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#41484b">s2, 0</text>
+<text x="80" y="107" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">bit 3</text>
+<path d="M70 129 H90" stroke="#af5137" stroke-width="4"/>
+<path d="M70 163 H90" stroke="#af5137" stroke-width="4"/>
+<path d="M80 141 V153" fill="none" stroke="#af5137" stroke-width="1.7" marker-end="url(#arrow)"/>
+<path d="M80 175 V225" fill="none" stroke="#af5137" stroke-width="1.7" marker-end="url(#arrow)"/>
+<text x="80" y="243" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#41484b">p21, c3</text>
+<rect x="368" y="280" width="54" height="35" rx="3" fill="#f5f1e8" stroke="#356c92" stroke-width="1.5"/>
+<text x="395.0" y="302.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">HA</text>
+<path d="M395 249 V280" fill="none" stroke="#75828a" stroke-width="1.7" marker-end="url(#arrow)"/>
+<path d="M368 298 H317" fill="none" stroke="#356c92" stroke-width="1.7" marker-end="url(#arrow)"/>
+<text x="342.5" y="285" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#41484b">k1</text>
+<path d="M395 315 V351" fill="none" stroke="#75828a" stroke-width="1.7" marker-end="url(#arrow)"/>
+<text x="395" y="371" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">z0</text>
+<rect x="263" y="280" width="54" height="35" rx="3" fill="#f5f1e8" stroke="#356c92" stroke-width="1.5"/>
+<text x="290.0" y="302.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">HA</text>
+<path d="M290 249 V280" fill="none" stroke="#75828a" stroke-width="1.7" marker-end="url(#arrow)"/>
+<path d="M263 298 H212" fill="none" stroke="#356c92" stroke-width="1.7" marker-end="url(#arrow)"/>
+<text x="237.5" y="285" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#41484b">k2</text>
+<path d="M290 315 V351" fill="none" stroke="#75828a" stroke-width="1.7" marker-end="url(#arrow)"/>
+<text x="290" y="371" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">z1</text>
+<rect x="158" y="280" width="54" height="35" rx="3" fill="#f5f1e8" stroke="#356c92" stroke-width="1.5"/>
+<text x="185.0" y="302.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">HA</text>
+<path d="M185 249 V280" fill="none" stroke="#75828a" stroke-width="1.7" marker-end="url(#arrow)"/>
+<path d="M158 298 H107" fill="none" stroke="#356c92" stroke-width="1.7" marker-end="url(#arrow)"/>
+<text x="132.5" y="285" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#41484b">k3</text>
+<path d="M185 315 V351" fill="none" stroke="#75828a" stroke-width="1.7" marker-end="url(#arrow)"/>
+<text x="185" y="371" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">z2</text>
+<rect x="53" y="280" width="54" height="35" rx="3" fill="#f5f1e8" stroke="#356c92" stroke-width="1.5"/>
+<text x="80.0" y="302.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">FA</text>
+<path d="M80 249 V280" fill="none" stroke="#75828a" stroke-width="1.7" marker-end="url(#arrow)"/>
+<path d="M80 315 V351" fill="none" stroke="#75828a" stroke-width="1.7" marker-end="url(#arrow)"/>
+<text x="80" y="371" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">z3</text>
+<path d="M53 298 H33 V351" fill="none" stroke="#75828a" stroke-width="1.7" marker-end="url(#arrow)"/>
+<text x="33" y="371" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">z4</text>
+<text x="235" y="417" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">A carry can advance through early low bits</text>
+<text x="235" y="440" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">while later row bits are still being computed.</text>
+<text x="720" y="84" text-anchor="middle" font-family="system-ui,sans-serif" font-size="20" fill="#356c92">Prefix</text>
+<text x="880" y="107" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">bit 0</text>
+<path d="M880 119 V225" fill="none" stroke="#356c92" stroke-width="1.7" marker-end="url(#arrow)"/>
+<text x="880" y="243" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#41484b">p00, b0</text>
+<text x="775" y="107" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">bit 1</text>
+<path d="M765 129 H785" stroke="#356c92" stroke-width="4"/>
+<path d="M775 141 V225" fill="none" stroke="#356c92" stroke-width="1.7" marker-end="url(#arrow)"/>
+<text x="775" y="243" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#41484b">s1, 0</text>
+<text x="670" y="107" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">bit 2</text>
+<path d="M660 129 H680" stroke="#af5137" stroke-width="4"/>
+<path d="M660 163 H680" stroke="#af5137" stroke-width="4"/>
+<path d="M670 141 V153" fill="none" stroke="#af5137" stroke-width="1.7" marker-end="url(#arrow)"/>
+<path d="M670 175 V225" fill="none" stroke="#af5137" stroke-width="1.7" marker-end="url(#arrow)"/>
+<text x="670" y="243" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#41484b">s2, 0</text>
+<text x="565" y="107" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">bit 3</text>
+<path d="M555 129 H575" stroke="#af5137" stroke-width="4"/>
+<path d="M555 163 H575" stroke="#af5137" stroke-width="4"/>
+<path d="M565 141 V153" fill="none" stroke="#af5137" stroke-width="1.7" marker-end="url(#arrow)"/>
+<path d="M565 175 V225" fill="none" stroke="#af5137" stroke-width="1.7" marker-end="url(#arrow)"/>
+<text x="565" y="243" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#41484b">p21, c3</text>
+<path d="M880 249 V279" fill="none" stroke="#75828a" stroke-width="1.7" marker-end="url(#arrow)"/>
+<circle cx="880" cy="284" r="5" fill="#356c92"/>
+<path d="M775 249 V279" fill="none" stroke="#75828a" stroke-width="1.7" marker-end="url(#arrow)"/>
+<circle cx="775" cy="284" r="5" fill="#356c92"/>
+<path d="M670 249 V279" fill="none" stroke="#75828a" stroke-width="1.7" marker-end="url(#arrow)"/>
+<circle cx="670" cy="284" r="5" fill="#356c92"/>
+<path d="M565 249 V279" fill="none" stroke="#75828a" stroke-width="1.7" marker-end="url(#arrow)"/>
+<circle cx="565" cy="284" r="5" fill="#356c92"/>
+<path d="M880 289 V318" fill="none" stroke="#75828a" stroke-width="1.7" marker-end="url(#arrow)"/>
+<circle cx="880" cy="323" r="5" fill="#356c92"/>
+<path d="M775 289 V318" fill="none" stroke="#75828a" stroke-width="1.7" marker-end="url(#arrow)"/>
+<path d="M880 289 L775 318" fill="none" stroke="#356c92" stroke-width="1.7" marker-end="url(#arrow)"/>
+<circle cx="775" cy="323" r="5" fill="#356c92"/>
+<path d="M670 289 V318" fill="none" stroke="#75828a" stroke-width="1.7" marker-end="url(#arrow)"/>
+<path d="M775 289 L670 318" fill="none" stroke="#356c92" stroke-width="1.7" marker-end="url(#arrow)"/>
+<circle cx="670" cy="323" r="5" fill="#356c92"/>
+<path d="M565 289 V318" fill="none" stroke="#75828a" stroke-width="1.7" marker-end="url(#arrow)"/>
+<path d="M670 289 L565 318" fill="none" stroke="#356c92" stroke-width="1.7" marker-end="url(#arrow)"/>
+<circle cx="565" cy="323" r="5" fill="#356c92"/>
+<path d="M880 328 V357" fill="none" stroke="#75828a" stroke-width="1.7" marker-end="url(#arrow)"/>
+<circle cx="880" cy="362" r="5" fill="#356c92"/>
+<path d="M775 328 V357" fill="none" stroke="#75828a" stroke-width="1.7" marker-end="url(#arrow)"/>
+<circle cx="775" cy="362" r="5" fill="#356c92"/>
+<path d="M670 328 V357" fill="none" stroke="#75828a" stroke-width="1.7" marker-end="url(#arrow)"/>
+<path d="M880 328 L670 357" fill="none" stroke="#356c92" stroke-width="1.7" marker-end="url(#arrow)"/>
+<circle cx="670" cy="362" r="5" fill="#356c92"/>
+<path d="M565 328 V357" fill="none" stroke="#75828a" stroke-width="1.7" marker-end="url(#arrow)"/>
+<path d="M775 328 L565 357" fill="none" stroke="#356c92" stroke-width="1.7" marker-end="url(#arrow)"/>
+<circle cx="565" cy="362" r="5" fill="#356c92"/>
+<text x="880" y="389" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">k1</text>
+<text x="775" y="389" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">k2</text>
+<text x="670" y="389" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">k3</text>
+<text x="565" y="389" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">k4</text>
+<text x="720" y="417" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">Combine generate/propagate groups.</text>
+<text x="720" y="440" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">Then zᵢ = Pᵢ XOR kᵢ; k₀ = 0.</text>
+<text x="480" y="478" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">Short ticks count FAs on the longest incoming compressor path; they are not separate cells.</text>
+</svg>

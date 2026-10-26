@@ -1,0 +1,193 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 335" role="img"><title>Moving the cut from seventeen resolved columns to thirteen stores four more unresolved columns in each row</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10" fill="#747d86"/></marker></defs>
+<rect width="100%" height="100%" fill="#faf9f6"/>
+<text x="25" y="30" text-anchor="start" font-family="system-ui,sans-serif" font-size="18" fill="#356c92">Resolve 17 low columns before R4</text>
+<text x="807" y="61" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#41484b">0</text>
+<text x="603" y="61" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#41484b">12</text>
+<text x="535" y="61" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#41484b">16</text>
+<text x="382" y="61" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#41484b">25</text>
+<text x="110" y="61" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#41484b">41</text>
+<rect x="800" y="73" width="13" height="12" fill="#e7e3da"/>
+<rect x="783" y="73" width="13" height="12" fill="#e7e3da"/>
+<rect x="766" y="73" width="13" height="12" fill="#e7e3da"/>
+<rect x="749" y="73" width="13" height="12" fill="#e7e3da"/>
+<rect x="732" y="73" width="13" height="12" fill="#e7e3da"/>
+<rect x="715" y="73" width="13" height="12" fill="#e7e3da"/>
+<rect x="698" y="73" width="13" height="12" fill="#e7e3da"/>
+<rect x="681" y="73" width="13" height="12" fill="#e7e3da"/>
+<rect x="664" y="73" width="13" height="12" fill="#e7e3da"/>
+<rect x="647" y="73" width="13" height="12" fill="#e7e3da"/>
+<rect x="630" y="73" width="13" height="12" fill="#e7e3da"/>
+<rect x="613" y="73" width="13" height="12" fill="#e7e3da"/>
+<rect x="596" y="73" width="13" height="12" fill="#e7e3da"/>
+<rect x="579" y="73" width="13" height="12" fill="#e7e3da"/>
+<rect x="562" y="73" width="13" height="12" fill="#e7e3da"/>
+<rect x="545" y="73" width="13" height="12" fill="#e7e3da"/>
+<rect x="528" y="73" width="13" height="12" fill="#e7e3da"/>
+<rect x="511" y="73" width="13" height="12" fill="#356c92"/>
+<rect x="494" y="73" width="13" height="12" fill="#356c92"/>
+<rect x="477" y="73" width="13" height="12" fill="#356c92"/>
+<rect x="460" y="73" width="13" height="12" fill="#356c92"/>
+<rect x="443" y="73" width="13" height="12" fill="#356c92"/>
+<rect x="426" y="73" width="13" height="12" fill="#356c92"/>
+<rect x="409" y="73" width="13" height="12" fill="#356c92"/>
+<rect x="392" y="73" width="13" height="12" fill="#356c92"/>
+<rect x="375" y="73" width="13" height="12" fill="#356c92"/>
+<rect x="358" y="73" width="13" height="12" fill="#356c92"/>
+<rect x="341" y="73" width="13" height="12" fill="#356c92"/>
+<rect x="324" y="73" width="13" height="12" fill="#356c92"/>
+<rect x="307" y="73" width="13" height="12" fill="#356c92"/>
+<rect x="290" y="73" width="13" height="12" fill="#356c92"/>
+<rect x="273" y="73" width="13" height="12" fill="#356c92"/>
+<rect x="256" y="73" width="13" height="12" fill="#356c92"/>
+<rect x="239" y="73" width="13" height="12" fill="#356c92"/>
+<rect x="222" y="73" width="13" height="12" fill="#356c92"/>
+<rect x="205" y="73" width="13" height="12" fill="#356c92"/>
+<rect x="188" y="73" width="13" height="12" fill="#356c92"/>
+<rect x="171" y="73" width="13" height="12" fill="#356c92"/>
+<rect x="154" y="73" width="13" height="12" fill="#356c92"/>
+<rect x="137" y="73" width="13" height="12" fill="#356c92"/>
+<rect x="120" y="73" width="13" height="12" fill="#356c92"/>
+<rect x="103" y="73" width="13" height="12" fill="#356c92"/>
+<rect x="800" y="90" width="13" height="12" fill="#e7e3da"/>
+<rect x="783" y="90" width="13" height="12" fill="#e7e3da"/>
+<rect x="766" y="90" width="13" height="12" fill="#e7e3da"/>
+<rect x="749" y="90" width="13" height="12" fill="#e7e3da"/>
+<rect x="732" y="90" width="13" height="12" fill="#e7e3da"/>
+<rect x="715" y="90" width="13" height="12" fill="#e7e3da"/>
+<rect x="698" y="90" width="13" height="12" fill="#e7e3da"/>
+<rect x="681" y="90" width="13" height="12" fill="#e7e3da"/>
+<rect x="664" y="90" width="13" height="12" fill="#e7e3da"/>
+<rect x="647" y="90" width="13" height="12" fill="#e7e3da"/>
+<rect x="630" y="90" width="13" height="12" fill="#e7e3da"/>
+<rect x="613" y="90" width="13" height="12" fill="#e7e3da"/>
+<rect x="596" y="90" width="13" height="12" fill="#e7e3da"/>
+<rect x="579" y="90" width="13" height="12" fill="#e7e3da"/>
+<rect x="562" y="90" width="13" height="12" fill="#e7e3da"/>
+<rect x="545" y="90" width="13" height="12" fill="#e7e3da"/>
+<rect x="528" y="90" width="13" height="12" fill="#e7e3da"/>
+<rect x="511" y="90" width="13" height="12" fill="#356c92"/>
+<rect x="494" y="90" width="13" height="12" fill="#356c92"/>
+<rect x="477" y="90" width="13" height="12" fill="#356c92"/>
+<rect x="460" y="90" width="13" height="12" fill="#356c92"/>
+<rect x="443" y="90" width="13" height="12" fill="#356c92"/>
+<rect x="426" y="90" width="13" height="12" fill="#356c92"/>
+<rect x="409" y="90" width="13" height="12" fill="#356c92"/>
+<rect x="392" y="90" width="13" height="12" fill="#356c92"/>
+<rect x="375" y="90" width="13" height="12" fill="#356c92"/>
+<rect x="358" y="90" width="13" height="12" fill="#356c92"/>
+<rect x="341" y="90" width="13" height="12" fill="#356c92"/>
+<rect x="324" y="90" width="13" height="12" fill="#356c92"/>
+<rect x="307" y="90" width="13" height="12" fill="#356c92"/>
+<rect x="290" y="90" width="13" height="12" fill="#356c92"/>
+<rect x="273" y="90" width="13" height="12" fill="#356c92"/>
+<rect x="256" y="90" width="13" height="12" fill="#356c92"/>
+<rect x="239" y="90" width="13" height="12" fill="#356c92"/>
+<rect x="222" y="90" width="13" height="12" fill="#356c92"/>
+<rect x="205" y="90" width="13" height="12" fill="#356c92"/>
+<rect x="188" y="90" width="13" height="12" fill="#356c92"/>
+<rect x="171" y="90" width="13" height="12" fill="#356c92"/>
+<rect x="154" y="90" width="13" height="12" fill="#356c92"/>
+<rect x="137" y="90" width="13" height="12" fill="#356c92"/>
+<rect x="120" y="90" width="13" height="12" fill="#356c92"/>
+<rect x="103" y="90" width="13" height="12" fill="#356c92"/>
+<text x="65" y="84" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#41484b">row 0</text>
+<text x="65" y="101" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#41484b">row 1</text>
+<text x="671.0" y="131" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">complete low sum → c17</text>
+<text x="314.0" y="131" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#356c92">store unresolved upper row bits</text>
+<text x="25" y="181" text-anchor="start" font-family="system-ui,sans-serif" font-size="18" fill="#af5137">Resolve 13 low columns before R4</text>
+<text x="807" y="212" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#41484b">0</text>
+<text x="603" y="212" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#41484b">12</text>
+<text x="535" y="212" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#41484b">16</text>
+<text x="382" y="212" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#41484b">25</text>
+<text x="110" y="212" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#41484b">41</text>
+<rect x="800" y="224" width="13" height="12" fill="#e7e3da"/>
+<rect x="783" y="224" width="13" height="12" fill="#e7e3da"/>
+<rect x="766" y="224" width="13" height="12" fill="#e7e3da"/>
+<rect x="749" y="224" width="13" height="12" fill="#e7e3da"/>
+<rect x="732" y="224" width="13" height="12" fill="#e7e3da"/>
+<rect x="715" y="224" width="13" height="12" fill="#e7e3da"/>
+<rect x="698" y="224" width="13" height="12" fill="#e7e3da"/>
+<rect x="681" y="224" width="13" height="12" fill="#e7e3da"/>
+<rect x="664" y="224" width="13" height="12" fill="#e7e3da"/>
+<rect x="647" y="224" width="13" height="12" fill="#e7e3da"/>
+<rect x="630" y="224" width="13" height="12" fill="#e7e3da"/>
+<rect x="613" y="224" width="13" height="12" fill="#e7e3da"/>
+<rect x="596" y="224" width="13" height="12" fill="#e7e3da"/>
+<rect x="579" y="224" width="13" height="12" fill="#e7bda9"/>
+<rect x="562" y="224" width="13" height="12" fill="#e7bda9"/>
+<rect x="545" y="224" width="13" height="12" fill="#e7bda9"/>
+<rect x="528" y="224" width="13" height="12" fill="#e7bda9"/>
+<rect x="511" y="224" width="13" height="12" fill="#af5137"/>
+<rect x="494" y="224" width="13" height="12" fill="#af5137"/>
+<rect x="477" y="224" width="13" height="12" fill="#af5137"/>
+<rect x="460" y="224" width="13" height="12" fill="#af5137"/>
+<rect x="443" y="224" width="13" height="12" fill="#af5137"/>
+<rect x="426" y="224" width="13" height="12" fill="#af5137"/>
+<rect x="409" y="224" width="13" height="12" fill="#af5137"/>
+<rect x="392" y="224" width="13" height="12" fill="#af5137"/>
+<rect x="375" y="224" width="13" height="12" fill="#af5137"/>
+<rect x="358" y="224" width="13" height="12" fill="#af5137"/>
+<rect x="341" y="224" width="13" height="12" fill="#af5137"/>
+<rect x="324" y="224" width="13" height="12" fill="#af5137"/>
+<rect x="307" y="224" width="13" height="12" fill="#af5137"/>
+<rect x="290" y="224" width="13" height="12" fill="#af5137"/>
+<rect x="273" y="224" width="13" height="12" fill="#af5137"/>
+<rect x="256" y="224" width="13" height="12" fill="#af5137"/>
+<rect x="239" y="224" width="13" height="12" fill="#af5137"/>
+<rect x="222" y="224" width="13" height="12" fill="#af5137"/>
+<rect x="205" y="224" width="13" height="12" fill="#af5137"/>
+<rect x="188" y="224" width="13" height="12" fill="#af5137"/>
+<rect x="171" y="224" width="13" height="12" fill="#af5137"/>
+<rect x="154" y="224" width="13" height="12" fill="#af5137"/>
+<rect x="137" y="224" width="13" height="12" fill="#af5137"/>
+<rect x="120" y="224" width="13" height="12" fill="#af5137"/>
+<rect x="103" y="224" width="13" height="12" fill="#af5137"/>
+<rect x="800" y="241" width="13" height="12" fill="#e7e3da"/>
+<rect x="783" y="241" width="13" height="12" fill="#e7e3da"/>
+<rect x="766" y="241" width="13" height="12" fill="#e7e3da"/>
+<rect x="749" y="241" width="13" height="12" fill="#e7e3da"/>
+<rect x="732" y="241" width="13" height="12" fill="#e7e3da"/>
+<rect x="715" y="241" width="13" height="12" fill="#e7e3da"/>
+<rect x="698" y="241" width="13" height="12" fill="#e7e3da"/>
+<rect x="681" y="241" width="13" height="12" fill="#e7e3da"/>
+<rect x="664" y="241" width="13" height="12" fill="#e7e3da"/>
+<rect x="647" y="241" width="13" height="12" fill="#e7e3da"/>
+<rect x="630" y="241" width="13" height="12" fill="#e7e3da"/>
+<rect x="613" y="241" width="13" height="12" fill="#e7e3da"/>
+<rect x="596" y="241" width="13" height="12" fill="#e7e3da"/>
+<rect x="579" y="241" width="13" height="12" fill="#e7bda9"/>
+<rect x="562" y="241" width="13" height="12" fill="#e7bda9"/>
+<rect x="545" y="241" width="13" height="12" fill="#e7bda9"/>
+<rect x="528" y="241" width="13" height="12" fill="#e7bda9"/>
+<rect x="511" y="241" width="13" height="12" fill="#af5137"/>
+<rect x="494" y="241" width="13" height="12" fill="#af5137"/>
+<rect x="477" y="241" width="13" height="12" fill="#af5137"/>
+<rect x="460" y="241" width="13" height="12" fill="#af5137"/>
+<rect x="443" y="241" width="13" height="12" fill="#af5137"/>
+<rect x="426" y="241" width="13" height="12" fill="#af5137"/>
+<rect x="409" y="241" width="13" height="12" fill="#af5137"/>
+<rect x="392" y="241" width="13" height="12" fill="#af5137"/>
+<rect x="375" y="241" width="13" height="12" fill="#af5137"/>
+<rect x="358" y="241" width="13" height="12" fill="#af5137"/>
+<rect x="341" y="241" width="13" height="12" fill="#af5137"/>
+<rect x="324" y="241" width="13" height="12" fill="#af5137"/>
+<rect x="307" y="241" width="13" height="12" fill="#af5137"/>
+<rect x="290" y="241" width="13" height="12" fill="#af5137"/>
+<rect x="273" y="241" width="13" height="12" fill="#af5137"/>
+<rect x="256" y="241" width="13" height="12" fill="#af5137"/>
+<rect x="239" y="241" width="13" height="12" fill="#af5137"/>
+<rect x="222" y="241" width="13" height="12" fill="#af5137"/>
+<rect x="205" y="241" width="13" height="12" fill="#af5137"/>
+<rect x="188" y="241" width="13" height="12" fill="#af5137"/>
+<rect x="171" y="241" width="13" height="12" fill="#af5137"/>
+<rect x="154" y="241" width="13" height="12" fill="#af5137"/>
+<rect x="137" y="241" width="13" height="12" fill="#af5137"/>
+<rect x="120" y="241" width="13" height="12" fill="#af5137"/>
+<rect x="103" y="241" width="13" height="12" fill="#af5137"/>
+<text x="65" y="235" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#41484b">row 0</text>
+<text x="65" y="252" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#41484b">row 1</text>
+<text x="705.0" y="282" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">complete low sum → c13</text>
+<text x="348.0" y="282" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#af5137">store unresolved upper row bits</text>
+<text x="450" y="326" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">Columns 13–16 move across R4. The final numerical truncation still removes columns 0–16.</text>
+</svg>

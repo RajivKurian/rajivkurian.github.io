@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 235" role="img"><title>One prefix node combines adjacent carry summaries without waiting for an incoming carry</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10" fill="#747d86"/></marker></defs>
+<rect width="100%" height="100%" fill="#faf9f6"/>
+<text x="450" y="25" text-anchor="middle" font-family="system-ui,sans-serif" font-size="21" fill="#41484b">One prefix node combines two adjacent groups</text>
+<text x="200" y="70" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" fill="#41484b">Higher group · Gᴴ, Pᴴ</text>
+<path d="M200 83 L450 115" fill="none" stroke="#af5137" stroke-width="1.7" marker-end="url(#arrow)"/>
+<text x="700" y="70" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" fill="#41484b">Lower group · Gᴸ, Pᴸ</text>
+<path d="M700 83 L450 115" fill="none" stroke="#af5137" stroke-width="1.7" marker-end="url(#arrow)"/>
+<circle cx="450" cy="122" r="7" fill="#af5137"/>
+<text x="450" y="167" text-anchor="middle" font-family="system-ui,sans-serif" font-size="19" fill="#41484b">G = Gᴴ OR (Pᴴ AND Gᴸ)     ·     P = Pᴴ AND Pᴸ</text>
+<text x="450" y="208" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#41484b">The combined group generates a carry itself, or propagates a carry through both parts.</text>
+</svg>

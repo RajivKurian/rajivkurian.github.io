@@ -1,0 +1,35 @@
+{
+  "data_sha256": {
+    "remez-trace.json": "346957eda36f3b6e1917dea969941150c86ecb2f0dc16019a43695de068cf1f9",
+    "search-examples.json": "fcd2736f9a8129e923a8f306c209570ac7b634ccb86fa4dd477168c3f0868c17",
+    "rounding-refined.json": "85193a661c6791c44a1d530abc223195de8f279f6d706555650fe9a055e31b65",
+    "rounding-accepted.json": "114aed09fd28beb7b3584fb6fb9eb8ed42e8d8bfcd8a45b8cdd9f8040d39e095",
+    "rounding-measurements.json": "dfe86c65179765857c03cf7d36d295af2c6542956573c24845c5d19191795c74",
+    "hardware-search.json": "79c094464403813f260ead71cd51bdd4866c5fb4f6937d541bb746681b97cf5e",
+    "methodology-check.json": "2a1e8145fe49f326614dc95cf333f3705cb8a4530495055d800649452dced81e",
+    "numerical-quality.json": "542d4890aa9764947b3d0c280eb20af63a6cb885e082d23eb62eddf2712c3ed1",
+    "rounding-area-delta.json": "bdd4ef15bbd314d1b8bafdbe91c0849992977f18e39974152d6c74fd07f8e726",
+    "narrow256-study.json": "4eb2f050601b68be5a48e75c3d021522e021dcafbd6921f5fe5318b48b96ff0b",
+    "coupled-refit.json": "e474f2ba88f8c78bd47dd9283c5ce82335e05171a0385a7a3f45ad18ab6dbe4a"
+  },
+  "generators": {
+    "remez-trace.json": "//sfu:blog_design_points --trace",
+    "search-examples.json": "//sfu:blog_search_examples",
+    "rounding-refined.json": "//sfu:rounding_refine",
+    "rounding-accepted.json": "//sfu:rounding_fit + //sfu:exhaustive",
+    "rounding-measurements.json": "rtl/rounding/record_measurements.py",
+    "hardware-search.json": "//sfu:search_cost + rtl/rounding/record_resolution.py; exhaustive profiles and mapped RTL",
+    "methodology-check.json": "rtl/rounding/record_methodology_check.py; staged-cost replay and exhaustive/mapped 64-row truncation fit",
+    "numerical-quality.json": "rtl/rounding/collect_quality.py; exhaustive frozen-profile error distributions",
+    "rounding-area-delta.json": "rtl/rounding/audit_rounding_delta.py; matched baseline mapping and isolated structural probes",
+    "narrow256-study.json": "rtl/rounding/export_narrow256.py + record_narrow256.py; exact refits, exhaustive distributions, RTL and mapped checks",
+    "coupled-refit.json": "//sfu:blog_coupled_move + rtl/rounding/export_coupled_example.py; frozen 256-row fit and exact C intervals"
+  },
+  "acceptance": "every FP32 encoding through the C++ model; no sampled acceptance",
+  "rtl_comparison": "six-cycle ROM and polynomial; one result per cycle; mapped cells and pin-load timing",
+  "exporter_binaries_sha256": {
+    "blog_design_points": "5db753e940bf20a54048943ca2a24f18ac16978cdf86ae907c868fa350d4b72d",
+    "blog_search_examples": "6e3bf58b0b758a99efd930d66d48c9b39911b16ab47dd715af757d9ebce7d083",
+    "rounding_refine": "6c02a1fa3416ead8b1db0283da5f249bc221a94de96aeee8684f1694fb385d05"
+  }
+}

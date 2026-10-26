@@ -1,0 +1,67 @@
+{
+  "measurement_scope": "mapped cell delays and pin loads; no wire parasitics",
+  "clock_ps": 800,
+  "comparison": [
+    {
+      "name": "t800_c4_unified_prefix",
+      "launch": "a[3]",
+      "capture": "s[14]",
+      "p22_arrival_ps": 546.1209,
+      "p22_to_c30_ps": 156.0272,
+      "c30_to_sum_ps": 59.323600000000056,
+      "sum_arrival_ps": 761.4717,
+      "p22_fanout": 2,
+      "p22_load_ff": 1.4128,
+      "verification": {
+        "replayed_cell_topology_identical": true,
+        "cell_count": 2989,
+        "normalized_topology_sha256": "c3f877bbc29e73031812a24ddaef8541b755c0d775ff706fdd0d0ddcb1d1965c",
+        "original_rtl_sha256": "cdf00c28ce7faa7517d571afdaff20af89590b79b96faccab9b9904b23b998ed",
+        "library_sha256": "c078d2d780379fe4a44d8c0f02c55a49cc1cdbba61a305cfa25d2fa0b18dd3e5",
+        "sdc_sha256": "1bf96a27e1a6029c477dcd48f004dcdbf95be96de11c641a8b6a757e9392cdeb",
+        "formal_checkpoint_count": 16,
+        "formal_proof_success": true
+      }
+    },
+    {
+      "name": "t800_c4_unified_hybrid",
+      "launch": "a[3]",
+      "capture": "s[14]",
+      "p22_arrival_ps": 554.0822,
+      "p22_to_c30_ps": 129.30690000000004,
+      "c30_to_sum_ps": 50.08850000000007,
+      "sum_arrival_ps": 733.4776,
+      "p22_fanout": 4,
+      "p22_load_ff": 2.4874,
+      "verification": {
+        "replayed_cell_topology_identical": true,
+        "cell_count": 3010,
+        "normalized_topology_sha256": "3af51251348108f7572bc50fe8ee68a19e8c421242fc502473e56a18000677bc",
+        "original_rtl_sha256": "f3a9c06db27461bc36361f7259f0f9f2926cea49f9f1a6e1ce116be5aa241952",
+        "library_sha256": "c078d2d780379fe4a44d8c0f02c55a49cc1cdbba61a305cfa25d2fa0b18dd3e5",
+        "sdc_sha256": "1bf96a27e1a6029c477dcd48f004dcdbf95be96de11c641a8b6a757e9392cdeb",
+        "formal_checkpoint_count": 17,
+        "formal_proof_success": true
+      }
+    }
+  ],
+  "control": {
+    "name": "split8_prefix",
+    "area_um2": 299.5461,
+    "stage_slack_ps": [
+      297.7971,
+      8.0234,
+      69.8674,
+      178.7761
+    ],
+    "minimum_slack_ps": 8.0234,
+    "rtl_model_pass": true,
+    "gate_model_pass": true,
+    "library_sha256": "c078d2d780379fe4a44d8c0f02c55a49cc1cdbba61a305cfa25d2fa0b18dd3e5",
+    "sdc_sha256": "1bf96a27e1a6029c477dcd48f004dcdbf95be96de11c641a8b6a757e9392cdeb"
+  },
+  "provenance": {
+    "source_sha256": "b6f9d1bc2b4a8815695d46059f24fc3a9bf9fe54aca3bff541a5b2dfec67b104",
+    "private_archive_sha256": "ab2bd9e705633a525b929c6eb828479ee39449e3bde97c4c4b98d8956974e093"
+  }
+}

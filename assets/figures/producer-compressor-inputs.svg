@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 215" role="img"><title>Six AND gates form a three-bit by two-bit product; the addend enters the same weighted columns</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10" fill="#747d86"/></marker></defs>
+<rect width="100%" height="100%" fill="#faf9f6"/>
+<text x="450" y="25" text-anchor="middle" font-family="system-ui,sans-serif" font-size="20" fill="#41484b">u: 3 bits · v: 2 bits · b: 2 bits</text>
+<text x="370" y="59" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">weight 8</text>
+<text x="510" y="59" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">weight 4</text>
+<text x="650" y="59" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">weight 2</text>
+<text x="790" y="59" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">weight 1</text>
+<text x="240" y="90" text-anchor="end" font-family="system-ui,sans-serif" font-size="17" fill="#41484b">u × v₀</text>
+<text x="370" y="90" text-anchor="middle" font-family="system-ui,sans-serif" font-size="19" fill="#a3aaa9">0</text>
+<text x="510" y="90" text-anchor="middle" font-family="system-ui,sans-serif" font-size="19" fill="#356c92">p20</text>
+<text x="650" y="90" text-anchor="middle" font-family="system-ui,sans-serif" font-size="19" fill="#356c92">p10</text>
+<text x="790" y="90" text-anchor="middle" font-family="system-ui,sans-serif" font-size="19" fill="#356c92">p00</text>
+<text x="240" y="127" text-anchor="end" font-family="system-ui,sans-serif" font-size="17" fill="#41484b">u × v₁ × 2</text>
+<text x="370" y="127" text-anchor="middle" font-family="system-ui,sans-serif" font-size="19" fill="#356c92">p21</text>
+<text x="510" y="127" text-anchor="middle" font-family="system-ui,sans-serif" font-size="19" fill="#356c92">p11</text>
+<text x="650" y="127" text-anchor="middle" font-family="system-ui,sans-serif" font-size="19" fill="#356c92">p01</text>
+<text x="790" y="127" text-anchor="middle" font-family="system-ui,sans-serif" font-size="19" fill="#a3aaa9">0</text>
+<text x="240" y="164" text-anchor="end" font-family="system-ui,sans-serif" font-size="17" fill="#41484b">b</text>
+<text x="370" y="164" text-anchor="middle" font-family="system-ui,sans-serif" font-size="19" fill="#a3aaa9">0</text>
+<text x="510" y="164" text-anchor="middle" font-family="system-ui,sans-serif" font-size="19" fill="#a3aaa9">0</text>
+<text x="650" y="164" text-anchor="middle" font-family="system-ui,sans-serif" font-size="19" fill="#41484b">b1</text>
+<text x="790" y="164" text-anchor="middle" font-family="system-ui,sans-serif" font-size="19" fill="#41484b">b0</text>
+<text x="450" y="202" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#41484b">pij = ui AND vj · each label is a signal bit, not a chosen value</text>
+</svg>

@@ -1,0 +1,52 @@
+---
+title: "Article formatting preview"
+toc: false
+navbar: false
+page-footer: ""
+---
+
+This private page checks the typography and HTML packaging used by future posts.
+
+## Equations and code
+
+For $x = n + f$, reconstruction uses
+
+$$2^x = 2^n 2^f, \qquad p(t) = a t^2 + b t + c.$$
+
+```cpp
+// Horner evaluation uses two multiply-add stages.
+int64_t Evaluate(int16_t x, int16_t a, int16_t b, int16_t c) {
+  const int64_t first = static_cast<int64_t>(a) * x + b;
+  return first * x + c;
+}
+```
+
+```python
+rows = [{"a_bits": 10, "b_bits": 13, "c_bits": 23}]
+print(rows[0])
+```
+
+| Choice | Lookup | Arithmetic |
+|:-------|:-------|:-----------|
+| More segments | More coefficient rows | Smaller residual interval |
+| Higher degree | More coefficients per row | More Horner stages |
+
+## Local interaction
+
+```{=html}
+<div id="preview-widget">
+  <label for="preview-x">Input x</label>
+  <input id="preview-x" type="range" min="-4" max="0" step="0.25" value="-1">
+  <output id="preview-value" for="preview-x">2^-1 = 0.5</output>
+</div>
+<script>
+(() => {
+  const widget = document.getElementById('preview-widget');
+  const input = widget.querySelector('input');
+  const output = widget.querySelector('output');
+  input.addEventListener('input', () => {
+    output.textContent = `2^${input.value} = ${Math.pow(2, Number(input.value))}`;
+  });
+})();
+</script>
+```

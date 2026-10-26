@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 385" role="img"><title>Stored widths of first-row coefficients at the same quantization spacing</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10" fill="#747d86"/></marker></defs>
+<rect width="100%" height="100%" fill="#faf9f6"/>
+<text x="390" y="25" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">Same scale 2⁻²⁰ · unsigned integers · low bits aligned</text>
+<text x="20" y="65" text-anchor="start" font-family="system-ui,sans-serif" font-size="16" fill="#41484b">c1: linear coefficient</text>
+<text x="20" y="107" text-anchor="start" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">8 quadratics</text>
+<text x="20" y="125" text-anchor="start" font-family="system-ui,sans-serif" font-size="12" fill="#41484b">stored integer 90,787</text>
+<rect x="289" y="90" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="299.5" y="111" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">1</text>
+<rect x="311" y="90" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="321.5" y="111" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">0</text>
+<rect x="333" y="90" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="343.5" y="111" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">1</text>
+<rect x="355" y="90" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="365.5" y="111" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">1</text>
+<rect x="377" y="90" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="387.5" y="111" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">0</text>
+<rect x="399" y="90" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="409.5" y="111" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">0</text>
+<rect x="421" y="90" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="431.5" y="111" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">0</text>
+<rect x="443" y="90" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="453.5" y="111" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">1</text>
+<rect x="465" y="90" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="475.5" y="111" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">0</text>
+<rect x="487" y="90" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="497.5" y="111" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">1</text>
+<rect x="509" y="90" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="519.5" y="111" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">0</text>
+<rect x="531" y="90" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="541.5" y="111" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">1</text>
+<rect x="553" y="90" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="563.5" y="111" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">0</text>
+<rect x="575" y="90" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="585.5" y="111" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">0</text>
+<rect x="597" y="90" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="607.5" y="111" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">0</text>
+<rect x="619" y="90" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="629.5" y="111" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">1</text>
+<rect x="641" y="90" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="651.5" y="111" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">1</text>
+<text x="680" y="111" text-anchor="start" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">17 bits</text>
+<text x="20" y="157" text-anchor="start" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">2 cubics</text>
+<text x="20" y="175" text-anchor="start" font-family="system-ui,sans-serif" font-size="12" fill="#41484b">stored integer 363,576</text>
+<rect x="245" y="140" width="21" height="30" fill="#f5ddd5" stroke="#c43c28"/>
+<text x="255.5" y="161" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#a53023">1</text>
+<rect x="267" y="140" width="21" height="30" fill="#f5ddd5" stroke="#c43c28"/>
+<text x="277.5" y="161" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#a53023">0</text>
+<rect x="289" y="140" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="299.5" y="161" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">1</text>
+<rect x="311" y="140" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="321.5" y="161" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">1</text>
+<rect x="333" y="140" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="343.5" y="161" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">0</text>
+<rect x="355" y="140" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="365.5" y="161" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">0</text>
+<rect x="377" y="140" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="387.5" y="161" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">0</text>
+<rect x="399" y="140" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="409.5" y="161" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">1</text>
+<rect x="421" y="140" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="431.5" y="161" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">1</text>
+<rect x="443" y="140" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="453.5" y="161" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">0</text>
+<rect x="465" y="140" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="475.5" y="161" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">0</text>
+<rect x="487" y="140" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="497.5" y="161" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">0</text>
+<rect x="509" y="140" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="519.5" y="161" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">0</text>
+<rect x="531" y="140" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="541.5" y="161" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">1</text>
+<rect x="553" y="140" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="563.5" y="161" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">1</text>
+<rect x="575" y="140" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="585.5" y="161" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">1</text>
+<rect x="597" y="140" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="607.5" y="161" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">0</text>
+<rect x="619" y="140" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="629.5" y="161" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">0</text>
+<rect x="641" y="140" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="651.5" y="161" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">0</text>
+<text x="680" y="161" text-anchor="start" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">19 bits</text>
+<text x="20" y="225" text-anchor="start" font-family="system-ui,sans-serif" font-size="16" fill="#41484b">c2: quadratic coefficient</text>
+<text x="20" y="267" text-anchor="start" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">8 quadratics</text>
+<text x="20" y="285" text-anchor="start" font-family="system-ui,sans-serif" font-size="12" fill="#41484b">stored integer 4,110</text>
+<rect x="377" y="250" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="387.5" y="271" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">1</text>
+<rect x="399" y="250" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="409.5" y="271" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">0</text>
+<rect x="421" y="250" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="431.5" y="271" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">0</text>
+<rect x="443" y="250" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="453.5" y="271" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">0</text>
+<rect x="465" y="250" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="475.5" y="271" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">0</text>
+<rect x="487" y="250" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="497.5" y="271" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">0</text>
+<rect x="509" y="250" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="519.5" y="271" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">0</text>
+<rect x="531" y="250" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="541.5" y="271" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">0</text>
+<rect x="553" y="250" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="563.5" y="271" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">0</text>
+<rect x="575" y="250" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="585.5" y="271" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">1</text>
+<rect x="597" y="250" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="607.5" y="271" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">1</text>
+<rect x="619" y="250" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="629.5" y="271" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">1</text>
+<rect x="641" y="250" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="651.5" y="271" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">0</text>
+<text x="680" y="271" text-anchor="start" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">13 bits</text>
+<text x="20" y="317" text-anchor="start" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">2 cubics</text>
+<text x="20" y="335" text-anchor="start" font-family="system-ui,sans-serif" font-size="12" fill="#41484b">stored integer 62,118</text>
+<rect x="311" y="300" width="21" height="30" fill="#f5ddd5" stroke="#c43c28"/>
+<text x="321.5" y="321" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#a53023">1</text>
+<rect x="333" y="300" width="21" height="30" fill="#f5ddd5" stroke="#c43c28"/>
+<text x="343.5" y="321" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#a53023">1</text>
+<rect x="355" y="300" width="21" height="30" fill="#f5ddd5" stroke="#c43c28"/>
+<text x="365.5" y="321" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#a53023">1</text>
+<rect x="377" y="300" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="387.5" y="321" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">1</text>
+<rect x="399" y="300" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="409.5" y="321" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">0</text>
+<rect x="421" y="300" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="431.5" y="321" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">0</text>
+<rect x="443" y="300" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="453.5" y="321" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">1</text>
+<rect x="465" y="300" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="475.5" y="321" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">0</text>
+<rect x="487" y="300" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="497.5" y="321" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">1</text>
+<rect x="509" y="300" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="519.5" y="321" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">0</text>
+<rect x="531" y="300" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="541.5" y="321" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">1</text>
+<rect x="553" y="300" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="563.5" y="321" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">0</text>
+<rect x="575" y="300" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="585.5" y="321" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">0</text>
+<rect x="597" y="300" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="607.5" y="321" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">1</text>
+<rect x="619" y="300" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="629.5" y="321" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">1</text>
+<rect x="641" y="300" width="21" height="30" fill="#e4edf3" stroke="#a9b9c6"/>
+<text x="651.5" y="321" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">0</text>
+<text x="680" y="321" text-anchor="start" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">16 bits</text>
+<text x="390" y="375" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#41484b">Highlighted cells: additional high bits needed by the larger cubic coefficient</text>
+</svg>

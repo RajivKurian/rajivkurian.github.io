@@ -1,0 +1,22 @@
+---
+title: "Articles"
+---
+
+Notes on numerical methods, programming, and hardware design.
+
+## Exponential hardware
+
+A four-part series on computing `exp2` with fixed-point arithmetic,
+coefficient tables, and a shared polynomial datapath.
+
+::: {.series-list}
+1. [**Computing exp2**](posts/exp2-versus-exp.qmd)  
+   [October 25, 2026]{.article-date}
+2. [**Range reduction, tables and polynomial degree**](posts/range-reduction.qmd)  
+   [October 25, 2026]{.article-date}
+3. [**Remez, coefficient search, accuracy testing and hardware cost**](posts/remez-and-search.qmd)  
+   [October 25, 2026]{.article-date}
+4. [**Generating RTL and searching implementation choices**](posts/rtl-producer.qmd)  
+   [October 25, 2026]{.article-date}
+:::
+

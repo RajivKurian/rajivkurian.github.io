@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 690" role="img"><title>Three Booth implementations for a times t and s times t, with local narrow-operand decoding, local residual decoding or shared residual controls</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10" fill="#747d86"/></marker></defs>
+<rect width="100%" height="100%" fill="#faf9f6"/>
+<text x="25" y="25" text-anchor="start" font-family="system-ui,sans-serif" font-size="21" fill="#356c92">1 · Recode a and s locally</text>
+<rect x="150" y="50" width="80" height="36" rx="4" fill="#f5f1e8" stroke="#356c92" stroke-width="1.5"/>
+<text x="190.0" y="74.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#41484b">R1</text>
+<rect x="650" y="50" width="80" height="36" rx="4" fill="#f5f1e8" stroke="#356c92" stroke-width="1.5"/>
+<text x="690.0" y="74.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#41484b">R2</text>
+<text x="65" y="74" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#41484b">t: 18 bits</text>
+<path d="M110 68 H150" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M230 68 H650" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M730 68 H835" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="450" y="59" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">18-bit t</text>
+<rect x="280" y="115" width="150" height="54" rx="4" fill="#f5f1e8" stroke="#356c92" stroke-width="1.5"/>
+<text x="355.0" y="136.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">multiples of t</text>
+<text x="355.0" y="159.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">5 Booth rows</text>
+<rect x="750" y="115" width="130" height="54" rx="4" fill="#f5f1e8" stroke="#356c92" stroke-width="1.5"/>
+<text x="815.0" y="136.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">multiples of t</text>
+<text x="815.0" y="159.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">8 Booth rows</text>
+<rect x="95" y="115" width="140" height="54" rx="4" fill="#f5f1e8" stroke="#356c92" stroke-width="1.5"/>
+<text x="165.0" y="136.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">decode a</text>
+<text x="165.0" y="159.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">8 bits</text>
+<rect x="570" y="115" width="140" height="54" rx="4" fill="#f5f1e8" stroke="#356c92" stroke-width="1.5"/>
+<text x="640.0" y="136.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">decode s</text>
+<text x="640.0" y="159.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">15 bits</text>
+<text x="50" y="147" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" fill="#41484b">a</text>
+<path d="M65 142 H95" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="530" y="147" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" fill="#41484b">s</text>
+<path d="M540 142 H570" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M235 142 H280" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M710 142 H750" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M355 68 V115" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M815 68 V115" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="355" y="193" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">first product: a·t</text>
+<text x="815" y="193" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">second product: s·t</text>
+<path d="M20 211L880 211" stroke="#d9d5ca" stroke-width="1" fill="none"/>
+<text x="25" y="245" text-anchor="start" font-family="system-ui,sans-serif" font-size="21" fill="#a36a18">2 · Recode t locally at both multipliers</text>
+<rect x="150" y="270" width="80" height="36" rx="4" fill="#f5f1e8" stroke="#a36a18" stroke-width="1.5"/>
+<text x="190.0" y="294.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#41484b">R1</text>
+<rect x="650" y="270" width="80" height="36" rx="4" fill="#f5f1e8" stroke="#a36a18" stroke-width="1.5"/>
+<text x="690.0" y="294.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#41484b">R2</text>
+<text x="65" y="294" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#41484b">t: 18 bits</text>
+<path d="M110 288 H150" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M230 288 H650" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M730 288 H835" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="450" y="279" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">18-bit t</text>
+<rect x="280" y="335" width="150" height="54" rx="4" fill="#f5f1e8" stroke="#a36a18" stroke-width="1.5"/>
+<text x="355.0" y="356.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">multiples of a</text>
+<text x="355.0" y="379.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">10 Booth rows</text>
+<rect x="750" y="335" width="130" height="54" rx="4" fill="#f5f1e8" stroke="#a36a18" stroke-width="1.5"/>
+<text x="815.0" y="356.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">multiples of s</text>
+<text x="815.0" y="379.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">10 Booth rows</text>
+<rect x="95" y="335" width="140" height="54" rx="4" fill="#f5f1e8" stroke="#a36a18" stroke-width="1.5"/>
+<text x="165.0" y="356.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">decode t</text>
+<text x="165.0" y="379.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">18 bits</text>
+<rect x="570" y="335" width="140" height="54" rx="4" fill="#f5f1e8" stroke="#a36a18" stroke-width="1.5"/>
+<text x="640.0" y="356.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">decode t</text>
+<text x="640.0" y="379.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">18 bits</text>
+<path d="M190 306 V320 H165 V335" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M690 306 V320 H640 V335" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M235 362 H280" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M710 362 H750" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="369" y="326" text-anchor="start" font-family="system-ui,sans-serif" font-size="17" fill="#41484b">a</text>
+<path d="M355 310 V335" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="829" y="326" text-anchor="start" font-family="system-ui,sans-serif" font-size="17" fill="#41484b">s</text>
+<path d="M815 310 V335" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="355" y="413" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">first product: a·t</text>
+<text x="815" y="413" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">second product: s·t</text>
+<path d="M20 431L880 431" stroke="#d9d5ca" stroke-width="1" fill="none"/>
+<text x="25" y="465" text-anchor="start" font-family="system-ui,sans-serif" font-size="21" fill="#af5137">3 · Recode t once and carry its controls</text>
+<rect x="150" y="490" width="80" height="36" rx="4" fill="#f5f1e8" stroke="#af5137" stroke-width="1.5"/>
+<text x="190.0" y="514.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#41484b">R1</text>
+<rect x="650" y="490" width="80" height="36" rx="4" fill="#f5f1e8" stroke="#af5137" stroke-width="1.5"/>
+<text x="690.0" y="514.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#41484b">R2</text>
+<rect x="20" y="490" width="110" height="36" rx="4" fill="#f5f1e8" stroke="#af5137" stroke-width="1.5"/>
+<text x="75.0" y="514.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">decode t</text>
+<path d="M130 508 H150" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="75" y="485" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#41484b">t: 18 bits</text>
+<path d="M230 508 H650" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M730 508 H835" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="450" y="499" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">27 controls</text>
+<rect x="280" y="555" width="150" height="54" rx="4" fill="#f5f1e8" stroke="#af5137" stroke-width="1.5"/>
+<text x="355.0" y="576.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">multiples of a</text>
+<text x="355.0" y="599.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">10 Booth rows</text>
+<rect x="750" y="555" width="130" height="54" rx="4" fill="#f5f1e8" stroke="#af5137" stroke-width="1.5"/>
+<text x="815.0" y="576.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">multiples of s</text>
+<text x="815.0" y="599.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">10 Booth rows</text>
+<path d="M190 526 V582 H280" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M690 526 V582 H750" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="369" y="546" text-anchor="start" font-family="system-ui,sans-serif" font-size="17" fill="#41484b">a</text>
+<path d="M355 530 V555" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="829" y="546" text-anchor="start" font-family="system-ui,sans-serif" font-size="17" fill="#41484b">s</text>
+<path d="M815 530 V555" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="355" y="633" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">first product: a·t</text>
+<text x="815" y="633" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">second product: s·t</text>
+<text x="450" y="681" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">R1–R2 show only residual/control storage. The coefficient addends b and c are omitted.</text>
+</svg>

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 235" role="img"><title>700 ps · four cycles, prefix in both MACs; minimum setup slack at every stage</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10" fill="#747d86"/></marker></defs>
+<rect width="100%" height="100%" fill="#faf9f6"/>
+<text x="20" y="28" text-anchor="start" font-family="system-ui,sans-serif" font-size="22" fill="#41484b">700 ps · four cycles, prefix in both MACs</text>
+<text x="20" y="56" text-anchor="start" font-family="system-ui,sans-serif" font-size="16" fill="#41484b">Setup slack at each register stage · ps</text>
+<text x="1180" y="56" text-anchor="end" font-family="system-ui,sans-serif" font-size="17" fill="#af5137">Timing fails</text>
+<rect x="20.0" y="77" width="252.0" height="114" rx="4" fill="#f1f0eb" stroke="#75828a" stroke-width="1.2"/>
+<text x="146.0" y="100" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#41484b">Coefficient</text>
+<text x="146.0" y="121" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#41484b">lookup</text>
+<text x="146.0" y="175" text-anchor="middle" font-family="system-ui,sans-serif" font-size="19" fill="#41484b">+141.66 ps</text>
+<path d="M272.0 134 H287.0" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M287.0 98 V170" stroke="#75828a" stroke-width="3"/>
+<text x="287.0" y="218" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">R1</text>
+<path d="M287.0 134 H310.0" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="310.0" y="77" width="252.0" height="114" rx="4" fill="#f6e9e1" stroke="#af5137" stroke-width="1.2"/>
+<text x="436.0" y="100" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#41484b">First MAC</text>
+<text x="436.0" y="121" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#41484b">complete sum</text>
+<text x="436.0" y="142" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#41484b">prefix</text>
+<text x="436.0" y="175" text-anchor="middle" font-family="system-ui,sans-serif" font-size="19" fill="#af5137">−42.55 ps</text>
+<path d="M562.0 134 H577.0" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M577.0 98 V170" stroke="#af5137" stroke-width="3"/>
+<text x="577.0" y="218" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">R2</text>
+<path d="M577.0 134 H600.0" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="600.0" y="77" width="252.0" height="114" rx="4" fill="#f6e9e1" stroke="#af5137" stroke-width="2.5"/>
+<text x="726.0" y="100" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#41484b">Second MAC</text>
+<text x="726.0" y="121" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#41484b">column compression</text>
+<text x="726.0" y="142" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#41484b">low 17: prefix</text>
+<text x="726.0" y="175" text-anchor="middle" font-family="system-ui,sans-serif" font-size="19" fill="#af5137">−46.14 ps</text>
+<path d="M852.0 134 H867.0" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M867.0 98 V170" stroke="#af5137" stroke-width="3"/>
+<text x="867.0" y="218" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">R3</text>
+<path d="M867.0 134 H890.0" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="890.0" y="77" width="252.0" height="114" rx="4" fill="#f1f0eb" stroke="#75828a" stroke-width="1.2"/>
+<text x="1016.0" y="100" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#41484b">Second MAC</text>
+<text x="1016.0" y="121" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#41484b">carry completion</text>
+<text x="1016.0" y="142" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#41484b">prefix</text>
+<text x="1016.0" y="175" text-anchor="middle" font-family="system-ui,sans-serif" font-size="19" fill="#41484b">+56.67 ps</text>
+<path d="M1142.0 134 H1157.0" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M1157.0 98 V170" stroke="#75828a" stroke-width="3"/>
+<text x="1157.0" y="218" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">R4</text>
+</svg>

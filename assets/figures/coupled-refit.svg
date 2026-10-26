@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 355" role="img"><title>A coupled coefficient refit changes disjoint C constraints into an overlap</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10" fill="#747d86"/></marker></defs>
+<rect width="100%" height="100%" fill="#faf9f6"/>
+<text x="208" y="27" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" fill="#41484b">Before refitting</text>
+<text x="208" y="53" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">A = 78, B = 2877</text>
+<text x="18" y="83" text-anchor="start" font-family="system-ui,sans-serif" font-size="13" fill="#41484b">t = 0.246</text>
+<path d="M243 100L313 100" stroke="#1460aa" stroke-width="4"/>
+<circle cx="243" cy="100" r="5" fill="#1460aa"/>
+<circle cx="313" cy="100" r="5" fill="#1460aa"/>
+<text x="18" y="148" text-anchor="start" font-family="system-ui,sans-serif" font-size="13" fill="#41484b">t = 0.949</text>
+<path d="M103 165L173 165" stroke="#1460aa" stroke-width="4"/>
+<circle cx="103" cy="165" r="5" fill="#1460aa"/>
+<circle cx="173" cy="165" r="5" fill="#1460aa"/>
+<text x="208" y="225" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#b65322">No C word satisfies both inputs</text>
+<text x="103" y="282" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#41484b">-2</text>
+<text x="173" y="282" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#41484b">-1</text>
+<text x="243" y="282" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#41484b">0</text>
+<text x="313" y="282" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#41484b">+1</text>
+<text x="208" y="307" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#41484b">Integer coefficient offset C − C₀</text>
+<text x="638" y="27" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" fill="#41484b">After refitting</text>
+<text x="638" y="53" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">A = 58, B = 2878</text>
+<text x="448" y="83" text-anchor="start" font-family="system-ui,sans-serif" font-size="13" fill="#41484b">t = 0.246</text>
+<path d="M603 100L743 100" stroke="#1460aa" stroke-width="4"/>
+<circle cx="603" cy="100" r="5" fill="#1460aa"/>
+<circle cx="673" cy="100" r="5" fill="#1460aa"/>
+<circle cx="743" cy="100" r="5" fill="#1460aa"/>
+<text x="448" y="148" text-anchor="start" font-family="system-ui,sans-serif" font-size="13" fill="#41484b">t = 0.949</text>
+<path d="M603 165L673 165" stroke="#1460aa" stroke-width="4"/>
+<circle cx="603" cy="165" r="5" fill="#1460aa"/>
+<circle cx="673" cy="165" r="5" fill="#1460aa"/>
+<path d="M603 213L673 213" stroke="#b65322" stroke-width="4"/>
+<circle cx="603" cy="213" r="6" fill="#b65322"/>
+<circle cx="673" cy="213" r="6" fill="#b65322"/>
+<text x="638" y="249" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#b65322">Both inputs accept C₀</text>
+<text x="533" y="282" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#41484b">-2</text>
+<text x="603" y="282" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#41484b">-1</text>
+<text x="673" y="282" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#41484b">0</text>
+<text x="743" y="282" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#41484b">+1</text>
+<text x="638" y="307" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#41484b">Integer coefficient offset C − C₀</text>
+<text x="425" y="344" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">C₀ = 4,251,473; the stored C word is unchanged by this refit.</text>
+</svg>

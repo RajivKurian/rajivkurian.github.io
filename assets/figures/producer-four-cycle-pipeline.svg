@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 210" role="img"><title>Four cycles: coefficient lookup, complete first multiply-add, second compression and final completion</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10" fill="#747d86"/></marker></defs>
+<rect width="100%" height="100%" fill="#faf9f6"/>
+<rect x="20" y="40" width="180" height="105" rx="4" fill="#f5f1e8" stroke="#3d6f8c" stroke-width="1.5"/>
+<text x="110.0" y="75.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">Cycle 1</text>
+<text x="110.0" y="98.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">Coefficient lookup</text>
+<text x="110.0" y="121.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">hold a, b, c and t</text>
+<path d="M200 92 H245" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="222" y="79" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">R1</text>
+<rect x="245" y="40" width="180" height="105" rx="4" fill="#f5f1e8" stroke="#3d6f8c" stroke-width="1.5"/>
+<text x="335.0" y="75.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">Cycle 2</text>
+<text x="335.0" y="98.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">Complete a·t + b</text>
+<text x="335.0" y="121.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">truncate to s</text>
+<path d="M425 92 H470" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="447" y="79" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">R2</text>
+<rect x="470" y="40" width="180" height="105" rx="4" fill="#f5f1e8" stroke="#3d6f8c" stroke-width="1.5"/>
+<text x="560.0" y="75.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">Cycle 3</text>
+<text x="560.0" y="98.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">Compress s·t + c</text>
+<text x="560.0" y="121.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">resolve low columns</text>
+<path d="M650 92 H695" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="672" y="79" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">R3</text>
+<rect x="695" y="40" width="180" height="105" rx="4" fill="#f5f1e8" stroke="#3d6f8c" stroke-width="1.5"/>
+<text x="785.0" y="75.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">Cycle 4</text>
+<text x="785.0" y="98.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">Complete upper sum</text>
+<text x="785.0" y="121.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">truncate to output</text>
+<text x="880" y="168" text-anchor="end" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">R4 · output register</text>
+<text x="450" y="197" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">t and c travel with s until the second multiply-add uses them.</text>
+</svg>

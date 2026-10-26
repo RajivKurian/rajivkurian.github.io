@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 210" role="img"><title>The same 256-row RNE hardware passes after counterexamples refine its coefficients</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10" fill="#747d86"/></marker></defs>
+<rect width="100%" height="100%" fill="#faf9f6"/>
+<rect x="15" y="30" width="250" height="90" rx="4" fill="#f5f1e8" stroke="#b65322"/>
+<text x="140.0" y="60.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">Fit 1</text>
+<text x="140.0" y="80.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">75,704 failing inputs</text>
+<text x="140.0" y="100.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">Same widths and rounding</text>
+<path d="M265 75 H300" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="300" y="30" width="250" height="90" rx="4" fill="#f5f1e8" stroke="#b65322"/>
+<text x="425.0" y="60.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">Fit 2</text>
+<text x="425.0" y="80.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">7,973 failing inputs</text>
+<text x="425.0" y="100.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">Same widths and rounding</text>
+<path d="M550 75 H585" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="585" y="30" width="250" height="90" rx="4" fill="#f5f1e8" stroke="#1460aa"/>
+<text x="710.0" y="60.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">Fit 3</text>
+<text x="710.0" y="80.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">0 failing inputs</text>
+<text x="710.0" y="100.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">Same widths and rounding</text>
+<text x="425" y="155" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#41484b">Retain the failures and nearby inputs; change the coefficient words.</text>
+<text x="425" y="185" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#747d86">Each check covers all 2³² FP32 encodings.</text>
+</svg>

@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 610" role="img"><title>Recorded RNE coefficient fits across table sizes and physical precision profiles</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10" fill="#747d86"/></marker></defs>
+<rect width="100%" height="100%" fill="#faf9f6"/>
+<text x="15" y="25" text-anchor="start" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">Coefficient bits a/b/c · residual · first/result bits</text>
+<text x="370" y="65" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#41484b">32 rows</text>
+<text x="500" y="65" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#41484b">64 rows</text>
+<text x="630" y="65" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#41484b">128 rows</text>
+<text x="760" y="65" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#41484b">256 rows</text>
+<text x="15" y="108" text-anchor="start" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">Wide</text>
+<text x="15" y="129" text-anchor="start" font-family="system-ui,sans-serif" font-size="13" fill="#747d86">12/16/26 · 22 · 22/28</text>
+<rect x="312" y="86" width="116" height="52" rx="4" fill="#f5f1e8" stroke="#1460aa"/>
+<text x="370.0" y="107.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">0 ULP: 74.33%</text>
+<text x="370.0" y="127.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">1 ULP: 23.86%</text>
+<text x="500" y="113" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" fill="#747d86">—</text>
+<text x="630" y="113" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" fill="#747d86">—</text>
+<text x="760" y="113" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" fill="#747d86">—</text>
+<text x="15" y="173" text-anchor="start" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">Medium</text>
+<text x="15" y="194" text-anchor="start" font-family="system-ui,sans-serif" font-size="13" fill="#747d86">11/14/24 · 20 · 19/26</text>
+<rect x="312" y="151" width="116" height="52" rx="4" fill="#f5f1e8" stroke="#b65322"/>
+<text x="370.0" y="172.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">Fit failed</text>
+<text x="370.0" y="192.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">&gt;2 ULP: 1.57%</text>
+<rect x="442" y="151" width="116" height="52" rx="4" fill="#f5f1e8" stroke="#1460aa"/>
+<text x="500.0" y="172.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">0 ULP: 67.30%</text>
+<text x="500.0" y="192.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">1 ULP: 32.08%</text>
+<rect x="572" y="151" width="116" height="52" rx="4" fill="#f5f1e8" stroke="#1460aa"/>
+<text x="630.0" y="172.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">0 ULP: 70.36%</text>
+<text x="630.0" y="192.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">1 ULP: 29.61%</text>
+<text x="760" y="178" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" fill="#747d86">—</text>
+<text x="15" y="238" text-anchor="start" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">Compact, 18-bit first</text>
+<text x="15" y="259" text-anchor="start" font-family="system-ui,sans-serif" font-size="13" fill="#747d86">10/13/23 · 20 · 18/25</text>
+<text x="370" y="243" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" fill="#747d86">—</text>
+<text x="500" y="243" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" fill="#747d86">—</text>
+<rect x="572" y="216" width="116" height="52" rx="4" fill="#f5f1e8" stroke="#1460aa"/>
+<text x="630.0" y="237.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">0 ULP: 55.87%</text>
+<text x="630.0" y="257.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">1 ULP: 40.30%</text>
+<text x="760" y="243" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" fill="#747d86">—</text>
+<text x="15" y="303" text-anchor="start" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">Compact, 17-bit first</text>
+<text x="15" y="324" text-anchor="start" font-family="system-ui,sans-serif" font-size="13" fill="#747d86">10/13/23 · 20 · 17/25</text>
+<text x="370" y="308" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" fill="#747d86">—</text>
+<rect x="442" y="281" width="116" height="52" rx="4" fill="#f5f1e8" stroke="#b65322"/>
+<text x="500.0" y="302.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">Fit failed</text>
+<text x="500.0" y="322.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">&gt;2 ULP: 0.32%</text>
+<rect x="572" y="281" width="116" height="52" rx="4" fill="#f5f1e8" stroke="#1460aa"/>
+<text x="630.0" y="302.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">0 ULP: 38.48%</text>
+<text x="630.0" y="322.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">1 ULP: 56.47%</text>
+<rect x="702" y="281" width="116" height="52" rx="4" fill="#f5f1e8" stroke="#1460aa"/>
+<text x="760.0" y="302.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">0 ULP: 75.90%</text>
+<text x="760.0" y="322.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">1 ULP: 23.87%</text>
+<text x="15" y="368" text-anchor="start" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">Narrower, 16-bit first</text>
+<text x="15" y="389" text-anchor="start" font-family="system-ui,sans-serif" font-size="13" fill="#747d86">8/13/23 · 18 · 16/25</text>
+<text x="370" y="373" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" fill="#747d86">—</text>
+<text x="500" y="373" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" fill="#747d86">—</text>
+<text x="630" y="373" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" fill="#747d86">—</text>
+<rect x="702" y="346" width="116" height="52" rx="4" fill="#f5f1e8" stroke="#1460aa"/>
+<text x="760.0" y="367.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">0 ULP: 71.92%</text>
+<text x="760.0" y="387.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">1 ULP: 27.90%</text>
+<text x="15" y="433" text-anchor="start" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">Narrower, 15-bit first</text>
+<text x="15" y="454" text-anchor="start" font-family="system-ui,sans-serif" font-size="13" fill="#747d86">8/13/23 · 18 · 15/25</text>
+<text x="370" y="438" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" fill="#747d86">—</text>
+<text x="500" y="438" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" fill="#747d86">—</text>
+<text x="630" y="438" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" fill="#747d86">—</text>
+<rect x="702" y="411" width="116" height="52" rx="4" fill="#f5f1e8" stroke="#1460aa"/>
+<text x="760.0" y="432.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">0 ULP: 65.43%</text>
+<text x="760.0" y="452.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">1 ULP: 34.13%</text>
+<text x="15" y="498" text-anchor="start" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">Narrower, 14-bit first</text>
+<text x="15" y="519" text-anchor="start" font-family="system-ui,sans-serif" font-size="13" fill="#747d86">8/13/23 · 18 · 14/25</text>
+<text x="370" y="503" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" fill="#747d86">—</text>
+<text x="500" y="503" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" fill="#747d86">—</text>
+<text x="630" y="503" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" fill="#747d86">—</text>
+<rect x="702" y="476" width="116" height="52" rx="4" fill="#f5f1e8" stroke="#b65322"/>
+<text x="760.0" y="497.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">Fit failed</text>
+<text x="760.0" y="517.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">&gt;2 ULP: 0.10%</text>
+<text x="425" y="572" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">RNE at both narrowing points; all cells use the same negative input range.</text>
+<text x="425" y="598" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#747d86">Negative inputs · blue: remainder is 2 ULP · rust: fit failed · —: not compared</text>
+</svg>

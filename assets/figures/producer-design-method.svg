@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 570" role="img" aria-labelledby="title desc">
+<title id="title">An exploratory design process guided by measurements</title>
+<desc id="desc">Algorithmic search provides a strong starting point. Experiments develop our understanding of implementation choices; a verified generator can make them easier to express. Measurements inform further experiments and revisions to both numerical choices and the generator. Maintainers judge the quality and PPA tradeoffs.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10" fill="#747d86"/></marker></defs>
+<rect width="1100" height="570" fill="#faf9f6"/>
+<style>text{font-family:system-ui,sans-serif;fill:#41484b;font-size:20px}.head{font-weight:600;font-size:22px}.note{font-size:18px}svg > path{fill:none;stroke-width:2;marker-end:url(#arrow)}</style>
+<rect x="300" y="20" width="500" height="105" rx="5" fill="#f5f1e8" stroke="#3d6f8c" stroke-width="2"/>
+<text x="550" y="52" text-anchor="middle" class="head">Seek a strong starting point</text>
+<text x="550" y="82" text-anchor="middle" class="">Algorithmic search · approximate costs</text>
+<text x="550" y="108" text-anchor="middle" class="">Check quality; consider nearby candidates</text>
+<rect x="300" y="190" width="500" height="105" rx="5" fill="#f5f1e8" stroke="#b75d2c" stroke-width="2"/>
+<text x="550" y="222" text-anchor="middle" class="head">Try concrete implementations</text>
+<text x="550" y="252" text-anchor="middle" class="">Build a checked generator where it helps</text>
+<text x="550" y="278" text-anchor="middle" class="">Extend its choices as understanding grows</text>
+<rect x="300" y="360" width="500" height="105" rx="5" fill="#f5f1e8" stroke="#b75d2c" stroke-width="2"/>
+<text x="550" y="392" text-anchor="middle" class="head">Interpret the measurements</text>
+<text x="550" y="422" text-anchor="middle" class="">Numerical quality · area · timing · power</text>
+<text x="550" y="448" text-anchor="middle" class="">Use paths and cells to choose experiments</text>
+<path d="M550 125 V190" stroke="#747d86"/>
+<path d="M550 295 V360" stroke="#747d86"/>
+<path d="M300 410 H65 V72 H300" stroke="#3d6f8c"/>
+<rect x="10" y="200" width="275" height="90" fill="#faf9f6"/>
+<text x="147" y="228" text-anchor="middle" class="note">Reconsider estimates</text>
+<text x="147" y="253" text-anchor="middle" class="note">and candidate choices</text>
+<text x="147" y="278" text-anchor="middle" class="note">as evidence accumulates</text>
+<path d="M800 410 H1035 V242 H800" stroke="#b75d2c"/>
+<rect x="815" y="290" width="275" height="70" fill="#faf9f6"/>
+<text x="952" y="316" text-anchor="middle" class="note">Revise circuit choices</text>
+<text x="952" y="341" text-anchor="middle" class="note">and the generator itself</text>
+<path d="M550 465 V505" stroke="#747d86"/>
+<text x="550" y="540" text-anchor="middle" class="note">Maintainers judge the tradeoffs and decide what to investigate next</text>
+</svg>

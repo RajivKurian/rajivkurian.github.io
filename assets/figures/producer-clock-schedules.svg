@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 410" role="img"><title>Complete five- and six-cycle pipelines; the lookup and first MAC through R3 are unchanged</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10" fill="#747d86"/></marker></defs>
+<rect width="100%" height="100%" fill="#faf9f6"/>
+<text x="20" y="32" text-anchor="start" font-family="system-ui,sans-serif" font-size="21" fill="#356c92">Five cycles · original column-compression cut</text>
+<g opacity="0.5">
+<rect x="25" y="67" width="160" height="92" rx="3" fill="#f5f1e8" stroke="#75828a" stroke-width="1.5"/>
+<text x="105.0" y="107.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">Coefficient</text>
+<text x="105.0" y="129.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">lookup</text>
+<path d="M185 113 H201" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M201 81 V145" stroke="#75828a" stroke-width="4"/>
+<text x="201" y="183" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">R1</text>
+<path d="M201 113 H219" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+</g>
+<g opacity="0.5">
+<rect x="219" y="67" width="160" height="92" rx="3" fill="#f5f1e8" stroke="#75828a" stroke-width="1.5"/>
+<text x="299.0" y="85.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">First MAC</text>
+<text x="299.0" y="107.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">row selection</text>
+<text x="299.0" y="129.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">compression</text>
+<text x="299.0" y="151.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">low-column sum</text>
+<path d="M379 113 H395" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M395 81 V145" stroke="#75828a" stroke-width="4"/>
+<text x="395" y="183" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">R2</text>
+<path d="M395 113 H413" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+</g>
+<g opacity="0.5">
+<rect x="413" y="67" width="160" height="92" rx="3" fill="#f5f1e8" stroke="#75828a" stroke-width="1.5"/>
+<text x="493.0" y="96.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">First MAC</text>
+<text x="493.0" y="118.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">carry completion</text>
+<text x="493.0" y="140.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">15-bit s</text>
+<path d="M573 113 H589" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M589 81 V145" stroke="#75828a" stroke-width="4"/>
+<text x="589" y="183" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">R3</text>
+<path d="M589 113 H607" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+</g>
+<rect x="607" y="67" width="160" height="92" rx="3" fill="#f5f1e8" stroke="#356c92" stroke-width="1.5"/>
+<text x="687.0" y="85.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">Second MAC</text>
+<text x="687.0" y="107.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">row selection</text>
+<text x="687.0" y="129.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">compression</text>
+<text x="687.0" y="151.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">low-column sum</text>
+<path d="M767 113 H783" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M783 81 V145" stroke="#356c92" stroke-width="4"/>
+<text x="783" y="183" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">R4</text>
+<path d="M783 113 H801" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="801" y="67" width="160" height="92" rx="3" fill="#f5f1e8" stroke="#356c92" stroke-width="1.5"/>
+<text x="881.0" y="96.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">Second MAC</text>
+<text x="881.0" y="118.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">carry completion</text>
+<text x="881.0" y="140.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">25-bit result</text>
+<path d="M961 113 H977" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M977 81 V145" stroke="#356c92" stroke-width="4"/>
+<text x="977" y="183" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">R5</text>
+<text x="20" y="220" text-anchor="start" font-family="system-ui,sans-serif" font-size="21" fill="#af5137">Six cycles · register selected rows before compression</text>
+<g opacity="0.5">
+<rect x="25" y="255" width="160" height="92" rx="3" fill="#f5f1e8" stroke="#75828a" stroke-width="1.5"/>
+<text x="105.0" y="295.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">Coefficient</text>
+<text x="105.0" y="317.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">lookup</text>
+<path d="M185 301 H201" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M201 269 V333" stroke="#75828a" stroke-width="4"/>
+<text x="201" y="371" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">R1</text>
+<path d="M201 301 H219" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+</g>
+<g opacity="0.5">
+<rect x="219" y="255" width="160" height="92" rx="3" fill="#f5f1e8" stroke="#75828a" stroke-width="1.5"/>
+<text x="299.0" y="273.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">First MAC</text>
+<text x="299.0" y="295.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">row selection</text>
+<text x="299.0" y="317.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">compression</text>
+<text x="299.0" y="339.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">low-column sum</text>
+<path d="M379 301 H395" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M395 269 V333" stroke="#75828a" stroke-width="4"/>
+<text x="395" y="371" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">R2</text>
+<path d="M395 301 H413" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+</g>
+<g opacity="0.5">
+<rect x="413" y="255" width="160" height="92" rx="3" fill="#f5f1e8" stroke="#75828a" stroke-width="1.5"/>
+<text x="493.0" y="284.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">First MAC</text>
+<text x="493.0" y="306.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">carry completion</text>
+<text x="493.0" y="328.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">15-bit s</text>
+<path d="M573 301 H589" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M589 269 V333" stroke="#75828a" stroke-width="4"/>
+<text x="589" y="371" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">R3</text>
+<path d="M589 301 H607" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+</g>
+<rect x="607" y="255" width="160" height="92" rx="3" fill="#f5f1e8" stroke="#af5137" stroke-width="1.5"/>
+<text x="687.0" y="295.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">Second MAC</text>
+<text x="687.0" y="317.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">row selection</text>
+<path d="M767 301 H783" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M783 269 V333" stroke="#af5137" stroke-width="4"/>
+<text x="783" y="371" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">R4</text>
+<path d="M783 301 H801" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="801" y="255" width="160" height="92" rx="3" fill="#f5f1e8" stroke="#af5137" stroke-width="1.5"/>
+<text x="881.0" y="284.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">Second MAC</text>
+<text x="881.0" y="306.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">compression +</text>
+<text x="881.0" y="328.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">low-column sum</text>
+<path d="M961 301 H977" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M977 269 V333" stroke="#af5137" stroke-width="4"/>
+<text x="977" y="371" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">R5</text>
+<path d="M977 301 H995" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="995" y="255" width="160" height="92" rx="3" fill="#f5f1e8" stroke="#af5137" stroke-width="1.5"/>
+<text x="1075.0" y="284.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">Second MAC</text>
+<text x="1075.0" y="306.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">carry completion</text>
+<text x="1075.0" y="328.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">25-bit result</text>
+<path d="M1155 301 H1171" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M1171 269 V333" stroke="#af5137" stroke-width="4"/>
+<text x="1171" y="371" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">R6</text>
+<text x="600" y="402" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" fill="#41484b">Grey: unchanged lookup and first MAC. Colour: the second MAC and its register cuts.</text>
+</svg>

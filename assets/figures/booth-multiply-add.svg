@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 205" role="img"><title>A fused radix-4 Booth multiply-add</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10" fill="#747d86"/></marker></defs>
+<rect width="100%" height="100%" fill="#faf9f6"/>
+<text x="125" y="30" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">Recode the narrower operand</text>
+<path d="M125 40 V70" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="15" y="70" width="220" height="95" rx="4" fill="#f5f1e8" stroke="#d8d4ca"/>
+<text x="125.0" y="102.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">Radix-4 Booth recoding</text>
+<text x="125.0" y="122.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">Select 0, ±A or ±2A</text>
+<text x="125.0" y="142.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">Include sign corrections</text>
+<path d="M235 118 H280" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="390" y="30" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">Aligned coefficient</text>
+<path d="M390 40 V70" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="280" y="70" width="220" height="95" rx="4" fill="#f5f1e8" stroke="#d8d4ca"/>
+<text x="390.0" y="102.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">Compress all rows</text>
+<text x="390.0" y="122.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">and the coefficient</text>
+<text x="390.0" y="142.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">to two rows</text>
+<path d="M500 118 H545" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="545" y="70" width="220" height="95" rx="4" fill="#f5f1e8" stroke="#d8d4ca"/>
+<text x="655.0" y="102.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">Final carry-propagate addition</text>
+<text x="655.0" y="122.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">Guard/sticky → rounding</text>
+<text x="655.0" y="142.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">Result register</text>
+</svg>

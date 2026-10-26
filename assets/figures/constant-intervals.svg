@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 240" role="img"><title>Constraints from three inputs share four possible constant coefficients</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10" fill="#747d86"/></marker></defs>
+<rect width="100%" height="100%" fill="#faf9f6"/>
+<text x="15" y="50" text-anchor="start" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">x = −1/128</text>
+<path d="M309 45L565 45" stroke="#1460aa" stroke-width="5"/>
+<circle cx="309" cy="45" r="4" fill="#1460aa"/>
+<circle cx="341" cy="45" r="4" fill="#1460aa"/>
+<circle cx="373" cy="45" r="4" fill="#1460aa"/>
+<circle cx="405" cy="45" r="4" fill="#1460aa"/>
+<circle cx="437" cy="45" r="4" fill="#1460aa"/>
+<circle cx="469" cy="45" r="4" fill="#1460aa"/>
+<circle cx="501" cy="45" r="4" fill="#1460aa"/>
+<circle cx="533" cy="45" r="4" fill="#1460aa"/>
+<circle cx="565" cy="45" r="4" fill="#1460aa"/>
+<text x="15" y="95" text-anchor="start" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">x = −1/256</text>
+<path d="M437 90L693 90" stroke="#1460aa" stroke-width="5"/>
+<circle cx="437" cy="90" r="4" fill="#1460aa"/>
+<circle cx="469" cy="90" r="4" fill="#1460aa"/>
+<circle cx="501" cy="90" r="4" fill="#1460aa"/>
+<circle cx="533" cy="90" r="4" fill="#1460aa"/>
+<circle cx="565" cy="90" r="4" fill="#1460aa"/>
+<circle cx="597" cy="90" r="4" fill="#1460aa"/>
+<circle cx="629" cy="90" r="4" fill="#1460aa"/>
+<circle cx="661" cy="90" r="4" fill="#1460aa"/>
+<circle cx="693" cy="90" r="4" fill="#1460aa"/>
+<text x="15" y="140" text-anchor="start" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">x = −1/32768</text>
+<path d="M245 135L533 135" stroke="#1460aa" stroke-width="5"/>
+<circle cx="245" cy="135" r="4" fill="#1460aa"/>
+<circle cx="277" cy="135" r="4" fill="#1460aa"/>
+<circle cx="309" cy="135" r="4" fill="#1460aa"/>
+<circle cx="341" cy="135" r="4" fill="#1460aa"/>
+<circle cx="373" cy="135" r="4" fill="#1460aa"/>
+<circle cx="405" cy="135" r="4" fill="#1460aa"/>
+<circle cx="437" cy="135" r="4" fill="#1460aa"/>
+<circle cx="469" cy="135" r="4" fill="#1460aa"/>
+<circle cx="501" cy="135" r="4" fill="#1460aa"/>
+<circle cx="533" cy="135" r="4" fill="#1460aa"/>
+<path d="M437 183L533 183" stroke="#c43c28" stroke-width="3"/>
+<circle cx="437" cy="183" r="5" fill="#c43c28"/>
+<circle cx="469" cy="183" r="5" fill="#c43c28"/>
+<circle cx="501" cy="183" r="5" fill="#c43c28"/>
+<circle cx="533" cy="183" r="5" fill="#c43c28"/>
+<text x="15" y="188" text-anchor="start" font-family="system-ui,sans-serif" font-size="15" fill="#c43c28">Allowed by all three</text>
+<text x="245" y="220" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#41484b">-8</text>
+<text x="309" y="220" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#41484b">-6</text>
+<text x="373" y="220" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#41484b">-4</text>
+<text x="437" y="220" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#41484b">-2</text>
+<text x="501" y="220" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#41484b">+0</text>
+<text x="565" y="220" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#41484b">+2</text>
+<text x="629" y="220" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#41484b">+4</text>
+<text x="693" y="220" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#41484b">+6</text>
+<text x="755" y="220" text-anchor="end" font-family="system-ui,sans-serif" font-size="12" fill="#41484b">C − C₀</text>
+</svg>

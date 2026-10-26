@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 565" role="img"><title>Six register stages for coefficient lookup and the two polynomial multiply-adds</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10" fill="#747d86"/></marker></defs>
+<rect width="100%" height="100%" fill="#faf9f6"/>
+<text x="425" y="24" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#41484b">Input: table address j and 18-bit local coordinate t</text>
+<rect x="135" y="45" width="580" height="58" rx="4" fill="#f5f1e8" stroke="#1460aa"/>
+<text x="425.0" y="69.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">Coefficient lookup</text>
+<text x="425.0" y="89.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">register a, b, c and t</text>
+<text x="100" y="79" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#747d86">R1</text>
+<path d="M425 103 V127" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="135" y="127" width="580" height="58" rx="4" fill="#f5f1e8" stroke="#d8d4ca"/>
+<text x="425.0" y="151.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">First Booth rows + b; compression; low-column addition</text>
+<text x="425.0" y="171.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">register two upper rows, carry/rounding information, t and c</text>
+<text x="100" y="161" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#747d86">R2</text>
+<path d="M425 185 V209" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="135" y="209" width="580" height="58" rx="4" fill="#f5f1e8" stroke="#1460aa"/>
+<text x="425.0" y="233.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">Complete first sum; apply its narrowing rule</text>
+<text x="425.0" y="253.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">register s: 15 or 16 bits; carry t and c</text>
+<text x="100" y="243" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#747d86">R3</text>
+<path d="M425 267 V291" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="135" y="291" width="580" height="58" rx="4" fill="#f5f1e8" stroke="#d8d4ca"/>
+<text x="425.0" y="315.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">Second Booth rows + c; compression; low-column addition</text>
+<text x="425.0" y="335.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">register two upper rows and carry/rounding information</text>
+<text x="100" y="325" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#747d86">R4</text>
+<path d="M425 349 V373" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="135" y="373" width="580" height="58" rx="4" fill="#f5f1e8" stroke="#d8d4ca"/>
+<text x="425.0" y="397.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">Complete second sum</text>
+<text x="425.0" y="417.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">register retained word and rounding information</text>
+<text x="100" y="407" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#747d86">R5</text>
+<path d="M425 431 V455" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="135" y="455" width="580" height="58" rx="4" fill="#f5f1e8" stroke="#1460aa"/>
+<text x="425.0" y="479.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">Apply final internal narrowing rule</text>
+<text x="425.0" y="499.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">register y: 25 bits and valid</text>
+<text x="100" y="489" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#747d86">R6</text>
+<text x="425" y="555" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">One new input per cycle · FP32 reconstruction follows this block</text>
+</svg>

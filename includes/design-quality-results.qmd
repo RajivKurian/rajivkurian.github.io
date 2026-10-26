@@ -1,0 +1,72 @@
+<!-- Generated from numerical-quality.json by report_numerical_quality.py. -->
+
+::: {.quality-results}
+
+| Rows | Coefficient bits a/b/c | Residual bits | Result bits s/y | Q₁/Q₂ | Mapped area¹ | 0 ULP % | 1 ULP % |
+| ---: | :--- | ---: | :--- | :---: | ---: | ---: | ---: |
+| 32 | 12/16/26 | 22 | 22/28 | R/R | 1.265× | 74.33 | 23.86 |
+| 64 | 11/14/24 | 20 | 19/26 | R/R | 1.121× | 67.30 | 32.08 |
+| 64 | 11/14/24 | 20 | 19/26 | T/T | 1.060× | 62.76 | 36.94 |
+| 128 | 11/14/24 | 20 | 19/26 | R/R | 1.192× | 70.36 | 29.61 |
+| 128 | 11/14/24 | 20 | 19/26 | R/T | 1.159× | 70.59 | 29.39 |
+| 128 | 11/14/24 | 20 | 19/26 | T/R | 1.160× | 71.76 | 28.21 |
+| 128 | 11/14/24 | 20 | 19/26 | T/T | 1.131× | 72.33 | 27.64 |
+| 128 | 10/13/23 | 20 | 18/25 | R/R | 1.122× | 55.87 | 40.30 |
+| 128 | 10/13/23 | 20 | 18/25 | R/T | 1.076× | 67.06 | 28.70 |
+| 128 | 10/13/23 | 20 | 18/25 | T/R | 1.087× | 52.35 | 44.15 |
+| 128 | 10/13/23 | 20 | 18/25 | T/T | 1.048× | 64.02 | 31.80 |
+| 128 | 10/13/23 | 20 | 17/25 | R/R | 1.083× | 38.48 | 56.47 |
+| 128 | 10/13/23 | 20 | 17/25 | R/T | 1.039× | 50.61 | 46.15 |
+| 128 | 10/13/23 | 20 | 17/25 | T/R | 1.086× | 34.19 | 56.08 |
+| 128 | 10/13/23 | 20 | 17/25 | T/T | 1.016× | 50.86 | 46.70 |
+| 256 | 10/13/23 | 20 | 17/25 | R/R | 1.234× | 75.90 | 23.87 |
+| 256 | 10/13/23 | 20 | 17/24 | R/R | 1.231× | 48.73 | 49.45 |
+| 256 | 8/12/23 | 20 | 17/25 | R/R | 1.164× | 66.47 | 31.40 |
+| 256 | 10/13/23 | 20 | 16/25 | R/R | 1.226× | 72.99 | 26.66 |
+| 256 | 8/13/23 | 18 | 16/25 | R/R | 1.104× | 71.92 | 27.90 |
+| 256 | 8/13/23 | 18 | 16/25 | T/T | 1.045× | 59.91 | 39.95 |
+| 256 | 8/13/23 | 18 | 15/25 | R/R | 1.055× | 65.43 | 34.13 |
+| 256 | 8/13/23 | 18 | 15/25 | R/T | 1.028× | 53.17 | 46.33 |
+| 256 | 8/13/23 | 18 | 15/25 | T/T | 1.000× | 53.73 | 45.78 |
+
+¹ Mapped area is relative to the smallest measured circuit: 256 rows, 8/13/23-bit coefficients, 18-bit residual, 15/25-bit results and two truncations (**1.000×**). The ratios use synthesized cell area; Part 4 examines the implementation. **R = RNE; T = truncation.** **The remaining percentage is at two ULP.** All fits meet the two-ULP bound and monotonicity requirement. Area and timing cover coefficient lookup and the polynomial pipeline, with one input per cycle, six cycles of latency and the same 1 GHz clock target.
+
+<details>
+<summary>Other input ranges, error direction and the accuracy/area frontier</summary>
+
+The main table counts each of the **278,265,855** FP32 inputs in $-150<x<-2^{-26}$ once. Each FP32 encoding in this range has equal weight. The table below compares the full approximation range and the near-zero subset too. Here a design is identified by **rows · a/b/c/residual/first/result widths · rounding pair**.
+
+| Design | All approximation: 0 ULP % | All approximation: 1 ULP % | Near zero: 0 ULP % | Near zero: 1 ULP % | Negative: below % | Negative: above % | Frontier² |
+| :--- | ---: | ---: | ---: | ---: | ---: | ---: | :---: |
+| 32 · 12/16/26/22/22/28 · RR | 74.27 | 24.56 | 77.76 | 20.39 | 13.71 | 11.97 | No |
+| 64 · 11/14/24/20/19/26 · RR | 65.55 | 33.62 | 70.19 | 29.53 | 18.20 | 14.50 | No |
+| 64 · 11/14/24/20/19/26 · TT | 53.54 | 46.12 | 63.32 | 36.55 | 9.15 | 28.09 | Yes |
+| 128 · 11/14/24/20/19/26 · RR | 70.60 | 29.35 | 70.90 | 29.09 | 21.94 | 7.71 | Yes |
+| 128 · 11/14/24/20/19/26 · RT | 69.50 | 30.47 | 70.84 | 29.14 | 22.16 | 7.25 | Yes |
+| 128 · 11/14/24/20/19/26 · TR | 71.30 | 28.66 | 72.73 | 27.25 | 12.32 | 15.92 | Yes |
+| 128 · 11/14/24/20/19/26 · TT | 70.30 | 29.65 | 73.03 | 26.95 | 12.85 | 14.83 | Yes |
+| 128 · 10/13/23/20/18/25 · RR | 66.15 | 31.08 | 54.82 | 41.05 | 17.42 | 26.71 | No |
+| 128 · 10/13/23/20/18/25 · RT | 59.75 | 37.24 | 68.73 | 26.51 | 12.09 | 20.84 | Yes |
+| 128 · 10/13/23/20/18/25 · TR | 64.61 | 32.85 | 49.77 | 46.38 | 16.25 | 31.40 | No |
+| 128 · 10/13/23/20/18/25 · TT | 57.93 | 39.26 | 64.79 | 30.41 | 11.04 | 24.94 | Yes |
+| 128 · 10/13/23/20/17/25 · RR | 57.19 | 39.39 | 32.98 | 61.26 | 15.68 | 45.84 | No |
+| 128 · 10/13/23/20/17/25 · RT | 51.37 | 46.13 | 47.84 | 48.58 | 33.30 | 16.10 | No |
+| 128 · 10/13/23/20/17/25 · TR | 54.59 | 39.52 | 27.51 | 60.84 | 15.45 | 50.36 | No |
+| 128 · 10/13/23/20/17/25 · TT | 50.67 | 47.39 | 48.53 | 48.90 | 32.67 | 16.47 | No |
+| 256 · 10/13/23/20/17/25 · RR | 78.33 | 21.40 | 78.97 | 20.90 | 11.22 | 12.88 | Yes |
+| 256 · 10/13/23/20/17/24 · RR | 49.54 | 48.83 | 48.87 | 49.67 | 22.05 | 29.21 | No |
+| 256 · 8/12/23/20/17/25 · RR | 66.83 | 30.65 | 69.66 | 28.57 | 11.84 | 21.69 | No |
+| 256 · 10/13/23/20/16/25 · RR | 76.27 | 23.34 | 75.94 | 23.87 | 12.47 | 14.54 | Yes |
+| 256 · 8/13/23/18/16/25 · RR | 75.45 | 24.38 | 74.18 | 25.68 | 13.45 | 14.63 | Yes |
+| 256 · 8/13/23/18/16/25 · TT | 58.09 | 41.79 | 58.37 | 41.50 | 30.78 | 9.32 | Yes |
+| 256 · 8/13/23/18/15/25 · RR | 70.50 | 29.07 | 67.47 | 32.19 | 16.35 | 18.22 | Yes |
+| 256 · 8/13/23/18/15/25 · RT | 53.21 | 46.31 | 51.71 | 47.89 | 33.59 | 13.24 | Yes |
+| 256 · 8/13/23/18/15/25 · TT | 55.61 | 43.86 | 52.48 | 47.13 | 32.81 | 13.46 | Yes |
+
+The full approximation domain contains **555,089,918** inputs in $-150<x<128$, excluding $|x|\le2^{-26}$. The near-zero subset contains **218,103,808** inputs in $[-1,-2^{-26})$. The remaining **3,723,100,162** finite encodings use common exact-result bypasses; all have zero error for every accepted fit. Nonfinite behavior is checked separately.
+
+² The frontier uses area, correctly rounded counts and within-one-ULP counts in **all three approximation domains**. A “No” means another measured design is no worse in every one of those measures and better in at least one. The rounded percentages shown here are for readability; comparisons use the integer counts.
+
+</details>
+
+:::

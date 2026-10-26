@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 380" role="img"><title>Truncation is a bit slice; RNE adds guard/sticky logic and an increment</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10" fill="#747d86"/></marker></defs>
+<rect width="100%" height="100%" fill="#faf9f6"/>
+<text x="200" y="25" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" fill="#41484b">Truncate</text>
+<text x="635" y="25" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" fill="#41484b">Round to nearest, ties to even</text>
+<rect x="15" y="48" width="375" height="45" rx="4" fill="#f5f1e8" stroke="#d8d4ca"/>
+<text x="202.5" y="75.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">Exact sum: high bits | guard | lower bits</text>
+<rect x="445" y="48" width="375" height="45" rx="4" fill="#f5f1e8" stroke="#d8d4ca"/>
+<text x="632.5" y="75.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">Exact sum: high bits | guard | lower bits</text>
+<path d="M200 93 V320" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="210" y="158" text-anchor="start" font-family="system-ui,sans-serif" font-size="14" fill="#1460aa">High bits</text>
+<text x="35" y="233" text-anchor="start" font-family="system-ui,sans-serif" font-size="14" fill="#747d86">Discard guard</text>
+<text x="35" y="253" text-anchor="start" font-family="system-ui,sans-serif" font-size="14" fill="#747d86">and lower bits</text>
+<text x="200" y="352" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#1460aa">Retained word</text>
+<rect x="445" y="110" width="125" height="40" rx="4" fill="#f5f1e8" stroke="#1460aa"/>
+<text x="507.5" y="135.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">High bits</text>
+<rect x="600" y="110" width="45" height="40" rx="4" fill="#f5f1e8" stroke="#d8d4ca"/>
+<text x="622.5" y="135.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">G</text>
+<rect x="690" y="110" width="125" height="40" rx="4" fill="#f5f1e8" stroke="#d8d4ca"/>
+<text x="752.5" y="135.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">Lower bits</text>
+<path d="M505 93 V110" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M622 93 V110" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M752 93 V110" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M752 150 V173" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="722" y="173" width="60" height="35" rx="4" fill="#f5f1e8" stroke="#d8d4ca"/>
+<text x="752.0" y="195.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">OR</text>
+<text x="808" y="225" text-anchor="end" font-family="system-ui,sans-serif" font-size="11" fill="#41484b">sticky</text>
+<path d="M752 208 V223 H710 V235" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="660" y="235" width="60" height="35" rx="4" fill="#f5f1e8" stroke="#d8d4ca"/>
+<text x="690.0" y="257.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">OR</text>
+<path d="M505 150 V290" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<circle cx="505" cy="192" r="3" fill="#747d86"/>
+<path d="M505 192 H615 V252 H660" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="562" y="183" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#41484b">Retained LSB</text>
+<rect x="660" y="290" width="70" height="35" rx="4" fill="#f5f1e8" stroke="#d8d4ca"/>
+<text x="695.0" y="312.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">AND</text>
+<path d="M690 270 V290" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M622 150 V280 H710 V290" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="445" y="290" width="125" height="35" rx="4" fill="#f5f1e8" stroke="#b65322"/>
+<text x="507.5" y="312.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">+ increment</text>
+<path d="M660 307 H570" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="609" y="298" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#41484b">0 or 1</text>
+<path d="M505 325 V338" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="505" y="360" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#b65322">Retained word</text>
+</svg>

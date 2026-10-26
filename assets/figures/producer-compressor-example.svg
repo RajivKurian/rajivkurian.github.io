@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 435" role="img"><title>A multiply-add 13 times 7 plus 5 becomes four aligned rows, then three rows, then two rows</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10" fill="#747d86"/></marker></defs>
+<rect width="100%" height="100%" fill="#faf9f6"/>
+<text x="450" y="26" text-anchor="middle" font-family="system-ui,sans-serif" font-size="21" fill="#41484b">Example: 13 × 7 + 5 = 96</text>
+<text x="170" y="59" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" fill="#41484b">Four aligned rows</text>
+<text x="138" y="95" text-anchor="middle" font-family="system-ui,sans-serif" font-size="20" fill="#41484b">00001101</text>
+<text x="240" y="95" text-anchor="start" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">13</text>
+<text x="138" y="128" text-anchor="middle" font-family="system-ui,sans-serif" font-size="20" fill="#41484b">00011010</text>
+<text x="240" y="128" text-anchor="start" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">13 &lt;&lt; 1</text>
+<text x="138" y="161" text-anchor="middle" font-family="system-ui,sans-serif" font-size="20" fill="#41484b">00110100</text>
+<text x="240" y="161" text-anchor="start" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">13 &lt;&lt; 2</text>
+<text x="138" y="194" text-anchor="middle" font-family="system-ui,sans-serif" font-size="20" fill="#41484b">00000101</text>
+<text x="240" y="194" text-anchor="start" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">+ 5</text>
+<text x="170" y="232" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">Each column has one bit weight</text>
+<path d="M315 140 H365" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="365" y="82" width="205" height="135" rx="4" fill="#f5f1e8" stroke="#3d6f8c" stroke-width="1.5"/>
+<text x="467.5" y="121.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#41484b">Compress first 3 rows</text>
+<text x="467.5" y="144.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#41484b">00100011  (35)</text>
+<text x="467.5" y="167.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#41484b">00111000  (56)</text>
+<text x="467.5" y="190.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#41484b">00000101  (5)</text>
+<path d="M570 150 H630" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="630" y="95" width="245" height="110" rx="4" fill="#f5f1e8" stroke="#3d6f8c" stroke-width="1.5"/>
+<text x="752.5" y="133.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" fill="#41484b">Compress those 3 rows</text>
+<text x="752.5" y="156.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" fill="#41484b">00011110  (30)</text>
+<text x="752.5" y="179.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" fill="#41484b">01000010  (66)</text>
+<text x="450" y="285" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#41484b">One column: three input bits → sum at this weight + carry at twice the weight</text>
+<rect x="45" y="310" width="350" height="65" rx="4" fill="#f5f1e8" stroke="#77878e" stroke-width="1.5"/>
+<text x="220.0" y="337.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" fill="#41484b">For bits 1, 0, 1: sum = 0</text>
+<text x="220.0" y="360.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" fill="#41484b">carry = 1 in the next column</text>
+<rect x="505" y="310" width="350" height="65" rx="4" fill="#f5f1e8" stroke="#3d6f8c" stroke-width="1.5"/>
+<text x="680.0" y="337.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" fill="#41484b">No carry propagation in this layer</text>
+<text x="680.0" y="360.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" fill="#41484b">final two rows: 30 + 66 = 96</text>
+<text x="450" y="414" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">All rows use the same binary scale; the coefficient enters before final carry completion.</text>
+</svg>

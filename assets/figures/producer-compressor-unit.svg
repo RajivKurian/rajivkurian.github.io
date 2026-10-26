@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 225" role="img"><title>A full adder compresses three equal-weight bits to a sum bit and a carry at twice the weight</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10" fill="#747d86"/></marker></defs>
+<rect width="100%" height="100%" fill="#faf9f6"/>
+<text x="450" y="25" text-anchor="middle" font-family="system-ui,sans-serif" font-size="21" fill="#41484b">One 3:2 compressor is a full adder</text>
+<text x="235" y="70" text-anchor="middle" font-family="system-ui,sans-serif" font-size="19" fill="#41484b">x</text>
+<path d="M255 65 H355" stroke="#75828a" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+<text x="235" y="105" text-anchor="middle" font-family="system-ui,sans-serif" font-size="19" fill="#41484b">y</text>
+<path d="M255 100 H355" stroke="#75828a" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+<text x="235" y="140" text-anchor="middle" font-family="system-ui,sans-serif" font-size="19" fill="#41484b">z</text>
+<path d="M255 135 H355" stroke="#75828a" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+<rect x="355" y="43" width="180" height="115" rx="3" fill="#f5f1e8" stroke="#356c92" stroke-width="1.5"/>
+<text x="445.0" y="95.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" fill="#41484b">full adder</text>
+<text x="445.0" y="116.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" fill="#41484b">3 inputs → 2 outputs</text>
+<path d="M535 77 H635" stroke="#75828a" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+<text x="655" y="83" text-anchor="start" font-family="system-ui,sans-serif" font-size="18" fill="#41484b">s · weight w</text>
+<path d="M535 126 H635" stroke="#75828a" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+<text x="655" y="132" text-anchor="start" font-family="system-ui,sans-serif" font-size="18" fill="#41484b">k · weight 2w</text>
+<text x="145" y="103" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">each weight w</text>
+<text x="450" y="193" text-anchor="middle" font-family="system-ui,sans-serif" font-size="21" fill="#41484b">x + y + z = s + 2k</text>
+</svg>

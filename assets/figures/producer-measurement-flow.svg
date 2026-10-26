@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 495" role="img"><title>A fitted computation and implementation choices feed RTL generation and checked measurements</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10" fill="#747d86"/></marker></defs>
+<rect width="100%" height="100%" fill="#faf9f6"/>
+<rect x="20" y="30" width="220" height="105" rx="4" fill="#f5f1e8" stroke="#3d6f8c" stroke-width="1.5"/>
+<text x="130.0" y="65.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#41484b">Fitted computation</text>
+<text x="130.0" y="88.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#41484b">table words + formats</text>
+<text x="130.0" y="111.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#41484b">narrowing + latency</text>
+<rect x="20" y="190" width="220" height="85" rx="4" fill="#f5f1e8" stroke="#b75d2c" stroke-width="1.5"/>
+<text x="130.0" y="227.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" fill="#41484b">Implementation choices</text>
+<text x="130.0" y="250.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" fill="#41484b">recoding · grouping · cuts</text>
+<rect x="300" y="75" width="240" height="165" rx="4" fill="#f5f1e8" stroke="#3d6f8c" stroke-width="1.5"/>
+<text x="420.0" y="129.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" fill="#41484b">RTL generator</text>
+<text x="420.0" y="152.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" fill="#41484b">connect selected blocks</text>
+<text x="420.0" y="175.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" fill="#41484b">fold constant bits</text>
+<text x="420.0" y="198.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" fill="#41484b">insert chosen registers</text>
+<path d="M240 82 H270 V120 H300" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M240 232 H270 V195 H300" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="605" y="35" width="275" height="100" rx="4" fill="#f5f1e8" stroke="#3d6f8c" stroke-width="1.5"/>
+<text x="742.5" y="79.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" fill="#41484b">RTL + testbench</text>
+<text x="742.5" y="102.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" fill="#41484b">circuit diagrams</text>
+<path d="M540 120 H570 V85 H605" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="605" y="175" width="275" height="60" rx="4" fill="#f5f1e8" stroke="#77878e" stroke-width="1.5"/>
+<text x="742.5" y="211.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">Verilator · RTL / model check</text>
+<path d="M742 135 V175" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="605" y="270" width="275" height="60" rx="4" fill="#f5f1e8" stroke="#77878e" stroke-width="1.5"/>
+<text x="742.5" y="294.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">Yosys + ABC</text>
+<text x="742.5" y="317.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">map cells · measure area</text>
+<path d="M742 235 V270" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="605" y="370" width="275" height="60" rx="4" fill="#f5f1e8" stroke="#77878e" stroke-width="1.5"/>
+<text x="742.5" y="406.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">Verilator · gate / model check</text>
+<path d="M742 330 V370" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="300" y="370" width="240" height="60" rx="4" fill="#f5f1e8" stroke="#3d6f8c" stroke-width="1.5"/>
+<text x="420.0" y="394.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#41484b">OpenSTA</text>
+<text x="420.0" y="417.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#41484b">timing · activity power</text>
+<path d="M605 400 H540" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="20" y="370" width="220" height="60" rx="4" fill="#f5f1e8" stroke="#3d6f8c" stroke-width="1.5"/>
+<text x="130.0" y="394.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">Experiment record</text>
+<text x="130.0" y="417.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">choices + RTL + results</text>
+<path d="M300 400 H240" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M130 370 V275" fill="none" stroke="#747d86" stroke-width="1.5" marker-end="url(#arrow)" stroke-dasharray="5 4"/>
+<text x="145" y="323" text-anchor="start" font-family="system-ui,sans-serif" font-size="15" fill="#b75d2c">next experiment</text>
+<text x="450" y="478" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">We choose the mutations; generation, checking and measurement run automatically.</text>
+</svg>

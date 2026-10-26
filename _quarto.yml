@@ -1,0 +1,49 @@
+project:
+  type: website
+  output-dir: dist
+  render:
+    - index.qmd
+    - about.qmd
+    - links.qmd
+    - posts/**/*.qmd
+    - '!posts/_template.qmd'
+
+website:
+  title: "Rajiv's blog"
+  description: "Notes on numerical methods, programming, and hardware design."
+  search: false
+  navbar:
+    background: light
+    pinned: false
+    collapse: false
+    right:
+      - text: Articles
+        href: index.qmd
+      - text: About
+        href: about.qmd
+  page-footer:
+    right:
+      - text: About
+        href: about.qmd
+
+format:
+  html:
+    theme:
+      - default
+      - assets/theme.scss
+    css: assets/style.css
+    embed-resources: true
+    html-math-method: mathml
+    toc: false
+    code-copy: true
+    code-overflow: scroll
+    highlight-style: github
+    smooth-scroll: false
+    anchor-sections: false
+    link-external-icon: false
+    lightbox: false
+    page-layout: article
+    lang: en
+
+execute:
+  enabled: false

@@ -1,0 +1,74 @@
+{
+  "rne": {
+    "profile": 8,
+    "structural_probe": false,
+    "normalized_cost": 1309.85,
+    "flip_flops": 311,
+    "source_sha256": {
+      "rtl/rounding/profile_8/sfu_poly.sv": "7b2cde67ea9cf92bcf5f31be5491db8062c9d21efe53d840c6ae6ee9bb9499b6",
+      "rtl/rounding/rounding_polynomial.sv": "2d428641872172a021c4a91aaaa54130e1c4211fdeea7b2e6dd7d71c3f8eee8c",
+      "rtl/rounding/polynomial_reduce.sv": "0a32fd9c040de18357e04ab496d9b86f6f8d4e25880c1e50d23bc50ad20455da",
+      "rtl/examples/booth_rows.sv": "dd1cec2fbe32f3e174b46b5395708e4ab8fe4ade0a41af0f9ee48ceddff4cd53",
+      "rtl/examples/carry_save_layer.sv": "72f404bde589696010fffbe28de3d4809b2f0ef6d50cd95625353f5db9803548"
+    },
+    "mapped_sha256": "d161a2f12ca9cbdf70a087ef83a58b9832cdbca16bf7dec22d9a8b0cc658b6ec",
+    "top_booth_zero": true,
+    "coefficient_bit_register": false
+  },
+  "truncate-refit": {
+    "profile": 10,
+    "structural_probe": false,
+    "normalized_cost": 1313.3,
+    "flip_flops": 310,
+    "source_sha256": {
+      "rtl/rounding/profile_10/sfu_poly.sv": "66fe00ab4b336cc5fe9d5ff996bd25facfd018b51c63ac04c6489c70617875aa",
+      "rtl/rounding/rounding_polynomial.sv": "2d428641872172a021c4a91aaaa54130e1c4211fdeea7b2e6dd7d71c3f8eee8c",
+      "rtl/rounding/polynomial_reduce.sv": "0a32fd9c040de18357e04ab496d9b86f6f8d4e25880c1e50d23bc50ad20455da",
+      "rtl/examples/booth_rows.sv": "dd1cec2fbe32f3e174b46b5395708e4ab8fe4ade0a41af0f9ee48ceddff4cd53",
+      "rtl/examples/carry_save_layer.sv": "72f404bde589696010fffbe28de3d4809b2f0ef6d50cd95625353f5db9803548"
+    },
+    "mapped_sha256": "31d4537f47dd0f6820b1f2c83da05f771f5949fc9a89a41643c7f5313f4fce3d",
+    "top_booth_zero": false,
+    "coefficient_bit_register": true
+  },
+  "truncate-unrefitted": {
+    "profile": 8,
+    "structural_probe": true,
+    "normalized_cost": 1269.1499999999999,
+    "flip_flops": 309,
+    "source_sha256": {
+      "rtl/audits/rounding/first-rounding-delta/truncate-unrefitted/sfu_poly.sv": "f5b62880747cd71a20d63568c9599de189e814c9a53eb4844763166d2337f46d",
+      "rtl/rounding/rounding_polynomial.sv": "2d428641872172a021c4a91aaaa54130e1c4211fdeea7b2e6dd7d71c3f8eee8c",
+      "rtl/rounding/polynomial_reduce.sv": "0a32fd9c040de18357e04ab496d9b86f6f8d4e25880c1e50d23bc50ad20455da",
+      "rtl/examples/booth_rows.sv": "dd1cec2fbe32f3e174b46b5395708e4ab8fe4ade0a41af0f9ee48ceddff4cd53",
+      "rtl/examples/carry_save_layer.sv": "72f404bde589696010fffbe28de3d4809b2f0ef6d50cd95625353f5db9803548"
+    },
+    "mapped_sha256": "26db1ad73f467ef34214db9a4d08a3b1e7b90b0715ef3dc52e5e96a2680509e9",
+    "top_booth_zero": true,
+    "coefficient_bit_register": false
+  },
+  "truncate-high-bit-zero": {
+    "profile": 10,
+    "structural_probe": true,
+    "normalized_cost": 1273.1499999999999,
+    "flip_flops": 309,
+    "source_sha256": {
+      "rtl/audits/rounding/first-rounding-delta/truncate-high-bit-zero/sfu_poly.sv": "34889da962886c433d3c2fbcb2e924b1a41d875559d6469f9a0cf4ac4e169de6",
+      "rtl/rounding/rounding_polynomial.sv": "2d428641872172a021c4a91aaaa54130e1c4211fdeea7b2e6dd7d71c3f8eee8c",
+      "rtl/rounding/polynomial_reduce.sv": "0a32fd9c040de18357e04ab496d9b86f6f8d4e25880c1e50d23bc50ad20455da",
+      "rtl/examples/booth_rows.sv": "dd1cec2fbe32f3e174b46b5395708e4ab8fe4ade0a41af0f9ee48ceddff4cd53",
+      "rtl/examples/carry_save_layer.sv": "72f404bde589696010fffbe28de3d4809b2f0ef6d50cd95625353f5db9803548"
+    },
+    "mapped_sha256": "838e8dd284b21a12161ac43098766406275828a8c5c957da1a9776ca6f4deb1c",
+    "top_booth_zero": true,
+    "coefficient_bit_register": false
+  },
+  "coefficient_change": {
+    "rne_a_min": 249,
+    "rne_a_max": 510,
+    "truncate_a_max": 512,
+    "high_bit_rows": [
+      127
+    ]
+  }
+}

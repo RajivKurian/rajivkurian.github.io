@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 390" role="img"><title>The actual mapped carry segment has four different cell arcs in prefix and hybrid implementations</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10" fill="#747d86"/></marker></defs>
+<rect width="100%" height="100%" fill="#faf9f6"/>
+<text x="500" y="27" text-anchor="middle" font-family="system-ui,sans-serif" font-size="22" fill="#41484b">Same critical route: P₂₂ → carry c₃₀ → result s[14]</text>
+<text x="20" y="82" text-anchor="start" font-family="system-ui,sans-serif" font-size="19" fill="#356c92">Unified prefix</text>
+<text x="20" y="111" text-anchor="start" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">P₂₂ arrives: 546.12 ps</text>
+<rect x="240" y="72" width="132" height="64" rx="3" fill="#f5f1e8" stroke="#356c92" stroke-width="1.5"/>
+<text x="306.0" y="99.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">AND2x2</text>
+<text x="306.0" y="119.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">29.06 ps</text>
+<rect x="393" y="72" width="132" height="64" rx="3" fill="#f5f1e8" stroke="#356c92" stroke-width="1.5"/>
+<text x="459.0" y="99.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">OA211x2</text>
+<text x="459.0" y="119.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">34.47 ps</text>
+<path d="M372 104 H393" fill="none" stroke="#356c92" stroke-width="1.7" marker-end="url(#arrow)"/>
+<rect x="546" y="72" width="132" height="64" rx="3" fill="#f5f1e8" stroke="#356c92" stroke-width="1.5"/>
+<text x="612.0" y="99.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">O2A1O1Ixp33</text>
+<text x="612.0" y="119.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">34.17 ps</text>
+<path d="M525 104 H546" fill="none" stroke="#356c92" stroke-width="1.7" marker-end="url(#arrow)"/>
+<rect x="699" y="72" width="132" height="64" rx="3" fill="#f5f1e8" stroke="#356c92" stroke-width="1.5"/>
+<text x="765.0" y="99.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">NOR2xp33</text>
+<text x="765.0" y="119.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">58.33 ps</text>
+<path d="M678 104 H699" fill="none" stroke="#356c92" stroke-width="1.7" marker-end="url(#arrow)"/>
+<path d="M831 104 H867" fill="none" stroke="#356c92" stroke-width="1.7" marker-end="url(#arrow)"/>
+<text x="934" y="99" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" fill="#356c92">c₃₀</text>
+<text x="934" y="122" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#41484b">156.03 ps later</text>
+<text x="525" y="163" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">Carry + remaining sum: 215.35 ps · s[14] arrives: 761.47 ps</text>
+<text x="20" y="235" text-anchor="start" font-family="system-ui,sans-serif" font-size="19" fill="#af5137">Unified hybrid</text>
+<text x="20" y="264" text-anchor="start" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">P₂₂ arrives: 554.08 ps</text>
+<rect x="240" y="225" width="132" height="64" rx="3" fill="#f5f1e8" stroke="#af5137" stroke-width="1.5"/>
+<text x="306.0" y="252.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">NAND3xp33</text>
+<text x="306.0" y="272.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">26.72 ps</text>
+<rect x="393" y="225" width="132" height="64" rx="3" fill="#f5f1e8" stroke="#af5137" stroke-width="1.5"/>
+<text x="459.0" y="252.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">AOI211xp5</text>
+<text x="459.0" y="272.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">21.29 ps</text>
+<path d="M372 257 H393" fill="none" stroke="#af5137" stroke-width="1.7" marker-end="url(#arrow)"/>
+<rect x="546" y="225" width="132" height="64" rx="3" fill="#f5f1e8" stroke="#af5137" stroke-width="1.5"/>
+<text x="612.0" y="252.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">NOR2xp33</text>
+<text x="612.0" y="272.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">27.41 ps</text>
+<path d="M525 257 H546" fill="none" stroke="#af5137" stroke-width="1.7" marker-end="url(#arrow)"/>
+<rect x="699" y="225" width="132" height="64" rx="3" fill="#f5f1e8" stroke="#af5137" stroke-width="1.5"/>
+<text x="765.0" y="252.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">O2A1O1Ixp33</text>
+<text x="765.0" y="272.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">53.89 ps</text>
+<path d="M678 257 H699" fill="none" stroke="#af5137" stroke-width="1.7" marker-end="url(#arrow)"/>
+<path d="M831 257 H867" fill="none" stroke="#af5137" stroke-width="1.7" marker-end="url(#arrow)"/>
+<text x="934" y="252" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" fill="#af5137">c₃₀</text>
+<text x="934" y="275" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#41484b">129.31 ps later</text>
+<text x="525" y="316" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">Carry + remaining sum: 179.40 ps · s[14] arrives: 733.48 ps</text>
+<text x="500" y="374" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" fill="#41484b">The hybrid starts this segment later, but its mapped cell arcs finish sooner.</text>
+</svg>

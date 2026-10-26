@@ -1,0 +1,13 @@
+---
+title: "Links"
+---
+
+References and tools used in the exponential hardware work.
+
+::: {.reading-list}
+- [RLibm](https://people.cs.rutgers.edu/~sn349/rlibm/) — polynomial generation using acceptable rounded-result intervals.
+- [MPFR](https://www.mpfr.org/) — multiple-precision arithmetic and rounding for the numerical reference.
+- [LLVM libc math](https://libc.llvm.org/math/) — elementary-function implementations and accuracy testing.
+- [Yosys](https://yosyshq.net/yosys/) — synthesis and circuit transformations.
+- [OpenSTA](https://github.com/The-OpenROAD-Project/OpenSTA) — static timing analysis.
+:::

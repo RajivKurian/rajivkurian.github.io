@@ -1,0 +1,9 @@
+{
+  "generator": "//sfu:blog_design_points",
+  "source_sha256": "fe3f43c2aab5a615a3d4a90a7021e90d2059e9db36d706312aea476bde360b92",
+  "data_sha256": "ccbf51d4c9ba2db72afe12eeb51cd988825166850938b68b220cfb6319bde110",
+  "method": "Relative-error Remez, degree 1\u20133, rows 1/2/4/8; each segment is an exponential scaled copy.",
+  "precision_bits": 53,
+  "validation": "All degree+2 extrema alternate; relative amplitude spread < 1e-7; stationary roots counted; 1025 independent samples per shape checked against extremal error.",
+  "environment": "3e50db3e9bd7d96b9ed4b2a59886ef655cd6c7db45f3557229f5a00a2491b5d6"
+}

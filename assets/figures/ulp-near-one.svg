@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 195" role="img"><title>FP32 output spacing changes at one</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10" fill="#747d86"/></marker></defs>
+<rect width="100%" height="100%" fill="#faf9f6"/>
+<path d="M50 82L770 82" stroke="#747d86" stroke-width="1"/>
+<path d="M70 74L70 90" stroke="#1460aa" stroke-width="2"/>
+<text x="70" y="114" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#41484b">1 − 3·2⁻²⁴</text>
+<path d="M170 74L170 90" stroke="#1460aa" stroke-width="2"/>
+<text x="170" y="114" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#41484b">1 − 2·2⁻²⁴</text>
+<path d="M270 74L270 90" stroke="#1460aa" stroke-width="2"/>
+<text x="270" y="114" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#41484b">1 − 2⁻²⁴</text>
+<path d="M370 74L370 90" stroke="#1460aa" stroke-width="2"/>
+<text x="370" y="114" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#41484b">1</text>
+<path d="M570 74L570 90" stroke="#1460aa" stroke-width="2"/>
+<text x="570" y="114" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#41484b">1 + 2⁻²³</text>
+<path d="M770 74L770 90" stroke="#1460aa" stroke-width="2"/>
+<text x="770" y="114" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#41484b">1 + 2·2⁻²³</text>
+<text x="220" y="46" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#1460aa">Spacing below 1: 2⁻²⁴</text>
+<text x="570" y="46" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#c43c28">Spacing above 1: 2⁻²³</text>
+<text x="390" y="163" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">Two representable steps need not cover the same numerical distance.</text>
+</svg>

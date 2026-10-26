@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 445" role="img"><title>Candidate ordering changes as coefficient contents and mapped logic become known</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10" fill="#747d86"/></marker></defs>
+<rect width="100%" height="100%" fill="#faf9f6"/>
+<path d="M220 108 L320 188" fill="none" stroke="#747d86" stroke-width="1.6"/>
+<path d="M220 188 L320 108" fill="none" stroke="#b65322" stroke-width="1.6"/>
+<path d="M220 268 L320 268" fill="none" stroke="#97826c" stroke-width="1.6"/>
+<path d="M220 348 L320 348" fill="none" stroke="#1460aa" stroke-width="3"/>
+<path d="M530 188 L630 348" fill="none" stroke="#747d86" stroke-width="1.6"/>
+<path d="M530 108 L630 268" fill="none" stroke="#b65322" stroke-width="1.6"/>
+<path d="M530 268 L630 188" fill="none" stroke="#97826c" stroke-width="1.6"/>
+<path d="M530 348 L630 108" fill="none" stroke="#1460aa" stroke-width="3"/>
+<text x="115" y="25" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" fill="#41484b">Before fitting</text>
+<text x="115" y="48" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#747d86">Dimensions only</text>
+<rect x="10" y="80" width="210" height="56" rx="4" fill="#f5f1e8" stroke="#747d86"/>
+<text x="115.0" y="103.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">32 rows · first 22 bits</text>
+<text x="115.0" y="123.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">2153.85</text>
+<rect x="10" y="160" width="210" height="56" rx="4" fill="#f5f1e8" stroke="#b65322"/>
+<text x="115.0" y="183.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">64 rows · first 19 bits</text>
+<text x="115.0" y="203.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">2495.80</text>
+<rect x="10" y="240" width="210" height="56" rx="4" fill="#f5f1e8" stroke="#97826c"/>
+<text x="115.0" y="263.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">128 rows · first 17 bits</text>
+<text x="115.0" y="283.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">3544.45</text>
+<rect x="10" y="320" width="210" height="56" rx="4" fill="#f5f1e8" stroke="#1460aa"/>
+<text x="115.0" y="343.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">256 rows · first 15 bits</text>
+<text x="115.0" y="363.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">5543.60</text>
+<text x="425" y="25" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" fill="#41484b">After fitting</text>
+<text x="425" y="48" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#747d86">Fitted ROM patterns</text>
+<rect x="320" y="80" width="210" height="56" rx="4" fill="#f5f1e8" stroke="#b65322"/>
+<text x="425.0" y="103.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">64 rows · first 19 bits</text>
+<text x="425.0" y="123.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">1611.90</text>
+<rect x="320" y="160" width="210" height="56" rx="4" fill="#f5f1e8" stroke="#747d86"/>
+<text x="425.0" y="183.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">32 rows · first 22 bits</text>
+<text x="425.0" y="203.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">1705.05</text>
+<rect x="320" y="240" width="210" height="56" rx="4" fill="#f5f1e8" stroke="#97826c"/>
+<text x="425.0" y="263.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">128 rows · first 17 bits</text>
+<text x="425.0" y="283.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">1769.35</text>
+<rect x="320" y="320" width="210" height="56" rx="4" fill="#f5f1e8" stroke="#1460aa"/>
+<text x="425.0" y="343.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">256 rows · first 15 bits</text>
+<text x="425.0" y="363.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">2008.70</text>
+<text x="735" y="25" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" fill="#41484b">Synthesis</text>
+<text x="735" y="48" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#747d86">Mapped ROM and pipeline</text>
+<rect x="630" y="80" width="210" height="56" rx="4" fill="#f5f1e8" stroke="#1460aa"/>
+<text x="735.0" y="103.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">256 rows · first 15 bits</text>
+<text x="735.0" y="123.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">1275.85</text>
+<rect x="630" y="160" width="210" height="56" rx="4" fill="#f5f1e8" stroke="#97826c"/>
+<text x="735.0" y="183.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">128 rows · first 17 bits</text>
+<text x="735.0" y="203.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">1309.85</text>
+<rect x="630" y="240" width="210" height="56" rx="4" fill="#f5f1e8" stroke="#b65322"/>
+<text x="735.0" y="263.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">64 rows · first 19 bits</text>
+<text x="735.0" y="283.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">1355.20</text>
+<rect x="630" y="320" width="210" height="56" rx="4" fill="#f5f1e8" stroke="#747d86"/>
+<text x="735.0" y="343.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">32 rows · first 22 bits</text>
+<text x="735.0" y="363.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#41484b">1529.45</text>
+<text x="425" y="410" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#41484b">Lowest cost at the top of each column</text>
+<text x="425" y="435" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#747d86">Costs in data-register-bit units; line height shows rank, not cost distance.</text>
+</svg>
