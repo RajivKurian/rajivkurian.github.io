@@ -10,8 +10,7 @@ what an algorithm does and why, and distinguish completed experiments from
 planned measurements. Do not turn a proposed methodology into a claim of work
 already performed merely to replace an imperative with “we did.”
 
-The four-post scope and visual plans are in docs/series-plan.md. Keep editorial
-notes in docs/; they are excluded from the published site. Do not invent author
+Keep editorial notes in docs/; they are excluded from the published site. Do not invent author
 biography, social profiles, publication dates, or completed results.
 
 Keep the site shell plain: system fonts, restrained colors, readable line length,
