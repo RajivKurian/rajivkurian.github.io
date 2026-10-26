@@ -120,10 +120,12 @@ output change, even though its local coordinate still runs from zero to one.
 
 ## Conclusions
 
-For the rest of the series, we favor the shorter arithmetic pipeline and
-develop **piecewise quadratics**. We can improve the fit by increasing table
-resolution while keeping two multiply-adds per input. We still need to choose
-the number of rows and the bit widths. [Part 3](remez-and-search.qmd) fits
+We continue with **piecewise quadratics**. Our synthesis experiments show that
+small coefficient lookups are much cheaper than multiply-add logic. Shrinking
+these tables is therefore very unlikely to pay for a third multiply-add and
+its pipeline storage at one result per cycle. We instead investigate more
+quadratic rows, retaining two multiply-adds per input, and choose the row count
+and bit widths together. [Part 3](remez-and-search.qmd) fits
 coefficients for those finite formats and their rounding operations, then
 compares the accuracy and circuit area of designs meeting our two-ULP limit.
 
