@@ -1,7 +1,7 @@
 project:
   output-dir: .preview
   render:
-    - docs/style-preview.qmd
+    - scripts/fixtures/style-preview.qmd
     - "!index.qmd"
     - "!about.qmd"
     - "!links.qmd"
